@@ -29,6 +29,8 @@
 }
 
 - (id) initWithTargetImage:(UIImage *)image;
+
+- (IBAction)slapButton;
 	
 @end
 

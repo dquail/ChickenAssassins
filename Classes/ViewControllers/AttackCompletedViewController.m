@@ -109,7 +109,6 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller
 		  didFinishWithResult:(MFMailComposeResult)result 
 						error:(NSError*)error {
-	
-	//TODO: implement Mail Compose delegate methods
+	[self dismissModalViewControllerAnimated:YES];
 }
 @end

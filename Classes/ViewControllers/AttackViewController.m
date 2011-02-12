@@ -16,6 +16,10 @@
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
 
+- (IBAction)slapButton {
+	[self slap];
+}
+
 - (void) completeInitialization {
 	shakeEventSource = [[ShakeEventSource alloc] init];
 	
