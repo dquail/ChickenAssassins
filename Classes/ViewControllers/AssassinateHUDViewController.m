@@ -11,7 +11,7 @@
 
 @implementation AssassinateHUDViewController
 
-@synthesize targetImage, overlay;
+@synthesize targetImage, overlay, appDelegate;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -27,7 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];	
 	
+	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
+	
 	camera  = [[UIImagePickerController alloc] init];
+
 	camera.sourceType =  UIImagePickerControllerSourceTypeCamera;
 	camera.delegate = self;
 	camera.allowsEditing = NO;
@@ -103,10 +106,12 @@
 {
 	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
+	[self.appDelegate lockTarget:self.targetImage];
+	/*
 	AttackViewController *attackController = [[AttackViewController alloc] initWithTargetImage:self.targetImage];
 	[self.view removeFromSuperview];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:attackController.view];
-	
+	*/
 }
 
 @end

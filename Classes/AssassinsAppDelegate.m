@@ -12,8 +12,7 @@
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize viewController;
-
+@synthesize viewController, hudController, attackController, completedController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -23,8 +22,13 @@
     // Override point for customization after application launch.
 
     // Add the view controller's view to the window and display.
-    [window addSubview:viewController.view];
-    [window makeKeyAndVisible];
+	
+	//Create the Hudview
+	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+    
+	//[window addSubview:viewController.view];
+    [window addSubview:self.hudController.view];
+	[window makeKeyAndVisible];
 
     return YES;
 }
@@ -84,5 +88,30 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark View management
+- (void) lockTarget:(UIImage *) targetImage{
+	self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
+	[self.hudController.view removeFromSuperview];
+	[[[UIApplication sharedApplication] keyWindow] addSubview:self.attackController.view];	
+}
+- (void) targetKilled:(UIImage *) targetImage{
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:1];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
+	[self.attackController.view removeFromSuperview];
+	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage];
+	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
+	[UIView commitAnimations];			
+}
+
+- (void) showHud{
+	//Create the Hudview
+	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+    
+	//[window addSubview:viewController.view];
+    [window addSubview:self.hudController.view];
+	
+}
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel;
+@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate;
 #pragma mark -
 #pragma mark ViewController lifecycle
 
@@ -36,6 +36,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
 }
 
@@ -95,5 +96,7 @@
 								 otherButtonTitles:nil];
 	[alert show];
 	[alert release];
+	
+	[self.appDelegate showHud];
 }
 @end
