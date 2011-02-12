@@ -12,7 +12,6 @@
 
 @implementation AssassinateHUDViewController
 
-@synthesize targetImage, overlay;
 @synthesize locationManager;
 @synthesize startingPoint;
 @synthesize targetImage, overlay, appDelegate;

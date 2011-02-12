@@ -23,6 +23,8 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
+#define HITS_TO_KILL 30
+#define HITS_TO_FINISH_HIM 20
 
 - (IBAction)slapButton {
 	[self slap];
@@ -33,6 +35,9 @@
 	
 	[shakeEventSource addDelegate: self];
 
+	/*
+	 * Create slap clips
+	 */
 	slapClips = [[SoundClipPool alloc] init];
 	
 	NSString *slapURLs[] = {
@@ -57,6 +62,9 @@
 	responseClips = [[SoundClipPool alloc] init];
 	responseClips.delegate = self;
 	
+	/*
+	 * Create response clips
+	 */
 	NSString *responseURLs[] = {
 		@"oof.caf",
 		@"uhh.caf",
@@ -79,6 +87,24 @@
 	}
 	
 	[NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(checkIfStillSlapping) userInfo: nil repeats: YES];
+	
+	/*
+	 * Create Finish him clips
+	 */
+	finishHimClips = [[SoundClipPool alloc] init];	
+	NSString *finishURLs[] = {
+		@"finishhim.caf",
+		@"punishhim.caf",
+	};
+	
+	for (int i = 0; i < (sizeof(finishURLs) / sizeof(finishURLs[0])); i++) {
+		NSURL *url = [[[NSBundle mainBundle] bundleURL] URLByAppendingPathComponent: finishURLs[i]];
+		
+		AVAudioPlayer *clip = [[AVAudioPlayer alloc] initWithContentsOfURL: url error: NULL];
+		[finishHimClips addSoundClip: clip];
+	}
+	
+	
 }
 
 - (id) initWithTargetImage:(UIImage *)image{
@@ -109,6 +135,8 @@
 	responseClips.delegate = nil;
 	[responseClips release];
 	
+	[finishHimClips release];
+	
 	[shakeEventSource removeDelegate: self];
 	[shakeEventSource release];
 	
@@ -128,23 +156,15 @@
 }
 
 - (void) slap {
-	//TODO - Temporray solution to finish an attack after 10 slaps.  
-	// also need to manage these view controllers through appdelegate
 	NSLog(@"Slapping %d", slapCount);
-	if (++slapCount == 10){
+	++slapCount;
+	if (slapCount >= HITS_TO_KILL){
 		[self finishKill];
-		/*
-		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:1];
-		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
-		[self.view removeFromSuperview];
-		AttackCompletedViewController *completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage];
-		[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
-		[UIView commitAnimations];		
-		 */
 	}
-	else if(slapCount>10)
-		return;
+	else if (slapCount == HITS_TO_FINISH_HIM){
+		[finishHimClips playRandomClip];
+	}
+
 	else{
 		double currentTime = CACurrentMediaTime();
 		if ((currentTime - lastSlapTime) >= 0.15) {
@@ -172,25 +192,26 @@
 - (void) shake: (int) direction {
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerometerShakeDirectionLeft");
+		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
+		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
-		[self slap];
-		
 		NSLog(@"AccelerometerShakeDirectionUp");
+		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
-		[self slap];
-		
 		NSLog(@"AccelerometerShakeDirectionDown");
+		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
+		[self slap];
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	
