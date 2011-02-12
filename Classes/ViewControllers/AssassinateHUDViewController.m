@@ -8,12 +8,14 @@
 
 #import "AssassinateHUDViewController.h"
 #import "AttackViewController.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation AssassinateHUDViewController
 
 @synthesize targetImage, overlay;
 @synthesize locationManager;
 @synthesize startingPoint;
+@synthesize targetImage, overlay, appDelegate;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -29,14 +31,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];	
 	
+	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
+	
 	camera  = [[UIImagePickerController alloc] init];
+	camera.delegate = self;
+	camera.allowsEditing = NO;
+	camera.toolbarHidden = YES;
+	camera.wantsFullScreenLayout = YES;
+	
 	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
 		camera.sourceType =  UIImagePickerControllerSourceTypeCamera;
-		camera.delegate = self;
-		camera.allowsEditing = NO;
 		camera.showsCameraControls = NO;
-		camera.toolbarHidden = YES;
-		camera.wantsFullScreenLayout = YES;
 		camera.cameraOverlayView = self.overlay;
 	} else {
 		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
@@ -45,7 +50,7 @@
 	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
 	locationManager.delegate = self;
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-	[locationManager startUpdatingLocation];	
+	[locationManager startUpdatingLocation];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
@@ -123,10 +128,12 @@
 {
 	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
+	[self.appDelegate lockTarget:self.targetImage];
+	/*
 	AttackViewController *attackController = [[AttackViewController alloc] initWithTargetImage:self.targetImage];
 	[self.view removeFromSuperview];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:attackController.view];
-	
+	*/
 }
 
 @end

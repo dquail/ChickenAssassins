@@ -8,13 +8,25 @@
 
 #import "AttackViewController.h"
 #import "AttackCompletedViewController.h"
+#import "AssassinsAppDelegate.h"
+
+@interface AttackViewController (Private)
+- (void) finishKill;
+@end
+
 
 @implementation AttackViewController
+
+@synthesize appDelegate;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
+
+- (IBAction)slapButton {
+	[self slap];
+}
 
 - (void) completeInitialization {
 	shakeEventSource = [[ShakeEventSource alloc] init];
@@ -111,11 +123,17 @@
 }
 */
 
+- (void) finishKill{
+	[self.appDelegate targetKilled:targetImage];
+}
+
 - (void) slap {
 	//TODO - Temporray solution to finish an attack after 10 slaps.  
 	// also need to manage these view controllers through appdelegate
 	NSLog(@"Slapping %d", slapCount);
 	if (++slapCount == 10){
+		[self finishKill];
+		/*
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationDuration:1];
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
@@ -123,6 +141,7 @@
 		AttackCompletedViewController *completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage];
 		[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
 		[UIView commitAnimations];		
+		 */
 	}
 	else if(slapCount>10)
 		return;
@@ -196,6 +215,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
 /*

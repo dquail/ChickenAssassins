@@ -8,10 +8,11 @@
 
 #import "AttackCompletedViewController.h"
 #import "UIImage+Combine.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel;
+@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate;
 #pragma mark -
 #pragma mark ViewController lifecycle
 
@@ -26,6 +27,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
 }
 
@@ -102,6 +104,8 @@
 								 otherButtonTitles:nil];
 	[alert show];
 	[alert release];
+	
+	[self.appDelegate showHud];
 }
 
 #pragma mark -
@@ -109,7 +113,6 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller
 		  didFinishWithResult:(MFMailComposeResult)result 
 						error:(NSError*)error {
-	
-	//TODO: implement Mail Compose delegate methods
+	[self dismissModalViewControllerAnimated:YES];
 }
 @end

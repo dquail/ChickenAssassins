@@ -14,7 +14,10 @@
 #import "ShakeEventSource.h"
 #import "SoundClipPool.h"
 
+@class AssassinsAppDelegate;
+
 @interface AttackViewController : UIViewController <ShakeDelegate, SoundClipPoolDelegate> {
+	AssassinsAppDelegate *appDelegate;
 	ShakeEventSource *shakeEventSource;
 
 	SoundClipPool *slapClips;
@@ -27,8 +30,11 @@
 	
 	int slapCount;
 }
+@property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
 
 - (id) initWithTargetImage:(UIImage *)image;
+
+- (IBAction)slapButton;
 	
 @end
 

@@ -298,7 +298,7 @@
 							<real>233</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 59 1280 719 0 0 1280 778 </string>
+						<string>-7 59 1280 719 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -328,13 +328,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A5C9C78B13072FBF0088BE1A</string>
+										<string>A5C9C7BA1307364C0088BE1A</string>
 										<key>history</key>
 										<array>
-											<string>A5C9C74D130728B30088BE1A</string>
-											<string>A5C9C76613072AA50088BE1A</string>
-											<string>A5C9C77C13072E2E0088BE1A</string>
-											<string>A5C9C77D13072E2E0088BE1A</string>
+											<string>A5C9C78E1307329E0088BE1A</string>
+											<string>A5C9C78F1307329E0088BE1A</string>
+											<string>A5C9C7901307329E0088BE1A</string>
+											<string>A5C9C7B5130734A30088BE1A</string>
+											<string>A5C9C7B6130734A30088BE1A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -348,7 +349,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1025, 673}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>-7 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -368,7 +369,7 @@
 								<key>Frame</key>
 								<string>{{0, 678}, {1025, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>-7 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -532,13 +533,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>A5C9C7AB1307342E0088BE1A</string>
+		<string>A5C9C7AC1307342E0088BE1A</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A5B3355B1307126A00E22656</string>
 		<string>/Users/cameronlinke/Dropbox/projects/ChickenAssassins/Assassins.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 59 1280 719 0 0 1280 778 </string>
+	<string>-7 59 1280 719 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

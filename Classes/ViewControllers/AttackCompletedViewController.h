@@ -9,17 +9,20 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
+@class AssassinsAppDelegate;
 
 @interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
 	UILabel *scoreLabel;
+	AssassinsAppDelegate *appDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
 @property (nonatomic, retain) IBOutlet UIImageView *overlayImageView;
 @property (nonatomic, retain) IBOutlet UILabel *scoreLabel;
+@property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
 
 - (id) initWithTargetImage:(UIImage *)image;
 - (IBAction) savePhoto;
