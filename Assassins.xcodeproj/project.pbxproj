@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AssassinsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AssassinsAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* AssassinsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* AssassinsViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */; };
+		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
+		C71E4A431263859400670FFC /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A421263859400670FFC /* crosshairs.png */; };
+		C71E4A6212638D7B00670FFC /* AssassinTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6012638D7B00670FFC /* AssassinTransparent.png */; };
+		C71E4A6312638D7B00670FFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6112638D7B00670FFC /* Default.png */; };
+		C71E4A6A12638E8800670FFC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6912638E8800670FFC /* Icon.png */; };
+		C748E3171283CC32001658E2 /* AttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E3151283CC32001658E2 /* AttackViewController.m */; };
+		C748E3181283CC32001658E2 /* AttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748E3161283CC32001658E2 /* AttackViewController.xib */; };
+		C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E31A1283CC41001658E2 /* ShakeEventSource.m */; };
+		C748E31E1283CC41001658E2 /* SoundClipPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E31C1283CC41001658E2 /* SoundClipPool.m */; };
+		C748E34B1283CC5E001658E2 /* ah.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3211283CC5E001658E2 /* ah.caf */; };
+		C748E34C1283CC5E001658E2 /* dominating.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3221283CC5E001658E2 /* dominating.caf */; };
+		C748E34D1283CC5E001658E2 /* dude.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3231283CC5E001658E2 /* dude.caf */; };
+		C748E34E1283CC5E001658E2 /* excellent.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3241283CC5E001658E2 /* excellent.caf */; };
+		C748E34F1283CC5E001658E2 /* finishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3251283CC5E001658E2 /* finishhim.caf */; };
+		C748E3501283CC5E001658E2 /* firstblood.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3261283CC5E001658E2 /* firstblood.caf */; };
+		C748E3511283CC5E001658E2 /* godlike.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3271283CC5E001658E2 /* godlike.caf */; };
+		C748E3521283CC5E001658E2 /* hey.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3281283CC5E001658E2 /* hey.caf */; };
+		C748E3531283CC5E001658E2 /* holyshit.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3291283CC5E001658E2 /* holyshit.caf */; };
+		C748E3541283CC5E001658E2 /* isthatachicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32A1283CC5E001658E2 /* isthatachicken.caf */; };
+		C748E3551283CC5E001658E2 /* ludicrouskill.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32B1283CC5E001658E2 /* ludicrouskill.caf */; };
+		C748E3561283CC5E001658E2 /* mk4flaw.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32C1283CC5E001658E2 /* mk4flaw.caf */; };
+		C748E3571283CC5E001658E2 /* monsterkill.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32D1283CC5E001658E2 /* monsterkill.caf */; };
+		C748E3581283CC5E001658E2 /* oof.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32E1283CC5E001658E2 /* oof.caf */; };
+		C748E3591283CC5E001658E2 /* outstanding.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32F1283CC5E001658E2 /* outstanding.caf */; };
+		C748E35A1283CC5E001658E2 /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3301283CC5E001658E2 /* ow.caf */; };
+		C748E35B1283CC5E001658E2 /* pathetic.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3311283CC5E001658E2 /* pathetic.caf */; };
+		C748E35C1283CC5E001658E2 /* prepare.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3321283CC5E001658E2 /* prepare.caf */; };
+		C748E35D1283CC5E001658E2 /* punishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3331283CC5E001658E2 /* punishhim.caf */; };
+		C748E35E1283CC5E001658E2 /* rampage.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3341283CC5E001658E2 /* rampage.caf */; };
+		C748E35F1283CC5E001658E2 /* slap.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3351283CC5E001658E2 /* slap.caf */; };
+		C748E3601283CC5E001658E2 /* slap2.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3361283CC5E001658E2 /* slap2.caf */; };
+		C748E3611283CC5E001658E2 /* slap3.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3371283CC5E001658E2 /* slap3.caf */; };
+		C748E3621283CC5E001658E2 /* slap4.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3381283CC5E001658E2 /* slap4.caf */; };
+		C748E3631283CC5E001658E2 /* slap5.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3391283CC5E001658E2 /* slap5.caf */; };
+		C748E3641283CC5E001658E2 /* slap6.aif in Resources */ = {isa = PBXBuildFile; fileRef = C748E33A1283CC5E001658E2 /* slap6.aif */; };
+		C748E3651283CC5E001658E2 /* slap6.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33B1283CC5E001658E2 /* slap6.caf */; };
+		C748E3661283CC5E001658E2 /* slap7.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33C1283CC5E001658E2 /* slap7.caf */; };
+		C748E3671283CC5E001658E2 /* stop.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33D1283CC5E001658E2 /* stop.caf */; };
+		C748E3681283CC5E001658E2 /* stopit.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33E1283CC5E001658E2 /* stopit.caf */; };
+		C748E3691283CC5E001658E2 /* supurb.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33F1283CC5E001658E2 /* supurb.caf */; };
+		C748E36A1283CC5E001658E2 /* testyourmight.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3401283CC5E001658E2 /* testyourmight.caf */; };
+		C748E36B1283CC5E001658E2 /* thathurts.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3411283CC5E001658E2 /* thathurts.caf */; };
+		C748E36C1283CC5E001658E2 /* threat.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3421283CC5E001658E2 /* threat.caf */; };
+		C748E36D1283CC5E001658E2 /* uhh.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3431283CC5E001658E2 /* uhh.caf */; };
+		C748E36E1283CC5E001658E2 /* unstoppable.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3441283CC5E001658E2 /* unstoppable.caf */; };
+		C748E36F1283CC5E001658E2 /* weak.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3451283CC5E001658E2 /* weak.caf */; };
+		C748E3701283CC5E001658E2 /* welldone.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3461283CC5E001658E2 /* welldone.caf */; };
+		C748E3711283CC5E001658E2 /* whatthehell.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3471283CC5E001658E2 /* whatthehell.caf */; };
+		C748E3721283CC5E001658E2 /* wickedsick.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3481283CC5E001658E2 /* wickedsick.caf */; };
+		C748E3731283CC5E001658E2 /* youarenothing.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3491283CC5E001658E2 /* youarenothing.caf */; };
+		C748E3741283CC5E001658E2 /* yousuck.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E34A1283CC5E001658E2 /* yousuck.caf */; };
+		C748E3831283CF5B001658E2 /* RubberChicken.png in Resources */ = {isa = PBXBuildFile; fileRef = C748E3821283CF5B001658E2 /* RubberChicken.png */; };
+		C748E3CB1283D15F001658E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CA1283D15F001658E2 /* QuartzCore.framework */; };
+		C748E3CD1283D16D001658E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CC1283D16D001658E2 /* AVFoundation.framework */; };
+		C748E3CF1283D180001658E2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CE1283D180001658E2 /* AudioToolbox.framework */; };
+		C748E3E91283D822001658E2 /* RubberChickenKillOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = C748E3E81283D822001658E2 /* RubberChickenKillOverlay.png */; };
+		C748E40C1283DEA5001658E2 /* AttackCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */; };
+		C748E40D1283DEA5001658E2 /* AttackCompletedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */; };
+		C76E6EF71266C94300B48793 /* AssassinateHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */; };
+		C76E6EF81266C94300B48793 /* AssassinateHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AssassinsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssassinsAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AssassinsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssassinsAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Assassins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assassins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* AssassinsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssassinsViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* AssassinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssassinsViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssassinsViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Combine.h"; path = "Helpers/UIImage+Combine.h"; sourceTree = "<group>"; };
+		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassins_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Assassins-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Assassins-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C71E4A421263859400670FFC /* crosshairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshairs.png; path = Images/Weapons/crosshairs.png; sourceTree = "<group>"; };
+		C71E4A6012638D7B00670FFC /* AssassinTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssassinTransparent.png; path = Images/Application/AssassinTransparent.png; sourceTree = "<group>"; };
+		C71E4A6112638D7B00670FFC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/Application/Default.png; sourceTree = "<group>"; };
+		C71E4A6912638E8800670FFC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Application/Icon.png; sourceTree = "<group>"; };
+		C748E3141283CC32001658E2 /* AttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackViewController.h; path = ViewControllers/AttackViewController.h; sourceTree = "<group>"; };
+		C748E3151283CC32001658E2 /* AttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackViewController.m; path = ViewControllers/AttackViewController.m; sourceTree = "<group>"; };
+		C748E3161283CC32001658E2 /* AttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackViewController.xib; path = ViewControllers/AttackViewController.xib; sourceTree = "<group>"; };
+		C748E3191283CC41001658E2 /* ShakeEventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakeEventSource.h; path = Models/ShakeEventSource.h; sourceTree = "<group>"; };
+		C748E31A1283CC41001658E2 /* ShakeEventSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakeEventSource.m; path = Models/ShakeEventSource.m; sourceTree = "<group>"; };
+		C748E31B1283CC41001658E2 /* SoundClipPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundClipPool.h; path = Models/SoundClipPool.h; sourceTree = "<group>"; };
+		C748E31C1283CC41001658E2 /* SoundClipPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundClipPool.m; path = Models/SoundClipPool.m; sourceTree = "<group>"; };
+		C748E3211283CC5E001658E2 /* ah.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ah.caf; path = Sounds/ah.caf; sourceTree = "<group>"; };
+		C748E3221283CC5E001658E2 /* dominating.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dominating.caf; path = Sounds/dominating.caf; sourceTree = "<group>"; };
+		C748E3231283CC5E001658E2 /* dude.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dude.caf; path = Sounds/dude.caf; sourceTree = "<group>"; };
+		C748E3241283CC5E001658E2 /* excellent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = excellent.caf; path = Sounds/excellent.caf; sourceTree = "<group>"; };
+		C748E3251283CC5E001658E2 /* finishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = finishhim.caf; path = Sounds/finishhim.caf; sourceTree = "<group>"; };
+		C748E3261283CC5E001658E2 /* firstblood.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = firstblood.caf; path = Sounds/firstblood.caf; sourceTree = "<group>"; };
+		C748E3271283CC5E001658E2 /* godlike.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = godlike.caf; path = Sounds/godlike.caf; sourceTree = "<group>"; };
+		C748E3281283CC5E001658E2 /* hey.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey.caf; path = Sounds/hey.caf; sourceTree = "<group>"; };
+		C748E3291283CC5E001658E2 /* holyshit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = holyshit.caf; path = Sounds/holyshit.caf; sourceTree = "<group>"; };
+		C748E32A1283CC5E001658E2 /* isthatachicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = isthatachicken.caf; path = Sounds/isthatachicken.caf; sourceTree = "<group>"; };
+		C748E32B1283CC5E001658E2 /* ludicrouskill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ludicrouskill.caf; path = Sounds/ludicrouskill.caf; sourceTree = "<group>"; };
+		C748E32C1283CC5E001658E2 /* mk4flaw.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mk4flaw.caf; path = Sounds/mk4flaw.caf; sourceTree = "<group>"; };
+		C748E32D1283CC5E001658E2 /* monsterkill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = monsterkill.caf; path = Sounds/monsterkill.caf; sourceTree = "<group>"; };
+		C748E32E1283CC5E001658E2 /* oof.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = oof.caf; path = Sounds/oof.caf; sourceTree = "<group>"; };
+		C748E32F1283CC5E001658E2 /* outstanding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = outstanding.caf; path = Sounds/outstanding.caf; sourceTree = "<group>"; };
+		C748E3301283CC5E001658E2 /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow.caf; path = Sounds/ow.caf; sourceTree = "<group>"; };
+		C748E3311283CC5E001658E2 /* pathetic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pathetic.caf; path = Sounds/pathetic.caf; sourceTree = "<group>"; };
+		C748E3321283CC5E001658E2 /* prepare.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = prepare.caf; path = Sounds/prepare.caf; sourceTree = "<group>"; };
+		C748E3331283CC5E001658E2 /* punishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = punishhim.caf; path = Sounds/punishhim.caf; sourceTree = "<group>"; };
+		C748E3341283CC5E001658E2 /* rampage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = rampage.caf; path = Sounds/rampage.caf; sourceTree = "<group>"; };
+		C748E3351283CC5E001658E2 /* slap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap.caf; path = Sounds/slap.caf; sourceTree = "<group>"; };
+		C748E3361283CC5E001658E2 /* slap2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap2.caf; path = Sounds/slap2.caf; sourceTree = "<group>"; };
+		C748E3371283CC5E001658E2 /* slap3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap3.caf; path = Sounds/slap3.caf; sourceTree = "<group>"; };
+		C748E3381283CC5E001658E2 /* slap4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap4.caf; path = Sounds/slap4.caf; sourceTree = "<group>"; };
+		C748E3391283CC5E001658E2 /* slap5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap5.caf; path = Sounds/slap5.caf; sourceTree = "<group>"; };
+		C748E33A1283CC5E001658E2 /* slap6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.aif; path = Sounds/slap6.aif; sourceTree = "<group>"; };
+		C748E33B1283CC5E001658E2 /* slap6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.caf; path = Sounds/slap6.caf; sourceTree = "<group>"; };
+		C748E33C1283CC5E001658E2 /* slap7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap7.caf; path = Sounds/slap7.caf; sourceTree = "<group>"; };
+		C748E33D1283CC5E001658E2 /* stop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stop.caf; path = Sounds/stop.caf; sourceTree = "<group>"; };
+		C748E33E1283CC5E001658E2 /* stopit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stopit.caf; path = Sounds/stopit.caf; sourceTree = "<group>"; };
+		C748E33F1283CC5E001658E2 /* supurb.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = supurb.caf; path = Sounds/supurb.caf; sourceTree = "<group>"; };
+		C748E3401283CC5E001658E2 /* testyourmight.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = testyourmight.caf; path = Sounds/testyourmight.caf; sourceTree = "<group>"; };
+		C748E3411283CC5E001658E2 /* thathurts.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = thathurts.caf; path = Sounds/thathurts.caf; sourceTree = "<group>"; };
+		C748E3421283CC5E001658E2 /* threat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = threat.caf; path = Sounds/threat.caf; sourceTree = "<group>"; };
+		C748E3431283CC5E001658E2 /* uhh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh.caf; path = Sounds/uhh.caf; sourceTree = "<group>"; };
+		C748E3441283CC5E001658E2 /* unstoppable.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = unstoppable.caf; path = Sounds/unstoppable.caf; sourceTree = "<group>"; };
+		C748E3451283CC5E001658E2 /* weak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = weak.caf; path = Sounds/weak.caf; sourceTree = "<group>"; };
+		C748E3461283CC5E001658E2 /* welldone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = welldone.caf; path = Sounds/welldone.caf; sourceTree = "<group>"; };
+		C748E3471283CC5E001658E2 /* whatthehell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whatthehell.caf; path = Sounds/whatthehell.caf; sourceTree = "<group>"; };
+		C748E3481283CC5E001658E2 /* wickedsick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wickedsick.caf; path = Sounds/wickedsick.caf; sourceTree = "<group>"; };
+		C748E3491283CC5E001658E2 /* youarenothing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = youarenothing.caf; path = Sounds/youarenothing.caf; sourceTree = "<group>"; };
+		C748E34A1283CC5E001658E2 /* yousuck.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yousuck.caf; path = Sounds/yousuck.caf; sourceTree = "<group>"; };
+		C748E3821283CF5B001658E2 /* RubberChicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RubberChicken.png; path = Images/Weapons/RubberChicken/RubberChicken.png; sourceTree = "<group>"; };
+		C748E3CA1283D15F001658E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = iphoneos4.1/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
+		C748E3CC1283D16D001658E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = iphoneos4.1/System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
+		C748E3CE1283D180001658E2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = iphoneos4.1/System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
+		C748E3E81283D822001658E2 /* RubberChickenKillOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RubberChickenKillOverlay.png; path = Images/Weapons/RubberChicken/RubberChickenKillOverlay.png; sourceTree = "<group>"; };
+		C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackCompletedViewController.h; path = ViewControllers/AttackCompletedViewController.h; sourceTree = "<group>"; };
+		C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackCompletedViewController.m; path = ViewControllers/AttackCompletedViewController.m; sourceTree = "<group>"; };
+		C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackCompletedViewController.xib; path = ViewControllers/AttackCompletedViewController.xib; sourceTree = "<group>"; };
+		C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssassinateHUDViewController.h; path = ViewControllers/AssassinateHUDViewController.h; sourceTree = "<group>"; };
+		C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssassinateHUDViewController.m; path = ViewControllers/AssassinateHUDViewController.m; sourceTree = "<group>"; };
+		C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AssassinateHUDViewController.xib; path = ViewControllers/AssassinateHUDViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				C748E3CB1283D15F001658E2 /* QuartzCore.framework in Frameworks */,
+				C748E3CD1283D16D001658E2 /* AVFoundation.framework in Frameworks */,
+				C748E3CF1283D180001658E2 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C71E4BF91263BEB600670FFC /* Helpers */,
+				C71E4B951263AF4100670FFC /* Models */,
+				C71E4A371263828000670FFC /* ViewControllers */,
+				1D3623240D0F684500981E51 /* AssassinsAppDelegate.h */,
+				1D3623250D0F684500981E51 /* AssassinsAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* AssassinsViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Assassins.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3201283CC48001658E2 /* Sounds */,
+				C71E4A321263819F00670FFC /* Images */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* AssassinsViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Assassins-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3CA1283D15F001658E2 /* QuartzCore.framework */,
+				C748E3CC1283D16D001658E2 /* AVFoundation.framework */,
+				C748E3CE1283D180001658E2 /* AudioToolbox.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C71E4A321263819F00670FFC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C71E4A5F12638D6600670FFC /* Application */,
+				C71E4A33126381A600670FFC /* Weapons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C71E4A33126381A600670FFC /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3811283CF4A001658E2 /* RubberChicken */,
+				C71E4A421263859400670FFC /* crosshairs.png */,
+			);
+			name = Weapons;
+			sourceTree = "<group>";
+		};
+		C71E4A371263828000670FFC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */,
+				C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */,
+				C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */,
+				C748E3141283CC32001658E2 /* AttackViewController.h */,
+				C748E3151283CC32001658E2 /* AttackViewController.m */,
+				C748E3161283CC32001658E2 /* AttackViewController.xib */,
+				C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */,
+				C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */,
+				C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C71E4A5F12638D6600670FFC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C71E4A6912638E8800670FFC /* Icon.png */,
+				C71E4A6012638D7B00670FFC /* AssassinTransparent.png */,
+				C71E4A6112638D7B00670FFC /* Default.png */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		C71E4B951263AF4100670FFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3191283CC41001658E2 /* ShakeEventSource.h */,
+				C748E31A1283CC41001658E2 /* ShakeEventSource.m */,
+				C748E31B1283CC41001658E2 /* SoundClipPool.h */,
+				C748E31C1283CC41001658E2 /* SoundClipPool.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C71E4BF91263BEB600670FFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */,
+				2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C748E3201283CC48001658E2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3211283CC5E001658E2 /* ah.caf */,
+				C748E3221283CC5E001658E2 /* dominating.caf */,
+				C748E3231283CC5E001658E2 /* dude.caf */,
+				C748E3241283CC5E001658E2 /* excellent.caf */,
+				C748E3251283CC5E001658E2 /* finishhim.caf */,
+				C748E3261283CC5E001658E2 /* firstblood.caf */,
+				C748E3271283CC5E001658E2 /* godlike.caf */,
+				C748E3281283CC5E001658E2 /* hey.caf */,
+				C748E3291283CC5E001658E2 /* holyshit.caf */,
+				C748E32A1283CC5E001658E2 /* isthatachicken.caf */,
+				C748E32B1283CC5E001658E2 /* ludicrouskill.caf */,
+				C748E32C1283CC5E001658E2 /* mk4flaw.caf */,
+				C748E32D1283CC5E001658E2 /* monsterkill.caf */,
+				C748E32E1283CC5E001658E2 /* oof.caf */,
+				C748E32F1283CC5E001658E2 /* outstanding.caf */,
+				C748E3301283CC5E001658E2 /* ow.caf */,
+				C748E3311283CC5E001658E2 /* pathetic.caf */,
+				C748E3321283CC5E001658E2 /* prepare.caf */,
+				C748E3331283CC5E001658E2 /* punishhim.caf */,
+				C748E3341283CC5E001658E2 /* rampage.caf */,
+				C748E3351283CC5E001658E2 /* slap.caf */,
+				C748E3361283CC5E001658E2 /* slap2.caf */,
+				C748E3371283CC5E001658E2 /* slap3.caf */,
+				C748E3381283CC5E001658E2 /* slap4.caf */,
+				C748E3391283CC5E001658E2 /* slap5.caf */,
+				C748E33A1283CC5E001658E2 /* slap6.aif */,
+				C748E33B1283CC5E001658E2 /* slap6.caf */,
+				C748E33C1283CC5E001658E2 /* slap7.caf */,
+				C748E33D1283CC5E001658E2 /* stop.caf */,
+				C748E33E1283CC5E001658E2 /* stopit.caf */,
+				C748E33F1283CC5E001658E2 /* supurb.caf */,
+				C748E3401283CC5E001658E2 /* testyourmight.caf */,
+				C748E3411283CC5E001658E2 /* thathurts.caf */,
+				C748E3421283CC5E001658E2 /* threat.caf */,
+				C748E3431283CC5E001658E2 /* uhh.caf */,
+				C748E3441283CC5E001658E2 /* unstoppable.caf */,
+				C748E3451283CC5E001658E2 /* weak.caf */,
+				C748E3461283CC5E001658E2 /* welldone.caf */,
+				C748E3471283CC5E001658E2 /* whatthehell.caf */,
+				C748E3481283CC5E001658E2 /* wickedsick.caf */,
+				C748E3491283CC5E001658E2 /* youarenothing.caf */,
+				C748E34A1283CC5E001658E2 /* yousuck.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		C748E3811283CF4A001658E2 /* RubberChicken */ = {
+			isa = PBXGroup;
+			children = (
+				C748E3E81283D822001658E2 /* RubberChickenKillOverlay.png */,
+				C748E3821283CF5B001658E2 /* RubberChicken.png */,
+			);
+			name = RubberChicken;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Assassins */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Assassins" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Assassins;
+			productName = Assassins;
+			productReference = 1D6058910D05DD3D006BFB54 /* Assassins.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Assassins" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Assassins */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* AssassinsViewController.xib in Resources */,
+				C71E4A431263859400670FFC /* crosshairs.png in Resources */,
+				C71E4A6212638D7B00670FFC /* AssassinTransparent.png in Resources */,
+				C71E4A6312638D7B00670FFC /* Default.png in Resources */,
+				C71E4A6A12638E8800670FFC /* Icon.png in Resources */,
+				C76E6EF81266C94300B48793 /* AssassinateHUDViewController.xib in Resources */,
+				C748E3181283CC32001658E2 /* AttackViewController.xib in Resources */,
+				C748E34B1283CC5E001658E2 /* ah.caf in Resources */,
+				C748E34C1283CC5E001658E2 /* dominating.caf in Resources */,
+				C748E34D1283CC5E001658E2 /* dude.caf in Resources */,
+				C748E34E1283CC5E001658E2 /* excellent.caf in Resources */,
+				C748E34F1283CC5E001658E2 /* finishhim.caf in Resources */,
+				C748E3501283CC5E001658E2 /* firstblood.caf in Resources */,
+				C748E3511283CC5E001658E2 /* godlike.caf in Resources */,
+				C748E3521283CC5E001658E2 /* hey.caf in Resources */,
+				C748E3531283CC5E001658E2 /* holyshit.caf in Resources */,
+				C748E3541283CC5E001658E2 /* isthatachicken.caf in Resources */,
+				C748E3551283CC5E001658E2 /* ludicrouskill.caf in Resources */,
+				C748E3561283CC5E001658E2 /* mk4flaw.caf in Resources */,
+				C748E3571283CC5E001658E2 /* monsterkill.caf in Resources */,
+				C748E3581283CC5E001658E2 /* oof.caf in Resources */,
+				C748E3591283CC5E001658E2 /* outstanding.caf in Resources */,
+				C748E35A1283CC5E001658E2 /* ow.caf in Resources */,
+				C748E35B1283CC5E001658E2 /* pathetic.caf in Resources */,
+				C748E35C1283CC5E001658E2 /* prepare.caf in Resources */,
+				C748E35D1283CC5E001658E2 /* punishhim.caf in Resources */,
+				C748E35E1283CC5E001658E2 /* rampage.caf in Resources */,
+				C748E35F1283CC5E001658E2 /* slap.caf in Resources */,
+				C748E3601283CC5E001658E2 /* slap2.caf in Resources */,
+				C748E3611283CC5E001658E2 /* slap3.caf in Resources */,
+				C748E3621283CC5E001658E2 /* slap4.caf in Resources */,
+				C748E3631283CC5E001658E2 /* slap5.caf in Resources */,
+				C748E3641283CC5E001658E2 /* slap6.aif in Resources */,
+				C748E3651283CC5E001658E2 /* slap6.caf in Resources */,
+				C748E3661283CC5E001658E2 /* slap7.caf in Resources */,
+				C748E3671283CC5E001658E2 /* stop.caf in Resources */,
+				C748E3681283CC5E001658E2 /* stopit.caf in Resources */,
+				C748E3691283CC5E001658E2 /* supurb.caf in Resources */,
+				C748E36A1283CC5E001658E2 /* testyourmight.caf in Resources */,
+				C748E36B1283CC5E001658E2 /* thathurts.caf in Resources */,
+				C748E36C1283CC5E001658E2 /* threat.caf in Resources */,
+				C748E36D1283CC5E001658E2 /* uhh.caf in Resources */,
+				C748E36E1283CC5E001658E2 /* unstoppable.caf in Resources */,
+				C748E36F1283CC5E001658E2 /* weak.caf in Resources */,
+				C748E3701283CC5E001658E2 /* welldone.caf in Resources */,
+				C748E3711283CC5E001658E2 /* whatthehell.caf in Resources */,
+				C748E3721283CC5E001658E2 /* wickedsick.caf in Resources */,
+				C748E3731283CC5E001658E2 /* youarenothing.caf in Resources */,
+				C748E3741283CC5E001658E2 /* yousuck.caf in Resources */,
+				C748E3831283CF5B001658E2 /* RubberChicken.png in Resources */,
+				C748E3E91283D822001658E2 /* RubberChickenKillOverlay.png in Resources */,
+				C748E40D1283DEA5001658E2 /* AttackCompletedViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AssassinsAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */,
+				C76E6EF71266C94300B48793 /* AssassinateHUDViewController.m in Sources */,
+				2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */,
+				C748E3171283CC32001658E2 /* AttackViewController.m in Sources */,
+				C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */,
+				C748E31E1283CC41001658E2 /* SoundClipPool.m in Sources */,
+				C748E40C1283DEA5001658E2 /* AttackCompletedViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Assassins_Prefix.pch;
+				INFOPLIST_FILE = "Assassins-Info.plist";
+				PRODUCT_NAME = Assassins;
+				SDKROOT = iphoneos4.2;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Assassins_Prefix.pch;
+				INFOPLIST_FILE = "Assassins-Info.plist";
+				PRODUCT_NAME = Assassins;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Assassins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Assassins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
