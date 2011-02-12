@@ -33,6 +33,8 @@
 @property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
 
 - (id) initWithTargetImage:(UIImage *)image;
+
+- (IBAction)slapButton;
 	
 @end
 

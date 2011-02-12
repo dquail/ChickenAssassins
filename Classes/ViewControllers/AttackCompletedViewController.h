@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @class AssassinsAppDelegate;
 
-@interface AttackCompletedViewController : UIViewController {
+@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
@@ -25,4 +26,7 @@
 
 - (id) initWithTargetImage:(UIImage *)image;
 - (IBAction) savePhoto;
+
+- (IBAction) postToFacebook;
+- (IBAction) emailPhoto;
 @end
