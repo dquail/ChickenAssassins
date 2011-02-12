@@ -12,6 +12,8 @@
 @implementation AssassinateHUDViewController
 
 @synthesize targetImage, overlay;
+@synthesize locationManager;
+@synthesize startingPoint;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -40,6 +42,10 @@
 		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
 	}
 
+	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+	locationManager.delegate = self;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	[locationManager startUpdatingLocation];	
 }
 
 - (void) viewDidAppear:(BOOL)animated{
@@ -79,6 +85,16 @@
 - (IBAction) onLockTarget{
 	//Take a photo of the target.  
 	[camera takePicture];
+}
+#pragma mark -
+#pragma mark CLLocationManagerDelegate Methods
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+		   fromLocation:(CLLocation *)oldLocation {
+	
+	[locationManager stopUpdatingLocation];
+	
+	self.startingPoint = newLocation;
 }
 
 #pragma mark -
