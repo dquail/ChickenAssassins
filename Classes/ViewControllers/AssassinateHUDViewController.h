@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Weapon.h"
-#import "RayGun.h"
 
 @interface AssassinateHUDViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 	UIImagePickerController *camera;

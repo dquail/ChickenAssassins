@@ -28,13 +28,17 @@
     [super viewDidLoad];	
 	
 	camera  = [[UIImagePickerController alloc] init];
-	camera.sourceType =  UIImagePickerControllerSourceTypeCamera;
-	camera.delegate = self;
-	camera.allowsEditing = NO;
-	camera.showsCameraControls = NO;
-	camera.toolbarHidden = YES;
-	camera.wantsFullScreenLayout = YES;
-	camera.cameraOverlayView = self.overlay;
+	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+		camera.sourceType =  UIImagePickerControllerSourceTypeCamera;
+		camera.delegate = self;
+		camera.allowsEditing = NO;
+		camera.showsCameraControls = NO;
+		camera.toolbarHidden = YES;
+		camera.wantsFullScreenLayout = YES;
+		camera.cameraOverlayView = self.overlay;
+	} else {
+		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+	}
 
 }
 

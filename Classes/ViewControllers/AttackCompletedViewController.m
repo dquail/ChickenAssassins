@@ -21,16 +21,6 @@
 	return self;
 }
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -76,6 +66,23 @@
 	UIImageWriteToSavedPhotosAlbum(killedImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
+- (IBAction) postToFacebook {
+	//TODO: implement postToFacebook
+}
+
+- (IBAction) emailPhoto {
+	if ([MFMailComposeViewController canSendMail]) {
+		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+		mailComposer.mailComposeDelegate = self; 
+		[mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
+		[mailComposer addAttachmentData:UIImagePNGRepresentation(targetImage) mimeType:@"image/png" fileName:@"image"]; 
+		[mailComposer setMessageBody:NSLocalizedString(@"Here's a picture that I took with my iPhone.", 
+													   @"Here's a picture that I took with my iPhone.") isHTML:NO]; 
+		[self presentModalViewController:mailComposer animated:YES]; 
+		[mailComposer release];
+	}
+}
+
 #pragma mark -
 #pragma mark UIImagePickerController delegate
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo; 
@@ -95,5 +102,14 @@
 								 otherButtonTitles:nil];
 	[alert show];
 	[alert release];
+}
+
+#pragma mark -
+#pragma mark Mail Compose Delegate Methods
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+		  didFinishWithResult:(MFMailComposeResult)result 
+						error:(NSError*)error {
+	
+	//TODO: implement Mail Compose delegate methods
 }
 @end
