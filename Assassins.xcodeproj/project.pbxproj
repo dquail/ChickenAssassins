@@ -76,6 +76,7 @@
 		C748E40D1283DEA5001658E2 /* AttackCompletedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */; };
 		C76E6EF71266C94300B48793 /* AssassinateHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */; };
 		C76E6EF81266C94300B48793 /* AssassinateHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */; };
+		C7BF177C1307307D005F7762 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BF177B1307307D005F7762 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +160,7 @@
 		C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssassinateHUDViewController.h; path = ViewControllers/AssassinateHUDViewController.h; sourceTree = "<group>"; };
 		C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssassinateHUDViewController.m; path = ViewControllers/AssassinateHUDViewController.m; sourceTree = "<group>"; };
 		C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AssassinateHUDViewController.xib; path = ViewControllers/AssassinateHUDViewController.xib; sourceTree = "<group>"; };
+		C7BF177B1307307D005F7762 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				C748E3CD1283D16D001658E2 /* AVFoundation.framework in Frameworks */,
 				C748E3CF1283D180001658E2 /* AudioToolbox.framework in Frameworks */,
 				A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */,
+				C7BF177C1307307D005F7762 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +247,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				C7BF177B1307307D005F7762 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
