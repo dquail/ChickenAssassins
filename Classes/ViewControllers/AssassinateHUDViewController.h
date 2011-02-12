@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface AssassinateHUDViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+@interface AssassinateHUDViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate> {
 	UIImagePickerController *camera;
 	UIView *overlay;
+	CLLocationManager	*locationManager;
+	CLLocation			*startingPoint;
 }
 
 @property (nonatomic, retain) UIImage *targetImage;
 @property (nonatomic, retain) IBOutlet UIView *overlay;
+@property (retain, nonatomic) CLLocationManager *locationManager;
+@property (retain, nonatomic) CLLocation *startingPoint;
 
 - (IBAction) onLockTarget; 
 
