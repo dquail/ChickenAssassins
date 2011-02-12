@@ -8,6 +8,7 @@
 
 #import "AssassinateHUDViewController.h"
 #import "AttackViewController.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation AssassinateHUDViewController
 

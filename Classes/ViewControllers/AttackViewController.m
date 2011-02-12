@@ -8,6 +8,7 @@
 
 #import "AttackViewController.h"
 #import "AttackCompletedViewController.h"
+#import "AssassinsAppDelegate.h"
 
 @interface AttackViewController (Private)
 - (void) finishKill;
