@@ -23,7 +23,11 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
+<<<<<<< HEAD
 #define HITS_TO_KILL 3
+=======
+#define HITS_TO_KILL 10
+>>>>>>> ac2abaa720eefecd41f2dfc4675fe57856ef8389
 #define HITS_TO_FINISH_HIM 2
 
 - (IBAction)slapButton {
@@ -32,7 +36,7 @@
 
 - (void) completeInitialization {
 	shakeEventSource = [[ShakeEventSource alloc] init];
-	
+	slapHistory = [[NSMutableString alloc] initWithString:@""];	
 	[shakeEventSource addDelegate: self];
 
 	/*
@@ -158,11 +162,12 @@
 - (void) slap {
 	NSLog(@"Slapping %d", slapCount);
 	++slapCount;
+	shouldPlayFinishHim = NO;
 	if (slapCount >= HITS_TO_KILL){
 		[self finishKill];
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
-		[finishHimClips playRandomClip];
+		shouldPlayFinishHim = YES;
 	}
 
 	else{
@@ -184,44 +189,55 @@
 	double currentTime = CACurrentMediaTime();
 	
 	if ((currentTime - lastSlapTime) >= 0.5) {
-		NSLog(@"%lf %lf", currentTime, lastSlapTime);
+		//NSLog(@"%lf %lf", currentTime, lastSlapTime);
 		slapping = NO;
 	}
 }
 
 - (void) shake: (int) direction {
 	if (direction & AccelerometerShakeDirectionLeft) {
-		NSLog(@"AccelerometerShakeDirectionLeft");
+		NSLog(@"AccelerofmeterShakeDirectionLeft");
+		[slapHistory appendString:@"L"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
+		[slapHistory appendString:@"R"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
 		NSLog(@"AccelerometerShakeDirectionUp");
+		[slapHistory appendString:@"U"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
 		NSLog(@"AccelerometerShakeDirectionDown");
+		[slapHistory appendString:@"D"];		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
 		[self slap];
+		[slapHistory appendString:@"F"];		
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	
 	if (direction & AccelerometerShakeDirectionPull) {
+		[slapHistory appendString:@"B"];		
 		NSLog(@"AccelerometerShakeDirectionPull");
 	}
+	NSLog(@"Slap history: %@",slapHistory);
 }
 
 - (void) playNextResponse {
-	if (slapping) {
+	if (shouldPlayFinishHim)
+	{
+		[finishHimClips playRandomClip];
+	}
+	else if (slapping) {
 		[responseClips playRandomClip];
 	}
 }
