@@ -74,9 +74,21 @@
 #pragma mark -
 #pragma mark IBOutlet methods
 
+- (IBAction) onCancel{
+	if (self.delegate!=nil)
+	{
+		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
+		{
+			[self.delegate donePickingFriendWithID:nil];
+		}
+	}
+}
+
 - (IBAction) onPost{
-	//Stub in facebook ID for now
-	NSString *facebookFriendID = @"1234";
+	
+	NSDictionary *firstFriendTest = [arrayOfFriends objectAtIndex:currentRow];
+	NSString *facebookFriendID = (NSString*) [firstFriendTest objectForKey:@"id"];
+	
 	if (self.delegate!=nil)
 	{
 		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
