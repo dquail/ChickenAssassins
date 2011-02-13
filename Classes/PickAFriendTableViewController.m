@@ -11,7 +11,7 @@
 
 @implementation PickAFriendTableViewController
 
-@synthesize delegate;
+@synthesize delegate, friendPic, imageView;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -23,20 +23,22 @@
 }
 */
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture{
 	NSLog(@"Friend Array - %d", [friendArray count]);
 	NSDictionary *firstFriendTest = [friendArray objectAtIndex:0];
 	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
 	NSString *userID = (NSString*) [firstFriendTest objectForKey:@"id"];
 	NSLog(@"First friend name: %@ id: %@", name, userID);	
+	self.friendPic = friendPicture;
 	return [self initWithNibName:nil bundle:nil];
 }
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.imageView.image = self.friendPic;
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

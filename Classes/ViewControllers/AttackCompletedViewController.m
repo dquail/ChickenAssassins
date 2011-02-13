@@ -201,8 +201,9 @@ static NSString* kAppId = @"189234387766257";
 	}
 	NSLog(@"friend count: %d", [friendArray count]);
 
-
-	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray];
+	UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
+	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
+																							   friendPic:image];
 	pickController.delegate = self;
 	[self presentModalViewController:pickController animated:YES];
 };
