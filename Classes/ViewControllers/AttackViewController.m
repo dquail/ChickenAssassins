@@ -41,13 +41,13 @@
 	slapClips = [[SoundClipPool alloc] init];
 	
 	NSString *slapURLs[] = {
-		@"slap.caf",
-		@"slap7.caf",
-		@"slap2.caf",
-		@"slap3.caf",
-		@"slap6.caf",
-		@"slap4.caf",
-		@"slap5.caf",
+		@"slap_splat_3.caf",
+		//@"slap7.caf",
+		//@"slap2.caf",
+		//@"slap3.caf",
+		//@"slap6.caf",
+		//@"slap4.caf",
+		//@"slap5.caf",
 	};
 	
 	for (int i = 0; i < (sizeof(slapURLs) / sizeof(slapURLs[0])); i++) {
