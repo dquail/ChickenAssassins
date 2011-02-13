@@ -69,7 +69,7 @@
 }
 
 - (IBAction) postToFacebook {
-	//TODO: implement postToFacebook
+	//TODO: Facebook
 }
 
 - (IBAction) emailPhoto {
@@ -115,4 +115,5 @@
 						error:(NSError*)error {
 	[self dismissModalViewControllerAnimated:YES];
 }
+
 @end
