@@ -36,6 +36,49 @@
 		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
 		A5CCF395130882E000BEF209 /* friendPick.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF393130882E000BEF209 /* friendPick.png */; };
 		A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF394130882E000BEF209 /* friendPick@2x.png */; };
+		A5CCF3BE1308881A00BEF209 /* ah2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A71308881900BEF209 /* ah2.caf */; };
+		A5CCF3BF1308881A00BEF209 /* chicken_squawk1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */; };
+		A5CCF3C01308881A00BEF209 /* chicken_squawk2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */; };
+		A5CCF3C11308881A00BEF209 /* dude2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AA1308881900BEF209 /* dude2.caf */; };
+		A5CCF3C21308881A00BEF209 /* dude3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AB1308881900BEF209 /* dude3.caf */; };
+		A5CCF3C31308881A00BEF209 /* hesgotarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */; };
+		A5CCF3C41308881A00BEF209 /* hey_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AD1308881900BEF209 /* hey_ow.caf */; };
+		A5CCF3C51308881A00BEF209 /* hey2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AE1308881900BEF209 /* hey2.caf */; };
+		A5CCF3C61308881A00BEF209 /* hey3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AF1308881A00BEF209 /* hey3.caf */; };
+		A5CCF3C71308881A00BEF209 /* isthatarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */; };
+		A5CCF3C81308881A00BEF209 /* oomf1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B11308881A00BEF209 /* oomf1.caf */; };
+		A5CCF3C91308881A00BEF209 /* ow_whine.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B21308881A00BEF209 /* ow_whine.caf */; };
+		A5CCF3CA1308881A00BEF209 /* ow2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B31308881A00BEF209 /* ow2.caf */; };
+		A5CCF3CB1308881A00BEF209 /* ow3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B41308881A00BEF209 /* ow3.caf */; };
+		A5CCF3CC1308881A00BEF209 /* ow4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B51308881A00BEF209 /* ow4.caf */; };
+		A5CCF3CD1308881A00BEF209 /* stopit2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B61308881A00BEF209 /* stopit2.caf */; };
+		A5CCF3CE1308881A00BEF209 /* uhh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B71308881A00BEF209 /* uhh2.caf */; };
+		A5CCF3CF1308881A00BEF209 /* uhh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B81308881A00BEF209 /* uhh3.caf */; };
+		A5CCF3D01308881A00BEF209 /* uhh4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B91308881A00BEF209 /* uhh4.caf */; };
+		A5CCF3D11308881A00BEF209 /* umm_ouch.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */; };
+		A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BB1308881A00BEF209 /* what_the1.caf */; };
+		A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BC1308881A00BEF209 /* what_the2.caf */; };
+		A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BD1308881A00BEF209 /* what_the3.caf */; };
+		A5CCF3EA1308887400BEF209 /* slap _splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D61308887400BEF209 /* slap _splat_3.caf */; };
+		A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D71308887400BEF209 /* slap_bonk.caf */; };
+		A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D81308887400BEF209 /* slap_hard_1.caf */; };
+		A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D91308887400BEF209 /* slap_hard_2.caf */; };
+		A5CCF3EE1308887400BEF209 /* slap_light_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DA1308887400BEF209 /* slap_light_1.caf */; };
+		A5CCF3EF1308887400BEF209 /* slap_light_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DB1308887400BEF209 /* slap_light_2.caf */; };
+		A5CCF3F01308887400BEF209 /* slap_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DC1308887400BEF209 /* slap_ow.caf */; };
+		A5CCF3F11308887400BEF209 /* slap_splat _2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */; };
+		A5CCF3F21308887400BEF209 /* slap_splat_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */; };
+		A5CCF3F31308887400BEF209 /* slap_splat_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */; };
+		A5CCF3F41308887400BEF209 /* slap_squeak.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E01308887400BEF209 /* slap_squeak.caf */; };
+		A5CCF3F51308887400BEF209 /* slap01.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E11308887400BEF209 /* slap01.caf */; };
+		A5CCF3F61308887400BEF209 /* slap02.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E21308887400BEF209 /* slap02.caf */; };
+		A5CCF3F71308887400BEF209 /* slap03.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E31308887400BEF209 /* slap03.caf */; };
+		A5CCF3F81308887400BEF209 /* slap04.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E41308887400BEF209 /* slap04.caf */; };
+		A5CCF3F91308887400BEF209 /* slap05.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E51308887400BEF209 /* slap05.caf */; };
+		A5CCF3FA1308887400BEF209 /* slap06.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E61308887400BEF209 /* slap06.caf */; };
+		A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E71308887400BEF209 /* slap07.caf */; };
+		A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E81308887400BEF209 /* slap08.caf */; };
+		A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E91308887400BEF209 /* squawk.caf */; };
 		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
 		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
 		A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247251307459F00E8A6DF /* NSString+SBJSON.m */; };
@@ -146,6 +189,49 @@
 		A5C9C745130728410088BE1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A5CCF393130882E000BEF209 /* friendPick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendPick.png; sourceTree = "<group>"; };
 		A5CCF394130882E000BEF209 /* friendPick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friendPick@2x.png"; sourceTree = "<group>"; };
+		A5CCF3A71308881900BEF209 /* ah2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ah2.caf; sourceTree = "<group>"; };
+		A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicken_squawk1.caf; sourceTree = "<group>"; };
+		A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicken_squawk2.caf; sourceTree = "<group>"; };
+		A5CCF3AA1308881900BEF209 /* dude2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dude2.caf; sourceTree = "<group>"; };
+		A5CCF3AB1308881900BEF209 /* dude3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dude3.caf; sourceTree = "<group>"; };
+		A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hesgotarubberchicken.caf; sourceTree = "<group>"; };
+		A5CCF3AD1308881900BEF209 /* hey_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_ow.caf; sourceTree = "<group>"; };
+		A5CCF3AE1308881900BEF209 /* hey2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey2.caf; sourceTree = "<group>"; };
+		A5CCF3AF1308881A00BEF209 /* hey3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey3.caf; sourceTree = "<group>"; };
+		A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = isthatarubberchicken.caf; sourceTree = "<group>"; };
+		A5CCF3B11308881A00BEF209 /* oomf1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oomf1.caf; sourceTree = "<group>"; };
+		A5CCF3B21308881A00BEF209 /* ow_whine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow_whine.caf; sourceTree = "<group>"; };
+		A5CCF3B31308881A00BEF209 /* ow2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow2.caf; sourceTree = "<group>"; };
+		A5CCF3B41308881A00BEF209 /* ow3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow3.caf; sourceTree = "<group>"; };
+		A5CCF3B51308881A00BEF209 /* ow4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow4.caf; sourceTree = "<group>"; };
+		A5CCF3B61308881A00BEF209 /* stopit2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stopit2.caf; sourceTree = "<group>"; };
+		A5CCF3B71308881A00BEF209 /* uhh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh2.caf; sourceTree = "<group>"; };
+		A5CCF3B81308881A00BEF209 /* uhh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh3.caf; sourceTree = "<group>"; };
+		A5CCF3B91308881A00BEF209 /* uhh4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh4.caf; sourceTree = "<group>"; };
+		A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = umm_ouch.caf; sourceTree = "<group>"; };
+		A5CCF3BB1308881A00BEF209 /* what_the1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the1.caf; sourceTree = "<group>"; };
+		A5CCF3BC1308881A00BEF209 /* what_the2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the2.caf; sourceTree = "<group>"; };
+		A5CCF3BD1308881A00BEF209 /* what_the3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the3.caf; sourceTree = "<group>"; };
+		A5CCF3D61308887400BEF209 /* slap _splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "slap _splat_3.caf"; sourceTree = "<group>"; };
+		A5CCF3D71308887400BEF209 /* slap_bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_bonk.caf; sourceTree = "<group>"; };
+		A5CCF3D81308887400BEF209 /* slap_hard_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_1.caf; sourceTree = "<group>"; };
+		A5CCF3D91308887400BEF209 /* slap_hard_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_2.caf; sourceTree = "<group>"; };
+		A5CCF3DA1308887400BEF209 /* slap_light_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_light_1.caf; sourceTree = "<group>"; };
+		A5CCF3DB1308887400BEF209 /* slap_light_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_light_2.caf; sourceTree = "<group>"; };
+		A5CCF3DC1308887400BEF209 /* slap_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_ow.caf; sourceTree = "<group>"; };
+		A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "slap_splat _2.caf"; sourceTree = "<group>"; };
+		A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_1.caf; sourceTree = "<group>"; };
+		A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_4.caf; sourceTree = "<group>"; };
+		A5CCF3E01308887400BEF209 /* slap_squeak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_squeak.caf; sourceTree = "<group>"; };
+		A5CCF3E11308887400BEF209 /* slap01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap01.caf; sourceTree = "<group>"; };
+		A5CCF3E21308887400BEF209 /* slap02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap02.caf; sourceTree = "<group>"; };
+		A5CCF3E31308887400BEF209 /* slap03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap03.caf; sourceTree = "<group>"; };
+		A5CCF3E41308887400BEF209 /* slap04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap04.caf; sourceTree = "<group>"; };
+		A5CCF3E51308887400BEF209 /* slap05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap05.caf; sourceTree = "<group>"; };
+		A5CCF3E61308887400BEF209 /* slap06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap06.caf; sourceTree = "<group>"; };
+		A5CCF3E71308887400BEF209 /* slap07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap07.caf; sourceTree = "<group>"; };
+		A5CCF3E81308887400BEF209 /* slap08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap08.caf; sourceTree = "<group>"; };
+		A5CCF3E91308887400BEF209 /* squawk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = squawk.caf; sourceTree = "<group>"; };
 		A5D2471F1307459F00E8A6DF /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
 		A5D247211307459F00E8A6DF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -469,6 +555,26 @@
 				C748E3321283CC5E001658E2 /* prepare.caf */,
 				C748E3331283CC5E001658E2 /* punishhim.caf */,
 				C748E3341283CC5E001658E2 /* rampage.caf */,
+				A5CCF3D61308887400BEF209 /* slap _splat_3.caf */,
+				A5CCF3D71308887400BEF209 /* slap_bonk.caf */,
+				A5CCF3D81308887400BEF209 /* slap_hard_1.caf */,
+				A5CCF3D91308887400BEF209 /* slap_hard_2.caf */,
+				A5CCF3DA1308887400BEF209 /* slap_light_1.caf */,
+				A5CCF3DB1308887400BEF209 /* slap_light_2.caf */,
+				A5CCF3DC1308887400BEF209 /* slap_ow.caf */,
+				A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */,
+				A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */,
+				A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */,
+				A5CCF3E01308887400BEF209 /* slap_squeak.caf */,
+				A5CCF3E11308887400BEF209 /* slap01.caf */,
+				A5CCF3E21308887400BEF209 /* slap02.caf */,
+				A5CCF3E31308887400BEF209 /* slap03.caf */,
+				A5CCF3E41308887400BEF209 /* slap04.caf */,
+				A5CCF3E51308887400BEF209 /* slap05.caf */,
+				A5CCF3E61308887400BEF209 /* slap06.caf */,
+				A5CCF3E71308887400BEF209 /* slap07.caf */,
+				A5CCF3E81308887400BEF209 /* slap08.caf */,
+				A5CCF3E91308887400BEF209 /* squawk.caf */,
 				C748E3351283CC5E001658E2 /* slap.caf */,
 				C748E3361283CC5E001658E2 /* slap2.caf */,
 				C748E3371283CC5E001658E2 /* slap3.caf */,
@@ -483,6 +589,29 @@
 				C748E3401283CC5E001658E2 /* testyourmight.caf */,
 				C748E3411283CC5E001658E2 /* thathurts.caf */,
 				C748E3421283CC5E001658E2 /* threat.caf */,
+				A5CCF3A71308881900BEF209 /* ah2.caf */,
+				A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */,
+				A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */,
+				A5CCF3AA1308881900BEF209 /* dude2.caf */,
+				A5CCF3AB1308881900BEF209 /* dude3.caf */,
+				A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */,
+				A5CCF3AD1308881900BEF209 /* hey_ow.caf */,
+				A5CCF3AE1308881900BEF209 /* hey2.caf */,
+				A5CCF3AF1308881A00BEF209 /* hey3.caf */,
+				A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */,
+				A5CCF3B11308881A00BEF209 /* oomf1.caf */,
+				A5CCF3B21308881A00BEF209 /* ow_whine.caf */,
+				A5CCF3B31308881A00BEF209 /* ow2.caf */,
+				A5CCF3B41308881A00BEF209 /* ow3.caf */,
+				A5CCF3B51308881A00BEF209 /* ow4.caf */,
+				A5CCF3B61308881A00BEF209 /* stopit2.caf */,
+				A5CCF3B71308881A00BEF209 /* uhh2.caf */,
+				A5CCF3B81308881A00BEF209 /* uhh3.caf */,
+				A5CCF3B91308881A00BEF209 /* uhh4.caf */,
+				A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */,
+				A5CCF3BB1308881A00BEF209 /* what_the1.caf */,
+				A5CCF3BC1308881A00BEF209 /* what_the2.caf */,
+				A5CCF3BD1308881A00BEF209 /* what_the3.caf */,
 				C748E3431283CC5E001658E2 /* uhh.caf */,
 				C748E3441283CC5E001658E2 /* unstoppable.caf */,
 				C748E3451283CC5E001658E2 /* weak.caf */,
@@ -622,6 +751,49 @@
 				A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */,
 				A5CCF395130882E000BEF209 /* friendPick.png in Resources */,
 				A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */,
+				A5CCF3BE1308881A00BEF209 /* ah2.caf in Resources */,
+				A5CCF3BF1308881A00BEF209 /* chicken_squawk1.caf in Resources */,
+				A5CCF3C01308881A00BEF209 /* chicken_squawk2.caf in Resources */,
+				A5CCF3C11308881A00BEF209 /* dude2.caf in Resources */,
+				A5CCF3C21308881A00BEF209 /* dude3.caf in Resources */,
+				A5CCF3C31308881A00BEF209 /* hesgotarubberchicken.caf in Resources */,
+				A5CCF3C41308881A00BEF209 /* hey_ow.caf in Resources */,
+				A5CCF3C51308881A00BEF209 /* hey2.caf in Resources */,
+				A5CCF3C61308881A00BEF209 /* hey3.caf in Resources */,
+				A5CCF3C71308881A00BEF209 /* isthatarubberchicken.caf in Resources */,
+				A5CCF3C81308881A00BEF209 /* oomf1.caf in Resources */,
+				A5CCF3C91308881A00BEF209 /* ow_whine.caf in Resources */,
+				A5CCF3CA1308881A00BEF209 /* ow2.caf in Resources */,
+				A5CCF3CB1308881A00BEF209 /* ow3.caf in Resources */,
+				A5CCF3CC1308881A00BEF209 /* ow4.caf in Resources */,
+				A5CCF3CD1308881A00BEF209 /* stopit2.caf in Resources */,
+				A5CCF3CE1308881A00BEF209 /* uhh2.caf in Resources */,
+				A5CCF3CF1308881A00BEF209 /* uhh3.caf in Resources */,
+				A5CCF3D01308881A00BEF209 /* uhh4.caf in Resources */,
+				A5CCF3D11308881A00BEF209 /* umm_ouch.caf in Resources */,
+				A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */,
+				A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */,
+				A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */,
+				A5CCF3EA1308887400BEF209 /* slap _splat_3.caf in Resources */,
+				A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */,
+				A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */,
+				A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */,
+				A5CCF3EE1308887400BEF209 /* slap_light_1.caf in Resources */,
+				A5CCF3EF1308887400BEF209 /* slap_light_2.caf in Resources */,
+				A5CCF3F01308887400BEF209 /* slap_ow.caf in Resources */,
+				A5CCF3F11308887400BEF209 /* slap_splat _2.caf in Resources */,
+				A5CCF3F21308887400BEF209 /* slap_splat_1.caf in Resources */,
+				A5CCF3F31308887400BEF209 /* slap_splat_4.caf in Resources */,
+				A5CCF3F41308887400BEF209 /* slap_squeak.caf in Resources */,
+				A5CCF3F51308887400BEF209 /* slap01.caf in Resources */,
+				A5CCF3F61308887400BEF209 /* slap02.caf in Resources */,
+				A5CCF3F71308887400BEF209 /* slap03.caf in Resources */,
+				A5CCF3F81308887400BEF209 /* slap04.caf in Resources */,
+				A5CCF3F91308887400BEF209 /* slap05.caf in Resources */,
+				A5CCF3FA1308887400BEF209 /* slap06.caf in Resources */,
+				A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */,
+				A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */,
+				A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

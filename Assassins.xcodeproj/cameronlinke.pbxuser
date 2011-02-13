@@ -391,7 +391,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 1963}}";
 			sepNavSelRange = "{3738, 0}";
-			sepNavVisRange = "{2953, 1754}";
+			sepNavVisRange = "{2766, 1811}";
 		};
 	};
 	A5D247E2130762D000E8A6DF /* PBXTextBookmark */ = {
@@ -572,6 +572,20 @@
 			sepNavVisRange = "{3, 927}";
 		};
 	};
+	C748E31B1283CC41001658E2 /* SoundClipPool.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {910, 618}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 721}";
+		};
+	};
+	C748E31C1283CC41001658E2 /* SoundClipPool.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {910, 897}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{378, 950}";
+		};
+	};
 	C748E3821283CF5B001658E2 /* RubberChicken.png */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = image.png;
@@ -588,16 +602,16 @@
 	};
 	C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1237, 618}}";
+			sepNavIntBoundsRect = "{{0, 0}, {910, 641}}";
 			sepNavSelRange = "{550, 0}";
-			sepNavVisRange = "{0, 1150}";
+			sepNavVisRange = "{0, 1204}";
 		};
 	};
 	C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 3068}}";
-			sepNavSelRange = "{3623, 0}";
-			sepNavVisRange = "{1905, 2183}";
+			sepNavIntBoundsRect = "{{0, 0}, {1041, 3497}}";
+			sepNavSelRange = "{5561, 0}";
+			sepNavVisRange = "{4447, 1412}";
 		};
 	};
 	C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */ = {
