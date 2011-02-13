@@ -95,7 +95,6 @@
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Cancel</string>
 						<reference key="IBUIHighlightedTitleColor" ref="431689875"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -105,6 +104,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="837718461">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">buttonCanelUP.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="134844090">
@@ -117,7 +120,6 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="11720853"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Post</string>
 						<reference key="IBUIHighlightedTitleColor" ref="431689875"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -125,6 +127,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="837718461"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">buttonPostUP.png</string>
+						</object>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -404,8 +410,19 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">../Assassins.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">friendPick.png</string>
-			<string key="NS.object.0">{320, 213}</string>
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>buttonCanelUP.png</string>
+				<string>buttonPostUP.png</string>
+				<string>friendPick.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{120, 30}</string>
+				<string>{120, 30}</string>
+				<string>{320, 213}</string>
+			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>
