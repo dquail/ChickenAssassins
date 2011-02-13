@@ -7,10 +7,11 @@
 //
 
 #import "PickAFriendTableViewController.h"
-
+#import "SBJSON.h"
 
 @implementation PickAFriendTableViewController
 
+@synthesize delegate;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -22,7 +23,12 @@
 }
 */
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(id) friendsJSON{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray{
+	NSLog(@"Friend Array - %d", [friendArray count]);
+	NSDictionary *firstFriendTest = [friendArray objectAtIndex:0];
+	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
+	NSString *userID = (NSString*) [firstFriendTest objectForKey:@"id"];
+	NSLog(@"First friend name: %@ id: %@", name, userID);	
 	return [self initWithNibName:nil bundle:nil];
 }
 /*
@@ -58,5 +64,19 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark IBOutlet methods
+
+- (IBAction) onPost{
+	//Stub in facebook ID for now
+	NSString *facebookFriendID = @"1234";
+	if (self.delegate!=nil)
+	{
+		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
+		{
+			[self.delegate donePickingFriendWithID:facebookFriendID];
+		}
+	}
+}
 
 @end

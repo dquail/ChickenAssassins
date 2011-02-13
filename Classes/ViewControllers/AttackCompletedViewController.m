@@ -194,13 +194,17 @@ static NSString* kAppId = @"189234387766257";
  *      didReceiveResponse:(NSURLResponse *)response
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
-	if ([result isKindOfClass:[NSArray class]]) {
-		result = [result objectAtIndex:0];
+	NSArray *friendArray;
+	if ([result isKindOfClass:[NSDictionary class]]) {
+		NSDictionary *friendDict = (NSDictionary*) result;
+		friendArray = [[friendDict objectForKey:@"data"] retain];  
 	}
-	NSLog(@"object: %@", result);
+	NSLog(@"friend count: %d", [friendArray count]);
 
-	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:result];
-	[pickController presentModalViewController:self.view animated:YES];
+
+	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray];
+	pickController.delegate = self;
+	[self presentModalViewController:pickController animated:YES];
 };
 
 /**
@@ -222,5 +226,10 @@ static NSString* kAppId = @"189234387766257";
 	//[self.label setText:@"publish successfully"];
 }
 
-
+#pragma mark -
+#pragma mark PickAFriendDelegate
+- (void) donePickingFriendWithID:(NSString *) friendID{
+	NSLog(@"Friend picked: %@", friendID);
+	[self dismissModalViewControllerAnimated:YES];
+}
 @end

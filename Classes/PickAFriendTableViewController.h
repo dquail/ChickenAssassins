@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PickAFriendDelegate <NSObject>
+- (void) donePickingFriendWithID:(NSString *) friendID;
+@end
+
+
 
 @interface PickAFriendTableViewController : UIViewController {
-	- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(id) friendsJSON;
+	id<PickAFriendDelegate> delegate;
 }
 
+@property (nonatomic, retain) id<PickAFriendDelegate> delegate;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray *) friendsJSON;
+- (IBAction) onPost;
 @end
