@@ -8,6 +8,7 @@
 
 #import "PhotoUploader.h"
 #import <zlib.h>
+#import "NSMutableURLRequest+WebServiceClient.h"
 
 static NSString * const BOUNDRY = @"0xKhTmLbOuNdArY";
 static NSString * const FORM_FLE_INPUT = @"uploaded";

@@ -17,6 +17,8 @@
 		28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
 		2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EBDD1308574C007AC351 /* PhotoUploader.m */; };
+		2FD5ED24130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5ED23130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m */; };
+		2FD5ED311308817E007AC351 /* NSData+AttassaEncodings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5ED301308817E007AC351 /* NSData+AttassaEncodings.m */; };
 		A57C07EE13086A650021B22B /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07EC13086A650021B22B /* crosshairs.png */; };
 		A57C07EF13086A650021B22B /* crosshairs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07ED13086A650021B22B /* crosshairs@2x.png */; };
 		A57C07FA13086CFD0021B22B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07F813086CFD0021B22B /* Default@2x.png */; };
@@ -119,6 +121,10 @@
 		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
 		2FD5EBDC1308574C007AC351 /* PhotoUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoUploader.h; path = Models/PhotoUploader.h; sourceTree = "<group>"; };
 		2FD5EBDD1308574C007AC351 /* PhotoUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoUploader.m; path = Models/PhotoUploader.m; sourceTree = "<group>"; };
+		2FD5ED22130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+WebServiceClient.h"; path = "Helpers/NSMutableURLRequest+WebServiceClient.h"; sourceTree = "<group>"; };
+		2FD5ED23130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+WebServiceClient.m"; path = "Helpers/NSMutableURLRequest+WebServiceClient.m"; sourceTree = "<group>"; };
+		2FD5ED2F1308817E007AC351 /* NSData+AttassaEncodings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AttassaEncodings.h"; path = "Helpers/NSData+AttassaEncodings.h"; sourceTree = "<group>"; };
+		2FD5ED301308817E007AC351 /* NSData+AttassaEncodings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AttassaEncodings.m"; path = "Helpers/NSData+AttassaEncodings.m"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassins_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Assassins-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Assassins-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A57C07EC13086A650021B22B /* crosshairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshairs.png; sourceTree = "<group>"; };
@@ -426,6 +432,10 @@
 			children = (
 				2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */,
 				2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */,
+				2FD5ED22130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.h */,
+				2FD5ED23130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m */,
+				2FD5ED2F1308817E007AC351 /* NSData+AttassaEncodings.h */,
+				2FD5ED301308817E007AC351 /* NSData+AttassaEncodings.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -635,6 +645,8 @@
 				A5D247411307459F00E8A6DF /* FBDialog.m in Sources */,
 				A5D247A01307552700E8A6DF /* PickAFriendTableViewController.m in Sources */,
 				2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */,
+				2FD5ED24130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m in Sources */,
+				2FD5ED311308817E007AC351 /* NSData+AttassaEncodings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
