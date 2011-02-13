@@ -1,0 +1,205 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Assassins */ = {
+		activeExec = 0;
+		executables = (
+			C78165641308840F002BF2D0 /* Assassins */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C78165641308840F002BF2D0 /* Assassins */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Assassins */;
+		codeSenseManager = C781657513088432002BF2D0 /* Code sense */;
+		executables = (
+			C78165641308840F002BF2D0 /* Assassins */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					277,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 319326705;
+			PBXWorkspaceStateSaveDate = 319326705;
+		};
+		perUserProjectItems = {
+			C781659C130889F5002BF2D0 /* PBXBookmark */ = C781659C130889F5002BF2D0 /* PBXBookmark */;
+			C781659D130889F5002BF2D0 /* PBXTextBookmark */ = C781659D130889F5002BF2D0 /* PBXTextBookmark */;
+			C78165A913088AE4002BF2D0 /* PBXTextBookmark */ = C78165A913088AE4002BF2D0 /* PBXTextBookmark */;
+			C78165AA13088AE4002BF2D0 /* PBXTextBookmark */ = C78165AA13088AE4002BF2D0 /* PBXTextBookmark */;
+			C78165AB13088AE4002BF2D0 /* PBXTextBookmark */ = C78165AB13088AE4002BF2D0 /* PBXTextBookmark */;
+			C78165AC13088AE4002BF2D0 /* PBXTextBookmark */ = C78165AC13088AE4002BF2D0 /* PBXTextBookmark */;
+			C78165AD13088AE4002BF2D0 /* PBXTextBookmark */ = C78165AD13088AE4002BF2D0 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C781657413088432002BF2D0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	A5D2479D1307552700E8A6DF /* PickAFriendTableViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 516}}";
+			sepNavSelRange = "{792, 0}";
+			sepNavVisRange = "{0, 971}";
+		};
+	};
+	A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {943, 2145}}";
+			sepNavSelRange = "{4941, 0}";
+			sepNavVisRange = "{3492, 1456}";
+			sepNavWindowFrame = "{{15, 4}, {882, 835}}";
+		};
+	};
+	C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 741}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1204}";
+		};
+	};
+	C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 3653}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1546}";
+		};
+	};
+	C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1083, 516}}";
+			sepNavSelRange = "{546, 0}";
+			sepNavVisRange = "{0, 880}";
+		};
+	};
+	C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 1807}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1607, 1071}";
+		};
+	};
+	C78165641308840F002BF2D0 /* Assassins */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Assassins;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	C781657413088432002BF2D0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C781657513088432002BF2D0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C781659C130889F5002BF2D0 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */;
+	};
+	C781659D130889F5002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */;
+		name = "PickAFriendTableViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1496;
+		vrLoc = 0;
+	};
+	C78165A913088AE4002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */;
+		name = "AssassinateHUDViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 1607;
+	};
+	C78165AA13088AE4002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */;
+		name = "AssassinateHUDViewController.h: 20";
+		rLen = 0;
+		rLoc = 546;
+		rType = 0;
+		vrLen = 880;
+		vrLoc = 0;
+	};
+	C78165AB13088AE4002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A5D2479D1307552700E8A6DF /* PickAFriendTableViewController.h */;
+		name = "PickAFriendTableViewController.h: 31";
+		rLen = 0;
+		rLoc = 792;
+		rType = 0;
+		vrLen = 971;
+		vrLoc = 0;
+	};
+	C78165AC13088AE4002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */;
+		name = "PickAFriendTableViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1454;
+		vrLoc = 0;
+	};
+	C78165AD13088AE4002BF2D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */;
+		name = "PickAFriendTableViewController.m: 157";
+		rLen = 0;
+		rLoc = 4941;
+		rType = 0;
+		vrLen = 1456;
+		vrLoc = 3492;
+	};
+}
