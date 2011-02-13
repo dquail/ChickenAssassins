@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -279,13 +281,12 @@
 							<array>
 								<array>
 									<integer>43</integer>
-									<integer>41</integer>
 									<integer>34</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 200}, {287, 660}}</string>
+							<string>{{0, 225}, {287, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -304,7 +305,7 @@
 							<real>287</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>9 59 1280 719 0 0 1280 778 </string>
+						<string>0 59 1280 719 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -315,8 +316,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -334,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A57C084013087C570021B22B</string>
+										<string>A5CCF37F13087FAE00BEF209</string>
 										<key>history</key>
 										<array>
 											<string>A5D247F21307675800E8A6DF</string>
@@ -351,7 +350,7 @@
 											<string>A57C0823130877E10021B22B</string>
 											<string>A57C083B13087BC60021B22B</string>
 											<string>A57C083C13087BC60021B22B</string>
-											<string>A57C083D13087BC60021B22B</string>
+											<string>A5CCF37E13087FAE00BEF209</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -365,7 +364,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {971, 673}}</string>
 								<key>RubberWindowFrame</key>
-								<string>9 59 1280 719 0 0 1280 778 </string>
+								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -385,7 +384,7 @@
 								<key>Frame</key>
 								<string>{{0, 678}, {971, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>9 59 1280 719 0 0 1280 778 </string>
+								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -409,9 +408,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A57C07DE130863D60021B22B</string>
+				<string>A5CCF37913087EC300BEF209</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A57C07DF130863D60021B22B</string>
+				<string>A5CCF37A13087EC300BEF209</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -549,15 +548,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A57C0827130877E10021B22B</string>
-		<string>A57C0828130877E10021B22B</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>A5B3355B1307126A00E22656</string>
 		<string>/Users/cameronlinke/Dropbox/projects/ChickenAssassins/Assassins.xcodeproj</string>
+		<string>A5B3355B1307126A00E22656</string>
 	</array>
 	<key>WindowString</key>
-	<string>9 59 1280 719 0 0 1280 778 </string>
+	<string>0 59 1280 719 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -573,12 +568,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>AttackCompletedViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -634,7 +631,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A5B3355B1307126A00E22656</string>
-				<string>A57C07E0130863D60021B22B</string>
+				<string>A5CCF37B13087EC300BEF209</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -647,7 +644,7 @@
 			<key>WindowToolGUID</key>
 			<string>A5B3355B1307126A00E22656</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
