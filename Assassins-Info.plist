@@ -6,7 +6,11 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>fb189234387766257</string>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb189234387766257</string>
+			</array>
 		</dict>
 	</array>
 	<key>UIStatusBarHidden</key>
