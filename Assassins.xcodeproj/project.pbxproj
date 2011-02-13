@@ -34,6 +34,8 @@
 		A57C082B130878140021B22B /* buttonSaveiPhoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */; };
 		A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */; };
 		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
+		A5CCF395130882E000BEF209 /* friendPick.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF393130882E000BEF209 /* friendPick.png */; };
+		A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF394130882E000BEF209 /* friendPick@2x.png */; };
 		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
 		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
 		A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247251307459F00E8A6DF /* NSString+SBJSON.m */; };
@@ -142,6 +144,8 @@
 		A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSaveiPhoneUp.png; sourceTree = "<group>"; };
 		A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSaveiPhoneUp@2x.png"; sourceTree = "<group>"; };
 		A5C9C745130728410088BE1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A5CCF393130882E000BEF209 /* friendPick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendPick.png; sourceTree = "<group>"; };
+		A5CCF394130882E000BEF209 /* friendPick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friendPick@2x.png"; sourceTree = "<group>"; };
 		A5D2471F1307459F00E8A6DF /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
 		A5D247211307459F00E8A6DF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -410,6 +414,8 @@
 				C71E4A6012638D7B00670FFC /* AssassinTransparent.png */,
 				A57C07F813086CFD0021B22B /* Default@2x.png */,
 				A57C07F913086CFD0021B22B /* Default.png */,
+				A5CCF393130882E000BEF209 /* friendPick.png */,
+				A5CCF394130882E000BEF209 /* friendPick@2x.png */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -614,6 +620,8 @@
 				A57C08151308745E0021B22B /* EmailButtonUP.png in Resources */,
 				A57C082B130878140021B22B /* buttonSaveiPhoneUp.png in Resources */,
 				A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */,
+				A5CCF395130882E000BEF209 /* friendPick.png in Resources */,
+				A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

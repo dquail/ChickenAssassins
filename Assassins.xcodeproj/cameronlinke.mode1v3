@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A5CCF37F13087FAE00BEF209</string>
+										<string>A5CCF3871308829A00BEF209</string>
 										<key>history</key>
 										<array>
 											<string>A5D247F21307675800E8A6DF</string>
@@ -548,8 +548,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/cameronlinke/Dropbox/projects/ChickenAssassins/Assassins.xcodeproj</string>
 		<string>A5B3355B1307126A00E22656</string>
+		<string>/Users/cameronlinke/Dropbox/projects/ChickenAssassins/Assassins.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1280 719 0 0 1280 778 </string>
@@ -568,8 +568,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -592,6 +590,8 @@
 							<string>249pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -644,7 +644,7 @@
 			<key>WindowToolGUID</key>
 			<string>A5B3355B1307126A00E22656</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

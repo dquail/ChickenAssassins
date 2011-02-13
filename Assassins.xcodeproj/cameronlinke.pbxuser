@@ -60,8 +60,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 319323828;
-			PBXWorkspaceStateSaveDate = 319323828;
+			PBXPerProjectTemplateStateSaveDate = 319324826;
+			PBXWorkspaceStateSaveDate = 319324826;
 		};
 		perUserProjectItems = {
 			A57C07DD130863D60021B22B = A57C07DD130863D60021B22B /* PlistBookmark */;
@@ -79,8 +79,12 @@
 			A57C083C13087BC60021B22B = A57C083C13087BC60021B22B /* PBXTextBookmark */;
 			A57C083D13087BC60021B22B = A57C083D13087BC60021B22B /* PBXTextBookmark */;
 			A57C083E13087BC60021B22B = A57C083E13087BC60021B22B /* PBXTextBookmark */;
-			A5CCF37E13087FAE00BEF209 /* XCBuildMessageTextBookmark */ = A5CCF37E13087FAE00BEF209 /* XCBuildMessageTextBookmark */;
-			A5CCF37F13087FAE00BEF209 /* PBXTextBookmark */ = A5CCF37F13087FAE00BEF209 /* PBXTextBookmark */;
+			A5CCF37E13087FAE00BEF209 = A5CCF37E13087FAE00BEF209 /* PBXTextBookmark */;
+			A5CCF37F13087FAE00BEF209 = A5CCF37F13087FAE00BEF209 /* PBXTextBookmark */;
+			A5CCF3831308806A00BEF209 = A5CCF3831308806A00BEF209 /* PBXTextBookmark */;
+			A5CCF3841308806A00BEF209 = A5CCF3841308806A00BEF209 /* PBXTextBookmark */;
+			A5CCF3851308806A00BEF209 = A5CCF3851308806A00BEF209 /* PBXTextBookmark */;
+			A5CCF3861308806B00BEF209 = A5CCF3861308806B00BEF209 /* PBXTextBookmark */;
 			A5D247E2130762D000E8A6DF = A5D247E2130762D000E8A6DF /* PBXTextBookmark */;
 			A5D247F21307675800E8A6DF = A5D247F21307675800E8A6DF /* PBXTextBookmark */;
 			A5D247F31307675800E8A6DF = A5D247F31307675800E8A6DF /* PBXTextBookmark */;
@@ -278,16 +282,53 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	A5CCF37E13087FAE00BEF209 /* XCBuildMessageTextBookmark */ = {
+	A5CCF37E13087FAE00BEF209 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "'killedImage' undeclared (first use in this function)";
 		fRef = C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 106;
 		rType = 1;
 	};
 	A5CCF37F13087FAE00BEF209 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */;
+		name = "AttackCompletedViewController.m: 107";
+		rLen = 0;
+		rLoc = 3623;
+		rType = 0;
+		vrLen = 2183;
+		vrLoc = 1905;
+	};
+	A5CCF3831308806A00BEF209 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */;
+		name = "AttackCompletedViewController.m: 107";
+		rLen = 0;
+		rLoc = 3623;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 2987;
+	};
+	A5CCF3841308806A00BEF209 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected identifier or '(' before '}' token";
+		fRef = 2FD5EBDC1308574C007AC351 /* PhotoUploader.h */;
+		rLen = 1;
+		rLoc = 31;
+		rType = 1;
+	};
+	A5CCF3851308806A00BEF209 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2FD5EBDC1308574C007AC351 /* PhotoUploader.h */;
+		name = "PhotoUploader.h: 32";
+		rLen = 0;
+		rLoc = 625;
+		rType = 0;
+		vrLen = 283;
+		vrLoc = 350;
+	};
+	A5CCF3861308806B00BEF209 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = C748E40A1283DEA5001658E2 /* AttackCompletedViewController.m */;
 		name = "AttackCompletedViewController.m: 107";
