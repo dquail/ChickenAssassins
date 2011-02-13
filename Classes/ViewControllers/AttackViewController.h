@@ -27,8 +27,11 @@
 	double lastSlapTime;
 	
 	BOOL slapping;
+	BOOL shouldPlayFinishHim;
 	
 	UIImage *targetImage;
+	
+	NSMutableString *slapHistory;
 	
 	int slapCount;
 }
