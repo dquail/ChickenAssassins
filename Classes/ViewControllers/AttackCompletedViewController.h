@@ -11,10 +11,12 @@
 #import "PickAFriendTableViewController.h"
 #import "Facebook.h"
 #import "FBConnect.h"
+#import "PhotoUploader.h"
 
 @class AssassinsAppDelegate;
 
-@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate> {
+@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, 
+				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, PhotoUploaderDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;

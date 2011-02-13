@@ -7,7 +7,6 @@
 //
 
 #import "PhotoUploader.h"
-#import "EPUploader.h"
 #import <zlib.h>
 
 static NSString * const BOUNDRY = @"0xKhTmLbOuNdArY";
@@ -15,14 +14,15 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
 
 #define ASSERT(x) NSAssert(x, @"")
 
-@interface EPUploader (Private)
+@interface PhotoUploader (Private)
 
 - (void)upload;
 - (NSURLRequest *)postRequestWithURL: (NSURL *)url
+						  parameters: (NSDictionary *) params
                              boundry: (NSString *)boundry
                                 data: (NSData *)data;
 
-- (NSData *)compress: (NSData *)data;
+//- (NSData *)compress: (NSData *)data;
 - (void)uploadSucceeded: (BOOL)success;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
@@ -49,25 +49,19 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
  *-----------------------------------------------------------------------------
  */
 
-- (id)initWithURL: (NSURL *)aServerURL   // IN
+- (id)initWithURL: (NSURL *)aServerURL
 		   imageData: (NSData *)imgData
-	   parameters: (NSDictionary *)params// IN
-         delegate: (id)aDelegate         // IN
-     doneSelector: (SEL)aDoneSelector    // IN
-    errorSelector: (SEL)anErrorSelector  // IN
+	   parameters: (NSDictionary *)params
+         delegate: (id<PhotoUploaderDelegate>)aDelegate
 {
     if ((self = [super init])) {
         ASSERT(aServerURL);
         ASSERT(aDelegate);
-        ASSERT(aDoneSelector);
-        ASSERT(anErrorSelector);
 		
         serverURL = [aServerURL retain];
         imageData = [imgData retain];
         delegate = [aDelegate retain];
-        doneSelector = aDoneSelector;
 		parameters = [params retain];		
-        errorSelector = anErrorSelector;
         [self upload];
     }
     return self;
@@ -94,14 +88,11 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
 {
     [serverURL release];
     serverURL = nil;
-    [imgData release];
+    [imageData release];
 	[parameters release];
-    filePath = nil;
     [delegate release];
     delegate = nil;
-    doneSelector = NULL;
-    errorSelector = NULL;
-	
+
     [super dealloc];
 }
 
@@ -121,17 +112,17 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
  *
  *-----------------------------------------------------------------------------
  
-
+*/
 - (NSString *)filePath
 {
-    return filePath;
+ //No longer needed
+    return @"";
 }
-*/
 
 @end // Uploader
 
 
-@implementation EPUploader (Private)
+@implementation PhotoUploader (Private)
 
 
 /*
@@ -153,7 +144,8 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
 
 - (void)upload
 {
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    //NSData *data = [NSData dataWithContentsOfFile:filePath];
+	NSData *data = imageData;
     ASSERT(data);
     if (!data) {
         [self uploadSucceeded:NO];
@@ -173,6 +165,7 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
 	//  }
 	
     NSURLRequest *urlRequest = [self postRequestWithURL:serverURL
+											 parameters: parameters
                                                 boundry:BOUNDRY
                                                    data:data];
     if (!urlRequest) {
@@ -207,6 +200,7 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
  */
 
 - (NSURLRequest *)postRequestWithURL: (NSURL *)url        // IN
+						  parameters: (NSDictionary *) params //IN
                              boundry: (NSString *)boundry // IN
                                 data: (NSData *)data      // IN
 {
@@ -217,7 +211,8 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
     [urlRequest setValue:
      [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundry]
       forHTTPHeaderField:@"Content-Type"];
-	
+
+	[urlRequest setFormPostParameters: parameters];
     NSMutableData *postData =
     [NSMutableData dataWithCapacity:[data length] + 512];
     [postData appendData:
@@ -249,7 +244,7 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
  *
  *-----------------------------------------------------------------------------
  */
-
+/*
 - (NSData *)compress: (NSData *)data // IN
 {
     if (!data || [data length] == 0)
@@ -271,7 +266,7 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
     [destData setLength:destSize];
     return destData;
 }
-
+*/
 
 /*
  *-----------------------------------------------------------------------------
@@ -291,8 +286,13 @@ static NSString * const FORM_FLE_INPUT = @"uploaded";
 
 - (void)uploadSucceeded: (BOOL)success // IN
 {
-    [delegate performSelector:success ? doneSelector : errorSelector
-                   withObject:self];
+	if (success)
+	{
+		[delegate onUploadSuccess];
+	}
+	else{
+		[delegate onUploadError];
+	}
 }
 
 

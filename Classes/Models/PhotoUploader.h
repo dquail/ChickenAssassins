@@ -8,27 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol PhotoUploaderDelegate <NSObject>
+- (void) onUploadSuccess;
+- (void) onUploadError;
+@end
+
 
 @interface PhotoUploader : NSObject {
     NSURL *serverURL;
     NSData *imageData;
 	NSDictionary *parameters;
-    id delegate;
-    SEL doneSelector;
-    SEL errorSelector;
+    id<PhotoUploaderDelegate> delegate;
 	
     BOOL uploadDidSucceed;
 }
 
--   (id)initWithURL: (NSURL *)serverURL
-			 params: (NSDictionary *) params
-		   imageData: (NSData *)imgData 
-		   delegate: (id)delegate 
-	   doneSelector: (SEL)doneSelector 
-	  errorSelector: (SEL)errorSelector;
+- (id)initWithURL: (NSURL *)aServerURL   // IN
+		imageData: (NSData *)imgData
+	   parameters: (NSDictionary *)params// IN
+         delegate: (id<PhotoUploaderDelegate>)aDelegate         // IN
+;
 
 -   (NSString *)filePath;
-
-}
 
 @end
