@@ -10,10 +10,16 @@
 #import "UIImage+Combine.h"
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
+#import "PhotoUploader.h"
 
 static NSString* kAppId = @"189234387766257";
 #define ACCESS_TOKEN_KEY @"fb_access_token"
 #define EXPIRATION_DATE_KEY @"fb_expiration_date"
+
+@interface AttackCompletedViewController (Private)
+- (void) onUploadDone;
+- (void) onUploadError;
+@end
 
 @implementation AttackCompletedViewController
 
@@ -231,6 +237,39 @@ static NSString* kAppId = @"189234387766257";
 #pragma mark PickAFriendDelegate
 - (void) donePickingFriendWithID:(NSString *) friendID{
 	NSLog(@"Friend picked: %@", friendID);
+
+	NSDictionary *killParams = [NSDictionary dictionaryWithObjectsAndKeys:	
+								@"1234", @"killer_id", 
+								friendID, @"assassin_id", 
+								@"blah", @"location",
+								@"LRLRLR", @"attack_sequence",
+								nil];
+
+	NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+								@"true", @"utf8",
+								facebook.accessToken, @"authenticity_token",
+								nil];
+	
+	[parameters setObject:killParams forKey:@"kill"];
+
+	
 	[self dismissModalViewControllerAnimated:YES];
+	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
+	
+	
+	[[PhotoUploader alloc] initWithURL:[NSURL URLWithString:@"http://chickenassassin.com/kills"]
+						   imageData:imageData
+							parameters:parameters
+						   delegate:self];
+}
+
+#pragma mark -
+#pragma mark PhotoUploader Delegate 
+-(void) onUploadSuccess{
+	NSLog(@"Upload done");
+}
+
+-(void) onUploadError{
+	NSLog(@"Upload error");
 }
 @end
