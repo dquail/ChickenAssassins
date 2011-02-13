@@ -104,13 +104,14 @@ static NSString* kAppId = @"189234387766257";
 - (IBAction) emailPhoto {
 	if ([MFMailComposeViewController canSendMail]) {
 		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
-		mailComposer.mailComposeDelegate = self; 
+		mailComposer.mailComposeDelegate = self;
 		[mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
 		[mailComposer addAttachmentData:UIImagePNGRepresentation(targetImage) mimeType:@"image/png" fileName:@"image"]; 
-		[mailComposer setMessageBody:NSLocalizedString(@"Here's a picture that I took with my iPhone.", 
-													   @"Here's a picture that I took with my iPhone.") isHTML:NO]; 
+		[mailComposer setMessageBody:NSLocalizedString(@"I killed you on Chicken assassin sucker.", 
+													   @"I killed you on Chicken assassin sucker.") isHTML:NO]; 
 		[self presentModalViewController:mailComposer animated:YES]; 
 		[mailComposer release];
+		[killedImage release];
 	}
 }
 
