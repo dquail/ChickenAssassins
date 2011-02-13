@@ -16,7 +16,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
-<<<<<<< HEAD
+		2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EBDD1308574C007AC351 /* PhotoUploader.m */; };
 		A57C07EE13086A650021B22B /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07EC13086A650021B22B /* crosshairs.png */; };
 		A57C07EF13086A650021B22B /* crosshairs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07ED13086A650021B22B /* crosshairs@2x.png */; };
 		A57C07FA13086CFD0021B22B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07F813086CFD0021B22B /* Default@2x.png */; };
@@ -31,9 +31,6 @@
 		A57C08151308745E0021B22B /* EmailButtonUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080F1308745E0021B22B /* EmailButtonUP.png */; };
 		A57C082B130878140021B22B /* buttonSaveiPhoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */; };
 		A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */; };
-=======
-		2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EBDD1308574C007AC351 /* PhotoUploader.m */; };
->>>>>>> b09ca47b316c15f322fba63d6c2b9d2ef693b479
 		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
 		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
 		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
