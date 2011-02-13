@@ -8,6 +8,7 @@
 
 #import "AttackCompletedViewController.h"
 #import "UIImage+Combine.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation AttackCompletedViewController
 

@@ -22,6 +22,8 @@
 
 	SoundClipPool *slapClips;
 	SoundClipPool *responseClips;
+	SoundClipPool *finishHimClips;
+	
 	double lastSlapTime;
 	
 	BOOL slapping;

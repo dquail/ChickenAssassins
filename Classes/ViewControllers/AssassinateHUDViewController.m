@@ -8,9 +8,12 @@
 
 #import "AssassinateHUDViewController.h"
 #import "AttackViewController.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation AssassinateHUDViewController
 
+@synthesize locationManager;
+@synthesize startingPoint;
 @synthesize targetImage, overlay, appDelegate;
 
 #pragma mark -
@@ -42,6 +45,11 @@
 	} else {
 		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
 	}
+
+	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+	locationManager.delegate = self;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	[locationManager startUpdatingLocation];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
@@ -81,6 +89,16 @@
 - (IBAction) onLockTarget{
 	//Take a photo of the target.  
 	[camera takePicture];
+}
+#pragma mark -
+#pragma mark CLLocationManagerDelegate Methods
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+		   fromLocation:(CLLocation *)oldLocation {
+	
+	[locationManager stopUpdatingLocation];
+	
+	self.startingPoint = newLocation;
 }
 
 #pragma mark -
