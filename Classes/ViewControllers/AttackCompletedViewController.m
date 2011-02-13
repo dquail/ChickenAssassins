@@ -105,7 +105,6 @@ static NSString* kAppId = @"189234387766257";
 													   @"I killed you on Chicken assassin sucker.") isHTML:NO]; 
 		[self presentModalViewController:mailComposer animated:YES]; 
 		[mailComposer release];
-		[killedImage release];
 	}
 }
 
