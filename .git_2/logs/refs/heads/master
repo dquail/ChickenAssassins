@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 2b2f8745e91f080b436a8121dd617e0e1b66e9ec David Quail <quail.david@gmail.com> 1297533214 -0800	clone: from git@github.com:dquail/ChickenAssassins.git
+2b2f8745e91f080b436a8121dd617e0e1b66e9ec fdda7e14a4a51717b8455498f471738ed9200279 David Quail <quail.david@gmail.com> 1297545440 -0700	pull : Fast forward
+fdda7e14a4a51717b8455498f471738ed9200279 1b6a874cc57dad660a4222b73b12d99f8a762c35 David Quail <quail.david@gmail.com> 1297545575 -0700	commit: Added Location framework to library
+1b6a874cc57dad660a4222b73b12d99f8a762c35 015b4c27e8296fbc2c5cd2074ef85273289a3420 David Quail <quail.david@gmail.com> 1297550611 -0700	commit: Added location manager
+015b4c27e8296fbc2c5cd2074ef85273289a3420 59b51e9cb7b9109e22fdb448feaece80f56f4782 David Quail <quail.david@gmail.com> 1297550635 -0700	commit: Added location manager
+59b51e9cb7b9109e22fdb448feaece80f56f4782 25938a442ac145955d5f1e123d475ae5e4a0f441 David Quail <quail.david@gmail.com> 1297550800 -0700	commit (merge): Added location managed; Fixed Merge
+25938a442ac145955d5f1e123d475ae5e4a0f441 f124187a5a80d71f3fcd0f2a852cfa68f86bff43 David Quail <quail.david@gmail.com> 1297555353 -0700	pull : Fast forward
+f124187a5a80d71f3fcd0f2a852cfa68f86bff43 3052efb27bd3261c811aba5a2344b58736fb4f2b David Quail <quail.david@gmail.com> 1297560489 -0700	pull : Fast forward
+3052efb27bd3261c811aba5a2344b58736fb4f2b aa73a5b6d0bb8c192ecb52cd5c2177d9e7e57d69 David Quail <quail.david@gmail.com> 1297620312 -0700	pull : Fast forward
+aa73a5b6d0bb8c192ecb52cd5c2177d9e7e57d69 b09ca47b316c15f322fba63d6c2b9d2ef693b479 David Quail <quail.david@gmail.com> 1297628296 -0700	pull : Fast forward
