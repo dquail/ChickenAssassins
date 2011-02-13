@@ -19,9 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-	
-	Facebook* facebook = [[Facebook alloc] initWithAppId:@"189234387766257"];
-    // Override point for customization after application launch.
+	// Override point for customization after application launch.
 
     // Add the view controller's view to the window and display.
 	

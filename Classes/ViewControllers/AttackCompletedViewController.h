@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
+#import "Facebook.h"
+
 @class AssassinsAppDelegate;
 
-@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate> {
+@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, FBSessionDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
 	UILabel *scoreLabel;
 	AssassinsAppDelegate *appDelegate;
+	Facebook *facebook;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;

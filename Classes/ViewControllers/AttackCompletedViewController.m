@@ -10,6 +10,8 @@
 #import "UIImage+Combine.h"
 #import "AssassinsAppDelegate.h"
 
+static NSString* kAppId = @"189234387766257";
+
 @implementation AttackCompletedViewController
 
 @synthesize targetImageView, overlayImageView, scoreLabel, appDelegate;
@@ -27,6 +29,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+		
 	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
 }
@@ -69,8 +72,19 @@
 }
 
 - (IBAction) postToFacebook {
-	//TODO: Facebook
+	//if user is logged in
+	//GOTO PickAFriendTableViewController
+	
+	
+	//else if user is not logged in
+	//GOTO login
+	facebook = [[Facebook alloc] initWithAppId:kAppId];
+
+	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", nil];
+	[facebook authorize:permissions delegate:self];
+
 }
+
 
 - (IBAction) emailPhoto {
 	if ([MFMailComposeViewController canSendMail]) {
@@ -114,6 +128,31 @@
 		  didFinishWithResult:(MFMailComposeResult)result 
 						error:(NSError*)error {
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Facebook delegate
+/**
+ * Called when the user successfully logged in.
+ */
+- (void)fbDidLogin{
+	NSLog(@"Logged in session - token %@", facebook.accessToken );
+	
+	
+}
+/**
+ * Called when the user dismissed the dialog without logging in.
+ */
+- (void)fbDidNotLogin:(BOOL)cancelled{
+	NSLog(@"Did not login");
+}
+
+/**
+ * Called when the user logged out.
+ */
+- (void)fbDidLogout{
+	
+	NSLog(@"Did logout");
 }
 
 @end
