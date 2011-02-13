@@ -12,6 +12,7 @@
 @implementation PickAFriendTableViewController
 
 @synthesize delegate, friendPic, imageView;
+@synthesize arrayOfFriends;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -25,6 +26,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture{
 	NSLog(@"Friend Array - %d", [friendArray count]);
+	arrayOfFriends = friendArray;
 	NSDictionary *firstFriendTest = [friendArray objectAtIndex:0];
 	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
 	NSString *userID = (NSString*) [firstFriendTest objectForKey:@"id"];
@@ -81,4 +83,68 @@
 	}
 }
 
+#pragma mark -
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return [arrayOfFriends count];
+}
+
+/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 51;
+}
+ */
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+	
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		//[[NSBundle mainBundle] loadNibNamed:@"MissionListCell" owner:self options:NULL];
+		//cell = nibLoadedCell;
+		//cell.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell-Green.png"]] autorelease];    
+	}
+	
+	NSUInteger row = [indexPath row];
+	cell.textLabel.text = [arrayOfFriends objectAtIndex:row];
+	
+	//NSDictionary *cellData = [dataArray objectAtIndex:indexPath.row];	
+	//UILabel *titleLabel = (UILabel *)[cell viewWithTag:1]; 
+	//titleLabel.text = [cellData objectForKey:kMissionName];
+	
+	return cell;
+}
+
+
+/*
+#pragma mark -
+#pragma mark Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	NSDictionary *cellData = [dataArray objectAtIndex:indexPath.row];
+	
+	MissionDetailViewController *detailViewController = [[MissionDetailViewController alloc] 
+														 initWithNibName:@"MissionDetailViewController" bundle:nil];
+	[detailViewController setDataDictionary:cellData];
+	// Pass the selected object to the new view controller.
+	[self.navigationController pushViewController:detailViewController animated:YES];
+	[detailViewController release];
+	
+	// need to push MissionDetailViewController which should have a nav controller which will return to the table view
+}
+*/
+ 
 @end

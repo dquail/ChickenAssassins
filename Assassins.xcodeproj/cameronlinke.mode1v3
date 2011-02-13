@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>19</integer>
 									<integer>18</integer>
 									<integer>15</integer>
 									<integer>0</integer>
@@ -310,14 +312,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AttackViewController.m</string>
+								<string>AttackCompletedViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,28 +325,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AttackViewController.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>A5D2481513076A0100E8A6DF</string>
+										<string>AttackCompletedViewController.h</string>
 										<key>history</key>
 										<array>
-											<string>A5D247581307475D00E8A6DF</string>
-											<string>A5D247A31307596800E8A6DF</string>
 											<string>A5D247A41307596800E8A6DF</string>
 											<string>A5D247A51307596800E8A6DF</string>
-											<string>A5D247AB130759AB00E8A6DF</string>
-											<string>A5D247BC130759E800E8A6DF</string>
 											<string>A5D247E2130762D000E8A6DF</string>
-											<string>A5D247EF1307675800E8A6DF</string>
-											<string>A5D247F01307675800E8A6DF</string>
-											<string>A5D247F11307675800E8A6DF</string>
 											<string>A5D247F21307675800E8A6DF</string>
 											<string>A5D247F31307675800E8A6DF</string>
-											<string>A5D247F41307675800E8A6DF</string>
-											<string>A5D2480D1307689900E8A6DF</string>
-											<string>A5D2480E1307689900E8A6DF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -404,9 +390,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A5D246B613073C8C00E8A6DF</string>
+				<string>A5D248D6130847CD00E8A6DF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>A5D246B713073C8C00E8A6DF</string>
+				<string>A5D248D7130847CD00E8A6DF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -544,10 +530,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A5D247FD1307679D00E8A6DF</string>
-		<string>A5D247F81307675800E8A6DF</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>A5B3355B1307126A00E22656</string>
 		<string>/Users/cameronlinke/Dropbox/projects/ChickenAssassins/Assassins.xcodeproj</string>
 	</array>
@@ -568,14 +550,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AttackCompletedViewController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -631,7 +611,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>A5B3355B1307126A00E22656</string>
-				<string>A5D246B813073C8C00E8A6DF</string>
+				<string>A5D248D8130847CD00E8A6DF</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
