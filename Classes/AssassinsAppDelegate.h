@@ -11,6 +11,8 @@
 #import "AttackViewController.h"
 #import "AttackCompletedViewController.h"
 
+#import "Facebook.h"
+
 @class AssassinsViewController;
 
 @interface AssassinsAppDelegate : NSObject <UIApplicationDelegate> {

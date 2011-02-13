@@ -17,6 +17,19 @@
 		28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
 		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
+		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
+		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
+		A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247251307459F00E8A6DF /* NSString+SBJSON.m */; };
+		A5D2473A1307459F00E8A6DF /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247271307459F00E8A6DF /* SBJSON.m */; };
+		A5D2473B1307459F00E8A6DF /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247291307459F00E8A6DF /* SBJsonBase.m */; };
+		A5D2473C1307459F00E8A6DF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2472B1307459F00E8A6DF /* SBJsonParser.m */; };
+		A5D2473D1307459F00E8A6DF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */; };
+		A5D2473E1307459F00E8A6DF /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247301307459F00E8A6DF /* FBRequest.m */; };
+		A5D2473F1307459F00E8A6DF /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247311307459F00E8A6DF /* Facebook.m */; };
+		A5D247401307459F00E8A6DF /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247341307459F00E8A6DF /* FBLoginDialog.m */; };
+		A5D247411307459F00E8A6DF /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247361307459F00E8A6DF /* FBDialog.m */; };
+		A5D247A01307552700E8A6DF /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */; };
+		A5D247A11307552700E8A6DF /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D2479F1307552700E8A6DF /* PickAFriendTableViewController.xib */; };
 		C71E4A431263859400670FFC /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A421263859400670FFC /* crosshairs.png */; };
 		C71E4A6212638D7B00670FFC /* AssassinTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6012638D7B00670FFC /* AssassinTransparent.png */; };
 		C71E4A6312638D7B00670FFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6112638D7B00670FFC /* Default.png */; };
@@ -96,6 +109,32 @@
 		32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassins_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Assassins-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Assassins-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A5C9C745130728410088BE1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A5D2471F1307459F00E8A6DF /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		A5D247211307459F00E8A6DF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		A5D247241307459F00E8A6DF /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		A5D247251307459F00E8A6DF /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		A5D247261307459F00E8A6DF /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		A5D247271307459F00E8A6DF /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		A5D247281307459F00E8A6DF /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		A5D247291307459F00E8A6DF /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		A5D2472A1307459F00E8A6DF /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		A5D2472B1307459F00E8A6DF /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		A5D2472C1307459F00E8A6DF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		A5D2472E1307459F00E8A6DF /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		A5D2472F1307459F00E8A6DF /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		A5D247301307459F00E8A6DF /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
+		A5D247311307459F00E8A6DF /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		A5D247321307459F00E8A6DF /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		A5D247331307459F00E8A6DF /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		A5D247341307459F00E8A6DF /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		A5D247351307459F00E8A6DF /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		A5D247361307459F00E8A6DF /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		A5D2479D1307552700E8A6DF /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAFriendTableViewController.h; sourceTree = "<group>"; };
+		A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAFriendTableViewController.m; sourceTree = "<group>"; };
+		A5D2479F1307552700E8A6DF /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickAFriendTableViewController.xib; sourceTree = "<group>"; };
 		C71E4A421263859400670FFC /* crosshairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshairs.png; path = Images/Weapons/crosshairs.png; sourceTree = "<group>"; };
 		C71E4A6012638D7B00670FFC /* AssassinTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssassinTransparent.png; path = Images/Application/AssassinTransparent.png; sourceTree = "<group>"; };
 		C71E4A6112638D7B00670FFC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/Application/Default.png; sourceTree = "<group>"; };
@@ -207,6 +246,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A5D2471E1307459F00E8A6DF /* FBConnect */,
 				C748E3201283CC48001658E2 /* Sounds */,
 				C71E4A321263819F00670FFC /* Images */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -252,6 +292,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A5D2471E1307459F00E8A6DF /* FBConnect */ = {
+			isa = PBXGroup;
+			children = (
+				A5D2471F1307459F00E8A6DF /* FBDialog.bundle */,
+				A5D247201307459F00E8A6DF /* JSON */,
+				A5D2472E1307459F00E8A6DF /* FBConnect.h */,
+				A5D2472F1307459F00E8A6DF /* FBRequest.h */,
+				A5D247301307459F00E8A6DF /* FBRequest.m */,
+				A5D247311307459F00E8A6DF /* Facebook.m */,
+				A5D247321307459F00E8A6DF /* Facebook.h */,
+				A5D247331307459F00E8A6DF /* FBLoginDialog.h */,
+				A5D247341307459F00E8A6DF /* FBLoginDialog.m */,
+				A5D247351307459F00E8A6DF /* FBDialog.h */,
+				A5D247361307459F00E8A6DF /* FBDialog.m */,
+			);
+			name = FBConnect;
+			sourceTree = "<group>";
+		};
+		A5D247201307459F00E8A6DF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A5D247211307459F00E8A6DF /* JSON.h */,
+				A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */,
+				A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */,
+				A5D247241307459F00E8A6DF /* NSString+SBJSON.h */,
+				A5D247251307459F00E8A6DF /* NSString+SBJSON.m */,
+				A5D247261307459F00E8A6DF /* SBJSON.h */,
+				A5D247271307459F00E8A6DF /* SBJSON.m */,
+				A5D247281307459F00E8A6DF /* SBJsonBase.h */,
+				A5D247291307459F00E8A6DF /* SBJsonBase.m */,
+				A5D2472A1307459F00E8A6DF /* SBJsonParser.h */,
+				A5D2472B1307459F00E8A6DF /* SBJsonParser.m */,
+				A5D2472C1307459F00E8A6DF /* SBJsonWriter.h */,
+				A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		C71E4A321263819F00670FFC /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +360,9 @@
 				C76E6EF41266C94300B48793 /* AssassinateHUDViewController.h */,
 				C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */,
 				C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */,
+				A5D2479D1307552700E8A6DF /* PickAFriendTableViewController.h */,
+				A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */,
+				A5D2479F1307552700E8A6DF /* PickAFriendTableViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -476,6 +557,8 @@
 				C748E3831283CF5B001658E2 /* RubberChicken.png in Resources */,
 				C748E3E91283D822001658E2 /* RubberChickenKillOverlay.png in Resources */,
 				C748E40D1283DEA5001658E2 /* AttackCompletedViewController.xib in Resources */,
+				A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */,
+				A5D247A11307552700E8A6DF /* PickAFriendTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +578,17 @@
 				C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */,
 				C748E31E1283CC41001658E2 /* SoundClipPool.m in Sources */,
 				C748E40C1283DEA5001658E2 /* AttackCompletedViewController.m in Sources */,
+				A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */,
+				A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */,
+				A5D2473A1307459F00E8A6DF /* SBJSON.m in Sources */,
+				A5D2473B1307459F00E8A6DF /* SBJsonBase.m in Sources */,
+				A5D2473C1307459F00E8A6DF /* SBJsonParser.m in Sources */,
+				A5D2473D1307459F00E8A6DF /* SBJsonWriter.m in Sources */,
+				A5D2473E1307459F00E8A6DF /* FBRequest.m in Sources */,
+				A5D2473F1307459F00E8A6DF /* Facebook.m in Sources */,
+				A5D247401307459F00E8A6DF /* FBLoginDialog.m in Sources */,
+				A5D247411307459F00E8A6DF /* FBDialog.m in Sources */,
+				A5D247A01307552700E8A6DF /* PickAFriendTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
