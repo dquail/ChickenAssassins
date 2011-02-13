@@ -79,6 +79,10 @@
 		A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E71308887400BEF209 /* slap07.caf */; };
 		A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E81308887400BEF209 /* slap08.caf */; };
 		A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E91308887400BEF209 /* squawk.caf */; };
+		A5CCF40813088A8000BEF209 /* buttonCancelUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */; };
+		A5CCF40913088A8000BEF209 /* buttonCanelUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40513088A8000BEF209 /* buttonCanelUP.png */; };
+		A5CCF40A13088A8000BEF209 /* buttonPostUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40613088A8000BEF209 /* buttonPostUP.png */; };
+		A5CCF40B13088A8000BEF209 /* buttonPostUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */; };
 		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
 		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
 		A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247251307459F00E8A6DF /* NSString+SBJSON.m */; };
@@ -232,6 +236,10 @@
 		A5CCF3E71308887400BEF209 /* slap07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap07.caf; sourceTree = "<group>"; };
 		A5CCF3E81308887400BEF209 /* slap08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap08.caf; sourceTree = "<group>"; };
 		A5CCF3E91308887400BEF209 /* squawk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = squawk.caf; sourceTree = "<group>"; };
+		A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonCancelUP@2x.png"; sourceTree = "<group>"; };
+		A5CCF40513088A8000BEF209 /* buttonCanelUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonCanelUP.png; sourceTree = "<group>"; };
+		A5CCF40613088A8000BEF209 /* buttonPostUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPostUP.png; sourceTree = "<group>"; };
+		A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonPostUP@2x.png"; sourceTree = "<group>"; };
 		A5D2471F1307459F00E8A6DF /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
 		A5D247211307459F00E8A6DF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
@@ -490,6 +498,10 @@
 		C71E4A5F12638D6600670FFC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */,
+				A5CCF40513088A8000BEF209 /* buttonCanelUP.png */,
+				A5CCF40613088A8000BEF209 /* buttonPostUP.png */,
+				A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */,
 				A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */,
 				A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */,
 				A57C080C1308745E0021B22B /* FacebookButtonUP@2x.png */,
@@ -794,6 +806,10 @@
 				A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */,
 				A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */,
 				A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */,
+				A5CCF40813088A8000BEF209 /* buttonCancelUP@2x.png in Resources */,
+				A5CCF40913088A8000BEF209 /* buttonCanelUP.png in Resources */,
+				A5CCF40A13088A8000BEF209 /* buttonPostUP.png in Resources */,
+				A5CCF40B13088A8000BEF209 /* buttonPostUP@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
