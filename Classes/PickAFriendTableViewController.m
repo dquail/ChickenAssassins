@@ -22,6 +22,9 @@
 }
 */
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(id) friendsJSON{
+	return [self initWithNibName:nil bundle:nil];
+}
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {

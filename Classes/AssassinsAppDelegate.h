@@ -10,6 +10,7 @@
 #import "AssassinateHUDViewController.h"
 #import "AttackViewController.h"
 #import "AttackCompletedViewController.h"
+#import "FBConnect.h"
 
 @class AssassinsViewController;
 
@@ -19,6 +20,7 @@
 	AttackCompletedViewController *completedController;
     AssassinsViewController *viewController;
 	AssassinateHUDViewController *hudController;	
+	Facebook *facebook;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -26,6 +28,7 @@
 @property (nonatomic, retain) AttackViewController *attackController;
 @property (nonatomic, retain) AttackCompletedViewController *completedController;
 @property (nonatomic, retain) AssassinateHUDViewController *hudController;
+@property (nonatomic, retain) Facebook *facebook;
 
 - (void) lockTarget: (UIImage *) targetImage;
 - (void) targetKilled: (UIImage *)targetImage;

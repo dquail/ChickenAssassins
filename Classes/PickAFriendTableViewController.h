@@ -10,7 +10,7 @@
 
 
 @interface PickAFriendTableViewController : UIViewController {
-
+	- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(id) friendsJSON;
 }
 
 @end

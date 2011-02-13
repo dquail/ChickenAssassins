@@ -23,11 +23,7 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
-<<<<<<< HEAD
 #define HITS_TO_KILL 3
-=======
-#define HITS_TO_KILL 10
->>>>>>> ac2abaa720eefecd41f2dfc4675fe57856ef8389
 #define HITS_TO_FINISH_HIM 2
 
 - (IBAction)slapButton {

@@ -10,10 +10,11 @@
 #import <MessageUI/MessageUI.h>
 
 #import "Facebook.h"
+#import "FBConnect.h"
 
 @class AssassinsAppDelegate;
 
-@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, FBSessionDelegate> {
+@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
@@ -26,8 +27,9 @@
 @property (nonatomic, retain) IBOutlet UIImageView *overlayImageView;
 @property (nonatomic, retain) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
+@property (nonatomic, retain) Facebook *facebook;
 
-- (id) initWithTargetImage:(UIImage *)image;
+- (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;
 - (IBAction) savePhoto;
 
 - (IBAction) postToFacebook;

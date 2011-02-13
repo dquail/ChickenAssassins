@@ -9,18 +9,24 @@
 #import "AttackCompletedViewController.h"
 #import "UIImage+Combine.h"
 #import "AssassinsAppDelegate.h"
+#import "PickAFriendTableViewController.h"
 
 static NSString* kAppId = @"189234387766257";
+#define ACCESS_TOKEN_KEY @"fb_access_token"
+#define EXPIRATION_DATE_KEY @"fb_expiration_date"
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate;
+@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook;
 #pragma mark -
 #pragma mark ViewController lifecycle
 
-- (id) initWithTargetImage:(UIImage *)image{
+- (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;{
 	if (self = [super initWithNibName:nil bundle:nil])
+	{
 		targetImage = [image retain];
+		self.facebook = fbook;
+	}
 	return self;
 }
 
@@ -72,17 +78,20 @@ static NSString* kAppId = @"189234387766257";
 }
 
 - (IBAction) postToFacebook {
-	//if user is logged in
-	//GOTO PickAFriendTableViewController
+    // on login, use the stored access token and see if it still works
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
+    self.facebook.accessToken = [defaults objectForKey:ACCESS_TOKEN_KEY];
+    self.facebook.expirationDate = [defaults objectForKey:EXPIRATION_DATE_KEY];
 	
+    // only authorize if the access token isn't valid
+    // if it *is* valid, no need to authenticate. just move on
+    if (![self.facebook isSessionValid]) {
+		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", nil];
+        [self.facebook authorize:permissions delegate:self];
+    }
 	
-	//else if user is not logged in
-	//GOTO login
-	facebook = [[Facebook alloc] initWithAppId:kAppId];
-
-	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", nil];
-	[facebook authorize:permissions delegate:self];
-
+	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+	
 }
 
 
@@ -133,26 +142,85 @@ static NSString* kAppId = @"189234387766257";
 #pragma mark -
 #pragma mark Facebook delegate
 /**
- * Called when the user successfully logged in.
+ * Called when the user has logged in successfully.
  */
-- (void)fbDidLogin{
-	NSLog(@"Logged in session - token %@", facebook.accessToken );
+- (void)fbDidLogin {
+	NSLog(@"Login succeeded - token - %@", self.facebook.accessToken);
+	// store the access token and expiration date to the user defaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.facebook.accessToken forKey:ACCESS_TOKEN_KEY];
+    [defaults setObject:self.facebook.expirationDate forKey:EXPIRATION_DATE_KEY];
+    [defaults synchronize];	
 	
-	
-}
-/**
- * Called when the user dismissed the dialog without logging in.
- */
-- (void)fbDidNotLogin:(BOOL)cancelled{
-	NSLog(@"Did not login");
+	// get the logged-in user's friends	
+	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
 }
 
 /**
- * Called when the user logged out.
+ * Called when the user canceled the authorization dialog.
  */
-- (void)fbDidLogout{
-	
-	NSLog(@"Did logout");
+-(void)fbDidNotLogin:(BOOL)cancelled {
+	NSLog(@"did not login");
 }
+
+/**
+ * Called when the request logout has succeeded.
+ */
+- (void)fbDidLogout {
+	NSLog(@"Failed login");
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// FBRequestDelegate
+
+/**
+ * Called when the Facebook API request has returned a response. This callback
+ * gives you access to the raw response. It's called before
+ * (void)request:(FBRequest *)request didLoad:(id)result,
+ * which is passed the parsed response object.
+ */
+- (void)request:(FBRequest *)request didReceiveResponse:(NSURLResponse *)response {
+	NSLog(@"received response");
+}
+
+/**
+ * Called when a request returns and its response has been parsed into
+ * an object. The resulting object may be a dictionary, an array, a string,
+ * or a number, depending on the format of the API response. If you need access
+ * to the raw response, use:
+ *
+ * (void)request:(FBRequest *)request
+ *      didReceiveResponse:(NSURLResponse *)response
+ */
+- (void)request:(FBRequest *)request didLoad:(id)result {
+	if ([result isKindOfClass:[NSArray class]]) {
+		result = [result objectAtIndex:0];
+	}
+	NSLog(@"object: %@", result);
+
+	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:result];
+	[pickController presentModalViewController:self.view animated:YES];
+};
+
+/**
+ * Called when an error prevents the Facebook API request from completing
+ * successfully.
+ */
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+	//[self.label setText:[error localizedDescription]];
+};
+
+
+////////////////////////////////////////////////////////////////////////////////
+// FBDialogDelegate
+
+/**
+ * Called when a UIServer Dialog successfully return.
+ */
+- (void)dialogDidComplete:(FBDialog *)dialog {
+	//[self.label setText:@"publish successfully"];
+}
+
 
 @end

@@ -12,7 +12,7 @@
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize viewController, hudController, attackController, completedController;
+@synthesize viewController, hudController, attackController, completedController, facebook;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -20,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	// Override point for customization after application launch.
-
+	self.facebook = [[Facebook alloc] initWithAppId:@"189234387766257"];
+	
     // Add the view controller's view to the window and display.
 	
 	//Create the Hudview
@@ -100,7 +101,7 @@
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
 	[self.attackController.view removeFromSuperview];
-	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage];
+	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
 	[UIView commitAnimations];			
 }
@@ -114,4 +115,9 @@
 	
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	NSLog(@"Handle url");
+	[self.facebook handleOpenURL:url];
+	return TRUE;
+}
 @end
