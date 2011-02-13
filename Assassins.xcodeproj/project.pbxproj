@@ -59,7 +59,7 @@
 		A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BB1308881A00BEF209 /* what_the1.caf */; };
 		A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BC1308881A00BEF209 /* what_the2.caf */; };
 		A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BD1308881A00BEF209 /* what_the3.caf */; };
-		A5CCF3EA1308887400BEF209 /* slap _splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D61308887400BEF209 /* slap _splat_3.caf */; };
+		A5CCF3EA1308887400BEF209 /* slap_splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D61308887400BEF209 /* slap_splat_3.caf */; };
 		A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D71308887400BEF209 /* slap_bonk.caf */; };
 		A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D81308887400BEF209 /* slap_hard_1.caf */; };
 		A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D91308887400BEF209 /* slap_hard_2.caf */; };
@@ -212,7 +212,7 @@
 		A5CCF3BB1308881A00BEF209 /* what_the1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the1.caf; sourceTree = "<group>"; };
 		A5CCF3BC1308881A00BEF209 /* what_the2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the2.caf; sourceTree = "<group>"; };
 		A5CCF3BD1308881A00BEF209 /* what_the3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the3.caf; sourceTree = "<group>"; };
-		A5CCF3D61308887400BEF209 /* slap _splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "slap _splat_3.caf"; sourceTree = "<group>"; };
+		A5CCF3D61308887400BEF209 /* slap_splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_3.caf; sourceTree = "<group>"; };
 		A5CCF3D71308887400BEF209 /* slap_bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_bonk.caf; sourceTree = "<group>"; };
 		A5CCF3D81308887400BEF209 /* slap_hard_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_1.caf; sourceTree = "<group>"; };
 		A5CCF3D91308887400BEF209 /* slap_hard_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_2.caf; sourceTree = "<group>"; };
@@ -555,7 +555,7 @@
 				C748E3321283CC5E001658E2 /* prepare.caf */,
 				C748E3331283CC5E001658E2 /* punishhim.caf */,
 				C748E3341283CC5E001658E2 /* rampage.caf */,
-				A5CCF3D61308887400BEF209 /* slap _splat_3.caf */,
+				A5CCF3D61308887400BEF209 /* slap_splat_3.caf */,
 				A5CCF3D71308887400BEF209 /* slap_bonk.caf */,
 				A5CCF3D81308887400BEF209 /* slap_hard_1.caf */,
 				A5CCF3D91308887400BEF209 /* slap_hard_2.caf */,
@@ -774,7 +774,7 @@
 				A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */,
 				A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */,
 				A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */,
-				A5CCF3EA1308887400BEF209 /* slap _splat_3.caf in Resources */,
+				A5CCF3EA1308887400BEF209 /* slap_splat_3.caf in Resources */,
 				A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */,
 				A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */,
 				A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */,
