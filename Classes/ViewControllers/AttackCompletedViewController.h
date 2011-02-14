@@ -12,11 +12,12 @@
 #import "Facebook.h"
 #import "FBConnect.h"
 #import "PhotoUploader.h"
+#import "ASIHTTPRequestDelegate.h"
 
 @class AssassinsAppDelegate;
 
 @interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, 
-				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, PhotoUploaderDelegate> {
+				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, ASIHTTPRequestDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;

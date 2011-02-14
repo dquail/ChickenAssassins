@@ -12,7 +12,7 @@
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize viewController, hudController, attackController, completedController, facebook;
+@synthesize viewController, hudController, attackController, completedController, facebook, location, hitCombo;
 
 #pragma mark -
 #pragma mark Application lifecycle

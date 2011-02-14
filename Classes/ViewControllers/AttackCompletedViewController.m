@@ -11,6 +11,7 @@
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
 #import "PhotoUploader.h"
+#import "ASIFormDataRequest.h"
 
 static NSString* kAppId = @"189234387766257";
 #define ACCESS_TOKEN_KEY @"fb_access_token"
@@ -92,7 +93,7 @@ static NSString* kAppId = @"189234387766257";
     // only authorize if the access token isn't valid
     // if it *is* valid, no need to authenticate. just move on
     if (![self.facebook isSessionValid]) {
-		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", nil];
+		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
         [self.facebook authorize:permissions delegate:self];
     }
 	
@@ -238,38 +239,66 @@ static NSString* kAppId = @"189234387766257";
 - (void) donePickingFriendWithID:(NSString *) friendID{
 	NSLog(@"Friend picked: %@", friendID);
 
-	NSDictionary *killParams = [NSDictionary dictionaryWithObjectsAndKeys:	
-								@"1234", @"killer_id", 
-								friendID, @"assassin_id", 
-								@"blah", @"location",
-								@"LRLRLR", @"attack_sequence",
-								nil];
-
-	NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								@"true", @"utf8",
-								facebook.accessToken, @"authenticity_token",
-								nil];
 	
-	[parameters setObject:killParams forKey:@"kill"];
+	//[parameters setObject:killParams forKey:@"kill"];
 
 	
 	[self dismissModalViewControllerAnimated:YES];
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
+	NSString *server = @"http://nathan.logicaldecay.com/kills";
+	//NSString *server = @"http://chickenassassin.com/kills";
 	
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
+								   [NSURL URLWithString:server]];
 	
-	[[PhotoUploader alloc] initWithURL:[NSURL URLWithString:@"http://chickenassassin.com/kills"]
+	[request addPostValue:@"true" forKey:@"utf8"];
+	[request addPostValue:facebook.accessToken forKey:@"access_token"];
+	[request addPostValue: @"867800458" forKey:@"killer_id"];
+	[request addPostValue: @"583002418" forKey:@"victim_id"];	
+	[request addPostValue: @"53.523574,-113.524046" forKey:@"location"];
+	[request addPostValue: 	self.appDelegate.hitCombo forKey:@"attack_sequence"];	
+	[request addData:imageData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
+	
+	[request startSynchronous];
+	NSError *error = [request error];
+	if (!error) {
+		NSString *response = [request responseString];
+		NSLog(@"Response string: %@", response);
+	}
+	 
+	
+	/*[[PhotoUploader alloc] initWithURL:[NSURL URLWithString:@"http://chickenassassin.com/kills"]
 						   imageData:imageData
 							parameters:parameters
-						   delegate:self];
+						   delegate:self];*/
 }
 
 #pragma mark -
-#pragma mark PhotoUploader Delegate 
--(void) onUploadSuccess{
-	NSLog(@"Upload done");
+#pragma mark ASIHTTPRequest Delegate 
+- (void)requestStarted:(ASIHTTPRequest *)request{
+	NSLog(@"Request started");
+}
+- (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders{
+	NSLog(@"Request recieved response header");
+}
+- (void)request:(ASIHTTPRequest *)request willRedirectToURL:(NSURL *)newURL{
+	NSLog(@"Request recieved willredirect");
+}
+- (void)requestFinished:(ASIHTTPRequest *)request{
+	NSLog(@"Request finished");
+}
+- (void)requestFailed:(ASIHTTPRequest *)request{
+	NSLog(@"Request failed");
+}
+- (void)requestRedirected:(ASIHTTPRequest *)request{
+	NSLog(@"Request redirect");
 }
 
--(void) onUploadError{
-	NSLog(@"Upload error");
+// When a delegate implements this method, it is expected to process all incoming data itself
+// This means that responseData / responseString / downloadDestinationPath etc are ignored
+// You can have the request call a different method by setting didReceiveDataSelector
+- (void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data{
+	NSLog(@"request recieved data");
 }
+
 @end

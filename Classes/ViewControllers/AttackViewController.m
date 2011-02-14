@@ -152,6 +152,7 @@
 */
 
 - (void) finishKill{
+	self.appDelegate.hitCombo = slapHistory;
 	[self.appDelegate targetKilled:targetImage];
 }
 
@@ -193,36 +194,36 @@
 - (void) shake: (int) direction {
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerofmeterShakeDirectionLeft");
-		[slapHistory appendString:@"L"];
+		[slapHistory appendString:@"L,"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
-		[slapHistory appendString:@"R"];
+		[slapHistory appendString:@"R,"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
 		NSLog(@"AccelerometerShakeDirectionUp");
-		[slapHistory appendString:@"U"];
+		[slapHistory appendString:@"U,"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
 		NSLog(@"AccelerometerShakeDirectionDown");
-		[slapHistory appendString:@"D"];		
+		[slapHistory appendString:@"D,"];		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
 		[self slap];
-		[slapHistory appendString:@"F"];		
+		[slapHistory appendString:@"F,"];		
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	
 	if (direction & AccelerometerShakeDirectionPull) {
-		[slapHistory appendString:@"B"];		
+		[slapHistory appendString:@"B,"];		
 		NSLog(@"AccelerometerShakeDirectionPull");
 	}
 	NSLog(@"Slap history: %@",slapHistory);

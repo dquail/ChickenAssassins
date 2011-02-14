@@ -21,6 +21,8 @@
     AssassinsViewController *viewController;
 	AssassinateHUDViewController *hudController;	
 	Facebook *facebook;
+	NSString *hitCombo;
+	NSString *location;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -29,6 +31,8 @@
 @property (nonatomic, retain) AttackCompletedViewController *completedController;
 @property (nonatomic, retain) AssassinateHUDViewController *hudController;
 @property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, retain) NSString *hitCombo;
+@property (nonatomic, retain) NSString *location;
 
 - (void) lockTarget: (UIImage *) targetImage;
 - (void) targetKilled: (UIImage *)targetImage;
