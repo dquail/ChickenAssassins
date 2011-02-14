@@ -237,6 +237,11 @@ static NSString* kAppId = @"189234387766257";
 #pragma mark -
 #pragma mark PickAFriendDelegate
 - (void) donePickingFriendWithID:(NSString *) friendID{
+	if (friendID == nil) {
+		[self dismissModalViewControllerAnimated:YES];
+		return;
+	}
+	
 	NSLog(@"Friend picked: %@", friendID);
 
 	
