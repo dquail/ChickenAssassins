@@ -250,8 +250,8 @@ static NSString* kAppId = @"189234387766257";
 	
 	[self dismissModalViewControllerAnimated:YES];
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
-	NSString *server = @"http://nathan.logicaldecay.com/kills";
-	//NSString *server = @"http://chickenassassin.com/kills";
+	//NSString *server = @"http://nathan.logicaldecay.com/kills";
+	NSString *server = @"http://chickenassassin.com/kills";
 	
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
 								   [NSURL URLWithString:server]];

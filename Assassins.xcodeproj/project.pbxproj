@@ -16,6 +16,129 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* AssassinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* AssassinsViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
+		2FC7C601130CF24200F7C3DB /* ah.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AB130CF24200F7C3DB /* ah.caf */; };
+		2FC7C602130CF24200F7C3DB /* ah2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AC130CF24200F7C3DB /* ah2.caf */; };
+		2FC7C603130CF24200F7C3DB /* chicken_squawk1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AD130CF24200F7C3DB /* chicken_squawk1.caf */; };
+		2FC7C604130CF24200F7C3DB /* chicken_squawk2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AE130CF24200F7C3DB /* chicken_squawk2.caf */; };
+		2FC7C605130CF24200F7C3DB /* dominating.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AF130CF24200F7C3DB /* dominating.caf */; };
+		2FC7C606130CF24200F7C3DB /* dude.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B0130CF24200F7C3DB /* dude.caf */; };
+		2FC7C607130CF24200F7C3DB /* dude2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B1130CF24200F7C3DB /* dude2.caf */; };
+		2FC7C608130CF24200F7C3DB /* dude3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B2130CF24200F7C3DB /* dude3.caf */; };
+		2FC7C609130CF24200F7C3DB /* excellent.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B3130CF24200F7C3DB /* excellent.caf */; };
+		2FC7C60A130CF24200F7C3DB /* finishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B4130CF24200F7C3DB /* finishhim.caf */; };
+		2FC7C60B130CF24200F7C3DB /* firstblood.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B5130CF24200F7C3DB /* firstblood.caf */; };
+		2FC7C60C130CF24200F7C3DB /* godlike.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B6130CF24200F7C3DB /* godlike.caf */; };
+		2FC7C60D130CF24200F7C3DB /* hesgotarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B7130CF24200F7C3DB /* hesgotarubberchicken.caf */; };
+		2FC7C60E130CF24200F7C3DB /* hey_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B8130CF24200F7C3DB /* hey_ow.caf */; };
+		2FC7C60F130CF24200F7C3DB /* hey.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5B9130CF24200F7C3DB /* hey.caf */; };
+		2FC7C610130CF24200F7C3DB /* hey2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BA130CF24200F7C3DB /* hey2.caf */; };
+		2FC7C611130CF24200F7C3DB /* hey3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BB130CF24200F7C3DB /* hey3.caf */; };
+		2FC7C612130CF24200F7C3DB /* holyshit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BC130CF24200F7C3DB /* holyshit.caf */; };
+		2FC7C613130CF24200F7C3DB /* isthatachicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BD130CF24200F7C3DB /* isthatachicken.caf */; };
+		2FC7C614130CF24200F7C3DB /* isthatarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BE130CF24200F7C3DB /* isthatarubberchicken.caf */; };
+		2FC7C615130CF24200F7C3DB /* ludicrouskill.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5BF130CF24200F7C3DB /* ludicrouskill.caf */; };
+		2FC7C616130CF24200F7C3DB /* mk4flaw.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C0130CF24200F7C3DB /* mk4flaw.caf */; };
+		2FC7C617130CF24200F7C3DB /* monsterkill.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C1130CF24200F7C3DB /* monsterkill.caf */; };
+		2FC7C618130CF24200F7C3DB /* oof.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C2130CF24200F7C3DB /* oof.caf */; };
+		2FC7C619130CF24200F7C3DB /* oomf1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C3130CF24200F7C3DB /* oomf1.caf */; };
+		2FC7C61A130CF24200F7C3DB /* outstanding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C4130CF24200F7C3DB /* outstanding.caf */; };
+		2FC7C61B130CF24200F7C3DB /* ow_whine.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C5130CF24200F7C3DB /* ow_whine.caf */; };
+		2FC7C61C130CF24200F7C3DB /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C6130CF24200F7C3DB /* ow.caf */; };
+		2FC7C61D130CF24200F7C3DB /* ow2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C7130CF24200F7C3DB /* ow2.caf */; };
+		2FC7C61E130CF24200F7C3DB /* ow3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C8130CF24200F7C3DB /* ow3.caf */; };
+		2FC7C61F130CF24200F7C3DB /* ow4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5C9130CF24200F7C3DB /* ow4.caf */; };
+		2FC7C620130CF24200F7C3DB /* pathetic.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CA130CF24200F7C3DB /* pathetic.caf */; };
+		2FC7C621130CF24200F7C3DB /* prepare.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CB130CF24200F7C3DB /* prepare.caf */; };
+		2FC7C622130CF24200F7C3DB /* punishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CC130CF24200F7C3DB /* punishhim.caf */; };
+		2FC7C623130CF24200F7C3DB /* rampage.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CD130CF24200F7C3DB /* rampage.caf */; };
+		2FC7C624130CF24200F7C3DB /* slap _splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CE130CF24200F7C3DB /* slap _splat_3.caf */; };
+		2FC7C625130CF24200F7C3DB /* slap_bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5CF130CF24200F7C3DB /* slap_bonk.caf */; };
+		2FC7C626130CF24200F7C3DB /* slap_hard_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D0130CF24200F7C3DB /* slap_hard_1.caf */; };
+		2FC7C627130CF24200F7C3DB /* slap_hard_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D1130CF24200F7C3DB /* slap_hard_2.caf */; };
+		2FC7C628130CF24200F7C3DB /* slap_light_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D2130CF24200F7C3DB /* slap_light_1.caf */; };
+		2FC7C629130CF24200F7C3DB /* slap_light_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D3130CF24200F7C3DB /* slap_light_2.caf */; };
+		2FC7C62A130CF24200F7C3DB /* slap_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D4130CF24200F7C3DB /* slap_ow.caf */; };
+		2FC7C62B130CF24200F7C3DB /* slap_splat _2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D5130CF24200F7C3DB /* slap_splat _2.caf */; };
+		2FC7C62C130CF24200F7C3DB /* slap_splat_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D6130CF24200F7C3DB /* slap_splat_1.caf */; };
+		2FC7C62D130CF24200F7C3DB /* slap_splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D7130CF24200F7C3DB /* slap_splat_3.caf */; };
+		2FC7C62E130CF24200F7C3DB /* slap_splat_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D8130CF24200F7C3DB /* slap_splat_4.caf */; };
+		2FC7C62F130CF24200F7C3DB /* slap_squeak.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5D9130CF24200F7C3DB /* slap_squeak.caf */; };
+		2FC7C630130CF24200F7C3DB /* slap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DA130CF24200F7C3DB /* slap.caf */; };
+		2FC7C631130CF24200F7C3DB /* slap01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DB130CF24200F7C3DB /* slap01.caf */; };
+		2FC7C632130CF24200F7C3DB /* slap02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DC130CF24200F7C3DB /* slap02.caf */; };
+		2FC7C633130CF24200F7C3DB /* slap2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DD130CF24200F7C3DB /* slap2.caf */; };
+		2FC7C634130CF24200F7C3DB /* slap03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DE130CF24200F7C3DB /* slap03.caf */; };
+		2FC7C635130CF24200F7C3DB /* slap3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5DF130CF24200F7C3DB /* slap3.caf */; };
+		2FC7C636130CF24200F7C3DB /* slap04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E0130CF24200F7C3DB /* slap04.caf */; };
+		2FC7C637130CF24200F7C3DB /* slap4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E1130CF24200F7C3DB /* slap4.caf */; };
+		2FC7C638130CF24200F7C3DB /* slap05.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E2130CF24200F7C3DB /* slap05.caf */; };
+		2FC7C639130CF24200F7C3DB /* slap5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E3130CF24200F7C3DB /* slap5.caf */; };
+		2FC7C63A130CF24200F7C3DB /* slap6.aif in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E4130CF24200F7C3DB /* slap6.aif */; };
+		2FC7C63B130CF24200F7C3DB /* slap06.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E5130CF24200F7C3DB /* slap06.caf */; };
+		2FC7C63C130CF24200F7C3DB /* slap6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E6130CF24200F7C3DB /* slap6.caf */; };
+		2FC7C63D130CF24200F7C3DB /* slap07.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E7130CF24200F7C3DB /* slap07.caf */; };
+		2FC7C63E130CF24200F7C3DB /* slap7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E8130CF24200F7C3DB /* slap7.caf */; };
+		2FC7C63F130CF24200F7C3DB /* slap08.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5E9130CF24200F7C3DB /* slap08.caf */; };
+		2FC7C640130CF24200F7C3DB /* squawk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5EA130CF24200F7C3DB /* squawk.caf */; };
+		2FC7C641130CF24200F7C3DB /* stop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5EB130CF24200F7C3DB /* stop.caf */; };
+		2FC7C642130CF24200F7C3DB /* stopit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5EC130CF24200F7C3DB /* stopit.caf */; };
+		2FC7C643130CF24200F7C3DB /* stopit2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5ED130CF24200F7C3DB /* stopit2.caf */; };
+		2FC7C644130CF24200F7C3DB /* supurb.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5EE130CF24200F7C3DB /* supurb.caf */; };
+		2FC7C645130CF24200F7C3DB /* testyourmight.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5EF130CF24200F7C3DB /* testyourmight.caf */; };
+		2FC7C646130CF24200F7C3DB /* thathurts.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F0130CF24200F7C3DB /* thathurts.caf */; };
+		2FC7C647130CF24200F7C3DB /* threat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F1130CF24200F7C3DB /* threat.caf */; };
+		2FC7C648130CF24200F7C3DB /* uhh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F2130CF24200F7C3DB /* uhh.caf */; };
+		2FC7C649130CF24200F7C3DB /* uhh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F3130CF24200F7C3DB /* uhh2.caf */; };
+		2FC7C64A130CF24200F7C3DB /* uhh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F4130CF24200F7C3DB /* uhh3.caf */; };
+		2FC7C64B130CF24200F7C3DB /* uhh4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F5130CF24200F7C3DB /* uhh4.caf */; };
+		2FC7C64C130CF24200F7C3DB /* umm_ouch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F6130CF24200F7C3DB /* umm_ouch.caf */; };
+		2FC7C64D130CF24200F7C3DB /* unstoppable.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F7130CF24200F7C3DB /* unstoppable.caf */; };
+		2FC7C64E130CF24200F7C3DB /* weak.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F8130CF24200F7C3DB /* weak.caf */; };
+		2FC7C64F130CF24200F7C3DB /* welldone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5F9130CF24200F7C3DB /* welldone.caf */; };
+		2FC7C650130CF24200F7C3DB /* what_the1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FA130CF24200F7C3DB /* what_the1.caf */; };
+		2FC7C651130CF24200F7C3DB /* what_the2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FB130CF24200F7C3DB /* what_the2.caf */; };
+		2FC7C652130CF24200F7C3DB /* what_the3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FC130CF24200F7C3DB /* what_the3.caf */; };
+		2FC7C653130CF24200F7C3DB /* whatthehell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FD130CF24200F7C3DB /* whatthehell.caf */; };
+		2FC7C654130CF24200F7C3DB /* wickedsick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FE130CF24200F7C3DB /* wickedsick.caf */; };
+		2FC7C655130CF24200F7C3DB /* youarenothing.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5FF130CF24200F7C3DB /* youarenothing.caf */; };
+		2FC7C656130CF24200F7C3DB /* yousuck.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C600130CF24200F7C3DB /* yousuck.caf */; };
+		2FC7C66A130CF26900F7C3DB /* Assassin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C657130CF26900F7C3DB /* Assassin.png */; };
+		2FC7C66B130CF26900F7C3DB /* AssassinTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C658130CF26900F7C3DB /* AssassinTransparent.png */; };
+		2FC7C66C130CF26900F7C3DB /* buttonCancelUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */; };
+		2FC7C66D130CF26900F7C3DB /* buttonCanelUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */; };
+		2FC7C66E130CF26900F7C3DB /* buttonPhoneUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */; };
+		2FC7C66F130CF26900F7C3DB /* buttonPhoneUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65C130CF26900F7C3DB /* buttonPhoneUP@2x.png */; };
+		2FC7C670130CF26900F7C3DB /* buttonPostUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65D130CF26900F7C3DB /* buttonPostUP.png */; };
+		2FC7C671130CF26900F7C3DB /* buttonPostUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65E130CF26900F7C3DB /* buttonPostUP@2x.png */; };
+		2FC7C672130CF26900F7C3DB /* buttonSaveiPhoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65F130CF26900F7C3DB /* buttonSaveiPhoneUp.png */; };
+		2FC7C673130CF26900F7C3DB /* buttonSaveiPhoneUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C660130CF26900F7C3DB /* buttonSaveiPhoneUp@2x.png */; };
+		2FC7C674130CF26900F7C3DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C661130CF26900F7C3DB /* Default.png */; };
+		2FC7C675130CF26900F7C3DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C662130CF26900F7C3DB /* Default@2x.png */; };
+		2FC7C676130CF26900F7C3DB /* EmailButtonUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C663130CF26900F7C3DB /* EmailButtonUP.png */; };
+		2FC7C677130CF26900F7C3DB /* emailButtonUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C664130CF26900F7C3DB /* emailButtonUP@2x.png */; };
+		2FC7C678130CF26900F7C3DB /* FacebookButtonUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C665130CF26900F7C3DB /* FacebookButtonUP.png */; };
+		2FC7C679130CF26900F7C3DB /* FacebookButtonUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C666130CF26900F7C3DB /* FacebookButtonUP@2x.png */; };
+		2FC7C67A130CF26900F7C3DB /* friendPick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C667130CF26900F7C3DB /* friendPick.png */; };
+		2FC7C67B130CF26900F7C3DB /* friendPick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C668130CF26900F7C3DB /* friendPick@2x.png */; };
+		2FC7C67C130CF26900F7C3DB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C669130CF26900F7C3DB /* Icon.png */; };
+		2FC7C680130CF27F00F7C3DB /* crosshairs-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C67D130CF27F00F7C3DB /* crosshairs-old.png */; };
+		2FC7C681130CF27F00F7C3DB /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C67E130CF27F00F7C3DB /* crosshairs.png */; };
+		2FC7C682130CF27F00F7C3DB /* crosshairs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C67F130CF27F00F7C3DB /* crosshairs@2x.png */; };
+		2FC7C687130CF29B00F7C3DB /* RubberChicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C683130CF29B00F7C3DB /* RubberChicken.png */; };
+		2FC7C688130CF29B00F7C3DB /* RubberChicken@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C684130CF29B00F7C3DB /* RubberChicken@2X.png */; };
+		2FC7C689130CF29B00F7C3DB /* RubberChickenKillOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C685130CF29B00F7C3DB /* RubberChickenKillOverlay.png */; };
+		2FC7C68A130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C686130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png */; };
+		2FC7C6CB130CF2D900F7C3DB /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6B4130CF2D900F7C3DB /* Facebook.m */; };
+		2FC7C6CC130CF2D900F7C3DB /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C6B6130CF2D900F7C3DB /* FBDialog.bundle */; };
+		2FC7C6CD130CF2D900F7C3DB /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6B8130CF2D900F7C3DB /* FBDialog.m */; };
+		2FC7C6CE130CF2D900F7C3DB /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6BA130CF2D900F7C3DB /* FBLoginDialog.m */; };
+		2FC7C6CF130CF2D900F7C3DB /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6BC130CF2D900F7C3DB /* FBRequest.m */; };
+		2FC7C6D0130CF2D900F7C3DB /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6C0130CF2D900F7C3DB /* NSObject+SBJSON.m */; };
+		2FC7C6D1130CF2D900F7C3DB /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6C2130CF2D900F7C3DB /* NSString+SBJSON.m */; };
+		2FC7C6D2130CF2D900F7C3DB /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6C4130CF2D900F7C3DB /* SBJSON.m */; };
+		2FC7C6D3130CF2D900F7C3DB /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6C6130CF2D900F7C3DB /* SBJsonBase.m */; };
+		2FC7C6D4130CF2D900F7C3DB /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6C8130CF2D900F7C3DB /* SBJsonParser.m */; };
+		2FC7C6D5130CF2D900F7C3DB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6CA130CF2D900F7C3DB /* SBJsonWriter.m */; };
 		2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EBDD1308574C007AC351 /* PhotoUploader.m */; };
 		2FD5ED24130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5ED23130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m */; };
 		2FD5ED311308817E007AC351 /* NSData+AttassaEncodings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5ED301308817E007AC351 /* NSData+AttassaEncodings.m */; };
@@ -32,131 +155,13 @@
 		2FD5EE6813089617007AC351 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE5E13089617007AC351 /* ASIInputStream.m */; };
 		2FD5EE6913089617007AC351 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE6013089617007AC351 /* ASINetworkQueue.m */; };
 		2FD5EE6F13089678007AC351 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */; };
-		A57C07EE13086A650021B22B /* crosshairs.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07EC13086A650021B22B /* crosshairs.png */; };
-		A57C07EF13086A650021B22B /* crosshairs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07ED13086A650021B22B /* crosshairs@2x.png */; };
-		A57C07FA13086CFD0021B22B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07F813086CFD0021B22B /* Default@2x.png */; };
-		A57C07FB13086CFD0021B22B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07F913086CFD0021B22B /* Default.png */; };
-		A57C080013086D570021B22B /* RubberChickenKillOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07FE13086D570021B22B /* RubberChickenKillOverlay.png */; };
-		A57C080113086D570021B22B /* RubberChickenKillOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C07FF13086D570021B22B /* RubberChickenKillOverlay@2x.png */; };
-		A57C080613086E550021B22B /* RubberChicken.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080413086E550021B22B /* RubberChicken.png */; };
-		A57C080713086E550021B22B /* RubberChicken@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080513086E550021B22B /* RubberChicken@2X.png */; };
-		A57C08121308745E0021B22B /* FacebookButtonUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080C1308745E0021B22B /* FacebookButtonUP@2x.png */; };
-		A57C08131308745E0021B22B /* FacebookButtonUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080D1308745E0021B22B /* FacebookButtonUP.png */; };
-		A57C08141308745E0021B22B /* emailButtonUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080E1308745E0021B22B /* emailButtonUP@2x.png */; };
-		A57C08151308745E0021B22B /* EmailButtonUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C080F1308745E0021B22B /* EmailButtonUP.png */; };
-		A57C082B130878140021B22B /* buttonSaveiPhoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */; };
-		A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */; };
 		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
-		A5CCF395130882E000BEF209 /* friendPick.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF393130882E000BEF209 /* friendPick.png */; };
-		A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF394130882E000BEF209 /* friendPick@2x.png */; };
-		A5CCF3BE1308881A00BEF209 /* ah2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A71308881900BEF209 /* ah2.caf */; };
-		A5CCF3BF1308881A00BEF209 /* chicken_squawk1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */; };
-		A5CCF3C01308881A00BEF209 /* chicken_squawk2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */; };
-		A5CCF3C11308881A00BEF209 /* dude2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AA1308881900BEF209 /* dude2.caf */; };
-		A5CCF3C21308881A00BEF209 /* dude3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AB1308881900BEF209 /* dude3.caf */; };
-		A5CCF3C31308881A00BEF209 /* hesgotarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */; };
-		A5CCF3C41308881A00BEF209 /* hey_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AD1308881900BEF209 /* hey_ow.caf */; };
-		A5CCF3C51308881A00BEF209 /* hey2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AE1308881900BEF209 /* hey2.caf */; };
-		A5CCF3C61308881A00BEF209 /* hey3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3AF1308881A00BEF209 /* hey3.caf */; };
-		A5CCF3C71308881A00BEF209 /* isthatarubberchicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */; };
-		A5CCF3C81308881A00BEF209 /* oomf1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B11308881A00BEF209 /* oomf1.caf */; };
-		A5CCF3C91308881A00BEF209 /* ow_whine.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B21308881A00BEF209 /* ow_whine.caf */; };
-		A5CCF3CA1308881A00BEF209 /* ow2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B31308881A00BEF209 /* ow2.caf */; };
-		A5CCF3CB1308881A00BEF209 /* ow3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B41308881A00BEF209 /* ow3.caf */; };
-		A5CCF3CC1308881A00BEF209 /* ow4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B51308881A00BEF209 /* ow4.caf */; };
-		A5CCF3CD1308881A00BEF209 /* stopit2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B61308881A00BEF209 /* stopit2.caf */; };
-		A5CCF3CE1308881A00BEF209 /* uhh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B71308881A00BEF209 /* uhh2.caf */; };
-		A5CCF3CF1308881A00BEF209 /* uhh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B81308881A00BEF209 /* uhh3.caf */; };
-		A5CCF3D01308881A00BEF209 /* uhh4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3B91308881A00BEF209 /* uhh4.caf */; };
-		A5CCF3D11308881A00BEF209 /* umm_ouch.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */; };
-		A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BB1308881A00BEF209 /* what_the1.caf */; };
-		A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BC1308881A00BEF209 /* what_the2.caf */; };
-		A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3BD1308881A00BEF209 /* what_the3.caf */; };
-		A5CCF3EA1308887400BEF209 /* slap_splat_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D61308887400BEF209 /* slap_splat_3.caf */; };
-		A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D71308887400BEF209 /* slap_bonk.caf */; };
-		A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D81308887400BEF209 /* slap_hard_1.caf */; };
-		A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3D91308887400BEF209 /* slap_hard_2.caf */; };
-		A5CCF3EE1308887400BEF209 /* slap_light_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DA1308887400BEF209 /* slap_light_1.caf */; };
-		A5CCF3EF1308887400BEF209 /* slap_light_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DB1308887400BEF209 /* slap_light_2.caf */; };
-		A5CCF3F01308887400BEF209 /* slap_ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DC1308887400BEF209 /* slap_ow.caf */; };
-		A5CCF3F11308887400BEF209 /* slap_splat _2.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */; };
-		A5CCF3F21308887400BEF209 /* slap_splat_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */; };
-		A5CCF3F31308887400BEF209 /* slap_splat_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */; };
-		A5CCF3F41308887400BEF209 /* slap_squeak.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E01308887400BEF209 /* slap_squeak.caf */; };
-		A5CCF3F51308887400BEF209 /* slap01.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E11308887400BEF209 /* slap01.caf */; };
-		A5CCF3F61308887400BEF209 /* slap02.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E21308887400BEF209 /* slap02.caf */; };
-		A5CCF3F71308887400BEF209 /* slap03.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E31308887400BEF209 /* slap03.caf */; };
-		A5CCF3F81308887400BEF209 /* slap04.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E41308887400BEF209 /* slap04.caf */; };
-		A5CCF3F91308887400BEF209 /* slap05.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E51308887400BEF209 /* slap05.caf */; };
-		A5CCF3FA1308887400BEF209 /* slap06.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E61308887400BEF209 /* slap06.caf */; };
-		A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E71308887400BEF209 /* slap07.caf */; };
-		A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E81308887400BEF209 /* slap08.caf */; };
-		A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF3E91308887400BEF209 /* squawk.caf */; };
-		A5CCF40813088A8000BEF209 /* buttonCancelUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */; };
-		A5CCF40913088A8000BEF209 /* buttonCanelUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40513088A8000BEF209 /* buttonCanelUP.png */; };
-		A5CCF40A13088A8000BEF209 /* buttonPostUP.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40613088A8000BEF209 /* buttonPostUP.png */; };
-		A5CCF40B13088A8000BEF209 /* buttonPostUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */; };
-		A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5D2471F1307459F00E8A6DF /* FBDialog.bundle */; };
-		A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */; };
-		A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247251307459F00E8A6DF /* NSString+SBJSON.m */; };
-		A5D2473A1307459F00E8A6DF /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247271307459F00E8A6DF /* SBJSON.m */; };
-		A5D2473B1307459F00E8A6DF /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247291307459F00E8A6DF /* SBJsonBase.m */; };
-		A5D2473C1307459F00E8A6DF /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2472B1307459F00E8A6DF /* SBJsonParser.m */; };
-		A5D2473D1307459F00E8A6DF /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */; };
-		A5D2473E1307459F00E8A6DF /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247301307459F00E8A6DF /* FBRequest.m */; };
-		A5D2473F1307459F00E8A6DF /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247311307459F00E8A6DF /* Facebook.m */; };
-		A5D247401307459F00E8A6DF /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247341307459F00E8A6DF /* FBLoginDialog.m */; };
-		A5D247411307459F00E8A6DF /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D247361307459F00E8A6DF /* FBDialog.m */; };
 		A5D247A01307552700E8A6DF /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */; };
 		A5D247A11307552700E8A6DF /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D2479F1307552700E8A6DF /* PickAFriendTableViewController.xib */; };
-		C71E4A6212638D7B00670FFC /* AssassinTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6012638D7B00670FFC /* AssassinTransparent.png */; };
-		C71E4A6A12638E8800670FFC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C71E4A6912638E8800670FFC /* Icon.png */; };
 		C748E3171283CC32001658E2 /* AttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E3151283CC32001658E2 /* AttackViewController.m */; };
 		C748E3181283CC32001658E2 /* AttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748E3161283CC32001658E2 /* AttackViewController.xib */; };
 		C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E31A1283CC41001658E2 /* ShakeEventSource.m */; };
 		C748E31E1283CC41001658E2 /* SoundClipPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E31C1283CC41001658E2 /* SoundClipPool.m */; };
-		C748E34B1283CC5E001658E2 /* ah.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3211283CC5E001658E2 /* ah.caf */; };
-		C748E34C1283CC5E001658E2 /* dominating.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3221283CC5E001658E2 /* dominating.caf */; };
-		C748E34D1283CC5E001658E2 /* dude.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3231283CC5E001658E2 /* dude.caf */; };
-		C748E34E1283CC5E001658E2 /* excellent.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3241283CC5E001658E2 /* excellent.caf */; };
-		C748E34F1283CC5E001658E2 /* finishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3251283CC5E001658E2 /* finishhim.caf */; };
-		C748E3501283CC5E001658E2 /* firstblood.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3261283CC5E001658E2 /* firstblood.caf */; };
-		C748E3511283CC5E001658E2 /* godlike.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3271283CC5E001658E2 /* godlike.caf */; };
-		C748E3521283CC5E001658E2 /* hey.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3281283CC5E001658E2 /* hey.caf */; };
-		C748E3531283CC5E001658E2 /* holyshit.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3291283CC5E001658E2 /* holyshit.caf */; };
-		C748E3541283CC5E001658E2 /* isthatachicken.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32A1283CC5E001658E2 /* isthatachicken.caf */; };
-		C748E3551283CC5E001658E2 /* ludicrouskill.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32B1283CC5E001658E2 /* ludicrouskill.caf */; };
-		C748E3561283CC5E001658E2 /* mk4flaw.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32C1283CC5E001658E2 /* mk4flaw.caf */; };
-		C748E3571283CC5E001658E2 /* monsterkill.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32D1283CC5E001658E2 /* monsterkill.caf */; };
-		C748E3581283CC5E001658E2 /* oof.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32E1283CC5E001658E2 /* oof.caf */; };
-		C748E3591283CC5E001658E2 /* outstanding.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E32F1283CC5E001658E2 /* outstanding.caf */; };
-		C748E35A1283CC5E001658E2 /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3301283CC5E001658E2 /* ow.caf */; };
-		C748E35B1283CC5E001658E2 /* pathetic.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3311283CC5E001658E2 /* pathetic.caf */; };
-		C748E35C1283CC5E001658E2 /* prepare.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3321283CC5E001658E2 /* prepare.caf */; };
-		C748E35D1283CC5E001658E2 /* punishhim.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3331283CC5E001658E2 /* punishhim.caf */; };
-		C748E35E1283CC5E001658E2 /* rampage.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3341283CC5E001658E2 /* rampage.caf */; };
-		C748E35F1283CC5E001658E2 /* slap.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3351283CC5E001658E2 /* slap.caf */; };
-		C748E3601283CC5E001658E2 /* slap2.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3361283CC5E001658E2 /* slap2.caf */; };
-		C748E3611283CC5E001658E2 /* slap3.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3371283CC5E001658E2 /* slap3.caf */; };
-		C748E3621283CC5E001658E2 /* slap4.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3381283CC5E001658E2 /* slap4.caf */; };
-		C748E3631283CC5E001658E2 /* slap5.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3391283CC5E001658E2 /* slap5.caf */; };
-		C748E3641283CC5E001658E2 /* slap6.aif in Resources */ = {isa = PBXBuildFile; fileRef = C748E33A1283CC5E001658E2 /* slap6.aif */; };
-		C748E3651283CC5E001658E2 /* slap6.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33B1283CC5E001658E2 /* slap6.caf */; };
-		C748E3661283CC5E001658E2 /* slap7.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33C1283CC5E001658E2 /* slap7.caf */; };
-		C748E3671283CC5E001658E2 /* stop.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33D1283CC5E001658E2 /* stop.caf */; };
-		C748E3681283CC5E001658E2 /* stopit.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33E1283CC5E001658E2 /* stopit.caf */; };
-		C748E3691283CC5E001658E2 /* supurb.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E33F1283CC5E001658E2 /* supurb.caf */; };
-		C748E36A1283CC5E001658E2 /* testyourmight.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3401283CC5E001658E2 /* testyourmight.caf */; };
-		C748E36B1283CC5E001658E2 /* thathurts.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3411283CC5E001658E2 /* thathurts.caf */; };
-		C748E36C1283CC5E001658E2 /* threat.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3421283CC5E001658E2 /* threat.caf */; };
-		C748E36D1283CC5E001658E2 /* uhh.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3431283CC5E001658E2 /* uhh.caf */; };
-		C748E36E1283CC5E001658E2 /* unstoppable.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3441283CC5E001658E2 /* unstoppable.caf */; };
-		C748E36F1283CC5E001658E2 /* weak.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3451283CC5E001658E2 /* weak.caf */; };
-		C748E3701283CC5E001658E2 /* welldone.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3461283CC5E001658E2 /* welldone.caf */; };
-		C748E3711283CC5E001658E2 /* whatthehell.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3471283CC5E001658E2 /* whatthehell.caf */; };
-		C748E3721283CC5E001658E2 /* wickedsick.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3481283CC5E001658E2 /* wickedsick.caf */; };
-		C748E3731283CC5E001658E2 /* youarenothing.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E3491283CC5E001658E2 /* youarenothing.caf */; };
-		C748E3741283CC5E001658E2 /* yousuck.caf in Resources */ = {isa = PBXBuildFile; fileRef = C748E34A1283CC5E001658E2 /* yousuck.caf */; };
 		C748E3CB1283D15F001658E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CA1283D15F001658E2 /* QuartzCore.framework */; };
 		C748E3CD1283D16D001658E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CC1283D16D001658E2 /* AVFoundation.framework */; };
 		C748E3CF1283D180001658E2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C748E3CE1283D180001658E2 /* AudioToolbox.framework */; };
@@ -181,6 +186,141 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Combine.h"; path = "Helpers/UIImage+Combine.h"; sourceTree = "<group>"; };
 		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
+		2FC7C5AB130CF24200F7C3DB /* ah.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ah.caf; path = Sounds/ah.caf; sourceTree = "<group>"; };
+		2FC7C5AC130CF24200F7C3DB /* ah2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ah2.caf; path = Sounds/ah2.caf; sourceTree = "<group>"; };
+		2FC7C5AD130CF24200F7C3DB /* chicken_squawk1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = chicken_squawk1.caf; path = Sounds/chicken_squawk1.caf; sourceTree = "<group>"; };
+		2FC7C5AE130CF24200F7C3DB /* chicken_squawk2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = chicken_squawk2.caf; path = Sounds/chicken_squawk2.caf; sourceTree = "<group>"; };
+		2FC7C5AF130CF24200F7C3DB /* dominating.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dominating.caf; path = Sounds/dominating.caf; sourceTree = "<group>"; };
+		2FC7C5B0130CF24200F7C3DB /* dude.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dude.caf; path = Sounds/dude.caf; sourceTree = "<group>"; };
+		2FC7C5B1130CF24200F7C3DB /* dude2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dude2.caf; path = Sounds/dude2.caf; sourceTree = "<group>"; };
+		2FC7C5B2130CF24200F7C3DB /* dude3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dude3.caf; path = Sounds/dude3.caf; sourceTree = "<group>"; };
+		2FC7C5B3130CF24200F7C3DB /* excellent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = excellent.caf; path = Sounds/excellent.caf; sourceTree = "<group>"; };
+		2FC7C5B4130CF24200F7C3DB /* finishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = finishhim.caf; path = Sounds/finishhim.caf; sourceTree = "<group>"; };
+		2FC7C5B5130CF24200F7C3DB /* firstblood.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = firstblood.caf; path = Sounds/firstblood.caf; sourceTree = "<group>"; };
+		2FC7C5B6130CF24200F7C3DB /* godlike.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = godlike.caf; path = Sounds/godlike.caf; sourceTree = "<group>"; };
+		2FC7C5B7130CF24200F7C3DB /* hesgotarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hesgotarubberchicken.caf; path = Sounds/hesgotarubberchicken.caf; sourceTree = "<group>"; };
+		2FC7C5B8130CF24200F7C3DB /* hey_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey_ow.caf; path = Sounds/hey_ow.caf; sourceTree = "<group>"; };
+		2FC7C5B9130CF24200F7C3DB /* hey.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey.caf; path = Sounds/hey.caf; sourceTree = "<group>"; };
+		2FC7C5BA130CF24200F7C3DB /* hey2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey2.caf; path = Sounds/hey2.caf; sourceTree = "<group>"; };
+		2FC7C5BB130CF24200F7C3DB /* hey3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey3.caf; path = Sounds/hey3.caf; sourceTree = "<group>"; };
+		2FC7C5BC130CF24200F7C3DB /* holyshit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = holyshit.caf; path = Sounds/holyshit.caf; sourceTree = "<group>"; };
+		2FC7C5BD130CF24200F7C3DB /* isthatachicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = isthatachicken.caf; path = Sounds/isthatachicken.caf; sourceTree = "<group>"; };
+		2FC7C5BE130CF24200F7C3DB /* isthatarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = isthatarubberchicken.caf; path = Sounds/isthatarubberchicken.caf; sourceTree = "<group>"; };
+		2FC7C5BF130CF24200F7C3DB /* ludicrouskill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ludicrouskill.caf; path = Sounds/ludicrouskill.caf; sourceTree = "<group>"; };
+		2FC7C5C0130CF24200F7C3DB /* mk4flaw.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mk4flaw.caf; path = Sounds/mk4flaw.caf; sourceTree = "<group>"; };
+		2FC7C5C1130CF24200F7C3DB /* monsterkill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = monsterkill.caf; path = Sounds/monsterkill.caf; sourceTree = "<group>"; };
+		2FC7C5C2130CF24200F7C3DB /* oof.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = oof.caf; path = Sounds/oof.caf; sourceTree = "<group>"; };
+		2FC7C5C3130CF24200F7C3DB /* oomf1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = oomf1.caf; path = Sounds/oomf1.caf; sourceTree = "<group>"; };
+		2FC7C5C4130CF24200F7C3DB /* outstanding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = outstanding.caf; path = Sounds/outstanding.caf; sourceTree = "<group>"; };
+		2FC7C5C5130CF24200F7C3DB /* ow_whine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow_whine.caf; path = Sounds/ow_whine.caf; sourceTree = "<group>"; };
+		2FC7C5C6130CF24200F7C3DB /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow.caf; path = Sounds/ow.caf; sourceTree = "<group>"; };
+		2FC7C5C7130CF24200F7C3DB /* ow2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow2.caf; path = Sounds/ow2.caf; sourceTree = "<group>"; };
+		2FC7C5C8130CF24200F7C3DB /* ow3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow3.caf; path = Sounds/ow3.caf; sourceTree = "<group>"; };
+		2FC7C5C9130CF24200F7C3DB /* ow4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow4.caf; path = Sounds/ow4.caf; sourceTree = "<group>"; };
+		2FC7C5CA130CF24200F7C3DB /* pathetic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pathetic.caf; path = Sounds/pathetic.caf; sourceTree = "<group>"; };
+		2FC7C5CB130CF24200F7C3DB /* prepare.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = prepare.caf; path = Sounds/prepare.caf; sourceTree = "<group>"; };
+		2FC7C5CC130CF24200F7C3DB /* punishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = punishhim.caf; path = Sounds/punishhim.caf; sourceTree = "<group>"; };
+		2FC7C5CD130CF24200F7C3DB /* rampage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = rampage.caf; path = Sounds/rampage.caf; sourceTree = "<group>"; };
+		2FC7C5CE130CF24200F7C3DB /* slap _splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slap _splat_3.caf"; path = "Sounds/slap _splat_3.caf"; sourceTree = "<group>"; };
+		2FC7C5CF130CF24200F7C3DB /* slap_bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_bonk.caf; path = Sounds/slap_bonk.caf; sourceTree = "<group>"; };
+		2FC7C5D0130CF24200F7C3DB /* slap_hard_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_hard_1.caf; path = Sounds/slap_hard_1.caf; sourceTree = "<group>"; };
+		2FC7C5D1130CF24200F7C3DB /* slap_hard_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_hard_2.caf; path = Sounds/slap_hard_2.caf; sourceTree = "<group>"; };
+		2FC7C5D2130CF24200F7C3DB /* slap_light_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_light_1.caf; path = Sounds/slap_light_1.caf; sourceTree = "<group>"; };
+		2FC7C5D3130CF24200F7C3DB /* slap_light_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_light_2.caf; path = Sounds/slap_light_2.caf; sourceTree = "<group>"; };
+		2FC7C5D4130CF24200F7C3DB /* slap_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_ow.caf; path = Sounds/slap_ow.caf; sourceTree = "<group>"; };
+		2FC7C5D5130CF24200F7C3DB /* slap_splat _2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slap_splat _2.caf"; path = "Sounds/slap_splat _2.caf"; sourceTree = "<group>"; };
+		2FC7C5D6130CF24200F7C3DB /* slap_splat_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_splat_1.caf; path = Sounds/slap_splat_1.caf; sourceTree = "<group>"; };
+		2FC7C5D7130CF24200F7C3DB /* slap_splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_splat_3.caf; path = Sounds/slap_splat_3.caf; sourceTree = "<group>"; };
+		2FC7C5D8130CF24200F7C3DB /* slap_splat_4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_splat_4.caf; path = Sounds/slap_splat_4.caf; sourceTree = "<group>"; };
+		2FC7C5D9130CF24200F7C3DB /* slap_squeak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap_squeak.caf; path = Sounds/slap_squeak.caf; sourceTree = "<group>"; };
+		2FC7C5DA130CF24200F7C3DB /* slap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap.caf; path = Sounds/slap.caf; sourceTree = "<group>"; };
+		2FC7C5DB130CF24200F7C3DB /* slap01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap01.caf; path = Sounds/slap01.caf; sourceTree = "<group>"; };
+		2FC7C5DC130CF24200F7C3DB /* slap02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap02.caf; path = Sounds/slap02.caf; sourceTree = "<group>"; };
+		2FC7C5DD130CF24200F7C3DB /* slap2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap2.caf; path = Sounds/slap2.caf; sourceTree = "<group>"; };
+		2FC7C5DE130CF24200F7C3DB /* slap03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap03.caf; path = Sounds/slap03.caf; sourceTree = "<group>"; };
+		2FC7C5DF130CF24200F7C3DB /* slap3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap3.caf; path = Sounds/slap3.caf; sourceTree = "<group>"; };
+		2FC7C5E0130CF24200F7C3DB /* slap04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap04.caf; path = Sounds/slap04.caf; sourceTree = "<group>"; };
+		2FC7C5E1130CF24200F7C3DB /* slap4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap4.caf; path = Sounds/slap4.caf; sourceTree = "<group>"; };
+		2FC7C5E2130CF24200F7C3DB /* slap05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap05.caf; path = Sounds/slap05.caf; sourceTree = "<group>"; };
+		2FC7C5E3130CF24200F7C3DB /* slap5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap5.caf; path = Sounds/slap5.caf; sourceTree = "<group>"; };
+		2FC7C5E4130CF24200F7C3DB /* slap6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.aif; path = Sounds/slap6.aif; sourceTree = "<group>"; };
+		2FC7C5E5130CF24200F7C3DB /* slap06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap06.caf; path = Sounds/slap06.caf; sourceTree = "<group>"; };
+		2FC7C5E6130CF24200F7C3DB /* slap6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.caf; path = Sounds/slap6.caf; sourceTree = "<group>"; };
+		2FC7C5E7130CF24200F7C3DB /* slap07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap07.caf; path = Sounds/slap07.caf; sourceTree = "<group>"; };
+		2FC7C5E8130CF24200F7C3DB /* slap7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap7.caf; path = Sounds/slap7.caf; sourceTree = "<group>"; };
+		2FC7C5E9130CF24200F7C3DB /* slap08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap08.caf; path = Sounds/slap08.caf; sourceTree = "<group>"; };
+		2FC7C5EA130CF24200F7C3DB /* squawk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = squawk.caf; path = Sounds/squawk.caf; sourceTree = "<group>"; };
+		2FC7C5EB130CF24200F7C3DB /* stop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stop.caf; path = Sounds/stop.caf; sourceTree = "<group>"; };
+		2FC7C5EC130CF24200F7C3DB /* stopit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stopit.caf; path = Sounds/stopit.caf; sourceTree = "<group>"; };
+		2FC7C5ED130CF24200F7C3DB /* stopit2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stopit2.caf; path = Sounds/stopit2.caf; sourceTree = "<group>"; };
+		2FC7C5EE130CF24200F7C3DB /* supurb.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = supurb.caf; path = Sounds/supurb.caf; sourceTree = "<group>"; };
+		2FC7C5EF130CF24200F7C3DB /* testyourmight.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = testyourmight.caf; path = Sounds/testyourmight.caf; sourceTree = "<group>"; };
+		2FC7C5F0130CF24200F7C3DB /* thathurts.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = thathurts.caf; path = Sounds/thathurts.caf; sourceTree = "<group>"; };
+		2FC7C5F1130CF24200F7C3DB /* threat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = threat.caf; path = Sounds/threat.caf; sourceTree = "<group>"; };
+		2FC7C5F2130CF24200F7C3DB /* uhh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh.caf; path = Sounds/uhh.caf; sourceTree = "<group>"; };
+		2FC7C5F3130CF24200F7C3DB /* uhh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh2.caf; path = Sounds/uhh2.caf; sourceTree = "<group>"; };
+		2FC7C5F4130CF24200F7C3DB /* uhh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh3.caf; path = Sounds/uhh3.caf; sourceTree = "<group>"; };
+		2FC7C5F5130CF24200F7C3DB /* uhh4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh4.caf; path = Sounds/uhh4.caf; sourceTree = "<group>"; };
+		2FC7C5F6130CF24200F7C3DB /* umm_ouch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = umm_ouch.caf; path = Sounds/umm_ouch.caf; sourceTree = "<group>"; };
+		2FC7C5F7130CF24200F7C3DB /* unstoppable.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = unstoppable.caf; path = Sounds/unstoppable.caf; sourceTree = "<group>"; };
+		2FC7C5F8130CF24200F7C3DB /* weak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = weak.caf; path = Sounds/weak.caf; sourceTree = "<group>"; };
+		2FC7C5F9130CF24200F7C3DB /* welldone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = welldone.caf; path = Sounds/welldone.caf; sourceTree = "<group>"; };
+		2FC7C5FA130CF24200F7C3DB /* what_the1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = what_the1.caf; path = Sounds/what_the1.caf; sourceTree = "<group>"; };
+		2FC7C5FB130CF24200F7C3DB /* what_the2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = what_the2.caf; path = Sounds/what_the2.caf; sourceTree = "<group>"; };
+		2FC7C5FC130CF24200F7C3DB /* what_the3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = what_the3.caf; path = Sounds/what_the3.caf; sourceTree = "<group>"; };
+		2FC7C5FD130CF24200F7C3DB /* whatthehell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whatthehell.caf; path = Sounds/whatthehell.caf; sourceTree = "<group>"; };
+		2FC7C5FE130CF24200F7C3DB /* wickedsick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wickedsick.caf; path = Sounds/wickedsick.caf; sourceTree = "<group>"; };
+		2FC7C5FF130CF24200F7C3DB /* youarenothing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = youarenothing.caf; path = Sounds/youarenothing.caf; sourceTree = "<group>"; };
+		2FC7C600130CF24200F7C3DB /* yousuck.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yousuck.caf; path = Sounds/yousuck.caf; sourceTree = "<group>"; };
+		2FC7C657130CF26900F7C3DB /* Assassin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Assassin.png; path = Images/Application/Assassin.png; sourceTree = "<group>"; };
+		2FC7C658130CF26900F7C3DB /* AssassinTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssassinTransparent.png; path = Images/Application/AssassinTransparent.png; sourceTree = "<group>"; };
+		2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonCancelUP@2x.png"; path = "Images/Application/buttonCancelUP@2x.png"; sourceTree = "<group>"; };
+		2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonCanelUP.png; path = Images/Application/buttonCanelUP.png; sourceTree = "<group>"; };
+		2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPhoneUP.png; path = Images/Application/buttonPhoneUP.png; sourceTree = "<group>"; };
+		2FC7C65C130CF26900F7C3DB /* buttonPhoneUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonPhoneUP@2x.png"; path = "Images/Application/buttonPhoneUP@2x.png"; sourceTree = "<group>"; };
+		2FC7C65D130CF26900F7C3DB /* buttonPostUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPostUP.png; path = Images/Application/buttonPostUP.png; sourceTree = "<group>"; };
+		2FC7C65E130CF26900F7C3DB /* buttonPostUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonPostUP@2x.png"; path = "Images/Application/buttonPostUP@2x.png"; sourceTree = "<group>"; };
+		2FC7C65F130CF26900F7C3DB /* buttonSaveiPhoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonSaveiPhoneUp.png; path = Images/Application/buttonSaveiPhoneUp.png; sourceTree = "<group>"; };
+		2FC7C660130CF26900F7C3DB /* buttonSaveiPhoneUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonSaveiPhoneUp@2x.png"; path = "Images/Application/buttonSaveiPhoneUp@2x.png"; sourceTree = "<group>"; };
+		2FC7C661130CF26900F7C3DB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/Application/Default.png; sourceTree = "<group>"; };
+		2FC7C662130CF26900F7C3DB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Application/Default@2x.png"; sourceTree = "<group>"; };
+		2FC7C663130CF26900F7C3DB /* EmailButtonUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EmailButtonUP.png; path = Images/Application/EmailButtonUP.png; sourceTree = "<group>"; };
+		2FC7C664130CF26900F7C3DB /* emailButtonUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "emailButtonUP@2x.png"; path = "Images/Application/emailButtonUP@2x.png"; sourceTree = "<group>"; };
+		2FC7C665130CF26900F7C3DB /* FacebookButtonUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FacebookButtonUP.png; path = Images/Application/FacebookButtonUP.png; sourceTree = "<group>"; };
+		2FC7C666130CF26900F7C3DB /* FacebookButtonUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FacebookButtonUP@2x.png"; path = "Images/Application/FacebookButtonUP@2x.png"; sourceTree = "<group>"; };
+		2FC7C667130CF26900F7C3DB /* friendPick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friendPick.png; path = Images/Application/friendPick.png; sourceTree = "<group>"; };
+		2FC7C668130CF26900F7C3DB /* friendPick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "friendPick@2x.png"; path = "Images/Application/friendPick@2x.png"; sourceTree = "<group>"; };
+		2FC7C669130CF26900F7C3DB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Application/Icon.png; sourceTree = "<group>"; };
+		2FC7C67D130CF27F00F7C3DB /* crosshairs-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crosshairs-old.png"; path = "Images/Weapons/crosshairs-old.png"; sourceTree = "<group>"; };
+		2FC7C67E130CF27F00F7C3DB /* crosshairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crosshairs.png; path = Images/Weapons/crosshairs.png; sourceTree = "<group>"; };
+		2FC7C67F130CF27F00F7C3DB /* crosshairs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crosshairs@2x.png"; path = "Images/Weapons/crosshairs@2x.png"; sourceTree = "<group>"; };
+		2FC7C683130CF29B00F7C3DB /* RubberChicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RubberChicken.png; path = Images/Weapons/RubberChicken/RubberChicken.png; sourceTree = "<group>"; };
+		2FC7C684130CF29B00F7C3DB /* RubberChicken@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RubberChicken@2X.png"; path = "Images/Weapons/RubberChicken/RubberChicken@2X.png"; sourceTree = "<group>"; };
+		2FC7C685130CF29B00F7C3DB /* RubberChickenKillOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RubberChickenKillOverlay.png; path = Images/Weapons/RubberChicken/RubberChickenKillOverlay.png; sourceTree = "<group>"; };
+		2FC7C686130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RubberChickenKillOverlay@2x.png"; path = "Images/Weapons/RubberChicken/RubberChickenKillOverlay@2x.png"; sourceTree = "<group>"; };
+		2FC7C6B3130CF2D900F7C3DB /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		2FC7C6B4130CF2D900F7C3DB /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		2FC7C6B5130CF2D900F7C3DB /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		2FC7C6B6130CF2D900F7C3DB /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		2FC7C6B7130CF2D900F7C3DB /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		2FC7C6B8130CF2D900F7C3DB /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		2FC7C6B9130CF2D900F7C3DB /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		2FC7C6BA130CF2D900F7C3DB /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		2FC7C6BB130CF2D900F7C3DB /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		2FC7C6BC130CF2D900F7C3DB /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
+		2FC7C6BE130CF2D900F7C3DB /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		2FC7C6BF130CF2D900F7C3DB /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		2FC7C6C0130CF2D900F7C3DB /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		2FC7C6C1130CF2D900F7C3DB /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		2FC7C6C2130CF2D900F7C3DB /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		2FC7C6C3130CF2D900F7C3DB /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		2FC7C6C4130CF2D900F7C3DB /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		2FC7C6C5130CF2D900F7C3DB /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		2FC7C6C6130CF2D900F7C3DB /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		2FC7C6C7130CF2D900F7C3DB /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		2FC7C6C8130CF2D900F7C3DB /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		2FC7C6C9130CF2D900F7C3DB /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		2FC7C6CA130CF2D900F7C3DB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		2FD5EBDC1308574C007AC351 /* PhotoUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoUploader.h; path = Models/PhotoUploader.h; sourceTree = "<group>"; };
 		2FD5EBDD1308574C007AC351 /* PhotoUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoUploader.m; path = Models/PhotoUploader.m; sourceTree = "<group>"; };
 		2FD5ED22130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+WebServiceClient.h"; path = "Helpers/NSMutableURLRequest+WebServiceClient.h"; sourceTree = "<group>"; };
@@ -215,98 +355,10 @@
 		2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassins_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Assassins-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Assassins-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A57C07EC13086A650021B22B /* crosshairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshairs.png; sourceTree = "<group>"; };
-		A57C07ED13086A650021B22B /* crosshairs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crosshairs@2x.png"; sourceTree = "<group>"; };
-		A57C07F813086CFD0021B22B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A57C07F913086CFD0021B22B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A57C07FE13086D570021B22B /* RubberChickenKillOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RubberChickenKillOverlay.png; sourceTree = "<group>"; };
-		A57C07FF13086D570021B22B /* RubberChickenKillOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RubberChickenKillOverlay@2x.png"; sourceTree = "<group>"; };
-		A57C080413086E550021B22B /* RubberChicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RubberChicken.png; sourceTree = "<group>"; };
-		A57C080513086E550021B22B /* RubberChicken@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RubberChicken@2X.png"; sourceTree = "<group>"; };
-		A57C080C1308745E0021B22B /* FacebookButtonUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButtonUP@2x.png"; sourceTree = "<group>"; };
-		A57C080D1308745E0021B22B /* FacebookButtonUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButtonUP.png; sourceTree = "<group>"; };
-		A57C080E1308745E0021B22B /* emailButtonUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emailButtonUP@2x.png"; sourceTree = "<group>"; };
-		A57C080F1308745E0021B22B /* EmailButtonUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailButtonUP.png; sourceTree = "<group>"; };
-		A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSaveiPhoneUp.png; sourceTree = "<group>"; };
-		A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonSaveiPhoneUp@2x.png"; sourceTree = "<group>"; };
 		A5C9C745130728410088BE1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		A5CCF393130882E000BEF209 /* friendPick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friendPick.png; sourceTree = "<group>"; };
-		A5CCF394130882E000BEF209 /* friendPick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friendPick@2x.png"; sourceTree = "<group>"; };
-		A5CCF3A71308881900BEF209 /* ah2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ah2.caf; sourceTree = "<group>"; };
-		A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicken_squawk1.caf; sourceTree = "<group>"; };
-		A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicken_squawk2.caf; sourceTree = "<group>"; };
-		A5CCF3AA1308881900BEF209 /* dude2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dude2.caf; sourceTree = "<group>"; };
-		A5CCF3AB1308881900BEF209 /* dude3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dude3.caf; sourceTree = "<group>"; };
-		A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hesgotarubberchicken.caf; sourceTree = "<group>"; };
-		A5CCF3AD1308881900BEF209 /* hey_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_ow.caf; sourceTree = "<group>"; };
-		A5CCF3AE1308881900BEF209 /* hey2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey2.caf; sourceTree = "<group>"; };
-		A5CCF3AF1308881A00BEF209 /* hey3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey3.caf; sourceTree = "<group>"; };
-		A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = isthatarubberchicken.caf; sourceTree = "<group>"; };
-		A5CCF3B11308881A00BEF209 /* oomf1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = oomf1.caf; sourceTree = "<group>"; };
-		A5CCF3B21308881A00BEF209 /* ow_whine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow_whine.caf; sourceTree = "<group>"; };
-		A5CCF3B31308881A00BEF209 /* ow2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow2.caf; sourceTree = "<group>"; };
-		A5CCF3B41308881A00BEF209 /* ow3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow3.caf; sourceTree = "<group>"; };
-		A5CCF3B51308881A00BEF209 /* ow4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow4.caf; sourceTree = "<group>"; };
-		A5CCF3B61308881A00BEF209 /* stopit2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stopit2.caf; sourceTree = "<group>"; };
-		A5CCF3B71308881A00BEF209 /* uhh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh2.caf; sourceTree = "<group>"; };
-		A5CCF3B81308881A00BEF209 /* uhh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh3.caf; sourceTree = "<group>"; };
-		A5CCF3B91308881A00BEF209 /* uhh4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uhh4.caf; sourceTree = "<group>"; };
-		A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = umm_ouch.caf; sourceTree = "<group>"; };
-		A5CCF3BB1308881A00BEF209 /* what_the1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the1.caf; sourceTree = "<group>"; };
-		A5CCF3BC1308881A00BEF209 /* what_the2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the2.caf; sourceTree = "<group>"; };
-		A5CCF3BD1308881A00BEF209 /* what_the3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = what_the3.caf; sourceTree = "<group>"; };
-		A5CCF3D61308887400BEF209 /* slap_splat_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_3.caf; sourceTree = "<group>"; };
-		A5CCF3D71308887400BEF209 /* slap_bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_bonk.caf; sourceTree = "<group>"; };
-		A5CCF3D81308887400BEF209 /* slap_hard_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_1.caf; sourceTree = "<group>"; };
-		A5CCF3D91308887400BEF209 /* slap_hard_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_hard_2.caf; sourceTree = "<group>"; };
-		A5CCF3DA1308887400BEF209 /* slap_light_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_light_1.caf; sourceTree = "<group>"; };
-		A5CCF3DB1308887400BEF209 /* slap_light_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_light_2.caf; sourceTree = "<group>"; };
-		A5CCF3DC1308887400BEF209 /* slap_ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_ow.caf; sourceTree = "<group>"; };
-		A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "slap_splat _2.caf"; sourceTree = "<group>"; };
-		A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_1.caf; sourceTree = "<group>"; };
-		A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_splat_4.caf; sourceTree = "<group>"; };
-		A5CCF3E01308887400BEF209 /* slap_squeak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap_squeak.caf; sourceTree = "<group>"; };
-		A5CCF3E11308887400BEF209 /* slap01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap01.caf; sourceTree = "<group>"; };
-		A5CCF3E21308887400BEF209 /* slap02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap02.caf; sourceTree = "<group>"; };
-		A5CCF3E31308887400BEF209 /* slap03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap03.caf; sourceTree = "<group>"; };
-		A5CCF3E41308887400BEF209 /* slap04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap04.caf; sourceTree = "<group>"; };
-		A5CCF3E51308887400BEF209 /* slap05.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap05.caf; sourceTree = "<group>"; };
-		A5CCF3E61308887400BEF209 /* slap06.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap06.caf; sourceTree = "<group>"; };
-		A5CCF3E71308887400BEF209 /* slap07.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap07.caf; sourceTree = "<group>"; };
-		A5CCF3E81308887400BEF209 /* slap08.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slap08.caf; sourceTree = "<group>"; };
-		A5CCF3E91308887400BEF209 /* squawk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = squawk.caf; sourceTree = "<group>"; };
-		A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonCancelUP@2x.png"; sourceTree = "<group>"; };
-		A5CCF40513088A8000BEF209 /* buttonCanelUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonCanelUP.png; sourceTree = "<group>"; };
-		A5CCF40613088A8000BEF209 /* buttonPostUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPostUP.png; sourceTree = "<group>"; };
-		A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonPostUP@2x.png"; sourceTree = "<group>"; };
-		A5D2471F1307459F00E8A6DF /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
-		A5D247211307459F00E8A6DF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		A5D247241307459F00E8A6DF /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		A5D247251307459F00E8A6DF /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		A5D247261307459F00E8A6DF /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		A5D247271307459F00E8A6DF /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		A5D247281307459F00E8A6DF /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		A5D247291307459F00E8A6DF /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		A5D2472A1307459F00E8A6DF /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		A5D2472B1307459F00E8A6DF /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		A5D2472C1307459F00E8A6DF /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		A5D2472E1307459F00E8A6DF /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
-		A5D2472F1307459F00E8A6DF /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
-		A5D247301307459F00E8A6DF /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
-		A5D247311307459F00E8A6DF /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
-		A5D247321307459F00E8A6DF /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
-		A5D247331307459F00E8A6DF /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
-		A5D247341307459F00E8A6DF /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
-		A5D247351307459F00E8A6DF /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
-		A5D247361307459F00E8A6DF /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
 		A5D2479D1307552700E8A6DF /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAFriendTableViewController.h; sourceTree = "<group>"; };
 		A5D2479E1307552700E8A6DF /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAFriendTableViewController.m; sourceTree = "<group>"; };
 		A5D2479F1307552700E8A6DF /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickAFriendTableViewController.xib; sourceTree = "<group>"; };
-		C71E4A6012638D7B00670FFC /* AssassinTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssassinTransparent.png; path = Images/Application/AssassinTransparent.png; sourceTree = "<group>"; };
-		C71E4A6912638E8800670FFC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Application/Icon.png; sourceTree = "<group>"; };
 		C748E3141283CC32001658E2 /* AttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackViewController.h; path = ViewControllers/AttackViewController.h; sourceTree = "<group>"; };
 		C748E3151283CC32001658E2 /* AttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackViewController.m; path = ViewControllers/AttackViewController.m; sourceTree = "<group>"; };
 		C748E3161283CC32001658E2 /* AttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackViewController.xib; path = ViewControllers/AttackViewController.xib; sourceTree = "<group>"; };
@@ -314,48 +366,6 @@
 		C748E31A1283CC41001658E2 /* ShakeEventSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakeEventSource.m; path = Models/ShakeEventSource.m; sourceTree = "<group>"; };
 		C748E31B1283CC41001658E2 /* SoundClipPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundClipPool.h; path = Models/SoundClipPool.h; sourceTree = "<group>"; };
 		C748E31C1283CC41001658E2 /* SoundClipPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundClipPool.m; path = Models/SoundClipPool.m; sourceTree = "<group>"; };
-		C748E3211283CC5E001658E2 /* ah.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ah.caf; path = Sounds/ah.caf; sourceTree = "<group>"; };
-		C748E3221283CC5E001658E2 /* dominating.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dominating.caf; path = Sounds/dominating.caf; sourceTree = "<group>"; };
-		C748E3231283CC5E001658E2 /* dude.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dude.caf; path = Sounds/dude.caf; sourceTree = "<group>"; };
-		C748E3241283CC5E001658E2 /* excellent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = excellent.caf; path = Sounds/excellent.caf; sourceTree = "<group>"; };
-		C748E3251283CC5E001658E2 /* finishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = finishhim.caf; path = Sounds/finishhim.caf; sourceTree = "<group>"; };
-		C748E3261283CC5E001658E2 /* firstblood.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = firstblood.caf; path = Sounds/firstblood.caf; sourceTree = "<group>"; };
-		C748E3271283CC5E001658E2 /* godlike.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = godlike.caf; path = Sounds/godlike.caf; sourceTree = "<group>"; };
-		C748E3281283CC5E001658E2 /* hey.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hey.caf; path = Sounds/hey.caf; sourceTree = "<group>"; };
-		C748E3291283CC5E001658E2 /* holyshit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = holyshit.caf; path = Sounds/holyshit.caf; sourceTree = "<group>"; };
-		C748E32A1283CC5E001658E2 /* isthatachicken.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = isthatachicken.caf; path = Sounds/isthatachicken.caf; sourceTree = "<group>"; };
-		C748E32B1283CC5E001658E2 /* ludicrouskill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ludicrouskill.caf; path = Sounds/ludicrouskill.caf; sourceTree = "<group>"; };
-		C748E32C1283CC5E001658E2 /* mk4flaw.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mk4flaw.caf; path = Sounds/mk4flaw.caf; sourceTree = "<group>"; };
-		C748E32D1283CC5E001658E2 /* monsterkill.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = monsterkill.caf; path = Sounds/monsterkill.caf; sourceTree = "<group>"; };
-		C748E32E1283CC5E001658E2 /* oof.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = oof.caf; path = Sounds/oof.caf; sourceTree = "<group>"; };
-		C748E32F1283CC5E001658E2 /* outstanding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = outstanding.caf; path = Sounds/outstanding.caf; sourceTree = "<group>"; };
-		C748E3301283CC5E001658E2 /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ow.caf; path = Sounds/ow.caf; sourceTree = "<group>"; };
-		C748E3311283CC5E001658E2 /* pathetic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pathetic.caf; path = Sounds/pathetic.caf; sourceTree = "<group>"; };
-		C748E3321283CC5E001658E2 /* prepare.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = prepare.caf; path = Sounds/prepare.caf; sourceTree = "<group>"; };
-		C748E3331283CC5E001658E2 /* punishhim.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = punishhim.caf; path = Sounds/punishhim.caf; sourceTree = "<group>"; };
-		C748E3341283CC5E001658E2 /* rampage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = rampage.caf; path = Sounds/rampage.caf; sourceTree = "<group>"; };
-		C748E3351283CC5E001658E2 /* slap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap.caf; path = Sounds/slap.caf; sourceTree = "<group>"; };
-		C748E3361283CC5E001658E2 /* slap2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap2.caf; path = Sounds/slap2.caf; sourceTree = "<group>"; };
-		C748E3371283CC5E001658E2 /* slap3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap3.caf; path = Sounds/slap3.caf; sourceTree = "<group>"; };
-		C748E3381283CC5E001658E2 /* slap4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap4.caf; path = Sounds/slap4.caf; sourceTree = "<group>"; };
-		C748E3391283CC5E001658E2 /* slap5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap5.caf; path = Sounds/slap5.caf; sourceTree = "<group>"; };
-		C748E33A1283CC5E001658E2 /* slap6.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.aif; path = Sounds/slap6.aif; sourceTree = "<group>"; };
-		C748E33B1283CC5E001658E2 /* slap6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap6.caf; path = Sounds/slap6.caf; sourceTree = "<group>"; };
-		C748E33C1283CC5E001658E2 /* slap7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = slap7.caf; path = Sounds/slap7.caf; sourceTree = "<group>"; };
-		C748E33D1283CC5E001658E2 /* stop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stop.caf; path = Sounds/stop.caf; sourceTree = "<group>"; };
-		C748E33E1283CC5E001658E2 /* stopit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stopit.caf; path = Sounds/stopit.caf; sourceTree = "<group>"; };
-		C748E33F1283CC5E001658E2 /* supurb.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = supurb.caf; path = Sounds/supurb.caf; sourceTree = "<group>"; };
-		C748E3401283CC5E001658E2 /* testyourmight.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = testyourmight.caf; path = Sounds/testyourmight.caf; sourceTree = "<group>"; };
-		C748E3411283CC5E001658E2 /* thathurts.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = thathurts.caf; path = Sounds/thathurts.caf; sourceTree = "<group>"; };
-		C748E3421283CC5E001658E2 /* threat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = threat.caf; path = Sounds/threat.caf; sourceTree = "<group>"; };
-		C748E3431283CC5E001658E2 /* uhh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = uhh.caf; path = Sounds/uhh.caf; sourceTree = "<group>"; };
-		C748E3441283CC5E001658E2 /* unstoppable.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = unstoppable.caf; path = Sounds/unstoppable.caf; sourceTree = "<group>"; };
-		C748E3451283CC5E001658E2 /* weak.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = weak.caf; path = Sounds/weak.caf; sourceTree = "<group>"; };
-		C748E3461283CC5E001658E2 /* welldone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = welldone.caf; path = Sounds/welldone.caf; sourceTree = "<group>"; };
-		C748E3471283CC5E001658E2 /* whatthehell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whatthehell.caf; path = Sounds/whatthehell.caf; sourceTree = "<group>"; };
-		C748E3481283CC5E001658E2 /* wickedsick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wickedsick.caf; path = Sounds/wickedsick.caf; sourceTree = "<group>"; };
-		C748E3491283CC5E001658E2 /* youarenothing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = youarenothing.caf; path = Sounds/youarenothing.caf; sourceTree = "<group>"; };
-		C748E34A1283CC5E001658E2 /* yousuck.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yousuck.caf; path = Sounds/yousuck.caf; sourceTree = "<group>"; };
 		C748E3CA1283D15F001658E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = iphoneos4.1/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
 		C748E3CC1283D16D001658E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = iphoneos4.1/System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
 		C748E3CE1283D180001658E2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = iphoneos4.1/System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
@@ -416,8 +426,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				2FC7C6B2130CF2D900F7C3DB /* FBConnect */,
 				2FD5ED7913088E4A007AC351 /* AsiHTTP */,
-				A5D2471E1307459F00E8A6DF /* FBConnect */,
 				C748E3201283CC48001658E2 /* Sounds */,
 				C71E4A321263819F00670FFC /* Images */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -467,6 +477,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2FC7C6B2130CF2D900F7C3DB /* FBConnect */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7C6B3130CF2D900F7C3DB /* Facebook.h */,
+				2FC7C6B4130CF2D900F7C3DB /* Facebook.m */,
+				2FC7C6B5130CF2D900F7C3DB /* FBConnect.h */,
+				2FC7C6B6130CF2D900F7C3DB /* FBDialog.bundle */,
+				2FC7C6B7130CF2D900F7C3DB /* FBDialog.h */,
+				2FC7C6B8130CF2D900F7C3DB /* FBDialog.m */,
+				2FC7C6B9130CF2D900F7C3DB /* FBLoginDialog.h */,
+				2FC7C6BA130CF2D900F7C3DB /* FBLoginDialog.m */,
+				2FC7C6BB130CF2D900F7C3DB /* FBRequest.h */,
+				2FC7C6BC130CF2D900F7C3DB /* FBRequest.m */,
+				2FC7C6BD130CF2D900F7C3DB /* JSON */,
+			);
+			path = FBConnect;
+			sourceTree = "<group>";
+		};
+		2FC7C6BD130CF2D900F7C3DB /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2FC7C6BE130CF2D900F7C3DB /* JSON.h */,
+				2FC7C6BF130CF2D900F7C3DB /* NSObject+SBJSON.h */,
+				2FC7C6C0130CF2D900F7C3DB /* NSObject+SBJSON.m */,
+				2FC7C6C1130CF2D900F7C3DB /* NSString+SBJSON.h */,
+				2FC7C6C2130CF2D900F7C3DB /* NSString+SBJSON.m */,
+				2FC7C6C3130CF2D900F7C3DB /* SBJSON.h */,
+				2FC7C6C4130CF2D900F7C3DB /* SBJSON.m */,
+				2FC7C6C5130CF2D900F7C3DB /* SBJsonBase.h */,
+				2FC7C6C6130CF2D900F7C3DB /* SBJsonBase.m */,
+				2FC7C6C7130CF2D900F7C3DB /* SBJsonParser.h */,
+				2FC7C6C8130CF2D900F7C3DB /* SBJsonParser.m */,
+				2FC7C6C9130CF2D900F7C3DB /* SBJsonWriter.h */,
+				2FC7C6CA130CF2D900F7C3DB /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		2FD5ED7913088E4A007AC351 /* AsiHTTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,44 +560,6 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		A5D2471E1307459F00E8A6DF /* FBConnect */ = {
-			isa = PBXGroup;
-			children = (
-				A5D2471F1307459F00E8A6DF /* FBDialog.bundle */,
-				A5D247201307459F00E8A6DF /* JSON */,
-				A5D2472E1307459F00E8A6DF /* FBConnect.h */,
-				A5D2472F1307459F00E8A6DF /* FBRequest.h */,
-				A5D247301307459F00E8A6DF /* FBRequest.m */,
-				A5D247311307459F00E8A6DF /* Facebook.m */,
-				A5D247321307459F00E8A6DF /* Facebook.h */,
-				A5D247331307459F00E8A6DF /* FBLoginDialog.h */,
-				A5D247341307459F00E8A6DF /* FBLoginDialog.m */,
-				A5D247351307459F00E8A6DF /* FBDialog.h */,
-				A5D247361307459F00E8A6DF /* FBDialog.m */,
-			);
-			name = FBConnect;
-			sourceTree = "<group>";
-		};
-		A5D247201307459F00E8A6DF /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				A5D247211307459F00E8A6DF /* JSON.h */,
-				A5D247221307459F00E8A6DF /* NSObject+SBJSON.h */,
-				A5D247231307459F00E8A6DF /* NSObject+SBJSON.m */,
-				A5D247241307459F00E8A6DF /* NSString+SBJSON.h */,
-				A5D247251307459F00E8A6DF /* NSString+SBJSON.m */,
-				A5D247261307459F00E8A6DF /* SBJSON.h */,
-				A5D247271307459F00E8A6DF /* SBJSON.m */,
-				A5D247281307459F00E8A6DF /* SBJsonBase.h */,
-				A5D247291307459F00E8A6DF /* SBJsonBase.m */,
-				A5D2472A1307459F00E8A6DF /* SBJsonParser.h */,
-				A5D2472B1307459F00E8A6DF /* SBJsonParser.m */,
-				A5D2472C1307459F00E8A6DF /* SBJsonWriter.h */,
-				A5D2472D1307459F00E8A6DF /* SBJsonWriter.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		C71E4A321263819F00670FFC /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,9 +572,10 @@
 		C71E4A33126381A600670FFC /* Weapons */ = {
 			isa = PBXGroup;
 			children = (
+				2FC7C67D130CF27F00F7C3DB /* crosshairs-old.png */,
+				2FC7C67E130CF27F00F7C3DB /* crosshairs.png */,
+				2FC7C67F130CF27F00F7C3DB /* crosshairs@2x.png */,
 				C748E3811283CF4A001658E2 /* RubberChicken */,
-				A57C07EC13086A650021B22B /* crosshairs.png */,
-				A57C07ED13086A650021B22B /* crosshairs@2x.png */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -591,22 +602,25 @@
 		C71E4A5F12638D6600670FFC /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A5CCF40413088A8000BEF209 /* buttonCancelUP@2x.png */,
-				A5CCF40513088A8000BEF209 /* buttonCanelUP.png */,
-				A5CCF40613088A8000BEF209 /* buttonPostUP.png */,
-				A5CCF40713088A8000BEF209 /* buttonPostUP@2x.png */,
-				A57C0829130878140021B22B /* buttonSaveiPhoneUp.png */,
-				A57C082A130878140021B22B /* buttonSaveiPhoneUp@2x.png */,
-				A57C080C1308745E0021B22B /* FacebookButtonUP@2x.png */,
-				A57C080D1308745E0021B22B /* FacebookButtonUP.png */,
-				A57C080E1308745E0021B22B /* emailButtonUP@2x.png */,
-				A57C080F1308745E0021B22B /* EmailButtonUP.png */,
-				C71E4A6912638E8800670FFC /* Icon.png */,
-				C71E4A6012638D7B00670FFC /* AssassinTransparent.png */,
-				A57C07F813086CFD0021B22B /* Default@2x.png */,
-				A57C07F913086CFD0021B22B /* Default.png */,
-				A5CCF393130882E000BEF209 /* friendPick.png */,
-				A5CCF394130882E000BEF209 /* friendPick@2x.png */,
+				2FC7C657130CF26900F7C3DB /* Assassin.png */,
+				2FC7C658130CF26900F7C3DB /* AssassinTransparent.png */,
+				2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */,
+				2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */,
+				2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */,
+				2FC7C65C130CF26900F7C3DB /* buttonPhoneUP@2x.png */,
+				2FC7C65D130CF26900F7C3DB /* buttonPostUP.png */,
+				2FC7C65E130CF26900F7C3DB /* buttonPostUP@2x.png */,
+				2FC7C65F130CF26900F7C3DB /* buttonSaveiPhoneUp.png */,
+				2FC7C660130CF26900F7C3DB /* buttonSaveiPhoneUp@2x.png */,
+				2FC7C661130CF26900F7C3DB /* Default.png */,
+				2FC7C662130CF26900F7C3DB /* Default@2x.png */,
+				2FC7C663130CF26900F7C3DB /* EmailButtonUP.png */,
+				2FC7C664130CF26900F7C3DB /* emailButtonUP@2x.png */,
+				2FC7C665130CF26900F7C3DB /* FacebookButtonUP.png */,
+				2FC7C666130CF26900F7C3DB /* FacebookButtonUP@2x.png */,
+				2FC7C667130CF26900F7C3DB /* friendPick.png */,
+				2FC7C668130CF26900F7C3DB /* friendPick@2x.png */,
+				2FC7C669130CF26900F7C3DB /* Icon.png */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -640,91 +654,92 @@
 		C748E3201283CC48001658E2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C748E3211283CC5E001658E2 /* ah.caf */,
-				C748E3221283CC5E001658E2 /* dominating.caf */,
-				C748E3231283CC5E001658E2 /* dude.caf */,
-				C748E3241283CC5E001658E2 /* excellent.caf */,
-				C748E3251283CC5E001658E2 /* finishhim.caf */,
-				C748E3261283CC5E001658E2 /* firstblood.caf */,
-				C748E3271283CC5E001658E2 /* godlike.caf */,
-				C748E3281283CC5E001658E2 /* hey.caf */,
-				C748E3291283CC5E001658E2 /* holyshit.caf */,
-				C748E32A1283CC5E001658E2 /* isthatachicken.caf */,
-				C748E32B1283CC5E001658E2 /* ludicrouskill.caf */,
-				C748E32C1283CC5E001658E2 /* mk4flaw.caf */,
-				C748E32D1283CC5E001658E2 /* monsterkill.caf */,
-				C748E32E1283CC5E001658E2 /* oof.caf */,
-				C748E32F1283CC5E001658E2 /* outstanding.caf */,
-				C748E3301283CC5E001658E2 /* ow.caf */,
-				C748E3311283CC5E001658E2 /* pathetic.caf */,
-				C748E3321283CC5E001658E2 /* prepare.caf */,
-				C748E3331283CC5E001658E2 /* punishhim.caf */,
-				C748E3341283CC5E001658E2 /* rampage.caf */,
-				A5CCF3D61308887400BEF209 /* slap_splat_3.caf */,
-				A5CCF3D71308887400BEF209 /* slap_bonk.caf */,
-				A5CCF3D81308887400BEF209 /* slap_hard_1.caf */,
-				A5CCF3D91308887400BEF209 /* slap_hard_2.caf */,
-				A5CCF3DA1308887400BEF209 /* slap_light_1.caf */,
-				A5CCF3DB1308887400BEF209 /* slap_light_2.caf */,
-				A5CCF3DC1308887400BEF209 /* slap_ow.caf */,
-				A5CCF3DD1308887400BEF209 /* slap_splat _2.caf */,
-				A5CCF3DE1308887400BEF209 /* slap_splat_1.caf */,
-				A5CCF3DF1308887400BEF209 /* slap_splat_4.caf */,
-				A5CCF3E01308887400BEF209 /* slap_squeak.caf */,
-				A5CCF3E11308887400BEF209 /* slap01.caf */,
-				A5CCF3E21308887400BEF209 /* slap02.caf */,
-				A5CCF3E31308887400BEF209 /* slap03.caf */,
-				A5CCF3E41308887400BEF209 /* slap04.caf */,
-				A5CCF3E51308887400BEF209 /* slap05.caf */,
-				A5CCF3E61308887400BEF209 /* slap06.caf */,
-				A5CCF3E71308887400BEF209 /* slap07.caf */,
-				A5CCF3E81308887400BEF209 /* slap08.caf */,
-				A5CCF3E91308887400BEF209 /* squawk.caf */,
-				C748E3351283CC5E001658E2 /* slap.caf */,
-				C748E3361283CC5E001658E2 /* slap2.caf */,
-				C748E3371283CC5E001658E2 /* slap3.caf */,
-				C748E3381283CC5E001658E2 /* slap4.caf */,
-				C748E3391283CC5E001658E2 /* slap5.caf */,
-				C748E33A1283CC5E001658E2 /* slap6.aif */,
-				C748E33B1283CC5E001658E2 /* slap6.caf */,
-				C748E33C1283CC5E001658E2 /* slap7.caf */,
-				C748E33D1283CC5E001658E2 /* stop.caf */,
-				C748E33E1283CC5E001658E2 /* stopit.caf */,
-				C748E33F1283CC5E001658E2 /* supurb.caf */,
-				C748E3401283CC5E001658E2 /* testyourmight.caf */,
-				C748E3411283CC5E001658E2 /* thathurts.caf */,
-				C748E3421283CC5E001658E2 /* threat.caf */,
-				A5CCF3A71308881900BEF209 /* ah2.caf */,
-				A5CCF3A81308881900BEF209 /* chicken_squawk1.caf */,
-				A5CCF3A91308881900BEF209 /* chicken_squawk2.caf */,
-				A5CCF3AA1308881900BEF209 /* dude2.caf */,
-				A5CCF3AB1308881900BEF209 /* dude3.caf */,
-				A5CCF3AC1308881900BEF209 /* hesgotarubberchicken.caf */,
-				A5CCF3AD1308881900BEF209 /* hey_ow.caf */,
-				A5CCF3AE1308881900BEF209 /* hey2.caf */,
-				A5CCF3AF1308881A00BEF209 /* hey3.caf */,
-				A5CCF3B01308881A00BEF209 /* isthatarubberchicken.caf */,
-				A5CCF3B11308881A00BEF209 /* oomf1.caf */,
-				A5CCF3B21308881A00BEF209 /* ow_whine.caf */,
-				A5CCF3B31308881A00BEF209 /* ow2.caf */,
-				A5CCF3B41308881A00BEF209 /* ow3.caf */,
-				A5CCF3B51308881A00BEF209 /* ow4.caf */,
-				A5CCF3B61308881A00BEF209 /* stopit2.caf */,
-				A5CCF3B71308881A00BEF209 /* uhh2.caf */,
-				A5CCF3B81308881A00BEF209 /* uhh3.caf */,
-				A5CCF3B91308881A00BEF209 /* uhh4.caf */,
-				A5CCF3BA1308881A00BEF209 /* umm_ouch.caf */,
-				A5CCF3BB1308881A00BEF209 /* what_the1.caf */,
-				A5CCF3BC1308881A00BEF209 /* what_the2.caf */,
-				A5CCF3BD1308881A00BEF209 /* what_the3.caf */,
-				C748E3431283CC5E001658E2 /* uhh.caf */,
-				C748E3441283CC5E001658E2 /* unstoppable.caf */,
-				C748E3451283CC5E001658E2 /* weak.caf */,
-				C748E3461283CC5E001658E2 /* welldone.caf */,
-				C748E3471283CC5E001658E2 /* whatthehell.caf */,
-				C748E3481283CC5E001658E2 /* wickedsick.caf */,
-				C748E3491283CC5E001658E2 /* youarenothing.caf */,
-				C748E34A1283CC5E001658E2 /* yousuck.caf */,
+				2FC7C5AB130CF24200F7C3DB /* ah.caf */,
+				2FC7C5AC130CF24200F7C3DB /* ah2.caf */,
+				2FC7C5AD130CF24200F7C3DB /* chicken_squawk1.caf */,
+				2FC7C5AE130CF24200F7C3DB /* chicken_squawk2.caf */,
+				2FC7C5AF130CF24200F7C3DB /* dominating.caf */,
+				2FC7C5B0130CF24200F7C3DB /* dude.caf */,
+				2FC7C5B1130CF24200F7C3DB /* dude2.caf */,
+				2FC7C5B2130CF24200F7C3DB /* dude3.caf */,
+				2FC7C5B3130CF24200F7C3DB /* excellent.caf */,
+				2FC7C5B4130CF24200F7C3DB /* finishhim.caf */,
+				2FC7C5B5130CF24200F7C3DB /* firstblood.caf */,
+				2FC7C5B6130CF24200F7C3DB /* godlike.caf */,
+				2FC7C5B7130CF24200F7C3DB /* hesgotarubberchicken.caf */,
+				2FC7C5B8130CF24200F7C3DB /* hey_ow.caf */,
+				2FC7C5B9130CF24200F7C3DB /* hey.caf */,
+				2FC7C5BA130CF24200F7C3DB /* hey2.caf */,
+				2FC7C5BB130CF24200F7C3DB /* hey3.caf */,
+				2FC7C5BC130CF24200F7C3DB /* holyshit.caf */,
+				2FC7C5BD130CF24200F7C3DB /* isthatachicken.caf */,
+				2FC7C5BE130CF24200F7C3DB /* isthatarubberchicken.caf */,
+				2FC7C5BF130CF24200F7C3DB /* ludicrouskill.caf */,
+				2FC7C5C0130CF24200F7C3DB /* mk4flaw.caf */,
+				2FC7C5C1130CF24200F7C3DB /* monsterkill.caf */,
+				2FC7C5C2130CF24200F7C3DB /* oof.caf */,
+				2FC7C5C3130CF24200F7C3DB /* oomf1.caf */,
+				2FC7C5C4130CF24200F7C3DB /* outstanding.caf */,
+				2FC7C5C5130CF24200F7C3DB /* ow_whine.caf */,
+				2FC7C5C6130CF24200F7C3DB /* ow.caf */,
+				2FC7C5C7130CF24200F7C3DB /* ow2.caf */,
+				2FC7C5C8130CF24200F7C3DB /* ow3.caf */,
+				2FC7C5C9130CF24200F7C3DB /* ow4.caf */,
+				2FC7C5CA130CF24200F7C3DB /* pathetic.caf */,
+				2FC7C5CB130CF24200F7C3DB /* prepare.caf */,
+				2FC7C5CC130CF24200F7C3DB /* punishhim.caf */,
+				2FC7C5CD130CF24200F7C3DB /* rampage.caf */,
+				2FC7C5CE130CF24200F7C3DB /* slap _splat_3.caf */,
+				2FC7C5CF130CF24200F7C3DB /* slap_bonk.caf */,
+				2FC7C5D0130CF24200F7C3DB /* slap_hard_1.caf */,
+				2FC7C5D1130CF24200F7C3DB /* slap_hard_2.caf */,
+				2FC7C5D2130CF24200F7C3DB /* slap_light_1.caf */,
+				2FC7C5D3130CF24200F7C3DB /* slap_light_2.caf */,
+				2FC7C5D4130CF24200F7C3DB /* slap_ow.caf */,
+				2FC7C5D5130CF24200F7C3DB /* slap_splat _2.caf */,
+				2FC7C5D6130CF24200F7C3DB /* slap_splat_1.caf */,
+				2FC7C5D7130CF24200F7C3DB /* slap_splat_3.caf */,
+				2FC7C5D8130CF24200F7C3DB /* slap_splat_4.caf */,
+				2FC7C5D9130CF24200F7C3DB /* slap_squeak.caf */,
+				2FC7C5DA130CF24200F7C3DB /* slap.caf */,
+				2FC7C5DB130CF24200F7C3DB /* slap01.caf */,
+				2FC7C5DC130CF24200F7C3DB /* slap02.caf */,
+				2FC7C5DD130CF24200F7C3DB /* slap2.caf */,
+				2FC7C5DE130CF24200F7C3DB /* slap03.caf */,
+				2FC7C5DF130CF24200F7C3DB /* slap3.caf */,
+				2FC7C5E0130CF24200F7C3DB /* slap04.caf */,
+				2FC7C5E1130CF24200F7C3DB /* slap4.caf */,
+				2FC7C5E2130CF24200F7C3DB /* slap05.caf */,
+				2FC7C5E3130CF24200F7C3DB /* slap5.caf */,
+				2FC7C5E4130CF24200F7C3DB /* slap6.aif */,
+				2FC7C5E5130CF24200F7C3DB /* slap06.caf */,
+				2FC7C5E6130CF24200F7C3DB /* slap6.caf */,
+				2FC7C5E7130CF24200F7C3DB /* slap07.caf */,
+				2FC7C5E8130CF24200F7C3DB /* slap7.caf */,
+				2FC7C5E9130CF24200F7C3DB /* slap08.caf */,
+				2FC7C5EA130CF24200F7C3DB /* squawk.caf */,
+				2FC7C5EB130CF24200F7C3DB /* stop.caf */,
+				2FC7C5EC130CF24200F7C3DB /* stopit.caf */,
+				2FC7C5ED130CF24200F7C3DB /* stopit2.caf */,
+				2FC7C5EE130CF24200F7C3DB /* supurb.caf */,
+				2FC7C5EF130CF24200F7C3DB /* testyourmight.caf */,
+				2FC7C5F0130CF24200F7C3DB /* thathurts.caf */,
+				2FC7C5F1130CF24200F7C3DB /* threat.caf */,
+				2FC7C5F2130CF24200F7C3DB /* uhh.caf */,
+				2FC7C5F3130CF24200F7C3DB /* uhh2.caf */,
+				2FC7C5F4130CF24200F7C3DB /* uhh3.caf */,
+				2FC7C5F5130CF24200F7C3DB /* uhh4.caf */,
+				2FC7C5F6130CF24200F7C3DB /* umm_ouch.caf */,
+				2FC7C5F7130CF24200F7C3DB /* unstoppable.caf */,
+				2FC7C5F8130CF24200F7C3DB /* weak.caf */,
+				2FC7C5F9130CF24200F7C3DB /* welldone.caf */,
+				2FC7C5FA130CF24200F7C3DB /* what_the1.caf */,
+				2FC7C5FB130CF24200F7C3DB /* what_the2.caf */,
+				2FC7C5FC130CF24200F7C3DB /* what_the3.caf */,
+				2FC7C5FD130CF24200F7C3DB /* whatthehell.caf */,
+				2FC7C5FE130CF24200F7C3DB /* wickedsick.caf */,
+				2FC7C5FF130CF24200F7C3DB /* youarenothing.caf */,
+				2FC7C600130CF24200F7C3DB /* yousuck.caf */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -732,10 +747,10 @@
 		C748E3811283CF4A001658E2 /* RubberChicken */ = {
 			isa = PBXGroup;
 			children = (
-				A57C07FE13086D570021B22B /* RubberChickenKillOverlay.png */,
-				A57C07FF13086D570021B22B /* RubberChickenKillOverlay@2x.png */,
-				A57C080413086E550021B22B /* RubberChicken.png */,
-				A57C080513086E550021B22B /* RubberChicken@2X.png */,
+				2FC7C683130CF29B00F7C3DB /* RubberChicken.png */,
+				2FC7C684130CF29B00F7C3DB /* RubberChicken@2X.png */,
+				2FC7C685130CF29B00F7C3DB /* RubberChickenKillOverlay.png */,
+				2FC7C686130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png */,
 			);
 			name = RubberChicken;
 			sourceTree = "<group>";
@@ -791,118 +806,123 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* AssassinsViewController.xib in Resources */,
-				C71E4A6212638D7B00670FFC /* AssassinTransparent.png in Resources */,
-				C71E4A6A12638E8800670FFC /* Icon.png in Resources */,
 				C76E6EF81266C94300B48793 /* AssassinateHUDViewController.xib in Resources */,
 				C748E3181283CC32001658E2 /* AttackViewController.xib in Resources */,
-				C748E34B1283CC5E001658E2 /* ah.caf in Resources */,
-				C748E34C1283CC5E001658E2 /* dominating.caf in Resources */,
-				C748E34D1283CC5E001658E2 /* dude.caf in Resources */,
-				C748E34E1283CC5E001658E2 /* excellent.caf in Resources */,
-				C748E34F1283CC5E001658E2 /* finishhim.caf in Resources */,
-				C748E3501283CC5E001658E2 /* firstblood.caf in Resources */,
-				C748E3511283CC5E001658E2 /* godlike.caf in Resources */,
-				C748E3521283CC5E001658E2 /* hey.caf in Resources */,
-				C748E3531283CC5E001658E2 /* holyshit.caf in Resources */,
-				C748E3541283CC5E001658E2 /* isthatachicken.caf in Resources */,
-				C748E3551283CC5E001658E2 /* ludicrouskill.caf in Resources */,
-				C748E3561283CC5E001658E2 /* mk4flaw.caf in Resources */,
-				C748E3571283CC5E001658E2 /* monsterkill.caf in Resources */,
-				C748E3581283CC5E001658E2 /* oof.caf in Resources */,
-				C748E3591283CC5E001658E2 /* outstanding.caf in Resources */,
-				C748E35A1283CC5E001658E2 /* ow.caf in Resources */,
-				C748E35B1283CC5E001658E2 /* pathetic.caf in Resources */,
-				C748E35C1283CC5E001658E2 /* prepare.caf in Resources */,
-				C748E35D1283CC5E001658E2 /* punishhim.caf in Resources */,
-				C748E35E1283CC5E001658E2 /* rampage.caf in Resources */,
-				C748E35F1283CC5E001658E2 /* slap.caf in Resources */,
-				C748E3601283CC5E001658E2 /* slap2.caf in Resources */,
-				C748E3611283CC5E001658E2 /* slap3.caf in Resources */,
-				C748E3621283CC5E001658E2 /* slap4.caf in Resources */,
-				C748E3631283CC5E001658E2 /* slap5.caf in Resources */,
-				C748E3641283CC5E001658E2 /* slap6.aif in Resources */,
-				C748E3651283CC5E001658E2 /* slap6.caf in Resources */,
-				C748E3661283CC5E001658E2 /* slap7.caf in Resources */,
-				C748E3671283CC5E001658E2 /* stop.caf in Resources */,
-				C748E3681283CC5E001658E2 /* stopit.caf in Resources */,
-				C748E3691283CC5E001658E2 /* supurb.caf in Resources */,
-				C748E36A1283CC5E001658E2 /* testyourmight.caf in Resources */,
-				C748E36B1283CC5E001658E2 /* thathurts.caf in Resources */,
-				C748E36C1283CC5E001658E2 /* threat.caf in Resources */,
-				C748E36D1283CC5E001658E2 /* uhh.caf in Resources */,
-				C748E36E1283CC5E001658E2 /* unstoppable.caf in Resources */,
-				C748E36F1283CC5E001658E2 /* weak.caf in Resources */,
-				C748E3701283CC5E001658E2 /* welldone.caf in Resources */,
-				C748E3711283CC5E001658E2 /* whatthehell.caf in Resources */,
-				C748E3721283CC5E001658E2 /* wickedsick.caf in Resources */,
-				C748E3731283CC5E001658E2 /* youarenothing.caf in Resources */,
-				C748E3741283CC5E001658E2 /* yousuck.caf in Resources */,
 				C748E40D1283DEA5001658E2 /* AttackCompletedViewController.xib in Resources */,
-				A5D247371307459F00E8A6DF /* FBDialog.bundle in Resources */,
 				A5D247A11307552700E8A6DF /* PickAFriendTableViewController.xib in Resources */,
-				A57C07EE13086A650021B22B /* crosshairs.png in Resources */,
-				A57C07EF13086A650021B22B /* crosshairs@2x.png in Resources */,
-				A57C07FA13086CFD0021B22B /* Default@2x.png in Resources */,
-				A57C07FB13086CFD0021B22B /* Default.png in Resources */,
-				A57C080013086D570021B22B /* RubberChickenKillOverlay.png in Resources */,
-				A57C080113086D570021B22B /* RubberChickenKillOverlay@2x.png in Resources */,
-				A57C080613086E550021B22B /* RubberChicken.png in Resources */,
-				A57C080713086E550021B22B /* RubberChicken@2X.png in Resources */,
-				A57C08121308745E0021B22B /* FacebookButtonUP@2x.png in Resources */,
-				A57C08131308745E0021B22B /* FacebookButtonUP.png in Resources */,
-				A57C08141308745E0021B22B /* emailButtonUP@2x.png in Resources */,
-				A57C08151308745E0021B22B /* EmailButtonUP.png in Resources */,
-				A57C082B130878140021B22B /* buttonSaveiPhoneUp.png in Resources */,
-				A57C082C130878140021B22B /* buttonSaveiPhoneUp@2x.png in Resources */,
-				A5CCF395130882E000BEF209 /* friendPick.png in Resources */,
-				A5CCF396130882E000BEF209 /* friendPick@2x.png in Resources */,
-				A5CCF3BE1308881A00BEF209 /* ah2.caf in Resources */,
-				A5CCF3BF1308881A00BEF209 /* chicken_squawk1.caf in Resources */,
-				A5CCF3C01308881A00BEF209 /* chicken_squawk2.caf in Resources */,
-				A5CCF3C11308881A00BEF209 /* dude2.caf in Resources */,
-				A5CCF3C21308881A00BEF209 /* dude3.caf in Resources */,
-				A5CCF3C31308881A00BEF209 /* hesgotarubberchicken.caf in Resources */,
-				A5CCF3C41308881A00BEF209 /* hey_ow.caf in Resources */,
-				A5CCF3C51308881A00BEF209 /* hey2.caf in Resources */,
-				A5CCF3C61308881A00BEF209 /* hey3.caf in Resources */,
-				A5CCF3C71308881A00BEF209 /* isthatarubberchicken.caf in Resources */,
-				A5CCF3C81308881A00BEF209 /* oomf1.caf in Resources */,
-				A5CCF3C91308881A00BEF209 /* ow_whine.caf in Resources */,
-				A5CCF3CA1308881A00BEF209 /* ow2.caf in Resources */,
-				A5CCF3CB1308881A00BEF209 /* ow3.caf in Resources */,
-				A5CCF3CC1308881A00BEF209 /* ow4.caf in Resources */,
-				A5CCF3CD1308881A00BEF209 /* stopit2.caf in Resources */,
-				A5CCF3CE1308881A00BEF209 /* uhh2.caf in Resources */,
-				A5CCF3CF1308881A00BEF209 /* uhh3.caf in Resources */,
-				A5CCF3D01308881A00BEF209 /* uhh4.caf in Resources */,
-				A5CCF3D11308881A00BEF209 /* umm_ouch.caf in Resources */,
-				A5CCF3D21308881A00BEF209 /* what_the1.caf in Resources */,
-				A5CCF3D31308881A00BEF209 /* what_the2.caf in Resources */,
-				A5CCF3D41308881A00BEF209 /* what_the3.caf in Resources */,
-				A5CCF3EA1308887400BEF209 /* slap_splat_3.caf in Resources */,
-				A5CCF3EB1308887400BEF209 /* slap_bonk.caf in Resources */,
-				A5CCF3EC1308887400BEF209 /* slap_hard_1.caf in Resources */,
-				A5CCF3ED1308887400BEF209 /* slap_hard_2.caf in Resources */,
-				A5CCF3EE1308887400BEF209 /* slap_light_1.caf in Resources */,
-				A5CCF3EF1308887400BEF209 /* slap_light_2.caf in Resources */,
-				A5CCF3F01308887400BEF209 /* slap_ow.caf in Resources */,
-				A5CCF3F11308887400BEF209 /* slap_splat _2.caf in Resources */,
-				A5CCF3F21308887400BEF209 /* slap_splat_1.caf in Resources */,
-				A5CCF3F31308887400BEF209 /* slap_splat_4.caf in Resources */,
-				A5CCF3F41308887400BEF209 /* slap_squeak.caf in Resources */,
-				A5CCF3F51308887400BEF209 /* slap01.caf in Resources */,
-				A5CCF3F61308887400BEF209 /* slap02.caf in Resources */,
-				A5CCF3F71308887400BEF209 /* slap03.caf in Resources */,
-				A5CCF3F81308887400BEF209 /* slap04.caf in Resources */,
-				A5CCF3F91308887400BEF209 /* slap05.caf in Resources */,
-				A5CCF3FA1308887400BEF209 /* slap06.caf in Resources */,
-				A5CCF3FB1308887400BEF209 /* slap07.caf in Resources */,
-				A5CCF3FC1308887400BEF209 /* slap08.caf in Resources */,
-				A5CCF3FD1308887400BEF209 /* squawk.caf in Resources */,
-				A5CCF40813088A8000BEF209 /* buttonCancelUP@2x.png in Resources */,
-				A5CCF40913088A8000BEF209 /* buttonCanelUP.png in Resources */,
-				A5CCF40A13088A8000BEF209 /* buttonPostUP.png in Resources */,
-				A5CCF40B13088A8000BEF209 /* buttonPostUP@2x.png in Resources */,
+				2FC7C601130CF24200F7C3DB /* ah.caf in Resources */,
+				2FC7C602130CF24200F7C3DB /* ah2.caf in Resources */,
+				2FC7C603130CF24200F7C3DB /* chicken_squawk1.caf in Resources */,
+				2FC7C604130CF24200F7C3DB /* chicken_squawk2.caf in Resources */,
+				2FC7C605130CF24200F7C3DB /* dominating.caf in Resources */,
+				2FC7C606130CF24200F7C3DB /* dude.caf in Resources */,
+				2FC7C607130CF24200F7C3DB /* dude2.caf in Resources */,
+				2FC7C608130CF24200F7C3DB /* dude3.caf in Resources */,
+				2FC7C609130CF24200F7C3DB /* excellent.caf in Resources */,
+				2FC7C60A130CF24200F7C3DB /* finishhim.caf in Resources */,
+				2FC7C60B130CF24200F7C3DB /* firstblood.caf in Resources */,
+				2FC7C60C130CF24200F7C3DB /* godlike.caf in Resources */,
+				2FC7C60D130CF24200F7C3DB /* hesgotarubberchicken.caf in Resources */,
+				2FC7C60E130CF24200F7C3DB /* hey_ow.caf in Resources */,
+				2FC7C60F130CF24200F7C3DB /* hey.caf in Resources */,
+				2FC7C610130CF24200F7C3DB /* hey2.caf in Resources */,
+				2FC7C611130CF24200F7C3DB /* hey3.caf in Resources */,
+				2FC7C612130CF24200F7C3DB /* holyshit.caf in Resources */,
+				2FC7C613130CF24200F7C3DB /* isthatachicken.caf in Resources */,
+				2FC7C614130CF24200F7C3DB /* isthatarubberchicken.caf in Resources */,
+				2FC7C615130CF24200F7C3DB /* ludicrouskill.caf in Resources */,
+				2FC7C616130CF24200F7C3DB /* mk4flaw.caf in Resources */,
+				2FC7C617130CF24200F7C3DB /* monsterkill.caf in Resources */,
+				2FC7C618130CF24200F7C3DB /* oof.caf in Resources */,
+				2FC7C619130CF24200F7C3DB /* oomf1.caf in Resources */,
+				2FC7C61A130CF24200F7C3DB /* outstanding.caf in Resources */,
+				2FC7C61B130CF24200F7C3DB /* ow_whine.caf in Resources */,
+				2FC7C61C130CF24200F7C3DB /* ow.caf in Resources */,
+				2FC7C61D130CF24200F7C3DB /* ow2.caf in Resources */,
+				2FC7C61E130CF24200F7C3DB /* ow3.caf in Resources */,
+				2FC7C61F130CF24200F7C3DB /* ow4.caf in Resources */,
+				2FC7C620130CF24200F7C3DB /* pathetic.caf in Resources */,
+				2FC7C621130CF24200F7C3DB /* prepare.caf in Resources */,
+				2FC7C622130CF24200F7C3DB /* punishhim.caf in Resources */,
+				2FC7C623130CF24200F7C3DB /* rampage.caf in Resources */,
+				2FC7C624130CF24200F7C3DB /* slap _splat_3.caf in Resources */,
+				2FC7C625130CF24200F7C3DB /* slap_bonk.caf in Resources */,
+				2FC7C626130CF24200F7C3DB /* slap_hard_1.caf in Resources */,
+				2FC7C627130CF24200F7C3DB /* slap_hard_2.caf in Resources */,
+				2FC7C628130CF24200F7C3DB /* slap_light_1.caf in Resources */,
+				2FC7C629130CF24200F7C3DB /* slap_light_2.caf in Resources */,
+				2FC7C62A130CF24200F7C3DB /* slap_ow.caf in Resources */,
+				2FC7C62B130CF24200F7C3DB /* slap_splat _2.caf in Resources */,
+				2FC7C62C130CF24200F7C3DB /* slap_splat_1.caf in Resources */,
+				2FC7C62D130CF24200F7C3DB /* slap_splat_3.caf in Resources */,
+				2FC7C62E130CF24200F7C3DB /* slap_splat_4.caf in Resources */,
+				2FC7C62F130CF24200F7C3DB /* slap_squeak.caf in Resources */,
+				2FC7C630130CF24200F7C3DB /* slap.caf in Resources */,
+				2FC7C631130CF24200F7C3DB /* slap01.caf in Resources */,
+				2FC7C632130CF24200F7C3DB /* slap02.caf in Resources */,
+				2FC7C633130CF24200F7C3DB /* slap2.caf in Resources */,
+				2FC7C634130CF24200F7C3DB /* slap03.caf in Resources */,
+				2FC7C635130CF24200F7C3DB /* slap3.caf in Resources */,
+				2FC7C636130CF24200F7C3DB /* slap04.caf in Resources */,
+				2FC7C637130CF24200F7C3DB /* slap4.caf in Resources */,
+				2FC7C638130CF24200F7C3DB /* slap05.caf in Resources */,
+				2FC7C639130CF24200F7C3DB /* slap5.caf in Resources */,
+				2FC7C63A130CF24200F7C3DB /* slap6.aif in Resources */,
+				2FC7C63B130CF24200F7C3DB /* slap06.caf in Resources */,
+				2FC7C63C130CF24200F7C3DB /* slap6.caf in Resources */,
+				2FC7C63D130CF24200F7C3DB /* slap07.caf in Resources */,
+				2FC7C63E130CF24200F7C3DB /* slap7.caf in Resources */,
+				2FC7C63F130CF24200F7C3DB /* slap08.caf in Resources */,
+				2FC7C640130CF24200F7C3DB /* squawk.caf in Resources */,
+				2FC7C641130CF24200F7C3DB /* stop.caf in Resources */,
+				2FC7C642130CF24200F7C3DB /* stopit.caf in Resources */,
+				2FC7C643130CF24200F7C3DB /* stopit2.caf in Resources */,
+				2FC7C644130CF24200F7C3DB /* supurb.caf in Resources */,
+				2FC7C645130CF24200F7C3DB /* testyourmight.caf in Resources */,
+				2FC7C646130CF24200F7C3DB /* thathurts.caf in Resources */,
+				2FC7C647130CF24200F7C3DB /* threat.caf in Resources */,
+				2FC7C648130CF24200F7C3DB /* uhh.caf in Resources */,
+				2FC7C649130CF24200F7C3DB /* uhh2.caf in Resources */,
+				2FC7C64A130CF24200F7C3DB /* uhh3.caf in Resources */,
+				2FC7C64B130CF24200F7C3DB /* uhh4.caf in Resources */,
+				2FC7C64C130CF24200F7C3DB /* umm_ouch.caf in Resources */,
+				2FC7C64D130CF24200F7C3DB /* unstoppable.caf in Resources */,
+				2FC7C64E130CF24200F7C3DB /* weak.caf in Resources */,
+				2FC7C64F130CF24200F7C3DB /* welldone.caf in Resources */,
+				2FC7C650130CF24200F7C3DB /* what_the1.caf in Resources */,
+				2FC7C651130CF24200F7C3DB /* what_the2.caf in Resources */,
+				2FC7C652130CF24200F7C3DB /* what_the3.caf in Resources */,
+				2FC7C653130CF24200F7C3DB /* whatthehell.caf in Resources */,
+				2FC7C654130CF24200F7C3DB /* wickedsick.caf in Resources */,
+				2FC7C655130CF24200F7C3DB /* youarenothing.caf in Resources */,
+				2FC7C656130CF24200F7C3DB /* yousuck.caf in Resources */,
+				2FC7C66A130CF26900F7C3DB /* Assassin.png in Resources */,
+				2FC7C66B130CF26900F7C3DB /* AssassinTransparent.png in Resources */,
+				2FC7C66C130CF26900F7C3DB /* buttonCancelUP@2x.png in Resources */,
+				2FC7C66D130CF26900F7C3DB /* buttonCanelUP.png in Resources */,
+				2FC7C66E130CF26900F7C3DB /* buttonPhoneUP.png in Resources */,
+				2FC7C66F130CF26900F7C3DB /* buttonPhoneUP@2x.png in Resources */,
+				2FC7C670130CF26900F7C3DB /* buttonPostUP.png in Resources */,
+				2FC7C671130CF26900F7C3DB /* buttonPostUP@2x.png in Resources */,
+				2FC7C672130CF26900F7C3DB /* buttonSaveiPhoneUp.png in Resources */,
+				2FC7C673130CF26900F7C3DB /* buttonSaveiPhoneUp@2x.png in Resources */,
+				2FC7C674130CF26900F7C3DB /* Default.png in Resources */,
+				2FC7C675130CF26900F7C3DB /* Default@2x.png in Resources */,
+				2FC7C676130CF26900F7C3DB /* EmailButtonUP.png in Resources */,
+				2FC7C677130CF26900F7C3DB /* emailButtonUP@2x.png in Resources */,
+				2FC7C678130CF26900F7C3DB /* FacebookButtonUP.png in Resources */,
+				2FC7C679130CF26900F7C3DB /* FacebookButtonUP@2x.png in Resources */,
+				2FC7C67A130CF26900F7C3DB /* friendPick.png in Resources */,
+				2FC7C67B130CF26900F7C3DB /* friendPick@2x.png in Resources */,
+				2FC7C67C130CF26900F7C3DB /* Icon.png in Resources */,
+				2FC7C680130CF27F00F7C3DB /* crosshairs-old.png in Resources */,
+				2FC7C681130CF27F00F7C3DB /* crosshairs.png in Resources */,
+				2FC7C682130CF27F00F7C3DB /* crosshairs@2x.png in Resources */,
+				2FC7C687130CF29B00F7C3DB /* RubberChicken.png in Resources */,
+				2FC7C688130CF29B00F7C3DB /* RubberChicken@2X.png in Resources */,
+				2FC7C689130CF29B00F7C3DB /* RubberChickenKillOverlay.png in Resources */,
+				2FC7C68A130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png in Resources */,
+				2FC7C6CC130CF2D900F7C3DB /* FBDialog.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,16 +942,6 @@
 				C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */,
 				C748E31E1283CC41001658E2 /* SoundClipPool.m in Sources */,
 				C748E40C1283DEA5001658E2 /* AttackCompletedViewController.m in Sources */,
-				A5D247381307459F00E8A6DF /* NSObject+SBJSON.m in Sources */,
-				A5D247391307459F00E8A6DF /* NSString+SBJSON.m in Sources */,
-				A5D2473A1307459F00E8A6DF /* SBJSON.m in Sources */,
-				A5D2473B1307459F00E8A6DF /* SBJsonBase.m in Sources */,
-				A5D2473C1307459F00E8A6DF /* SBJsonParser.m in Sources */,
-				A5D2473D1307459F00E8A6DF /* SBJsonWriter.m in Sources */,
-				A5D2473E1307459F00E8A6DF /* FBRequest.m in Sources */,
-				A5D2473F1307459F00E8A6DF /* Facebook.m in Sources */,
-				A5D247401307459F00E8A6DF /* FBLoginDialog.m in Sources */,
-				A5D247411307459F00E8A6DF /* FBDialog.m in Sources */,
 				A5D247A01307552700E8A6DF /* PickAFriendTableViewController.m in Sources */,
 				2FD5EBDE1308574C007AC351 /* PhotoUploader.m in Sources */,
 				2FD5ED24130880D1007AC351 /* NSMutableURLRequest+WebServiceClient.m in Sources */,
@@ -945,6 +955,16 @@
 				2FD5EE6713089617007AC351 /* ASIHTTPRequest.m in Sources */,
 				2FD5EE6813089617007AC351 /* ASIInputStream.m in Sources */,
 				2FD5EE6913089617007AC351 /* ASINetworkQueue.m in Sources */,
+				2FC7C6CB130CF2D900F7C3DB /* Facebook.m in Sources */,
+				2FC7C6CD130CF2D900F7C3DB /* FBDialog.m in Sources */,
+				2FC7C6CE130CF2D900F7C3DB /* FBLoginDialog.m in Sources */,
+				2FC7C6CF130CF2D900F7C3DB /* FBRequest.m in Sources */,
+				2FC7C6D0130CF2D900F7C3DB /* NSObject+SBJSON.m in Sources */,
+				2FC7C6D1130CF2D900F7C3DB /* NSString+SBJSON.m in Sources */,
+				2FC7C6D2130CF2D900F7C3DB /* SBJSON.m in Sources */,
+				2FC7C6D3130CF2D900F7C3DB /* SBJsonBase.m in Sources */,
+				2FC7C6D4130CF2D900F7C3DB /* SBJsonParser.m in Sources */,
+				2FC7C6D5130CF2D900F7C3DB /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,12 +1003,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Quail (87P66PSJZU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Quail (87P66PSJZU)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.1;
+				PROVISIONING_PROFILE = "0043ACD2-7220-4C8F-A27E-9573FC7AA21D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0043ACD2-7220-4C8F-A27E-9573FC7AA21D";
+				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
 		};
