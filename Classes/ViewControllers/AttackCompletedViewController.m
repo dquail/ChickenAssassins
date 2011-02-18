@@ -10,21 +10,12 @@
 #import "UIImage+Combine.h"
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
-#import "PhotoUploader.h"
-#import "ASIFormDataRequest.h"
-
-static NSString* kAppId = @"189234387766257";
-#define ACCESS_TOKEN_KEY @"fb_access_token"
-#define EXPIRATION_DATE_KEY @"fb_expiration_date"
-
-@interface AttackCompletedViewController (Private)
-- (void) onUploadDone;
-- (void) onUploadError;
-@end
+#import "AssassinsServer.h"
 
 @implementation AttackCompletedViewController
 
 @synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook;
+
 #pragma mark -
 #pragma mark ViewController lifecycle
 
@@ -74,11 +65,19 @@ static NSString* kAppId = @"189234387766257";
 	[targetImageView release];
 	[targetImage release];
 	[overlayImageView release];
-	[scoreLabel	release];
+	[scoreLabel release]; 
+	
+	[facebook release];
 }
 
 #pragma mark -
 #pragma mark UIEvents 
+
+- (IBAction) startAttack{
+	//Start a new attack
+	[self.appDelegate showHud];
+}
+
 - (IBAction) savePhoto{
 	UIImage *killedImage = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
 	UIImageWriteToSavedPhotosAlbum(killedImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
@@ -86,9 +85,7 @@ static NSString* kAppId = @"189234387766257";
 
 - (IBAction) postToFacebook {
     // on login, use the stored access token and see if it still works
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
-    self.facebook.accessToken = [defaults objectForKey:ACCESS_TOKEN_KEY];
-    self.facebook.expirationDate = [defaults objectForKey:EXPIRATION_DATE_KEY];
+	[self.facebook setTokenFromCache];
 	
     // only authorize if the access token isn't valid
     // if it *is* valid, no need to authenticate. just move on
@@ -101,7 +98,6 @@ static NSString* kAppId = @"189234387766257";
 	
 }
 
-
 - (IBAction) emailPhoto {
 	if ([MFMailComposeViewController canSendMail]) {
 		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
@@ -113,6 +109,14 @@ static NSString* kAppId = @"189234387766257";
 		[self presentModalViewController:mailComposer animated:YES]; 
 		[mailComposer release];
 	}
+}
+
+#pragma mark -
+#pragma mark Mail Compose Delegate Methods
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+		  didFinishWithResult:(MFMailComposeResult)result 
+						error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -139,14 +143,6 @@ static NSString* kAppId = @"189234387766257";
 }
 
 #pragma mark -
-#pragma mark Mail Compose Delegate Methods
-- (void)mailComposeController:(MFMailComposeViewController*)controller
-		  didFinishWithResult:(MFMailComposeResult)result 
-						error:(NSError*)error {
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-#pragma mark -
 #pragma mark Facebook delegate
 /**
  * Called when the user has logged in successfully.
@@ -154,10 +150,7 @@ static NSString* kAppId = @"189234387766257";
 - (void)fbDidLogin {
 	NSLog(@"Login succeeded - token - %@", self.facebook.accessToken);
 	// store the access token and expiration date to the user defaults
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.facebook.accessToken forKey:ACCESS_TOKEN_KEY];
-    [defaults setObject:self.facebook.expirationDate forKey:EXPIRATION_DATE_KEY];
-    [defaults synchronize];	
+	[self.facebook saveTokenToCache];
 	
 	// get the logged-in user's friends	
 	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
@@ -202,9 +195,10 @@ static NSString* kAppId = @"189234387766257";
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
 	NSArray *friendArray;
+	[result retain];
 	if ([result isKindOfClass:[NSDictionary class]]) {
 		NSDictionary *friendDict = (NSDictionary*) result;
-		friendArray = [[friendDict objectForKey:@"data"] retain];  
+		friendArray = [friendDict objectForKey:@"data"];  
 	}
 	NSLog(@"friend count: %d", [friendArray count]);
 
@@ -213,6 +207,7 @@ static NSString* kAppId = @"189234387766257";
 																							   friendPic:image];
 	pickController.delegate = self;
 	[self presentModalViewController:pickController animated:YES];
+	[pickController autorelease];
 };
 
 /**
@@ -243,67 +238,19 @@ static NSString* kAppId = @"189234387766257";
 	}
 	
 	NSLog(@"Friend picked: %@", friendID);
-
-	
-	//[parameters setObject:killParams forKey:@"kill"];
-
 	
 	[self dismissModalViewControllerAnimated:YES];
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
-	//NSString *server = @"http://nathan.logicaldecay.com/kills";
-	NSString *server = @"http://chickenassassin.com/kills";
 	
-	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
-								   [NSURL URLWithString:server]];
-	
-	[request addPostValue:@"true" forKey:@"utf8"];
-	[request addPostValue:facebook.accessToken forKey:@"access_token"];
-	[request addPostValue: @"867800458" forKey:@"killer_id"];
-	[request addPostValue: @"583002418" forKey:@"victim_id"];	
-	[request addPostValue: @"53.523574,-113.524046" forKey:@"location"];
-	[request addPostValue: 	self.appDelegate.hitCombo forKey:@"attack_sequence"];	
-	[request addData:imageData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
-	
-	[request startSynchronous];
-	NSError *error = [request error];
-	if (!error) {
-		NSString *response = [request responseString];
-		NSLog(@"Response string: %@", response);
-	}
-	 
-	
-	/*[[PhotoUploader alloc] initWithURL:[NSURL URLWithString:@"http://chickenassassin.com/kills"]
-						   imageData:imageData
-							parameters:parameters
-						   delegate:self];*/
-}
-
-#pragma mark -
-#pragma mark ASIHTTPRequest Delegate 
-- (void)requestStarted:(ASIHTTPRequest *)request{
-	NSLog(@"Request started");
-}
-- (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders{
-	NSLog(@"Request recieved response header");
-}
-- (void)request:(ASIHTTPRequest *)request willRedirectToURL:(NSURL *)newURL{
-	NSLog(@"Request recieved willredirect");
-}
-- (void)requestFinished:(ASIHTTPRequest *)request{
-	NSLog(@"Request finished");
-}
-- (void)requestFailed:(ASIHTTPRequest *)request{
-	NSLog(@"Request failed");
-}
-- (void)requestRedirected:(ASIHTTPRequest *)request{
-	NSLog(@"Request redirect");
-}
-
-// When a delegate implements this method, it is expected to process all incoming data itself
-// This means that responseData / responseString / downloadDestinationPath etc are ignored
-// You can have the request call a different method by setting didReceiveDataSelector
-- (void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data{
-	NSLog(@"request recieved data");
+	NSString *obituaryURL;
+	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
+														  imageData:imageData
+														   killerID:@"867800458"
+														   victimID:@"583002418"
+														   location:@"53.523574,-113.524046"
+													 attackSequence:self.appDelegate.hitCombo];
+	NSLog(@"Obituary returned was: %@", obituaryURL);
+	//TODO - Display a webview with the obituaryURL			
 }
 
 @end

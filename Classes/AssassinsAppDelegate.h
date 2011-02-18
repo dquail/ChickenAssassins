@@ -12,13 +12,10 @@
 #import "AttackCompletedViewController.h"
 #import "FBConnect.h"
 
-@class AssassinsViewController;
-
 @interface AssassinsAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	AttackViewController *attackController;
 	AttackCompletedViewController *completedController;
-    AssassinsViewController *viewController;
 	AssassinateHUDViewController *hudController;	
 	Facebook *facebook;
 	NSString *hitCombo;
@@ -26,7 +23,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet AssassinsViewController *viewController;
 @property (nonatomic, retain) AttackViewController *attackController;
 @property (nonatomic, retain) AttackCompletedViewController *completedController;
 @property (nonatomic, retain) AssassinateHUDViewController *hudController;

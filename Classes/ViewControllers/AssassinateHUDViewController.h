@@ -14,6 +14,8 @@
 @interface AssassinateHUDViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate> {
 	UIImagePickerController *camera;
 	UIView *overlay;
+	
+	// Week reference
 	AssassinsAppDelegate *appDelegate;
 	CLLocationManager	*locationManager;
 	CLLocation			*startingPoint;

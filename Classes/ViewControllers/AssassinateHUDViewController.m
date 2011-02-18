@@ -81,8 +81,14 @@
 
 
 - (void)dealloc {
-    [super dealloc];
 	[camera release];
+	[overlay release];
+	
+	// Week reference - don't release appDelegate
+	
+	[locationManager release];
+	[startingPoint release];
+    [super dealloc];
 }
 
 #pragma mark CameraOverlay callbacks 
@@ -97,7 +103,7 @@
 		   fromLocation:(CLLocation *)oldLocation {
 	
 	[locationManager stopUpdatingLocation];
-	
+	NSLog(@"Setting location");
 	self.startingPoint = newLocation;
 }
 
@@ -128,11 +134,6 @@
 	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
 	[self.appDelegate lockTarget:self.targetImage];
-	/*
-	AttackViewController *attackController = [[AttackViewController alloc] initWithTargetImage:self.targetImage];
-	[self.view removeFromSuperview];
-	[[[UIApplication sharedApplication] keyWindow] addSubview:attackController.view];
-	*/
 }
 
 @end

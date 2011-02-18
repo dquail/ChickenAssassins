@@ -9,19 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "PickAFriendTableViewController.h"
-#import "Facebook.h"
+#import "Facebook+CacheAuth.h"
 #import "FBConnect.h"
-#import "PhotoUploader.h"
-#import "ASIHTTPRequestDelegate.h"
 
 @class AssassinsAppDelegate;
 
 @interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, 
-				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, ASIHTTPRequestDelegate> {
+				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
 	UILabel *scoreLabel;
+
+	//Week reference
 	AssassinsAppDelegate *appDelegate;
 	Facebook *facebook;
 }
@@ -34,7 +34,7 @@
 
 - (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;
 - (IBAction) savePhoto;
-
+- (IBAction) startAttack;
 - (IBAction) postToFacebook;
 - (IBAction) emailPhoto;
 @end

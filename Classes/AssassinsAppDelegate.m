@@ -7,12 +7,13 @@
 //
 
 #import "AssassinsAppDelegate.h"
-#import "AssassinsViewController.h"
+
+#define FACEBOOK_APP_ID @"189234387766257"
 
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize viewController, hudController, attackController, completedController, facebook, location, hitCombo;
+@synthesize hudController, attackController, completedController, facebook, location, hitCombo;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -20,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	// Override point for customization after application launch.
-	self.facebook = [[Facebook alloc] initWithAppId:@"189234387766257"];
+	self.facebook = [[Facebook alloc] initWithAppId:FACEBOOK_APP_ID];
 	
     // Add the view controller's view to the window and display.
 	
@@ -84,40 +85,62 @@
 
 
 - (void)dealloc {
-    [viewController release];
     [window release];
+	[attackController release];
+	[completedController release];
+	[hudController release];	
+	[facebook release];
+	[hitCombo release];
+	[location release];	
     [super dealloc];
+}
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	[self.facebook handleOpenURL:url];
+	return TRUE;
 }
 
 #pragma mark -
 #pragma mark View management
+
+
+/*
+ * Show the attack controller that allows a user to select a target
+ */
 - (void) lockTarget:(UIImage *) targetImage{
 	self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
 	[self.hudController.view removeFromSuperview];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:self.attackController.view];	
 }
+
+/* 
+ * Release the attackViewController.  Show the target killed controller
+ */
 - (void) targetKilled:(UIImage *) targetImage{
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
 	[self.attackController.view removeFromSuperview];
+	
+	//release the controller so that it doesnt' receive accelerometer events
+	[attackController release];
+	attackController = nil;
+	
 	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
 	[UIView commitAnimations];			
 }
 
+/* 
+ * Show the Screen allowing a user to lock on to a target
+ */
 - (void) showHud{
 	//Create the Hudview
 	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
-    
-	//[window addSubview:viewController.view];
-    [window addSubview:self.hudController.view];
+	[self.completedController.view removeFromSuperview];
+	[[[UIApplication sharedApplication] keyWindow] addSubview:self.hudController.view];
 	
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-	NSLog(@"Handle url");
-	[self.facebook handleOpenURL:url];
-	return TRUE;
-}
 @end
