@@ -23,8 +23,9 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
-#define HITS_TO_KILL 15
-#define HITS_TO_FINISH_HIM 5
+#define HITS_TO_KILL 25
+#define HITS_TO_FINISH_HIM 20
+#define HITS_FOR_RESPONSE 4  //Only occasionally will responses be played
 
 - (IBAction)slapButton {
 	[self slap];
@@ -39,6 +40,7 @@
 	 * Create slap clips
 	 */
 	slapClips = [[SoundClipPool alloc] init];
+	slapClips.delegate = self;
 	
 	NSString *slapURLs[] = {
 		@"slap_splat_3.caf",
@@ -70,7 +72,6 @@
 	
 	for (int i = 0; i < (sizeof(slapURLs) / sizeof(slapURLs[0])); i++) {
 		NSURL *slapURL = [[[NSBundle mainBundle] bundleURL] URLByAppendingPathComponent: slapURLs[i]];
-		NSLog(@"Slap Url: %@", slapURL);
 		AVAudioPlayer *slapSound = [[AVAudioPlayer alloc] initWithContentsOfURL: slapURL error: NULL];
 		[slapClips addSoundClip: slapSound];
 	}
@@ -78,7 +79,7 @@
 	lastSlapTime = CACurrentMediaTime();
 	
 	responseClips = [[SoundClipPool alloc] init];
-	responseClips.delegate = self;
+	//responseClips.delegate = self;
 	
 	/*
 	 * Create response clips
@@ -225,7 +226,7 @@
 		[self finishKill];
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
-		shouldPlayFinishHim = YES;
+		[finishHimClips playRandomClip];
 	}
 	else if (slapCount > HITS_TO_KILL)
 	{
@@ -240,7 +241,6 @@
 			[slapClips playRandomClip];
 			
 			if (!slapping) {
-				[responseClips playRandomClip];
 				slapping = YES;
 			}
 		}
@@ -288,18 +288,16 @@
 	}
 	
 	if (direction & AccelerometerShakeDirectionPull) {
-		[slapHistory appendString:@"B,"];		
-		NSLog(@"AccelerometerShakeDirectionPull");
+		/*Don't want to capture pulls
+		[slapHistory appendString:@"B,"];		*/
+		NSLog(@"AccelerometerShakeDirectionPull - not sending slap though");
 	}
 	NSLog(@"Slap history: %@",slapHistory);
 }
 
 - (void) playNextResponse {
-	if (shouldPlayFinishHim)
-	{
-		[finishHimClips playRandomClip];
-	}
-	else if (slapping) {
+	if (arc4random() % HITS_FOR_RESPONSE == 1) {
+		//We don't always want to play response clips.  More of an easter egg
 		[responseClips playRandomClip];
 	}
 }
