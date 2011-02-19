@@ -29,7 +29,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
 @property (nonatomic, retain) IBOutlet UIImageView *overlayImageView;
 @property (nonatomic, retain) IBOutlet UILabel *scoreLabel;
-@property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
+@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 @property (nonatomic, retain) Facebook *facebook;
 
 - (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;

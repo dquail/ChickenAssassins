@@ -159,6 +159,15 @@
 	
 }
 
+- (void) resetUsingImage:(UIImage *) image{
+	if (targetImage!=image){
+		[targetImage release];
+		targetImage = [image retain];
+		[slapHistory setString:@""];
+		slapCount = 0;
+	}
+}
+
 - (id) initWithTargetImage:(UIImage *)image{
 	targetImage = [image retain];
 	return [self initWithNibName:nil bundle:nil];
@@ -212,13 +221,17 @@
 	NSLog(@"Slapping %d", slapCount);
 	++slapCount;
 	shouldPlayFinishHim = NO;
-	if (slapCount >= HITS_TO_KILL){
+	if (slapCount == HITS_TO_KILL){
 		[self finishKill];
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
 		shouldPlayFinishHim = YES;
 	}
-
+	else if (slapCount > HITS_TO_KILL)
+	{
+		NSLog(@"Something went wrong.  sholdn't be slapping after a kill");
+		return;
+	}
 	else{
 		double currentTime = CACurrentMediaTime();
 		if ((currentTime - lastSlapTime) >= 0.15) {

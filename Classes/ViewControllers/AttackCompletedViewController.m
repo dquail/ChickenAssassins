@@ -66,7 +66,6 @@
 	[targetImage release];
 	[overlayImageView release];
 	[scoreLabel release]; 
-	
 	[facebook release];
 }
 

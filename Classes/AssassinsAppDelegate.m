@@ -109,7 +109,13 @@
  * Show the attack controller that allows a user to select a target
  */
 - (void) lockTarget:(UIImage *) targetImage{
-	self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
+	if (!self.attackController)
+		self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
+	else {
+		[self.attackController resetUsingImage:targetImage];
+	}
+
+	
 	[self.hudController.view removeFromSuperview];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:self.attackController.view];	
 }
@@ -123,9 +129,11 @@
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
 	[self.attackController.view removeFromSuperview];
 	
+	/*
 	//release the controller so that it doesnt' receive accelerometer events
 	[attackController release];
 	attackController = nil;
+	*/
 	
 	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];

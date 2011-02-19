@@ -35,11 +35,14 @@
 	
 	int slapCount;
 }
-@property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
+@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 
 - (id) initWithTargetImage:(UIImage *)image;
 
 - (IBAction)slapButton;
 	
+// Resets the hitcount, combination etc.
+- (void) resetUsingImage:(UIImage *) image;
+
 @end
 

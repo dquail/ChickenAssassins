@@ -23,9 +23,9 @@
 
 @property (nonatomic, retain) UIImage *targetImage;
 @property (nonatomic, retain) IBOutlet UIView *overlay;
-@property (retain, nonatomic) CLLocationManager *locationManager;
-@property (retain, nonatomic) CLLocation *startingPoint;
-@property (nonatomic, retain) AssassinsAppDelegate *appDelegate;
+@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, retain) CLLocation *startingPoint;
+@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 
 - (IBAction) onLockTarget; 
 
