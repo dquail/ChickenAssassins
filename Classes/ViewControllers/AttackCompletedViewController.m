@@ -14,7 +14,7 @@
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook;
+@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook, alertView;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -66,6 +66,7 @@
 	[targetImage release];
 	[overlayImageView release];
 	[scoreLabel release]; 
+	[alertView release];
 	[facebook release];
 }
 
@@ -93,6 +94,10 @@
         [self.facebook authorize:permissions delegate:self];
     }
 	
+	
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
+
+	[self.alertView show];
 	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
 	
 }
@@ -193,6 +198,7 @@
  *      didReceiveResponse:(NSURLResponse *)response
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
+	[self.alertView hide];
 	NSArray *friendArray;
 	[result retain];
 	if ([result isKindOfClass:[NSDictionary class]]) {
@@ -214,6 +220,7 @@
  * successfully.
  */
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+	[self.alertView hide];
 	//[self.label setText:[error localizedDescription]];
 };
 
@@ -235,12 +242,16 @@
 		[self dismissModalViewControllerAnimated:YES];
 		return;
 	}
+
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
+	[self.alertView show];
 	
 	NSLog(@"Friend picked: %@", friendID);
 	
-	[self dismissModalViewControllerAnimated:YES];
+
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
 	
+
 	NSString *obituaryURL;
 	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
@@ -248,8 +259,24 @@
 														   victimID:@"583002418"
 														   location:@"53.523574,-113.524046"
 													 attackSequence:self.appDelegate.hitCombo];
+	[self.alertView hide];
+	[self dismissModalViewControllerAnimated:YES];
 	NSLog(@"Obituary returned was: %@", obituaryURL);
-	//TODO - Display a webview with the obituaryURL			
+	if (obituaryURL==@""){
+		UIAlertView *alert;
+		
+		alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+											   message:@"Unable to create obituary." 
+											  delegate:self cancelButtonTitle:@"Ok" 
+									 otherButtonTitles:nil];
+
+		[alert show];
+		[alert release];		
+	}
+	else{
+		//TODO load webView
+	}
+	//TODO - Display a webview with the obituaryURL	or error dialog.		
 }
 
 @end

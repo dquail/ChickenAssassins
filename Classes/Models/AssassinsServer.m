@@ -52,6 +52,10 @@ static AssassinsServer * sharedServer = nil;
 		response = [request responseString];
 		NSLog(@"Response string: %@", response);
 	}
+	else {
+		response = @"";
+		NSLog(@"Error posting kill");
+	}
 	return response;
 }
 

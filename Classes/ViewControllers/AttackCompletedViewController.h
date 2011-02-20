@@ -11,6 +11,7 @@
 #import "PickAFriendTableViewController.h"
 #import "Facebook+CacheAuth.h"
 #import "FBConnect.h"
+#import "ActivityAlert.h"
 
 @class AssassinsAppDelegate;
 
@@ -20,7 +21,7 @@
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
 	UILabel *scoreLabel;
-
+	ActivityAlert *alertView;
 	//Week reference
 	AssassinsAppDelegate *appDelegate;
 	Facebook *facebook;
@@ -31,6 +32,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 @property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, retain) ActivityAlert *alertView;
+
 
 - (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;
 - (IBAction) savePhoto;
