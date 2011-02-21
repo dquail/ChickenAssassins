@@ -25,6 +25,8 @@
 	//Week reference
 	AssassinsAppDelegate *appDelegate;
 	Facebook *facebook;
+					
+	//ObituaryViewController *obituaryController;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
@@ -33,7 +35,7 @@
 @property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic, retain) ActivityAlert *alertView;
-
+//@property (nonatomic, retain) ObituaryViewController *obituaryController;
 
 - (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;
 - (IBAction) savePhoto;

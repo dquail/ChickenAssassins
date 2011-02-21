@@ -11,10 +11,16 @@
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
 #import "AssassinsServer.h"
+#import "ObituaryViewController.h"
+
+@interface AttackCompletedViewController (Private)
+- (void) showObituary:(NSString *)obituaryURL;
+@end
+
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook, alertView;
+@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook, alertView;//, obituaryController;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -36,6 +42,8 @@
 		
 	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
+	//self.obituaryController = [[ObituaryViewController alloc] initWithNibName:nil bundle:nil];	
+	
 }
 
 
@@ -85,6 +93,10 @@
 
 - (IBAction) postToFacebook {
     // on login, use the stored access token and see if it still works
+	//TODO: remove this.  Testing the webview
+	[self showObituary:@"http://msn.com"];
+	return;
+	
 	[self.facebook setTokenFromCache];
 	
     // only authorize if the access token isn't valid
@@ -274,9 +286,22 @@
 		[alert release];		
 	}
 	else{
-		//TODO load webView
+		[self showObituary:obituaryURL];
 	}
 	//TODO - Display a webview with the obituaryURL	or error dialog.		
+}
+	
+- (void) showObituary:(NSString *)obituaryURL{
+	//Temporary to test loading the ObituaryView.  Move this to donePicking method
+	//[self.view addSubview:obituaryController.view];
+	
+	ObituaryViewController *obituaryController = [[ObituaryViewController alloc] initWithObituaryURL:obituaryURL];
+	[self.view addSubview:obituaryController.view];
+	obituaryController.view.center = self.view.center;
+	obituaryController.view.alpha = 0.0f;
+	[UIView beginAnimations:@"showObituary" context:nil];
+	obituaryController.view.alpha = 1.0f;
+	[UIView commitAnimations];
 }
 
 @end

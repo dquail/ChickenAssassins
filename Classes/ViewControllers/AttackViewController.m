@@ -14,17 +14,16 @@
 - (void) finishKill;
 @end
 
-
 @implementation AttackViewController
 
-@synthesize appDelegate;
+@synthesize appDelegate, progressView, targetImageView, statusLabel;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
-#define HITS_TO_KILL 25
-#define HITS_TO_FINISH_HIM 20
+#define HITS_TO_KILL 5
+#define HITS_TO_FINISH_HIM 3
 #define HITS_FOR_RESPONSE 4  //Only occasionally will responses be played
 
 - (IBAction)slapButton {
@@ -164,6 +163,9 @@
 	if (targetImage!=image){
 		[targetImage release];
 		targetImage = [image retain];
+		self.targetImageView.image = targetImage;
+		self.statusLabel.text = @"Attack using your chicken!";
+		[self.progressView setProgress:1.0f];
 		[slapHistory setString:@""];
 		slapCount = 0;
 	}
@@ -221,11 +223,16 @@
 - (void) slap {
 	NSLog(@"Slapping %d", slapCount);
 	++slapCount;
+	NSLog(@"progress value before: %f", self.progressView.progress);
+	
+	self.progressView.progress = 1.0f - (float) slapCount / (float)HITS_TO_KILL;
+	NSLog(@"progress value after: %f", self.progressView.progress);
 	shouldPlayFinishHim = NO;
 	if (slapCount == HITS_TO_KILL){
 		[self finishKill];
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
+		self.statusLabel.text = @"Finish him!!!";
 		[finishHimClips playRandomClip];
 	}
 	else if (slapCount > HITS_TO_KILL)
@@ -313,6 +320,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
+	self.targetImageView.image = targetImage;
+	[self.progressView setProgress:1.0f];
 }
 
 /*
