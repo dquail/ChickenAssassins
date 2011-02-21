@@ -94,8 +94,8 @@
 - (IBAction) postToFacebook {
     // on login, use the stored access token and see if it still works
 	//TODO: remove this.  Testing the webview
-	[self showObituary:@"http://msn.com"];
-	return;
+	//[self showObituary:@"http://msn.com"];
+	//return;
 	
 	[self.facebook setTokenFromCache];
 	
@@ -286,7 +286,9 @@
 		[alert release];		
 	}
 	else{
-		[self showObituary:obituaryURL];
+		//TODO Uncomment the following when server is working
+		//[self showObituary:obituaryURL];
+		[self showObituary:@"http://msn.com"];
 	}
 	//TODO - Display a webview with the obituaryURL	or error dialog.		
 }
