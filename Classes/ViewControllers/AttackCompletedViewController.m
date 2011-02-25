@@ -11,7 +11,6 @@
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
 #import "AssassinsServer.h"
-#import "ObituaryViewController.h"
 
 @interface AttackCompletedViewController (Private)
 - (void) showObituary:(NSString *)obituaryURL;
@@ -76,6 +75,7 @@
 	[scoreLabel release]; 
 	[alertView release];
 	[facebook release];
+	[obituaryViewController release];
 }
 
 #pragma mark -
@@ -297,13 +297,24 @@
 	//Temporary to test loading the ObituaryView.  Move this to donePicking method
 	//[self.view addSubview:obituaryController.view];
 	
-	ObituaryViewController *obituaryController = [[ObituaryViewController alloc] initWithObituaryURL:obituaryURL];
-	[self.view addSubview:obituaryController.view];
-	obituaryController.view.center = self.view.center;
-	obituaryController.view.alpha = 0.0f;
+	if (obituaryViewController)
+		[obituaryViewController release];
+	
+	obituaryViewController = [[ObituaryViewController alloc] initWithObituaryURL:obituaryURL];
+	[self.view addSubview:obituaryViewController.view];
+	obituaryViewController.view.center = self.view.center;
+	obituaryViewController.view.alpha = 0.0f;
 	[UIView beginAnimations:@"showObituary" context:nil];
-	obituaryController.view.alpha = 1.0f;
+	obituaryViewController.view.alpha = 1.0f;
 	[UIView commitAnimations];
 }
+
+#pragma mark -
+#pragma mark UIWebViewDelegate methods
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView{
+	NSLog(@"finished loading");	
+}
+
 
 @end

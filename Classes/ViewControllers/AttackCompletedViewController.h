@@ -12,11 +12,12 @@
 #import "Facebook+CacheAuth.h"
 #import "FBConnect.h"
 #import "ActivityAlert.h"
+#import "ObituaryViewController.h"
 
 @class AssassinsAppDelegate;
 
 @interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, 
-				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate> {
+				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, UIWebViewDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;
@@ -25,6 +26,7 @@
 	//Week reference
 	AssassinsAppDelegate *appDelegate;
 	Facebook *facebook;
+	ObituaryViewController *obituaryViewController;
 					
 	//ObituaryViewController *obituaryController;
 }
