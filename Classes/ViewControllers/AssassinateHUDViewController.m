@@ -45,7 +45,7 @@
 	} else {
 		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
 	}
-
+	
 	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
 	locationManager.delegate = self;
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -55,7 +55,8 @@
 - (void) viewDidAppear:(BOOL)animated{
 	
 	[super viewDidAppear:animated];
-	[self presentModalViewController:camera animated:YES];
+	
+	[self presentModalViewController:[camera autorelease] animated:YES];
 	
 }
 /*
@@ -129,6 +130,14 @@
 	self.overlay.alpha = 1.0f;
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Select a photo" 
+									   message:@"You must select a photo to use Rubber Chicken Assassins." 
+									  delegate:self cancelButtonTitle:@"Ok" 
+							 otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];

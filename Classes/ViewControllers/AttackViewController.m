@@ -22,8 +22,8 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
-#define HITS_TO_KILL 5
-#define HITS_TO_FINISH_HIM 3
+#define HITS_TO_KILL 25
+#define HITS_TO_FINISH_HIM 20
 #define HITS_FOR_RESPONSE 4  //Only occasionally will responses be played
 
 - (IBAction)slapButton {
