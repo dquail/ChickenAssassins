@@ -258,6 +258,7 @@
 	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
 	[self.alertView show];
 	
+	self.appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);
 	
 
@@ -265,12 +266,28 @@
 	
 
 	NSString *obituaryURL;
+	
+	/*
+	 *Todo - Use this to post to our server
+	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
+														  imageData:imageData
+														   killerID:self.appDelegate.attackInfo.assassinID
+														   victimID:self.appDelegate.attackInfo.targetID
+														   location:self.appDelegate.attackInfo.location
+													 attackSequence:self.appDelegate.attackInfo.hitCombo];
+	*/
+	
+	
 	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
 														   killerID:@"867800458"
 														   victimID:@"583002418"
 														   location:@"53.523574,-113.524046"
-													 attackSequence:self.appDelegate.hitCombo];
+													 attackSequence:self.appDelegate.attackInfo.hitCombo];
+	
+	//TODO - Change this to the actual obituary url
+	self.appDelegate.attackInfo.obituaryString = @"http://chickenassassin.com";
+	
 	[self.alertView hide];
 	[self dismissModalViewControllerAnimated:YES];
 	NSLog(@"Obituary returned was: %@", obituaryURL);

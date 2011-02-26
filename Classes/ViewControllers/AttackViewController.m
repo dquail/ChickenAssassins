@@ -216,7 +216,9 @@
 */
 
 - (void) finishKill{
-	self.appDelegate.hitCombo = slapHistory;
+	self.appDelegate.attackInfo = [[AttackInfo alloc] init];
+	self.appDelegate.attackInfo.hitCombo = slapHistory;
+	self.appDelegate.attackInfo.targetImage = targetImage;
 	[self.appDelegate targetKilled:targetImage];
 }
 

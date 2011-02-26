@@ -11,6 +11,7 @@
 #import "AttackViewController.h"
 #import "AttackCompletedViewController.h"
 #import "FBConnect.h"
+#import "AttackInfo.h"
 
 @interface AssassinsAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
@@ -18,8 +19,7 @@
 	AttackCompletedViewController *completedController;
 	AssassinateHUDViewController *hudController;	
 	Facebook *facebook;
-	NSString *hitCombo;
-	NSString *location;
+	AttackInfo *attackInfo;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -27,8 +27,7 @@
 @property (nonatomic, retain) AttackCompletedViewController *completedController;
 @property (nonatomic, retain) AssassinateHUDViewController *hudController;
 @property (nonatomic, retain) Facebook *facebook;
-@property (nonatomic, retain) NSString *hitCombo;
-@property (nonatomic, retain) NSString *location;
+@property (nonatomic, retain) AttackInfo *attackInfo;
 
 - (void) lockTarget: (UIImage *) targetImage;
 - (void) targetKilled: (UIImage *)targetImage;

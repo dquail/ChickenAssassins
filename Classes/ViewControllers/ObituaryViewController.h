@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Facebook.h"
 
-
-@interface ObituaryViewController : UIViewController <UIWebViewDelegate>{
+@interface ObituaryViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate, FBRequestDelegate>{
 	UIWebView *_webView;
 	NSString *obituaryURL;
 	id <UIWebViewDelegate> delegate;

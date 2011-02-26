@@ -13,7 +13,7 @@
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize hudController, attackController, completedController, facebook, location, hitCombo;
+@synthesize hudController, attackController, completedController, facebook, attackInfo;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -90,8 +90,6 @@
 	[completedController release];
 	[hudController release];	
 	[facebook release];
-	[hitCombo release];
-	[location release];	
     [super dealloc];
 }
 
