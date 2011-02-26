@@ -20,14 +20,12 @@
 	IBOutlet UIImageView *imageView;
 	NSArray *arrayOfFriends;
 	UIButton *postButton;
-	int currentRow;
 }
 
 @property (nonatomic, retain) id<PickAFriendDelegate> delegate;
 @property (nonatomic, retain) UIImage *friendPic;
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) NSArray *arrayOfFriends;
-@property (nonatomic, retain) IBOutlet UIButton *postButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture;
 

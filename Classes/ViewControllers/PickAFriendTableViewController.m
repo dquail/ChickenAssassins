@@ -13,7 +13,6 @@
 
 @synthesize delegate, friendPic, imageView;
 @synthesize arrayOfFriends;
-@synthesize postButton;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
  - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -40,8 +39,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.imageView.image = self.friendPic;
-	postButton.enabled = FALSE;
-	currentRow = -1;
 }
 
 
@@ -84,20 +81,6 @@
 	}
 }
 
-- (IBAction) onPost{
-	
-	NSDictionary *firstFriendTest = [arrayOfFriends objectAtIndex:currentRow];
-	NSString *facebookFriendID = (NSString*) [firstFriendTest objectForKey:@"id"];
-	
-	if (self.delegate!=nil)
-	{
-		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
-		{
-			[self.delegate donePickingFriendWithID:facebookFriendID];
-		}
-	}
-}
-
 #pragma mark -
 #pragma mark Table view data source
 
@@ -112,12 +95,6 @@
     return [arrayOfFriends count];
 }
 
-/*
- - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
- return 51;
- }
- */
-
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -127,9 +104,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		//[[NSBundle mainBundle] loadNibNamed:@"MissionListCell" owner:self options:NULL];
-		//cell = nibLoadedCell;
-		//cell.selectedBackgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell-Green.png"]] autorelease];    
 	}
 	
 	NSUInteger row = [indexPath row];
@@ -137,10 +111,6 @@
 	NSDictionary *firstFriendTest = [arrayOfFriends objectAtIndex:row];
 	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
 	cell.textLabel.text = name;
-	
-	//NSDictionary *cellData = [dataArray objectAtIndex:indexPath.row];	
-	//UILabel *titleLabel = (UILabel *)[cell viewWithTag:1]; 
-	//titleLabel.text = [cellData objectForKey:kMissionName];
 	
 	return cell;
 }
@@ -151,20 +121,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	postButton.enabled = TRUE;
-	currentRow = [indexPath row];
+	NSDictionary *selectedFrient = [arrayOfFriends objectAtIndex:indexPath.row];
+	NSString *facebookFriendID = (NSString*) [selectedFrient objectForKey:@"id"];
 	
-	/*
-	 NSDictionary *cellData = [dataArray objectAtIndex:indexPath.row];
-	 
-	 MissionDetailViewController *detailViewController = [[MissionDetailViewController alloc] 
-	 initWithNibName:@"MissionDetailViewController" bundle:nil];
-	 [detailViewController setDataDictionary:cellData];
-	 // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 
-	 // need to push MissionDetailViewController which should have a nav controller which will return to the table view
-	 */
+	if (self.delegate!=nil)
+	{
+		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
+		{
+			[self.delegate donePickingFriendWithID:facebookFriendID];
+		}
+	}
+	
 }	
 @end
