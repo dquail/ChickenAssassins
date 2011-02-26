@@ -16,7 +16,6 @@
 		2F122F1213105558001F9DE5 /* ActivityAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F122F1113105558001F9DE5 /* ActivityAlert.m */; };
 		2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79AF3C1318CDCB00541ACC /* AttackInfo.m */; };
 		2F79B0BD13197E9C00541ACC /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */; };
-		2F79B0C113197F2000541ACC /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
 		2F97D5461311951C00F77318 /* AttackCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97D5451311951C00F77318 /* AttackCompletedViewController.m */; };
 		2FC7C601130CF24200F7C3DB /* ah.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AB130CF24200F7C3DB /* ah.caf */; };
@@ -169,6 +168,7 @@
 		C76E6EF71266C94300B48793 /* AssassinateHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */; };
 		C76E6EF81266C94300B48793 /* AssassinateHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */; };
 		C7BF177C1307307D005F7762 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BF177B1307307D005F7762 /* CoreLocation.framework */; };
+		C7E4E92613198152009045D8 /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E4E92513198152009045D8 /* PickAFriendTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,9 +184,7 @@
 		2F122F1113105558001F9DE5 /* ActivityAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityAlert.m; path = Views/ActivityAlert.m; sourceTree = "<group>"; };
 		2F79AF3B1318CDCB00541ACC /* AttackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackInfo.h; path = Models/AttackInfo.h; sourceTree = "<group>"; };
 		2F79AF3C1318CDCB00541ACC /* AttackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackInfo.m; path = Models/AttackInfo.m; sourceTree = "<group>"; };
-		2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PickAFriendTableViewController.xib; path = Classes/ViewControllers/PickAFriendTableViewController.xib; sourceTree = "<group>"; };
-		2F79B0BF13197F2000541ACC /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAFriendTableViewController.h; sourceTree = "<group>"; };
-		2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAFriendTableViewController.m; sourceTree = "<group>"; };
+		2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PickAFriendTableViewController.xib; path = ViewControllers/PickAFriendTableViewController.xib; sourceTree = "<group>"; };
 		2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Combine.h"; path = "Helpers/UIImage+Combine.h"; sourceTree = "<group>"; };
 		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
 		2F97D5451311951C00F77318 /* AttackCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackCompletedViewController.m; path = ViewControllers/AttackCompletedViewController.m; sourceTree = "<group>"; };
@@ -375,6 +373,8 @@
 		C76E6EF51266C94300B48793 /* AssassinateHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssassinateHUDViewController.m; path = ViewControllers/AssassinateHUDViewController.m; sourceTree = "<group>"; };
 		C76E6EF61266C94300B48793 /* AssassinateHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AssassinateHUDViewController.xib; path = ViewControllers/AssassinateHUDViewController.xib; sourceTree = "<group>"; };
 		C7BF177B1307307D005F7762 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C7E4E92413198152009045D8 /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickAFriendTableViewController.h; path = ViewControllers/PickAFriendTableViewController.h; sourceTree = "<group>"; };
+		C7E4E92513198152009045D8 /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickAFriendTableViewController.m; path = ViewControllers/PickAFriendTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,7 +438,6 @@
 				2FD5EE0D1308938D007AC351 /* SystemConfiguration.framework */,
 				2FD5EE0F13089397007AC351 /* MobileCoreServices.framework */,
 				2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */,
-				2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -590,8 +589,9 @@
 		C71E4A371263828000670FFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2F79B0BF13197F2000541ACC /* PickAFriendTableViewController.h */,
-				2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */,
+				C7E4E92413198152009045D8 /* PickAFriendTableViewController.h */,
+				C7E4E92513198152009045D8 /* PickAFriendTableViewController.m */,
+				2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */,
 				2F97D5451311951C00F77318 /* AttackCompletedViewController.m */,
 				C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */,
 				C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */,
@@ -970,7 +970,7 @@
 				2F97D5461311951C00F77318 /* AttackCompletedViewController.m in Sources */,
 				2FDA20171311C32D00A78EE8 /* ObituaryViewController.m in Sources */,
 				2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */,
-				2F79B0C113197F2000541ACC /* PickAFriendTableViewController.m in Sources */,
+				C7E4E92613198152009045D8 /* PickAFriendTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
