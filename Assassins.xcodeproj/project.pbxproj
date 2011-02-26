@@ -15,8 +15,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		2F122F1213105558001F9DE5 /* ActivityAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F122F1113105558001F9DE5 /* ActivityAlert.m */; };
 		2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79AF3C1318CDCB00541ACC /* AttackInfo.m */; };
-		2F79B0311318ECB200541ACC /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79B02F1318ECB200541ACC /* PickAFriendTableViewController.m */; };
-		2F79B0321318ECB200541ACC /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79B0301318ECB200541ACC /* PickAFriendTableViewController.xib */; };
+		2F79B0BD13197E9C00541ACC /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */; };
+		2F79B0C113197F2000541ACC /* PickAFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
 		2F97D5461311951C00F77318 /* AttackCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97D5451311951C00F77318 /* AttackCompletedViewController.m */; };
 		2FC7C601130CF24200F7C3DB /* ah.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C5AB130CF24200F7C3DB /* ah.caf */; };
@@ -184,9 +184,9 @@
 		2F122F1113105558001F9DE5 /* ActivityAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityAlert.m; path = Views/ActivityAlert.m; sourceTree = "<group>"; };
 		2F79AF3B1318CDCB00541ACC /* AttackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackInfo.h; path = Models/AttackInfo.h; sourceTree = "<group>"; };
 		2F79AF3C1318CDCB00541ACC /* AttackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackInfo.m; path = Models/AttackInfo.m; sourceTree = "<group>"; };
-		2F79B02E1318ECB200541ACC /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAFriendTableViewController.h; sourceTree = "<group>"; };
-		2F79B02F1318ECB200541ACC /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAFriendTableViewController.m; sourceTree = "<group>"; };
-		2F79B0301318ECB200541ACC /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickAFriendTableViewController.xib; sourceTree = "<group>"; };
+		2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PickAFriendTableViewController.xib; path = Classes/ViewControllers/PickAFriendTableViewController.xib; sourceTree = "<group>"; };
+		2F79B0BF13197F2000541ACC /* PickAFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickAFriendTableViewController.h; sourceTree = "<group>"; };
+		2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickAFriendTableViewController.m; sourceTree = "<group>"; };
 		2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Combine.h"; path = "Helpers/UIImage+Combine.h"; sourceTree = "<group>"; };
 		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
 		2F97D5451311951C00F77318 /* AttackCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackCompletedViewController.m; path = ViewControllers/AttackCompletedViewController.m; sourceTree = "<group>"; };
@@ -438,6 +438,7 @@
 				2FD5EE0D1308938D007AC351 /* SystemConfiguration.framework */,
 				2FD5EE0F13089397007AC351 /* MobileCoreServices.framework */,
 				2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */,
+				2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -589,9 +590,8 @@
 		C71E4A371263828000670FFC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2F79B02E1318ECB200541ACC /* PickAFriendTableViewController.h */,
-				2F79B02F1318ECB200541ACC /* PickAFriendTableViewController.m */,
-				2F79B0301318ECB200541ACC /* PickAFriendTableViewController.xib */,
+				2F79B0BF13197F2000541ACC /* PickAFriendTableViewController.h */,
+				2F79B0C013197F2000541ACC /* PickAFriendTableViewController.m */,
 				2F97D5451311951C00F77318 /* AttackCompletedViewController.m */,
 				C748E4091283DEA5001658E2 /* AttackCompletedViewController.h */,
 				C748E40B1283DEA5001658E2 /* AttackCompletedViewController.xib */,
@@ -927,7 +927,7 @@
 				2FC7C68A130CF29B00F7C3DB /* RubberChickenKillOverlay@2x.png in Resources */,
 				2FC7C6CC130CF2D900F7C3DB /* FBDialog.bundle in Resources */,
 				2FDA20181311C32D00A78EE8 /* ObituaryViewController.xib in Resources */,
-				2F79B0321318ECB200541ACC /* PickAFriendTableViewController.xib in Resources */,
+				2F79B0BD13197E9C00541ACC /* PickAFriendTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,7 +970,7 @@
 				2F97D5461311951C00F77318 /* AttackCompletedViewController.m in Sources */,
 				2FDA20171311C32D00A78EE8 /* ObituaryViewController.m in Sources */,
 				2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */,
-				2F79B0311318ECB200541ACC /* PickAFriendTableViewController.m in Sources */,
+				2F79B0C113197F2000541ACC /* PickAFriendTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1008,34 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		2F79B0691318F9F100541ACC /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+			};
+			name = "Ad Hoc";
+		};
+		2F79B06A1318F9F100541ACC /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Assassins_Prefix.pch;
+				INFOPLIST_FILE = "Assassins-Info.plist";
+				PRODUCT_NAME = Assassins;
+				SDKROOT = iphoneos4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1047,6 +1075,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				2F79B06A1318F9F100541ACC /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1056,6 +1085,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				2F79B0691318F9F100541ACC /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
