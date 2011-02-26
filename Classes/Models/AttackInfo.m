@@ -10,14 +10,16 @@
 
 @implementation AttackInfo
 
-@synthesize hitCombo, location, assassinID, targetID, targetImage, obituaryString;
+@synthesize hitCombo, location, assassinID, targetID, targetImage, obituaryString, assassinName, targetName;
 
 
 - (void) dealloc{
 	[hitCombo release];
 	[location release];
 	[assassinID release];
+	[assassinName release];
 	[targetID release];
+	[targetName release];
 	[targetImage release];
 	[obituaryString release];
 	[super dealloc];

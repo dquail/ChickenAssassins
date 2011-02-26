@@ -8,6 +8,7 @@
 
 #import "PickAFriendTableViewController.h"
 #import "SBJSON.h"
+#import "AssassinsAppDelegate.h"
 
 @implementation PickAFriendTableViewController
 
@@ -120,15 +121,17 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	
 	NSDictionary *selectedFrient = [arrayOfFriends objectAtIndex:indexPath.row];
-	NSString *facebookFriendID = (NSString*) [selectedFrient objectForKey:@"id"];
+	appDelegate.attackInfo.targetID = (NSString*) [selectedFrient objectForKey:@"id"];
+	appDelegate.attackInfo.targetName = (NSString*) [selectedFrient objectForKey:@"name"];
 	
 	if (self.delegate!=nil)
 	{
 		if ([self.delegate respondsToSelector:@selector(donePickingFriendWithID:)])
 		{
-			[self.delegate donePickingFriendWithID:facebookFriendID];
+			[self.delegate donePickingFriendWithID:appDelegate.attackInfo.targetID];
 		}
 	}
 	

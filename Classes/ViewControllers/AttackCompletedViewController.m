@@ -110,6 +110,7 @@
 	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
 
 	[self.alertView show];
+	[facebook requestWithGraphPath:@"me" andDelegate:self];
 	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
 	
 }
@@ -210,7 +211,36 @@
  *      didReceiveResponse:(NSURLResponse *)response
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
-	[self.alertView hide];
+	//Result could be the users info or a friend list
+	[result retain];
+	NSDictionary *resultDict;
+	if ([result isKindOfClass:[NSDictionary class]]){
+		resultDict = (NSDictionary *) result;
+		if ([resultDict objectForKey:@"id"])
+		{
+			//This is a callback from get user info
+			self.appDelegate.attackInfo.assassinID = [resultDict objectForKey:@"id"];
+			self.appDelegate.attackInfo.assassinName = [resultDict objectForKey:@"name"];
+		}
+		else {
+			[self.alertView hide];
+			NSArray *friendArray;
+			friendArray = [resultDict objectForKey:@"data"];
+			NSLog(@"friend count: %d", [friendArray count]);
+			
+			UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
+			PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
+																										   friendPic:image];
+			pickController.delegate = self;
+			[self presentModalViewController:pickController animated:YES];
+			[pickController autorelease];
+		}
+
+	}
+	else {
+		NSLog(@"Something went wrong with the json returned");
+	}
+	/*
 	NSArray *friendArray;
 	[result retain];
 	if ([result isKindOfClass:[NSDictionary class]]) {
@@ -225,6 +255,7 @@
 	pickController.delegate = self;
 	[self presentModalViewController:pickController animated:YES];
 	[pickController autorelease];
+	 */
 };
 
 /**
@@ -254,7 +285,6 @@
 		[self dismissModalViewControllerAnimated:YES];
 		return;
 	}
-
 	
 	self.appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);
