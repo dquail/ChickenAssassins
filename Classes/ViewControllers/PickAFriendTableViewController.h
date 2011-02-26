@@ -30,5 +30,4 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture;
 
 - (IBAction) onCancel;
-- (IBAction) onPost;
 @end
