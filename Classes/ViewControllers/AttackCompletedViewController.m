@@ -255,8 +255,6 @@
 		return;
 	}
 
-	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
-	[self.alertView show];
 	
 	self.appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);

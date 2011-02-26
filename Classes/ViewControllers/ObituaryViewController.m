@@ -43,6 +43,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
+	[self.alertView show];	
 	[self._webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:obituaryURL]]];
 }
 
@@ -164,9 +166,8 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-	if (delegate){
-		[delegate webViewDidFinishLoad:webView];
-	}
+	//self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Posting obituary to Facebook ..."];
+	[self.alertView hide];	
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
@@ -175,7 +176,7 @@
 	
 	UIAlertView *alert;
 	alert = [[UIAlertView alloc] initWithTitle:@"Error" 
-									   message:@"Unable to post link to Facebook." 
+									   message:@"Unable generate obituary." 
 									  delegate:self cancelButtonTitle:@"Ok" 
 							 otherButtonTitles:nil];
 	[alert show];
@@ -226,7 +227,14 @@
  */
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
 	//TODO - display load failed.  Dismiss dialog
-	NSLog(@"REquest failed");
+	UIAlertView *alert;
+	alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+									   message:@"Unable to post obituary to your wall." 
+									  delegate:self cancelButtonTitle:@"Ok" 
+							 otherButtonTitles:nil];
+	[alert show];
+	[alert release];	
+	NSLog(@"Request failed");
 };
 
 #pragma mark -
