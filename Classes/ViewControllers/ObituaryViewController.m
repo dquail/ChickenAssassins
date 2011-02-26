@@ -139,6 +139,21 @@
 
 - (void) sendViaEmail{
 	NSLog(@"Attempting to send obituary in email");
+	if ([MFMailComposeViewController canSendMail]) {
+		AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+
+		NSString *htmlMessage = [NSString stringWithFormat:
+								  @"I just killed you using Rubber Chicken Assassins.  &lt;a href = %@&gt;Check out your obituary  here &lt;/a&gt;.  You could also get revenge by reverse assasination.  Start by &lt;a href = http://chickenassassin.com &gt;downloading the app&lt;/a&gt;", appDelegate.attackInfo.obituaryString];
+
+
+		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+		mailComposer.mailComposeDelegate = self;
+		[mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
+		[mailComposer addAttachmentData:UIImagePNGRepresentation(appDelegate.attackInfo.targetImage) mimeType:@"image/png" fileName:@"image"]; 
+		[mailComposer setMessageBody:htmlMessage isHTML:YES]; 		
+		[self presentModalViewController:mailComposer animated:YES]; 
+		[mailComposer release];
+	}	
 }
 
 #pragma mark -
@@ -184,6 +199,7 @@
  *      didReceiveResponse:(NSURLResponse *)response
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
+	//TODO - display load success.  Dismiss dialog
 	NSLog(@"Request loaded");
 };
 
@@ -192,8 +208,16 @@
  * successfully.
  */
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+	//TODO - display load failed.  Dismiss dialog
 	NSLog(@"REquest failed");
 };
 
+#pragma mark -
+#pragma mark Mail Compose Delegate Methods
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+		  didFinishWithResult:(MFMailComposeResult)result 
+						error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 @end
