@@ -17,7 +17,7 @@
 
 @implementation ObituaryViewController
 
-@synthesize _webView, delegate, toolBar;
+@synthesize _webView, delegate, toolBar, alertView;
 
 - (id) initWithObituaryURL:(NSString *)url{
     self = [super initWithNibName:@"ObituaryViewController" bundle:nil];
@@ -129,6 +129,9 @@
 								   @"I just finished killing off my friend with a rubber chicken.  Check it out", @"caption",
 								   @"In a searies of blows, I managed to beat up my newest target.  What an assassination", @"description",
 								   nil];
+	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Posting obituary to Facebook ..."];
+	[self.alertView show];
+	
 	[appDelegate.facebook requestWithGraphPath:@"me/feed" 
 									  andParams:params
 								  andHttpMethod:@"POST"
@@ -168,10 +171,15 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
 	NSLog(@"Error loading request");
-	/*
-	if (delegate){
-		[delegate webView:webView didFailLoadWithError:error];
-	}*/
+	[self.alertView hide];
+	
+	UIAlertView *alert;
+	alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+									   message:@"Unable to post link to Facebook." 
+									  delegate:self cancelButtonTitle:@"Ok" 
+							 otherButtonTitles:nil];
+	[alert show];
+	[alert release];
 }
 
 #pragma mark -
@@ -200,6 +208,15 @@
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
 	//TODO - display load success.  Dismiss dialog
+	[self.alertView hide];
+	UIAlertView *alert;
+	alert = [[UIAlertView alloc] initWithTitle:@"Success" 
+									   message:@"The obituary was posted to your Facebook wall." 
+									  delegate:self cancelButtonTitle:@"Ok" 
+							 otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+	
 	NSLog(@"Request loaded");
 };
 

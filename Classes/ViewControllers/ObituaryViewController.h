@@ -8,6 +8,7 @@
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 #import "Facebook.h"
+#import "ActivityAlert.h"
 
 @interface ObituaryViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate, 
 													MFMailComposeViewControllerDelegate,FBRequestDelegate>{
@@ -15,9 +16,13 @@
 	NSString *obituaryURL;
 	id <UIWebViewDelegate> delegate;
 	UIToolbar *toolBar;
+    ActivityAlert *alertView;
+														
 }
 @property (nonatomic, retain) IBOutlet UIWebView *_webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolBar;
+@property (nonatomic, retain) ActivityAlert *alertView;
+
 @property (nonatomic, retain) id delegate;
 
 - (id) initWithObituaryURL:(NSString *)url;
