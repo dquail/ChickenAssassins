@@ -70,7 +70,6 @@
 								<reference key="IBUINavigationBar" ref="4349812"/>
 								<string key="IBUITitle">Obituary</string>
 								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="224744152">
-									<string key="IBUITitle">Item</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">2</int>
 									<reference key="IBUINavigationItem" ref="673868256"/>
@@ -110,14 +109,6 @@
 						<reference key="destination" ref="191373211"/>
 					</object>
 					<int key="connectionID">3</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">webView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="720299492"/>
-					</object>
-					<int key="connectionID">14</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
