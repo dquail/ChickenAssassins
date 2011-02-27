@@ -9,7 +9,8 @@
 #import "AssassinsServer.h"
 #import "ASIFormDataRequest.h"
 
-static NSString* SERVER_BASE = @"http://nathan.logicaldecay.com";
+//static NSString* SERVER_BASE = @"http://nathan.logicaldecay.com";
+static NSString* SERVER_BASE = @"http://chickenassassin.heroku.com";
 //static NSString* SERVER_BASE = @"http://chickenassassin.com/kills"
 
 static AssassinsServer * sharedServer = nil;

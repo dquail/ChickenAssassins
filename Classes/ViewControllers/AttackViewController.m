@@ -22,8 +22,8 @@
 
 #define NONSHAKE_DELTA 0.4
 #define SHAKE_DELTA 2.0
-#define HITS_TO_KILL 25
-#define HITS_TO_FINISH_HIM 20
+#define HITS_TO_KILL 5
+#define HITS_TO_FINISH_HIM 5
 #define HITS_FOR_RESPONSE 4  //Only occasionally will responses be played
 
 - (IBAction)slapButton {
@@ -31,10 +31,10 @@
 }
 
 - (void) completeInitialization {
-	shakeEventSource = [[ShakeEventSource alloc] init];
-	slapHistory = [[NSMutableString alloc] initWithString:@""];	
+	shakeEventSource = [[ShakeEventSource alloc] init];	
 	[shakeEventSource addDelegate: self];
 
+	[self.appDelegate.attackInfo.hitCombo setString:@""];
 	/*
 	 * Create slap clips
 	 */
@@ -161,17 +161,18 @@
 
 - (void) resetUsingImage:(UIImage *) image{
 	if (targetImage!=image){
+		self.appDelegate.attackInfo = [[AttackInfo alloc] init];
 		[targetImage release];
 		targetImage = [image retain];
 		self.targetImageView.image = targetImage;
 		self.statusLabel.text = @"Attack using your chicken!";
 		[self.progressView setProgress:1.0f];
-		[slapHistory setString:@""];
+		[self.appDelegate.attackInfo.hitCombo setString:@""];		
 		slapCount = 0;
 	}
 }
 
-- (id) initWithTargetImage:(UIImage *)image{
+- (id) initWithTargetImage:(UIImage *)image{	
 	targetImage = [image retain];
 	return [self initWithNibName:nil bundle:nil];
 }
@@ -216,8 +217,6 @@
 */
 
 - (void) finishKill{
-	self.appDelegate.attackInfo = [[AttackInfo alloc] init];
-	self.appDelegate.attackInfo.hitCombo = slapHistory;
 	self.appDelegate.attackInfo.targetImage = targetImage;
 	[self.appDelegate targetKilled:targetImage];
 }
@@ -225,6 +224,7 @@
 - (void) slap {
 	NSLog(@"Slapping %d", slapCount);
 	++slapCount;
+	[self.appDelegate.attackInfo.hitCombo appendString:@"L"];
 	NSLog(@"progress value before: %f", self.progressView.progress);
 	
 	self.progressView.progress = 1.0f - (float) slapCount / (float)HITS_TO_KILL;
@@ -268,40 +268,40 @@
 - (void) shake: (int) direction {
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerofmeterShakeDirectionLeft");
-		[slapHistory appendString:@"L,"];
+		[self.appDelegate.attackInfo.hitCombo appendString:@"L"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
-		[slapHistory appendString:@"R,"];
+		[self.appDelegate.attackInfo.hitCombo appendString:@"R"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
 		NSLog(@"AccelerometerShakeDirectionUp");
-		[slapHistory appendString:@"U,"];
+		[self.appDelegate.attackInfo.hitCombo appendString:@"U"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
 		NSLog(@"AccelerometerShakeDirectionDown");
-		[slapHistory appendString:@"D,"];		
+		[self.appDelegate.attackInfo.hitCombo appendString:@"D"];		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
 		[self slap];
-		[slapHistory appendString:@"F,"];		
+		[self.appDelegate.attackInfo.hitCombo appendString:@"F"];		
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	
 	if (direction & AccelerometerShakeDirectionPull) {
 		/*Don't want to capture pulls
-		[slapHistory appendString:@"B,"];		*/
+		[self.appData.attackInfo.hitCombo appendString:@"B"];		*/
 		NSLog(@"AccelerometerShakeDirectionPull - not sending slap though");
 	}
-	NSLog(@"Slap history: %@",slapHistory);
+	NSLog(@"Slap history: %@",self.appDelegate.attackInfo.hitCombo);
 }
 
 - (void) playNextResponse {

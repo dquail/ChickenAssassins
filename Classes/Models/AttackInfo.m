@@ -12,6 +12,19 @@
 
 @synthesize hitCombo, location, assassinID, targetID, targetImage, obituaryString, assassinName, targetName;
 
+- (id) init{
+	if (self = [super init]){
+		self.targetID = @"";
+		self.location = @"";
+		self.assassinID = @"";
+		self.targetID = @"";
+		self.obituaryString = @"";
+		self.assassinName = @"";
+		self.hitCombo = [NSMutableString stringWithCapacity:30];
+		self.targetName = @"";
+	}
+	return self;
+}
 
 - (void) dealloc{
 	[hitCombo release];

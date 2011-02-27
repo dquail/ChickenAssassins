@@ -106,6 +106,7 @@
 	[locationManager stopUpdatingLocation];
 	NSLog(@"Setting location");
 	self.startingPoint = newLocation;
+	//TODO - Add this location to the appDelegate attackinfo
 }
 
 #pragma mark -

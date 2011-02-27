@@ -295,26 +295,27 @@
 
 	NSString *obituaryURL;
 	
-	/*
-	 *Todo - Use this to post to our server
+	//TODO - remove this
+	self.appDelegate.attackInfo.location= @"53.523574,-113.524046";
+	
+	 //Todo - Use this to post to our server
 	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
 														   killerID:self.appDelegate.attackInfo.assassinID
 														   victimID:self.appDelegate.attackInfo.targetID
 														   location:self.appDelegate.attackInfo.location
 													 attackSequence:self.appDelegate.attackInfo.hitCombo];
-	*/
 	
-	
+	/*
 	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
 														   killerID:@"867800458"
 														   victimID:@"583002418"
 														   location:@"53.523574,-113.524046"
-													 attackSequence:self.appDelegate.attackInfo.hitCombo];
-	
+													 attackSequence:@"LRLRLUDPLP"];
+	*/
 	//TODO - Change this to the actual obituary url
-	self.appDelegate.attackInfo.obituaryString = @"http://chickenassassin.com";
+	self.appDelegate.attackInfo.obituaryString = obituaryURL;
 	
 	[self.alertView hide];
 	[self dismissModalViewControllerAnimated:YES];
@@ -333,7 +334,7 @@
 	else{
 		//TODO Uncomment the following when server is working
 		//[self showObituary:obituaryURL];
-		[self showObituary:@"http://msn.com"];
+		[self showObituary:	self.appDelegate.attackInfo.obituaryString];
 	}
 	//TODO - Display a webview with the obituaryURL	or error dialog.		
 }

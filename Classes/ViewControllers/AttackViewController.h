@@ -31,8 +31,6 @@
 	
 	UIImage *targetImage;
 	
-	NSMutableString *slapHistory;
-	
 	int slapCount;
 	
 	UIProgressView *progressView;
