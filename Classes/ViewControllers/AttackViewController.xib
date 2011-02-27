@@ -57,7 +57,7 @@
 					<object class="IBUIButton" id="318496952">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{68, 460}, {72, 20}}</string>
+						<string key="NSFrame">{{2, 460}, {72, 20}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -86,7 +86,7 @@
 					<object class="IBUIImageView" id="17049995">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{8, 11}, {70, 105}}</string>
+						<string key="NSFrame">{{8, 11}, {60, 70}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -94,23 +94,23 @@
 					<object class="IBUIProgressView" id="966850749">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{89, 60}, {216, 9}}</string>
+						<string key="NSFrame">{{76, 36}, {216, 9}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<float key="IBUIProgress">0.5</float>
 					</object>
-					<object class="IBUILabel" id="155052023">
+					<object class="IBUILabel" id="368378454">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{86, 11}, {232, 41}}</string>
+						<string key="NSFrame">{{76, 11}, {73, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Attack using your chicken!!</string>
+						<string key="IBUIText">Strength</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">AmericanTypewriter</string>
 							<double key="NSSize">17</double>
@@ -168,14 +168,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">statusLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="155052023"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">targetImageView</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="17049995"/>
@@ -209,9 +201,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1026026402"/>
-							<reference ref="966850749"/>
 							<reference ref="17049995"/>
-							<reference ref="155052023"/>
+							<reference ref="966850749"/>
+							<reference ref="368378454"/>
 							<reference ref="318496952"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -237,8 +229,8 @@
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="155052023"/>
+						<int key="objectID">20</int>
+						<reference key="object" ref="368378454"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>
@@ -257,8 +249,7 @@
 					<string>14.IBViewBoundsToFrameTransform</string>
 					<string>15.IBPluginDependency</string>
 					<string>15.IBViewBoundsToFrameTransform</string>
-					<string>16.IBPluginDependency</string>
-					<string>16.IBViewBoundsToFrameTransform</string>
+					<string>20.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 				</object>
@@ -272,7 +263,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABC+AAAw+8AAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCiAAAw+8AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -280,12 +271,9 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDJAAAwxcAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCsgAAwoYAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCrAAAwoYAAA</bytes>
-					</object>
 					<string>{{567, 276}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -306,7 +294,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
