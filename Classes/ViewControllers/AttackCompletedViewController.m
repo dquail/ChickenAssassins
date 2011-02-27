@@ -102,8 +102,18 @@
     // only authorize if the access token isn't valid
     // if it *is* valid, no need to authenticate. just move on
     if (![self.facebook isSessionValid]) {
+		UIAlertView *alert;
+		alert = [[UIAlertView alloc] initWithTitle:@"Facebook" 
+											   message:@"We use Facebook data to create a fake obituary for your target.  Nothing will be posted on Facebook without your permission.  You'll be asked to enter your Facebook info now." 
+											  delegate:self cancelButtonTitle:@"Ok" 
+									 otherButtonTitles:nil];
+		
+		[alert show];
+		[alert release];
+		return;
+		/*
 		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
-        [self.facebook authorize:permissions delegate:self];
+        [self.facebook authorize:permissions delegate:self];*/
     }
 	
 	
@@ -361,6 +371,8 @@
 - (void) webViewDidFinishLoad:(UIWebView *)webView{
 	NSLog(@"finished loading");	
 }
-
-
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
+	[self.facebook authorize:permissions delegate:self];
+}
 @end
