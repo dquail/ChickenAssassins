@@ -10,17 +10,25 @@
 
 #import "ASIHTTPRequest.h"
 
+@protocol AssassinsServerDelegate
+- (void) onRequestDidLoad:(NSString*) response;
+- (void) onRequestDidFail;
+@end
+
 
 @interface AssassinsServer : NSObject<ASIHTTPRequestDelegate> {
+	id <AssassinsServerDelegate> delegate;
 
 }
+@property (nonatomic, retain) id<AssassinsServerDelegate> delegate;
+
 + (AssassinsServer *)sharedServer;
 
 /*
  * - Posts the kill to our server
  * - Returns url to kill
 */
-- (NSString*) postKillWithToken:(NSString *) authToken
+- (void) postKillWithToken:(NSString *) authToken
 					  imageData:(NSData *) imgData
 					   killerID:(NSString *) killer_id
 					   victimID:(NSString *) victim_id

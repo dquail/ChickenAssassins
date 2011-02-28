@@ -15,7 +15,12 @@ static NSString* SERVER_BASE = @"http://chickenassassin.heroku.com";
 
 static AssassinsServer * sharedServer = nil;
 
+@interface AssassinsServer (Private)
+- (BOOL) validateUrl: (NSString *) candidate;
+@end
 @implementation AssassinsServer
+
+@synthesize delegate;
 
 + (AssassinsServer *)sharedServer{
     @synchronized( self )
@@ -28,7 +33,7 @@ static AssassinsServer * sharedServer = nil;
     return sharedServer;	
 }
 
-- (NSString*) postKillWithToken:(NSString *) authToken
+- (void) postKillWithToken:(NSString *) authToken
 					  imageData:(NSData *) imgData
 					   killerID:(NSString *) killer_id
 					   victimID:(NSString *) victim_id
@@ -45,47 +50,42 @@ static AssassinsServer * sharedServer = nil;
 	[request addPostValue: location forKey:@"location"];
 	[request addPostValue: 	attack_sequence forKey:@"attack_sequence"];	
 	[request addData:imgData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
-
-	[request startSynchronous];
-	NSString *response;
-	NSError *error = [request error];
-	if (!error) {
-		response = [request responseString];
-		NSLog(@"Response string: %@", response);
-	}
-	else {
-		response = @"";
-		NSLog(@"Error posting kill");
-	}
-	return response;
+	request.delegate = self;
+	[request start];
 }
 
 #pragma mark -
 #pragma mark ASIHTTPRequest Delegate 
-- (void)requestStarted:(ASIHTTPRequest *)request{
-	NSLog(@"Request started");
-}
-- (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders{
-	NSLog(@"Request recieved response header");
-}
-- (void)request:(ASIHTTPRequest *)request willRedirectToURL:(NSURL *)newURL{
-	NSLog(@"Request recieved willredirect");
-}
+
 - (void)requestFinished:(ASIHTTPRequest *)request{
+	ASIFormDataRequest *formRequest = (ASIFormDataRequest *) request;
+	NSError *error = [formRequest error];
+	NSString *urlReturned = [formRequest responseString];
+	
+	if (!error && [self validateUrl:urlReturned]) {
+		NSLog(@"Response string: %@", urlReturned);		
+		if (self.delegate){
+			[self.delegate onRequestDidLoad:urlReturned];
+		}
+	}
+	else {
+		NSLog(@"Error creating obituary");
+		if (self.delegate)
+			[self.delegate onRequestDidFail];	}	
 	NSLog(@"Request finished");
 }
 - (void)requestFailed:(ASIHTTPRequest *)request{
-	NSLog(@"Request failed");
-}
-- (void)requestRedirected:(ASIHTTPRequest *)request{
-	NSLog(@"Request redirect");
+	NSLog(@"Error creating obituary");
+	if (self.delegate)
+		[self.delegate onRequestDidFail];
+
 }
 
-// When a delegate implements this method, it is expected to process all incoming data itself
-// This means that responseData / responseString / downloadDestinationPath etc are ignored
-// You can have the request call a different method by setting didReceiveDataSelector
-- (void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data{
-	NSLog(@"request recieved data");
+- (BOOL) validateUrl: (NSString *) candidate {
+    NSString *urlRegEx =
+    @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx]; 
+    return [urlTest evaluateWithObject:candidate];
 }
 
 @end

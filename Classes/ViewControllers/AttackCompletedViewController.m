@@ -92,10 +92,6 @@
 }
 
 - (IBAction) postToFacebook {
-    // on login, use the stored access token and see if it still works
-	//TODO: remove this.  Testing the webview
-	//[self showObituary:@"http://msn.com"];
-	//return;
 	
 	[self.facebook setTokenFromCache];
 	
@@ -250,22 +246,6 @@
 	else {
 		NSLog(@"Something went wrong with the json returned");
 	}
-	/*
-	NSArray *friendArray;
-	[result retain];
-	if ([result isKindOfClass:[NSDictionary class]]) {
-		NSDictionary *friendDict = (NSDictionary*) result;
-		friendArray = [friendDict objectForKey:@"data"];  
-	}
-	NSLog(@"friend count: %d", [friendArray count]);
-
-	UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
-	PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
-																							   friendPic:image];
-	pickController.delegate = self;
-	[self presentModalViewController:pickController animated:YES];
-	[pickController autorelease];
-	 */
 };
 
 /**
@@ -291,8 +271,8 @@
 #pragma mark -
 #pragma mark PickAFriendDelegate
 - (void) donePickingFriendWithID:(NSString *) friendID{
+	[self dismissModalViewControllerAnimated:YES];
 	if (friendID == nil) {
-		[self dismissModalViewControllerAnimated:YES];
 		return;
 	}
 	
@@ -300,59 +280,27 @@
 	NSLog(@"Friend picked: %@", friendID);
 	
 
-	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.5);
-	
-
-	NSString *obituaryURL;
-	
-	//TODO - remove this
-	self.appDelegate.attackInfo.location= @"53.523574,-113.524046";
+	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.2);
+	NSLog(@"Image data size: %d", [imageData length]);
 	
 	 //Todo - Use this to post to our server
-	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
+	AssassinsServer *server = [AssassinsServer sharedServer];
+	server.delegate = self;
+	
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
+	[self.alertView show];
+	
+	[server postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
 														   killerID:self.appDelegate.attackInfo.assassinID
 														   victimID:self.appDelegate.attackInfo.targetID
 														   location:self.appDelegate.attackInfo.location
 													 attackSequence:self.appDelegate.attackInfo.hitCombo];
 	
-	/*
-	obituaryURL = [[AssassinsServer sharedServer] postKillWithToken:(NSString *) facebook.accessToken
-														  imageData:imageData
-														   killerID:@"867800458"
-														   victimID:@"583002418"
-														   location:@"53.523574,-113.524046"
-													 attackSequence:@"LRLRLUDPLP"];
-	*/
-	//TODO - Change this to the actual obituary url
-	self.appDelegate.attackInfo.obituaryString = obituaryURL;
-	
-	[self.alertView hide];
-	[self dismissModalViewControllerAnimated:YES];
-	NSLog(@"Obituary returned was: %@", obituaryURL);
-	if (obituaryURL==@""){
-		UIAlertView *alert;
-		
-		alert = [[UIAlertView alloc] initWithTitle:@"Error" 
-											   message:@"Unable to create obituary." 
-											  delegate:self cancelButtonTitle:@"Ok" 
-									 otherButtonTitles:nil];
-
-		[alert show];
-		[alert release];		
-	}
-	else{
-		//TODO Uncomment the following when server is working
-		//[self showObituary:obituaryURL];
-		[self showObituary:	self.appDelegate.attackInfo.obituaryString];
-	}
-	//TODO - Display a webview with the obituaryURL	or error dialog.		
 }
 	
 - (void) showObituary:(NSString *)obituaryURL{
-	//Temporary to test loading the ObituaryView.  Move this to donePicking method
-	//[self.view addSubview:obituaryController.view];
-	
+
 	if (obituaryViewController)
 		[obituaryViewController release];
 	
@@ -374,5 +322,41 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
 	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
 	[self.facebook authorize:permissions delegate:self];
+}
+
+#pragma mark -
+#pragma mark AssassinsServerDelegate
+- (void) onRequestDidLoad:(NSString*) response{
+	[self.alertView hide];
+	self.appDelegate.attackInfo.obituaryString = response;
+	
+	NSLog(@"Obituary returned was: %@", response);
+	if (response==@""){
+		UIAlertView *alert;
+		
+		alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+										   message:@"Unable to create obituary." 
+										  delegate:self cancelButtonTitle:@"Ok" 
+								 otherButtonTitles:nil];
+		
+		[alert show];
+		[alert release];		
+	}
+	else{
+		[self showObituary:	self.appDelegate.attackInfo.obituaryString];
+	}	
+}
+
+- (void) onRequestDidFail{
+	[self.alertView hide];
+	UIAlertView *alert;
+	
+	alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+									   message:@"Unable to create obituary." 
+									  delegate:self cancelButtonTitle:@"Ok" 
+							 otherButtonTitles:nil];
+	
+	[alert show];
+	[alert release];		
 }
 @end

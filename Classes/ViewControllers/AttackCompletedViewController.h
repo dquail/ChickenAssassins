@@ -16,8 +16,8 @@
 
 @class AssassinsAppDelegate;
 
-@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, 
-				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, UIWebViewDelegate> {
+@interface AttackCompletedViewController : UIViewController <MFMailComposeViewControllerDelegate, AssassinsServerDelegate,
+				PickAFriendDelegate, FBRequestDelegate, FBDialogDelegate,FBSessionDelegate, UIWebViewDelegate, UIAlertViewDelegate> {
 	UIImageView *targetImageView;
 	UIImage *targetImage;
 	UIImageView *overlayImageView;

@@ -28,7 +28,7 @@
 	//Create the Hudview
 	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
     
-	self.attackInfo = [[AttackInfo alloc] init];
+ 	self.attackInfo = [[AttackInfo alloc] init];
 	//[window addSubview:viewController.view];
     [window addSubview:self.hudController.view];
 	[window makeKeyAndVisible];

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Facebook.h"
 #import "ActivityAlert.h"
+#import "AssassinsServer.h"
 
 @interface ObituaryViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate, 
 													MFMailComposeViewControllerDelegate,FBRequestDelegate>{
