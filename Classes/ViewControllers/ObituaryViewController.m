@@ -43,7 +43,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
+	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Displaying obituary ..."];
 	[self.alertView show];	
 	[self._webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:obituaryURL]]];
 }
@@ -164,6 +164,9 @@
 #pragma mark -
 #pragma mark UIWebView delegate
 
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+	[self.alertView hide];	
+}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 	//self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Posting obituary to Facebook ..."];

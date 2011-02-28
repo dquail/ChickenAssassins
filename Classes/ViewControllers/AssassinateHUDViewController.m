@@ -104,11 +104,9 @@
 		   fromLocation:(CLLocation *)oldLocation {
 	
 	[locationManager stopUpdatingLocation];
-	self.appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.longitude, newLocation.coordinate.latitude];
-	NSLog(@"Setting location %@", self.appDelegate.attackInfo.location);	
-	NSLog(@"location %f ,  %f ", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
+	
+	self.appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
 	self.startingPoint = newLocation;
-	//TODO - Add this location to the appDelegate attackinfo
 }
 
 #pragma mark -
