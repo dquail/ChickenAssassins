@@ -40,14 +40,21 @@ static AssassinsServer * sharedServer = nil;
 					   location:(NSString *) location
 				 attackSequence:(NSString *) attack_sequence{
 	
+	//Get current time to pass to server
+	NSDate *date = [NSDate date];
+	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+	[dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss"]; 
+	NSString *stringFromDate = [dateFormat stringFromDate:date];
+	NSLog(@"stringDate: %@", stringFromDate);
 	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
 								   [NSURL URLWithString:[NSString stringWithFormat:@"%@/kills", SERVER_BASE]]];
-
+	request.timeOutSeconds = 45;
 	[request addPostValue: @"true" forKey:@"utf8"];
 	[request addPostValue: authToken forKey:@"access_token"];
 	[request addPostValue: killer_id forKey:@"killer_id"];
 	[request addPostValue: victim_id forKey:@"victim_id"];	
 	[request addPostValue: location forKey:@"location"];
+	[request addPostValue: stringFromDate forKey:@"kill_date"];
 	[request addPostValue: 	attack_sequence forKey:@"attack_sequence"];	
 	[request addData:imgData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
 	request.delegate = self;
