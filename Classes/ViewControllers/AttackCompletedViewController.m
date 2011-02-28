@@ -281,13 +281,13 @@
 	
 
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.2);
-	NSLog(@"Image data size: %d", [imageData length]);
+	NSLog(@"Location: %@", self.appDelegate.attackInfo.location);
 	
 	 //Todo - Use this to post to our server
 	AssassinsServer *server = [AssassinsServer sharedServer];
 	server.delegate = self;
 	
-	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary ..."];
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary.  This may take up to a minute ..."];
 	[self.alertView show];
 	
 	[server postKillWithToken:(NSString *) facebook.accessToken
