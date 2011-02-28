@@ -149,7 +149,7 @@
 		AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 
 		NSString *htmlMessage = [NSString stringWithFormat:
-								  @"I just killed you using Rubber Chicken Assassins.  &lt;a href = %@&gt;Check out your obituary  here &lt;/a&gt;.  You could also get revenge by reverse assasination.  Start by &lt;a href = http://chickenassassin.com &gt;downloading the app&lt;/a&gt;", appDelegate.attackInfo.obituaryString];
+								  @"I just killed you using Rubber Chicken Assassins.  Check out your obituary here %@.  You could also get revenge by reverse assasination.  Start by downloading the app http://chickenassassin.com", appDelegate.attackInfo.obituaryString];
 
 
 		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
