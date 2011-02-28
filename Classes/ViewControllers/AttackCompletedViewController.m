@@ -320,7 +320,7 @@
 	NSLog(@"finished loading");	
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
-	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
+	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil];
 	[self.facebook authorize:permissions delegate:self];
 }
 
