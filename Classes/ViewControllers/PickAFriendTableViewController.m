@@ -26,12 +26,10 @@
  */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture{
-	NSLog(@"Friend Array - %d", [friendArray count]);
 	arrayOfFriends = friendArray;
 	NSDictionary *firstFriendTest = [friendArray objectAtIndex:0];
 	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
 	NSString *userID = (NSString*) [firstFriendTest objectForKey:@"id"];
-	NSLog(@"First friend name: %@ id: %@", name, userID);	
 	self.friendPic = friendPicture;
 	return [self initWithNibName:nil bundle:nil];
 }
@@ -66,6 +64,10 @@
 
 
 - (void)dealloc {
+	[friendPic release];
+	[imageView release];
+	[arrayOfFriends release];
+	[postButton release];	
     [super dealloc];
 }
 

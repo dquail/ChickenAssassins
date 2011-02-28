@@ -72,6 +72,9 @@
 
 - (void)dealloc {
 	[obituaryURL release];
+	[toolBar release];
+    [alertView release];
+	
 	[_webView release];
 	
     [super dealloc];
@@ -100,9 +103,7 @@
 - (IBAction) onCloseObituary{
 	//remove this view from superview.
 	//TODO: this animation is not working for some stupid reason
-	NSLog(@"Closing obituary view");
 	[UIView beginAnimations:@"closeObituary" context:nil];
-	NSLog(@"Alpha: %d", self.view.alpha);
 	self.view.alpha = 0.0f;
 	NSLog(@"Alpha: %d", self.view.alpha);
 	[UIView commitAnimations];	

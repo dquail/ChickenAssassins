@@ -17,7 +17,6 @@
 @class AssassinsAppDelegate;
 
 @interface AttackViewController : UIViewController <ShakeDelegate, SoundClipPoolDelegate> {
-	AssassinsAppDelegate *appDelegate;
 	ShakeEventSource *shakeEventSource;
 
 	SoundClipPool *slapClips;
@@ -38,7 +37,7 @@
 	UILabel *statusLabel;
 	
 }
-@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
+
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;

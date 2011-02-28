@@ -14,7 +14,7 @@
 
 @synthesize locationManager;
 @synthesize startingPoint;
-@synthesize targetImage, overlay, appDelegate;
+@synthesize targetImage, overlay;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -29,8 +29,6 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];	
-	
-	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	camera  = [[UIImagePickerController alloc] init];
 	camera.delegate = self;
@@ -48,7 +46,7 @@
 	
 	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
 	locationManager.delegate = self;
-	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
 	[locationManager startUpdatingLocation];
 }
 
@@ -56,7 +54,7 @@
 	
 	[super viewDidAppear:animated];
 	
-	[self presentModalViewController:[camera autorelease] animated:YES];
+	[self presentModalViewController:camera animated:YES];
 	
 }
 /*
@@ -81,15 +79,15 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc {	
+    [super dealloc];	
 	[camera release];
 	[overlay release];
 	
-	// Week reference - don't release appDelegate
-	
+	[locationManager stopUpdatingLocation];
 	[locationManager release];
 	[startingPoint release];
-    [super dealloc];
+
 }
 
 #pragma mark CameraOverlay callbacks 
@@ -102,10 +100,10 @@
 - (void)locationManager:(CLLocationManager *)manager
 	didUpdateToLocation:(CLLocation *)newLocation
 		   fromLocation:(CLLocation *)oldLocation {
-	
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	[locationManager stopUpdatingLocation];
 	
-	self.appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
+	appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
 	self.startingPoint = newLocation;
 }
 
@@ -141,9 +139,10 @@
 }
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
-	[self.appDelegate lockTarget:self.targetImage];
+	[appDelegate lockTarget:self.targetImage];
 }
 
 @end

@@ -19,7 +19,7 @@
 
 @implementation AttackCompletedViewController
 
-@synthesize targetImageView, overlayImageView, scoreLabel, appDelegate, facebook, alertView;//, obituaryController;
+@synthesize targetImageView, overlayImageView, scoreLabel, facebook, alertView;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -39,10 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 		
-	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
-	//self.obituaryController = [[ObituaryViewController alloc] initWithNibName:nil bundle:nil];	
-	
 }
 
 
@@ -83,7 +80,8 @@
 
 - (IBAction) startAttack{
 	//Start a new attack
-	[self.appDelegate showHud];
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	[appDelegate showHud];
 }
 
 - (IBAction) savePhoto{
@@ -92,6 +90,13 @@
 }
 
 - (IBAction) postToFacebook {
+	
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	if (nil != appDelegate.attackController)
+	{
+		[appDelegate.attackController release];
+		appDelegate = nil;
+	}
 	
 	[self.facebook setTokenFromCache];
 	
@@ -107,9 +112,6 @@
 		[alert show];
 		[alert release];
 		return;
-		/*
-		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", nil];
-        [self.facebook authorize:permissions delegate:self];*/
     }
 	
 	
@@ -162,7 +164,7 @@
 	[alert show];
 	[alert release];
 	
-	[self.appDelegate showHud];
+	[(AssassinsAppDelegate*)[[UIApplication sharedApplication] delegate] showHud];
 }
 
 #pragma mark -
@@ -225,15 +227,15 @@
 		if ([resultDict objectForKey:@"id"])
 		{
 			//This is a callback from get user info
-			self.appDelegate.attackInfo.assassinID = [resultDict objectForKey:@"id"];
-			self.appDelegate.attackInfo.assassinName = [resultDict objectForKey:@"name"];
+			AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+			appDelegate.attackInfo.assassinID = [resultDict objectForKey:@"id"];
+			appDelegate.attackInfo.assassinName = [resultDict objectForKey:@"name"];
 		}
 		else {
 			[self.alertView hide];
 			NSArray *friendArray;
 			friendArray = [resultDict objectForKey:@"data"];
-			NSLog(@"friend count: %d", [friendArray count]);
-			
+
 			UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
 			PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
 																										   friendPic:image];
@@ -276,12 +278,13 @@
 		return;
 	}
 	
-	self.appDelegate.attackInfo.targetID = friendID;
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);
 	
 
 	NSData *imageData = UIImageJPEGRepresentation(targetImage, 0.2);
-	NSLog(@"Location: %@", self.appDelegate.attackInfo.location);
+	NSLog(@"Location: %@", appDelegate.attackInfo.location);
 	
 	 //Todo - Use this to post to our server
 	AssassinsServer *server = [AssassinsServer sharedServer];
@@ -292,17 +295,20 @@
 	
 	[server postKillWithToken:(NSString *) facebook.accessToken
 														  imageData:imageData
-														   killerID:self.appDelegate.attackInfo.assassinID
-														   victimID:self.appDelegate.attackInfo.targetID
-														   location:self.appDelegate.attackInfo.location
-													 attackSequence:self.appDelegate.attackInfo.hitCombo];
+														   killerID:appDelegate.attackInfo.assassinID
+														   victimID:appDelegate.attackInfo.targetID
+														   location:appDelegate.attackInfo.location
+													 attackSequence:appDelegate.attackInfo.hitCombo];
 	
 }
 	
 - (void) showObituary:(NSString *)obituaryURL{
 
-	if (obituaryViewController)
+	if (obituaryViewController){
 		[obituaryViewController release];
+		obituaryURL = nil;
+	}
+	
 	
 	obituaryViewController = [[ObituaryViewController alloc] initWithObituaryURL:obituaryURL];
 	[self.view addSubview:obituaryViewController.view];
@@ -327,8 +333,9 @@
 #pragma mark -
 #pragma mark AssassinsServerDelegate
 - (void) onRequestDidLoad:(NSString*) response{
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	[self.alertView hide];
-	self.appDelegate.attackInfo.obituaryString = response;
+	appDelegate.attackInfo.obituaryString = response;
 	
 	NSLog(@"Obituary returned was: %@", response);
 	if (response==@""){
@@ -343,7 +350,7 @@
 		[alert release];		
 	}
 	else{
-		[self showObituary:	self.appDelegate.attackInfo.obituaryString];
+		[self showObituary:	appDelegate.attackInfo.obituaryString];
 	}	
 }
 

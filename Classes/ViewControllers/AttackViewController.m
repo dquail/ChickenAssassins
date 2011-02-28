@@ -16,7 +16,7 @@
 
 @implementation AttackViewController
 
-@synthesize appDelegate, progressView, targetImageView, statusLabel;
+@synthesize progressView, targetImageView, statusLabel;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
@@ -35,7 +35,8 @@
 	shakeEventSource = [[ShakeEventSource alloc] init];	
 	[shakeEventSource addDelegate: self];
 
-	[self.appDelegate.attackInfo.hitCombo setString:@""];
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	[appDelegate.attackInfo.hitCombo setString:@""];
 	/*
 	 * Create slap clips
 	 */
@@ -156,18 +157,19 @@
 		[finishHimClips addSoundClip: clip];
 	}
 	
-	
 }
 
 - (void) resetUsingImage:(UIImage *) image{
 	if (targetImage!=image){
-		self.appDelegate.attackInfo = [[AttackInfo alloc] init];
+		AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];		
+		appDelegate.attackInfo = [[AttackInfo alloc] init];
+		[appDelegate.attackInfo.hitCombo setString:@""];		
 		[targetImage release];
 		targetImage = [image retain];
 		self.targetImageView.image = targetImage;
 		self.statusLabel.text = @"Attack using your chicken!";
 		[self.progressView setProgress:1.0f];
-		[self.appDelegate.attackInfo.hitCombo setString:@""];		
+		[appDelegate.attackInfo.hitCombo setString:@""];		
 		slapCount = 0;
 	}
 }
@@ -199,12 +201,15 @@
 	
 	responseClips.delegate = nil;
 	[responseClips release];
-	
+	[slapClips release];
 	[finishHimClips release];
 	
 	[shakeEventSource removeDelegate: self];
 	[shakeEventSource release];
 	
+	[progressView release];
+	[targetImageView release];
+	[statusLabel release];
 	[targetImage release];
 	
     [super dealloc];
@@ -217,18 +222,17 @@
 */
 
 - (void) finishKill{
-	self.appDelegate.attackInfo.targetImage = targetImage;
-	[self.appDelegate targetKilled:targetImage];
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	appDelegate.attackInfo.targetImage = targetImage;
+	[appDelegate targetKilled:targetImage];
 }
 
 - (void) slap {
-	NSLog(@"Slapping %d", slapCount);
 	++slapCount;
-	[self.appDelegate.attackInfo.hitCombo appendString:@"L"];
-	NSLog(@"progress value before: %f", self.progressView.progress);
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	[appDelegate.attackInfo.hitCombo appendString:@"L"];
 	
 	self.progressView.progress = 1.0f - (float) slapCount / (float)HITS_TO_KILL;
-	NSLog(@"progress value after: %f", self.progressView.progress);
 	shouldPlayFinishHim = NO;
 	if (slapCount == HITS_TO_KILL){
 		[self finishKill];
@@ -267,36 +271,37 @@
 
 - (void) shake: (int) direction {
 	//Stoo sending slap events after kill
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	if (slapCount > HITS_TO_KILL)
 		return;
 	
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerofmeterShakeDirectionLeft");
-		[self.appDelegate.attackInfo.hitCombo appendString:@"L"];
+		[appDelegate.attackInfo.hitCombo appendString:@"L"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
-		[self.appDelegate.attackInfo.hitCombo appendString:@"R"];
+		[appDelegate.attackInfo.hitCombo appendString:@"R"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
 		NSLog(@"AccelerometerShakeDirectionUp");
-		[self.appDelegate.attackInfo.hitCombo appendString:@"U"];
+		[appDelegate.attackInfo.hitCombo appendString:@"U"];
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
 		NSLog(@"AccelerometerShakeDirectionDown");
-		[self.appDelegate.attackInfo.hitCombo appendString:@"D"];		
+		[appDelegate.attackInfo.hitCombo appendString:@"D"];		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
 		[self slap];
-		[self.appDelegate.attackInfo.hitCombo appendString:@"F"];		
+		[appDelegate.attackInfo.hitCombo appendString:@"F"];		
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	
@@ -305,7 +310,7 @@
 		[self.appData.attackInfo.hitCombo appendString:@"B"];		*/
 		NSLog(@"AccelerometerShakeDirectionPull - not sending slap though");
 	}
-	NSLog(@"Slap history: %@",self.appDelegate.attackInfo.hitCombo);
+	NSLog(@"Slap history: %@",appDelegate.attackInfo.hitCombo);
 }
 
 - (void) playNextResponse {
@@ -324,8 +329,9 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
     [super viewDidLoad];
-	self.appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
+	appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
 	[self.progressView setProgress:1.0f];
 }
@@ -348,6 +354,9 @@
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+	self.progressView = nil;
+	self.targetImageView = nil;
+	self.statusLabel = nil; 	
 }
 
 

@@ -13,7 +13,9 @@
 @implementation AssassinsAppDelegate
 
 @synthesize window;
-@synthesize hudController, attackController, completedController, facebook, attackInfo;
+//@synthesize hudController, attackController, completedController, facebook, attackInfo;
+@synthesize facebook, attackInfo;
+@synthesize attackController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -26,11 +28,11 @@
     // Add the view controller's view to the window and display.
 	
 	//Create the Hudview
-	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+	hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
     
  	self.attackInfo = [[AttackInfo alloc] init];
-	//[window addSubview:viewController.view];
-    [window addSubview:self.hudController.view];
+
+    [window addSubview:hudController.view];
 	[window makeKeyAndVisible];
 
     return YES;
@@ -87,9 +89,9 @@
 
 - (void)dealloc {
     [window release];
-	[attackController release];
+	/*[attackController release];
 	[completedController release];
-	[hudController release];	
+	[hudController release];	*/
 	[facebook release];
     [super dealloc];
 }
@@ -108,35 +110,36 @@
  * Show the attack controller that allows a user to select a target
  */
 - (void) lockTarget:(UIImage *) targetImage{
-	if (!self.attackController)
-		self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
-	else {
-		[self.attackController resetUsingImage:targetImage];
-	}
-
 	
-	[self.hudController.view removeFromSuperview];
-	[[[UIApplication sharedApplication] keyWindow] addSubview:self.attackController.view];	
+	if (nil != attackController){
+		[attackController resetUsingImage:targetImage];
+	}
+	
+
+	self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
+	
+	[hudController.view removeFromSuperview];
+	[hudController release];
+	hudController = nil;
+	[[[UIApplication sharedApplication] keyWindow] addSubview:attackController.view];	
+	//[attackController autorelease];
 }
 
-/* 
- * Release the attackViewController.  Show the target killed controller
- */
 - (void) targetKilled:(UIImage *) targetImage{
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
-	[self.attackController.view removeFromSuperview];
-	
-	/*
-	//release the controller so that it doesnt' receive accelerometer events
-	[attackController release];
-	attackController = nil;
-	*/
-	
-	self.completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
+
+
+	if (nil != completedController){
+		[completedController release];
+		completedController = nil;
+	}
+	completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
 	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
 	[UIView commitAnimations];			
+	[attackController.view removeFromSuperview];
+	[self.attackController autorelease];	
 }
 
 /* 
@@ -144,9 +147,15 @@
  */
 - (void) showHud{
 	//Create the Hudview
-	self.hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
-	[self.completedController.view removeFromSuperview];
-	[[[UIApplication sharedApplication] keyWindow] addSubview:self.hudController.view];
+	if (nil != hudController){
+		[hudController release];
+		hudController = nil;
+	}
+	hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+	[completedController.view removeFromSuperview];
+	[completedController release];
+	completedController = nil;
+	[[[UIApplication sharedApplication] keyWindow] addSubview:hudController.view];
 	
 }
 

@@ -24,7 +24,6 @@
 	UILabel *scoreLabel;
 	ActivityAlert *alertView;
 	//Week reference
-	AssassinsAppDelegate *appDelegate;
 	Facebook *facebook;
 	ObituaryViewController *obituaryViewController;
 					
@@ -34,7 +33,6 @@
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
 @property (nonatomic, retain) IBOutlet UIImageView *overlayImageView;
 @property (nonatomic, retain) IBOutlet UILabel *scoreLabel;
-@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic, retain) ActivityAlert *alertView;
 //@property (nonatomic, retain) ObituaryViewController *obituaryController;

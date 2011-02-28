@@ -15,8 +15,6 @@
 	UIImagePickerController *camera;
 	UIView *overlay;
 	
-	// Week reference
-	AssassinsAppDelegate *appDelegate;
 	CLLocationManager	*locationManager;
 	CLLocation			*startingPoint;
 }
@@ -25,7 +23,6 @@
 @property (nonatomic, retain) IBOutlet UIView *overlay;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) CLLocation *startingPoint;
-@property (nonatomic, assign) AssassinsAppDelegate *appDelegate;
 
 - (IBAction) onLockTarget; 
 

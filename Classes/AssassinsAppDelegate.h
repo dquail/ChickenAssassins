@@ -15,17 +15,19 @@
 
 @interface AssassinsAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+	
 	AttackViewController *attackController;
 	AttackCompletedViewController *completedController;
 	AssassinateHUDViewController *hudController;	
+	
 	Facebook *facebook;
 	AttackInfo *attackInfo;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) AttackViewController *attackController;
-@property (nonatomic, retain) AttackCompletedViewController *completedController;
-@property (nonatomic, retain) AssassinateHUDViewController *hudController;
+//@property (nonatomic, retain) AttackCompletedViewController *completedController;
+//@property (nonatomic, retain) AssassinateHUDViewController *hudController;
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic, retain) AttackInfo *attackInfo;
 
