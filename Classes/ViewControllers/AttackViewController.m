@@ -16,7 +16,7 @@
 
 @implementation AttackViewController
 
-@synthesize progressView, targetImageView, statusLabel;
+@synthesize progressView, targetImageView;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
@@ -167,7 +167,6 @@
 		[targetImage release];
 		targetImage = [image retain];
 		self.targetImageView.image = targetImage;
-		self.statusLabel.text = @"Attack using your chicken!";
 		[self.progressView setProgress:1.0f];
 		[appDelegate.attackInfo.hitCombo setString:@""];		
 		slapCount = 0;
@@ -209,7 +208,6 @@
 	
 	[progressView release];
 	[targetImageView release];
-	[statusLabel release];
 	[targetImage release];
 	
     [super dealloc];
@@ -238,7 +236,6 @@
 		[self finishKill];
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
-		self.statusLabel.text = @"Finish him!!!";
 		[finishHimClips playRandomClip];
 	}
 	else if (slapCount > HITS_TO_KILL)
@@ -356,7 +353,6 @@
 	// e.g. self.myOutlet = nil;
 	self.progressView = nil;
 	self.targetImageView = nil;
-	self.statusLabel = nil; 	
 }
 
 

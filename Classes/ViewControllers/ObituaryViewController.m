@@ -108,6 +108,7 @@
 	NSLog(@"Alpha: %d", self.view.alpha);
 	[UIView commitAnimations];	
 	[self.view removeFromSuperview];
+	[self autorelease];
 }
 
 #pragma mark -

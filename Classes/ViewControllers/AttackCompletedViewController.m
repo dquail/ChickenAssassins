@@ -108,9 +108,9 @@
 											   message:@"We use Facebook data to create a fake obituary for your target.  Nothing will be posted on Facebook without your permission.  You'll be asked to enter your Facebook info now." 
 											  delegate:self cancelButtonTitle:@"Ok" 
 									 otherButtonTitles:nil];
-		
 		[alert show];
 		[alert release];
+		
 		return;
     }
 	
@@ -178,6 +178,7 @@
 	[self.facebook saveTokenToCache];
 	
 	// get the logged-in user's friends	
+	[facebook requestWithGraphPath:@"me" andDelegate:self];	
 	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
 }
 
@@ -326,8 +327,16 @@
 	NSLog(@"finished loading");	
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+	//Only called when the user has seen the mesage about facebook
+	
 	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil];
 	[self.facebook authorize:permissions delegate:self];
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
+	
+	[self.alertView show];
+	[facebook requestWithGraphPath:@"me" andDelegate:self];
+	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+	
 }
 
 #pragma mark -
@@ -366,4 +375,5 @@
 	[alert show];
 	[alert release];		
 }
+
 @end

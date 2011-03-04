@@ -34,13 +34,11 @@
 	
 	UIProgressView *progressView;
 	UIImageView *targetImageView;
-	UILabel *statusLabel;
 	
 }
 
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
-@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 
 - (id) initWithTargetImage:(UIImage *)image;
 

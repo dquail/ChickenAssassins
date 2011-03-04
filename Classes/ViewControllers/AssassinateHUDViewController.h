@@ -19,7 +19,7 @@
 	CLLocation			*startingPoint;
 }
 
-@property (nonatomic, retain) UIImage *targetImage;
+//@property (nonatomic, retain) UIImage *targetImage;
 @property (nonatomic, retain) IBOutlet UIView *overlay;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) CLLocation *startingPoint;

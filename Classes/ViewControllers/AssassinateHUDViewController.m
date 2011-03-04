@@ -14,7 +14,8 @@
 
 @synthesize locationManager;
 @synthesize startingPoint;
-@synthesize targetImage, overlay;
+//@synthesize targetImage, 
+@synthesize overlay;
 
 #pragma mark -
 #pragma mark ViewController lifecycle
@@ -109,6 +110,7 @@
 
 #pragma mark -
 #pragma mark UIImagePickerController delegate
+/*
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo; 
 {
 	UIAlertView *alert;
@@ -128,7 +130,7 @@
 	[alert release];
 	self.overlay.alpha = 1.0f;
 }
-
+*/
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Select a photo" 
 									   message:@"You must select a photo to use Rubber Chicken Assassins." 
@@ -140,9 +142,9 @@
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
-	self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+	//self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
-	[appDelegate lockTarget:self.targetImage];
+	[appDelegate lockTarget:[info objectForKey:@"UIImagePickerControllerOriginalImage"]];
 }
 
 @end

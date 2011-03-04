@@ -981,8 +981,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Quail";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Quail";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -990,8 +990,8 @@
 				GCC_PREFIX_HEADER = Assassins_Prefix.pch;
 				INFOPLIST_FILE = "Assassins-Info.plist";
 				PRODUCT_NAME = Assassins;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "3B6A48D6-31CC-40E1-B63F-DCC17CB62664";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3B6A48D6-31CC-40E1-B63F-DCC17CB62664";
 				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;

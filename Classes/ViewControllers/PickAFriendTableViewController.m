@@ -26,10 +26,16 @@
  */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture{
-	arrayOfFriends = friendArray;
-	NSDictionary *firstFriendTest = [friendArray objectAtIndex:0];
-	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
-	NSString *userID = (NSString*) [firstFriendTest objectForKey:@"id"];
+	arrayOfFriends = [friendArray mutableCopy];
+	[arrayOfFriends sortUsingComparator: ^NSComparisonResult(id obj1, id obj2){
+		NSDictionary* dict1 = (NSDictionary*)obj1;
+		NSDictionary* dict2 = (NSDictionary*)obj2;
+		NSString* str1 = [dict1 objectForKey: @"name"];
+		NSString* str2 = [dict2 objectForKey: @"name"];
+		NSComparisonResult cr = [str1 compare: str2];
+		return cr;
+	}];	
+	
 	self.friendPic = friendPicture;
 	return [self initWithNibName:nil bundle:nil];
 }
