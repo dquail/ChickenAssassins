@@ -242,7 +242,7 @@
 	AssassinsServer *server = [AssassinsServer sharedServer];
 	server.delegate = self;
 	
-	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary.  This may take up to a minute ..."];
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Generating obituary. This may take up to one minute to complete ..."];
 	[self.alertView show];
 	
 	[server postKillWithToken:(NSString *) facebook.accessToken
