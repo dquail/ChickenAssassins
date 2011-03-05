@@ -53,8 +53,7 @@
 						</object>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIDataDetectorTypes">1</int>
-						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
+						<bool key="IBUIScalesPageToFit">YES</bool>
 					</object>
 					<object class="IBUINavigationBar" id="4349812">
 						<reference key="NSNextResponder" ref="191373211"/>
