@@ -20,6 +20,7 @@
 @synthesize _webView, delegate, toolBar, alertView;
 
 - (id) initWithObituaryURL:(NSString *)url{
+	NSLog(@"Initializing obituary at %@", url);
     self = [super initWithNibName:@"ObituaryViewController" bundle:nil];
     if (self) {
 		obituaryURL = [url retain];
@@ -46,6 +47,7 @@
 	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Displaying obituary ..."];
 	[self.alertView show];	
 	[self._webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:obituaryURL]]];
+	NSLog(@"Loading request");
 }
 
 /*
@@ -201,7 +203,7 @@
  * which is passed the parsed response object.
  */
 - (void)request:(FBRequest *)request didReceiveResponse:(NSURLResponse *)response {
-	NSLog(@"received response");
+	NSLog(@"received facebook response");
 }
 
 /**
