@@ -84,11 +84,6 @@
 	[appDelegate showHud];
 }
 
-- (IBAction) savePhoto{
-	UIImage *killedImage = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
-	UIImageWriteToSavedPhotosAlbum(killedImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-}
-
 - (IBAction) postToFacebook {
 	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -121,50 +116,6 @@
 	[facebook requestWithGraphPath:@"me" andDelegate:self];
 	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
 	
-}
-
-- (IBAction) emailPhoto {
-	if ([MFMailComposeViewController canSendMail]) {
-		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
-		mailComposer.mailComposeDelegate = self;
-		[mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
-		[mailComposer addAttachmentData:UIImagePNGRepresentation(targetImage) mimeType:@"image/png" fileName:@"image"]; 
-		[mailComposer setMessageBody:NSLocalizedString(@"I killed you on Chicken assassin sucker.", 
-													   @"I killed you on Chicken assassin sucker.") isHTML:NO]; 
-		[self presentModalViewController:mailComposer animated:YES]; 
-		[mailComposer release];
-	}
-}
-
-#pragma mark -
-#pragma mark Mail Compose Delegate Methods
-- (void)mailComposeController:(MFMailComposeViewController*)controller
-		  didFinishWithResult:(MFMailComposeResult)result 
-						error:(NSError*)error {
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-#pragma mark -
-#pragma mark UIImagePickerController delegate
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo; 
-{
-	UIAlertView *alert;
-	
-	// Unable to save the image  
-	if (error)
-		alert = [[UIAlertView alloc] initWithTitle:@"Error" 
-										   message:@"Unable to save image to Photo Album." 
-										  delegate:self cancelButtonTitle:@"Ok" 
-								 otherButtonTitles:nil];
-	else // All is well
-		alert = [[UIAlertView alloc] initWithTitle:@"Success" 
-										   message:@"Image saved to Photo Album." 
-										  delegate:self cancelButtonTitle:@"Ok" 
-								 otherButtonTitles:nil];
-	[alert show];
-	[alert release];
-	
-	[(AssassinsAppDelegate*)[[UIApplication sharedApplication] delegate] showHud];
 }
 
 #pragma mark -
