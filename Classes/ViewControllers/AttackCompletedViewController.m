@@ -87,17 +87,19 @@
 - (IBAction) postToFacebook {
 	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-	if (nil != appDelegate.attackController)
+	
+	/*if (nil != appDelegate.attackController)
 	{
 		[appDelegate.attackController release];
 		appDelegate = nil;
-	}
+	}*/
 	
 	[self.facebook setTokenFromCache];
 	
     // only authorize if the access token isn't valid
     // if it *is* valid, no need to authenticate. just move on
     if (![self.facebook isSessionValid]) {
+		/*
 		UIAlertView *alert;
 		alert = [[UIAlertView alloc] initWithTitle:@"Facebook" 
 											   message:@"We use Facebook data to create a fake obituary for your target.  Nothing will be posted on Facebook without your permission.  You'll be asked to enter your Facebook info now." 
@@ -105,7 +107,9 @@
 									 otherButtonTitles:nil];
 		[alert show];
 		[alert release];
-		
+		*/
+		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil];
+		[self.facebook authorize:permissions delegate:self];		
 		return;
     }
 	
@@ -124,9 +128,14 @@
  * Called when the user has logged in successfully.
  */
 - (void)fbDidLogin {
+	
 	NSLog(@"Login succeeded - token - %@", self.facebook.accessToken);
 	// store the access token and expiration date to the user defaults
 	[self.facebook saveTokenToCache];
+
+	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
+	
+	[self.alertView show];
 	
 	// get the logged-in user's friends	
 	[facebook requestWithGraphPath:@"me" andDelegate:self];	
@@ -219,6 +228,7 @@
  * Called when a UIServer Dialog successfully return.
  */
 - (void)dialogDidComplete:(FBDialog *)dialog {
+	NSLog(@"dialogDidComplete");
 	//[self.label setText:@"publish successfully"];
 }
 
@@ -277,17 +287,12 @@
 - (void) webViewDidFinishLoad:(UIWebView *)webView{
 	NSLog(@"finished loading");	
 }
+
+#pragma mark -
+#pragma mark UIAlertView delegate
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
 	//Only called when the user has seen the mesage about facebook
-	
-	NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil];
-	[self.facebook authorize:permissions delegate:self];
-	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
-	
-	[self.alertView show];
-	[facebook requestWithGraphPath:@"me" andDelegate:self];
-	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
-	
 }
 
 #pragma mark -

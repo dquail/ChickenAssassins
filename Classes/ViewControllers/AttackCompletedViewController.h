@@ -38,8 +38,6 @@
 //@property (nonatomic, retain) ObituaryViewController *obituaryController;
 
 - (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;
-- (IBAction) savePhoto;
 - (IBAction) startAttack;
 - (IBAction) postToFacebook;
-- (IBAction) emailPhoto;
 @end
