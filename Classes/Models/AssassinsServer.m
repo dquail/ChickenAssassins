@@ -59,6 +59,7 @@ static AssassinsServer * sharedServer = nil;
 	[request addData:imgData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
 	request.delegate = self;
 	[request start];
+	[dateFormat autorelease];
 }
 
 #pragma mark -
