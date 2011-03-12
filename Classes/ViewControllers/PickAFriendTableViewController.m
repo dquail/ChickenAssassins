@@ -67,6 +67,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.imageView.image = self.friendPic;
+	//Round the image view
+	self.imageView.layer.cornerRadius = 5.0;
+	self.imageView.layer.masksToBounds = YES;
+	
+	//Add a border
+	self.imageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.imageView.layer.borderWidth = 1.0;		
 }
 
 
