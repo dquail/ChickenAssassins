@@ -38,6 +38,7 @@
 
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	[appDelegate.attackInfo.hitCombo setString:@""];
+
 	/*
 	 * Create slap clips
 	 */
@@ -45,31 +46,14 @@
 	slapClips.delegate = self;
 	
 	NSString *slapURLs[] = {
-		@"slap_splat_3.caf",
-		@"slap_bonk.caf",
-		@"slap_hard_1.caf",
-//		@"slap_hard_2.caf",
-//		@"slap_light_1.caf",
-		@"slap_light_2.caf",
-//		@"slap_ow.caf",
-//		@"slap_splat_1.caf",
-//		@"slap_splat_4.caf",
-		@"slap_squeak.caf",
-//		@"slap01.caf",
-//		@"slap02.caf",
-//		@"slap03.caf",
-//		@"slap04.caf",
-//		@"slap05.caf",
-		@"slap06.caf",
-//		@"slap07.caf",
-		@"slap08.caf",
-		@"slap.caf",
-//		@"slap2.caf",
-		@"slap3.caf",
-//		@"slap4.caf",
-//		@"slap5.caf",
-//		@"slap6.caf",
-//		@"slap7.caf",
+		@"s1.caf",
+		@"s2.caf",
+		@"s3.caf",
+		@"s4.caf",
+		@"s5.caf",
+		@"s6.caf",
+		@"s7.caf",
+		@"s8.caf",		
 	};
 	
 	for (int i = 0; i < (sizeof(slapURLs) / sizeof(slapURLs[0])); i++) {
@@ -77,60 +61,63 @@
 		AVAudioPlayer *slapSound = [[AVAudioPlayer alloc] initWithContentsOfURL: slapURL error: NULL];
 		[slapClips addSoundClip: slapSound];
 	}
+
+	/*
+	 * Create jab clips
+	 */
+	jabClips = [[SoundClipPool alloc] init];
+	jabClips.delegate = self;
+	
+	NSString *jabURLs[] = {
+		@"j1.caf",	
+	};
+	
+	for (int i = 0; i < (sizeof(jabURLs) / sizeof(jabURLs[0])); i++) {
+		NSURL *slapURL = [[[NSBundle mainBundle] bundleURL] URLByAppendingPathComponent: jabURLs[i]];
+		AVAudioPlayer *slapSound = [[AVAudioPlayer alloc] initWithContentsOfURL: slapURL error: NULL];
+		[jabClips addSoundClip: slapSound];
+	}
+	
+	/*
+	 * Create bonk clips
+	 */
+	bonkClips = [[SoundClipPool alloc] init];
+	bonkClips.delegate = self;
+	
+	NSString *bonkURLS[] = {
+		@"b1.caf",
+		@"b2.caf",
+		@"b3.caf",		
+	};
+	
+	for (int i = 0; i < (sizeof(bonkURLS) / sizeof(bonkURLS[0])); i++) {
+		NSURL *slapURL = [[[NSBundle mainBundle] bundleURL] URLByAppendingPathComponent: bonkURLS[i]];
+		AVAudioPlayer *slapSound = [[AVAudioPlayer alloc] initWithContentsOfURL: slapURL error: NULL];
+		[bonkClips addSoundClip: slapSound];
+	}
 	
 	lastSlapTime = CACurrentMediaTime();
 	
 	responseClips = [[SoundClipPool alloc] init];
-	//responseClips.delegate = self;
-	
 	/*
 	 * Create response clips
 	 */
 	NSString *responseURLs[] = {
-//		@"ah.caf",
-//		@"dude.caf",
-		//@"excellent.caf",
-//		@"hey.caf",
-//		@"stopit.caf",
-//		@"whatthehell.caf",
-//		@"isthatachicken.caf",
-//		@"oof.caf",
-//		@"ow.caf",
-//		@"thathurts.caf",
-//		@"threat.caf",
-//		@"ah2.caf",
-		@"chicken_squawk1.caf",
-		@"chicken_squawk2.caf",
-//		@"dude2.caf",
-		@"dude3.caf",
-		@"hesgotarubberchicken.caf",
-//		@"hey_ow.caf",
-//		@"hey2.caf",
-//		@"hey3.caf",
-		@"isthatarubberchicken.caf",
-//		@"oomf1.caf",
-//		@"ow_whine.caf",
-		@"ow2.caf",
-//		@"ow3.caf",
-//		@"ow4.caf",
-		@"stopit2.caf",
-//		@"uhh2.caf",
-//		@"uhh3.caf",
-//		@"uhh4.caf",
-		@"umm_ouch.caf",
-//		@"what_the1.caf",
-//		@"what_the2.caf",
-//		@"what_the3.caf",
-//		@"uhh.caf",
-		@"whatthehell.caf",
-		//@"godlike.caf",
-		//@"firstblood.caf",
-		//@"holyshit.caf",
-		//@"ludicrouskill.caf",
-		//@"pathetic.caf",
-		//@"prepare.caf",
-		//@"rampage.caf",
-		//@"wickedsick.caf",
+		@"c1.caf",
+		@"c2.caf",
+		@"r1.caf",
+		@"r2.caf",
+		@"r3.caf",
+		@"r4.caf",
+		@"r5.caf",
+		@"r6.caf",
+		@"r7.caf",
+		@"r8.caf",
+		@"r9.caf",
+		@"r10.caf",
+		@"r11.caf",
+		@"r12.caf",
+		@"r13.caf",		
 	};
 	
 	for (int i = 0; i < (sizeof(responseURLs) / sizeof(responseURLs[0])); i++) {
@@ -145,8 +132,8 @@
 	 */
 	finishHimClips = [[SoundClipPool alloc] init];	
 	NSString *finishURLs[] = {
-		@"finishhim.caf",
-		@"punishhim.caf",
+		@"c1.caf",
+		@"c2.caf",
 	};
 	
 	for (int i = 0; i < (sizeof(finishURLs) / sizeof(finishURLs[0])); i++) {
@@ -202,6 +189,7 @@
 	responseClips.delegate = nil;
 	[responseClips release];
 	[slapClips release];
+	[jabClips release];
 	[finishHimClips release];
 	
 	[shakeEventSource removeDelegate: self];
@@ -252,7 +240,7 @@
 		if ((currentTime - lastSlapTime) >= 0.15) {
 			lastSlapTime = currentTime;
 			
-			[slapClips playRandomClip];
+			//[slapClips playRandomClip];
 			
 			if (!slapping) {
 				slapping = YES;
@@ -271,38 +259,68 @@
 }
 
 - (void) shake: (int) direction {
-	//Stoo sending slap events after kill
+	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	if (slapCount > HITS_TO_KILL)
 		return;
 	
+	BOOL playClip;
+	
+	double currentTime = CACurrentMediaTime();
+	if ((currentTime - lastSlapTime) >= 0.15) {
+		playClip = YES;
+	}
+	else {
+		playClip = NO;
+	}
+
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerofmeterShakeDirectionLeft");
 		[appDelegate.attackInfo.hitCombo appendString:@"L"];
+		if (playClip)
+		{
+			[slapClips playRandomClip];
+		}
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionRight) {
 		NSLog(@"AccelerometerShakeDirectionRight");
 		[appDelegate.attackInfo.hitCombo appendString:@"R"];
+		if (playClip)
+		{
+			[slapClips playRandomClip];
+		}		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionUp) {
 		NSLog(@"AccelerometerShakeDirectionUp");
 		[appDelegate.attackInfo.hitCombo appendString:@"U"];
+		if (playClip)
+		{
+			[slapClips playRandomClip];
+		}
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionDown) {
 		NSLog(@"AccelerometerShakeDirectionDown");
 		[appDelegate.attackInfo.hitCombo appendString:@"D"];		
+		if (playClip)
+		{
+			[bonkClips playRandomClip];
+		}		
 		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
 		[self slap];
-		[appDelegate.attackInfo.hitCombo appendString:@"F"];		
+		[appDelegate.attackInfo.hitCombo appendString:@"F"];	
+		if (playClip)
+		{
+			[jabClips playRandomClip];
+		}		
 		NSLog(@"AccelerometerShakeDirectionPush");
 	}
 	

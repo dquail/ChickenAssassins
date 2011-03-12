@@ -20,6 +20,8 @@
 	ShakeEventSource *shakeEventSource;
 
 	SoundClipPool *slapClips;
+	SoundClipPool *jabClips;
+	SoundClipPool *bonkClips;
 	SoundClipPool *responseClips;
 	SoundClipPool *finishHimClips;
 	
