@@ -354,6 +354,15 @@
     [super viewDidLoad];
 	appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;
+	
+	//Round the image view
+	self.targetImageView.layer.cornerRadius = 5.0;
+	self.targetImageView.layer.masksToBounds = YES;
+	
+	//Add a border
+	self.targetImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.targetImageView.layer.borderWidth = 1.0;
+	
 	[self.progressView setProgress:1.0f];
 }
 
