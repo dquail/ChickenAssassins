@@ -10,14 +10,16 @@
 #import "AttackCompletedViewController.h"
 #import "AssassinsAppDelegate.h"
 
-@interface AttackViewController (Private)
+@interface AttackViewController ()
 - (void) finishKill;
 - (void) slap;
+- (void)moveImage:(UIImageView *)image duration:(NSTimeInterval)duration
+			curve:(int)curve x:(CGFloat)x y:(CGFloat)y;
 @end
 
 @implementation AttackViewController
 
-@synthesize progressView, targetImageView;
+@synthesize progressView, targetImageView, chickenImageView;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
@@ -213,6 +215,7 @@
 	[timer invalidate];
 	[timer release];
 	
+	// Move the image
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	appDelegate.attackInfo.targetImage = targetImage;
 	[appDelegate targetKilled:targetImage];
@@ -367,6 +370,14 @@
 	[self.progressView setProgress:1.0f];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+	
+	// Move the image
+	[self moveImage:self.chickenImageView duration:0.75 
+			  curve:UIViewAnimationCurveLinear x:0.0 y:-270.0];	
+
+	[finishHimClips playRandomClip];
+}
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -389,5 +400,22 @@
 	self.targetImageView = nil;
 }
 
+- (void)moveImage:(UIImageView *)image duration:(NSTimeInterval)duration
+			curve:(int)curve x:(CGFloat)x y:(CGFloat)y
+{
+	// Setup the animation
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:duration];
+	[UIView setAnimationCurve:curve];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	
+	// The transform matrix
+	CGAffineTransform transform = CGAffineTransformMakeTranslation(x, y);
+	image.transform = transform;
+	
+	// Commit the changes
+	[UIView commitAnimations];
+	
+}
 
 @end
