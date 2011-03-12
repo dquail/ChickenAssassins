@@ -15,7 +15,7 @@
 @synthesize window;
 //@synthesize hudController, attackController, completedController, facebook, attackInfo;
 @synthesize facebook, attackInfo;
-@synthesize attackController;
+@synthesize attackController, completedController, hudController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -23,14 +23,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	// Override point for customization after application launch.
-	self.facebook = [[Facebook alloc] initWithAppId:FACEBOOK_APP_ID];
+	self.facebook = [[[Facebook alloc] initWithAppId:FACEBOOK_APP_ID] autorelease];
 	
     // Add the view controller's view to the window and display.
 	
 	//Create the Hudview
-	hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+	self.hudController = [[[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     
- 	self.attackInfo = [[AttackInfo alloc] init];
+ 	self.attackInfo = [[[AttackInfo alloc] init] autorelease];
 
     [window addSubview:hudController.view];
 	[window makeKeyAndVisible];
@@ -89,9 +89,11 @@
 
 - (void)dealloc {
     [window release];
-	/*[attackController release];
+
+	[attackController release];
 	[completedController release];
-	[hudController release];	*/
+	[hudController release];
+	
 	[facebook release];
     [super dealloc];
 }
@@ -110,17 +112,16 @@
  * Show the attack controller that allows a user to select a target
  */
 - (void) lockTarget:(UIImage *) targetImage{
-	
 	if (nil != attackController){
 		[attackController resetUsingImage:targetImage];
 	}
 	
-
-	self.attackController = [[AttackViewController alloc] initWithTargetImage:targetImage];
+	self.attackController = [[[AttackViewController alloc] initWithTargetImage:targetImage] autorelease];
 	
 	[hudController.view removeFromSuperview];
-	[hudController release];
-	hudController = nil;
+	[[hudController retain] autorelease];
+	self.hudController = nil;
+
 	[[[UIApplication sharedApplication] keyWindow] addSubview:attackController.view];	
 	//[attackController autorelease];
 }
@@ -131,30 +132,24 @@
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
 
 
-	if (nil != completedController){
-		[completedController release];
-		completedController = nil;
-	}
-	completedController = [[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook];
+	self.completedController = [[[AttackCompletedViewController alloc] initWithTargetImage:targetImage andFacebook:self.facebook] autorelease];
+
 	[[[UIApplication sharedApplication] keyWindow] addSubview:completedController.view];
 	[UIView commitAnimations];			
 	[attackController.view removeFromSuperview];
-	[self.attackController autorelease];	
+	
+	self.attackController = nil;	
 }
 
 /* 
  * Show the Screen allowing a user to lock on to a target
  */
 - (void) showHud{
-	//Create the Hudview
-	if (nil != hudController){
-		[hudController release];
-		hudController = nil;
-	}
-	hudController = [[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil];
+	self.hudController = [[[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+
 	[completedController.view removeFromSuperview];
-	[completedController release];
-	completedController = nil;
+	self.completedController = nil;
+	
 	[[[UIApplication sharedApplication] keyWindow] addSubview:hudController.view];
 	
 }

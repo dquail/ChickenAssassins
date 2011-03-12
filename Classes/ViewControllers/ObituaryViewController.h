@@ -15,7 +15,6 @@
 													MFMailComposeViewControllerDelegate,FBRequestDelegate>{
 	UIWebView *_webView;
 	NSString *obituaryURL;
-	id <UIWebViewDelegate> delegate;
 	UIToolbar *toolBar;
     ActivityAlert *alertView;
 														
@@ -23,8 +22,6 @@
 @property (nonatomic, retain) IBOutlet UIWebView *_webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolBar;
 @property (nonatomic, retain) ActivityAlert *alertView;
-
-@property (nonatomic, retain) id delegate;
 
 - (id) initWithObituaryURL:(NSString *)url;
 - (IBAction) onPostLink;

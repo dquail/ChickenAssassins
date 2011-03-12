@@ -35,6 +35,7 @@
 	UIProgressView *progressView;
 	UIImageView *targetImageView;
 	
+	NSTimer *timer;	
 }
 
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;

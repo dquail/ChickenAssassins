@@ -132,12 +132,11 @@
 }
 */
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Select a photo" 
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Select a photo" 
 									   message:@"You must select a photo to use Rubber Chicken Assassins." 
 									  delegate:self cancelButtonTitle:@"Ok" 
-							 otherButtonTitles:nil];
+							 otherButtonTitles:nil] autorelease];
 	[alert show];
-	[alert release];
 }
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {

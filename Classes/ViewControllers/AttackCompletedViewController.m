@@ -24,7 +24,7 @@
 #pragma mark -
 #pragma mark ViewController lifecycle
 
-- (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook;{
+- (id) initWithTargetImage:(UIImage *)image andFacebook:(Facebook *) fbook {
 	if (self = [super initWithNibName:nil bundle:nil])
 	{
 		targetImage = [image retain];
@@ -72,7 +72,6 @@
 	[scoreLabel release]; 
 	[alertView release];
 	[facebook release];
-	[obituaryViewController release];
 }
 
 #pragma mark -
@@ -85,9 +84,6 @@
 }
 
 - (IBAction) postToFacebook {
-	
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-	
 	/*if (nil != appDelegate.attackController)
 	{
 		[appDelegate.attackController release];
@@ -108,7 +104,7 @@
 		[alert show];
 		[alert release];
 		*/
-		NSArray *permissions = [[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil];
+		NSArray *permissions = [[[NSArray alloc] initWithObjects:@"publish_stream", @"read_stream", @"read_friendlists", @"offline_access", nil] autorelease];
 		[self.facebook authorize:permissions delegate:self];		
 		return;
     }
@@ -181,7 +177,6 @@
  */
 - (void)request:(FBRequest *)request didLoad:(id)result {
 	//Result could be the users info or a friend list
-	[result retain];
 	NSDictionary *resultDict;
 	if ([result isKindOfClass:[NSDictionary class]]){
 		resultDict = (NSDictionary *) result;
@@ -198,13 +193,11 @@
 			friendArray = [resultDict objectForKey:@"data"];
 
 			UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
-			PickAFriendTableViewController *pickController = [[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
-																										   friendPic:image];
+			PickAFriendTableViewController *pickController = [[[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:friendArray 
+																										   friendPic:image] autorelease];
 			pickController.delegate = self;
 			[self presentModalViewController:pickController animated:YES];
-			[pickController autorelease];
 		}
-
 	}
 	else {
 		NSLog(@"Something went wrong with the json returned");
@@ -265,20 +258,10 @@
 }
 	
 - (void) showObituary:(NSString *)obituaryURL{
-
-	if (obituaryViewController){
-		[obituaryViewController release];
-		obituaryURL = nil;
-	}
+	ObituaryViewController *obituaryViewController = [[[ObituaryViewController alloc] initWithObituaryURL:obituaryURL] autorelease];
+	obituaryViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	
-	
-	obituaryViewController = [[ObituaryViewController alloc] initWithObituaryURL:obituaryURL];
-	[self.view addSubview:obituaryViewController.view];
-	obituaryViewController.view.center = self.view.center;
-	obituaryViewController.view.alpha = 0.0f;
-	[UIView beginAnimations:@"showObituary" context:nil];
-	obituaryViewController.view.alpha = 1.0f;
-	[UIView commitAnimations];
+	[self presentModalViewController: obituaryViewController animated: YES];
 }
 
 #pragma mark -
@@ -303,7 +286,7 @@
 	appDelegate.attackInfo.obituaryString = response;
 	
 	NSLog(@"Obituary returned was: %@", response);
-	if (response==@""){
+	if ([response isEqualToString: @""]){
 		UIAlertView *alert;
 		
 		alert = [[UIAlertView alloc] initWithTitle:@"Error" 
@@ -323,13 +306,12 @@
 	[self.alertView hide];
 	UIAlertView *alert;
 	
-	alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+	alert = [[[UIAlertView alloc] initWithTitle:@"Error" 
 									   message:@"Unable to create obituary." 
 									  delegate:self cancelButtonTitle:@"Ok" 
-							 otherButtonTitles:nil];
+							 otherButtonTitles:nil] autorelease];
 	
 	[alert show];
-	[alert release];		
 }
 
 @end

@@ -12,6 +12,7 @@
 
 @interface AttackViewController (Private)
 - (void) finishKill;
+- (void) slap;
 @end
 
 @implementation AttackViewController
@@ -139,8 +140,6 @@
 		[responseClips addSoundClip: clip];
 	}
 	
-	[NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(checkIfStillSlapping) userInfo: nil repeats: YES];
-	
 	/*
 	 * Create Finish him clips
 	 */
@@ -157,6 +156,7 @@
 		[finishHimClips addSoundClip: clip];
 	}
 	
+	timer = [[NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(checkIfStillSlapping) userInfo: nil repeats: YES] retain];	
 }
 
 - (void) resetUsingImage:(UIImage *) image{
@@ -174,8 +174,11 @@
 }
 
 - (id) initWithTargetImage:(UIImage *)image{	
-	targetImage = [image retain];
-	return [self initWithNibName:nil bundle:nil];
+	if (self = [self initWithNibName:nil bundle:nil]) {
+		targetImage = [image retain];
+	}
+	
+	return self;
 }
 
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -196,8 +199,6 @@
 }
 
 - (void)dealloc {
-	[NSTimer cancelPreviousPerformRequestsWithTarget: self];
-	
 	responseClips.delegate = nil;
 	[responseClips release];
 	[slapClips release];
@@ -220,6 +221,9 @@
 */
 
 - (void) finishKill{
+	[timer invalidate];
+	[timer release];
+	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
 	appDelegate.attackInfo.targetImage = targetImage;
 	[appDelegate targetKilled:targetImage];

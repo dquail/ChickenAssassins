@@ -17,7 +17,7 @@
 
 @implementation ObituaryViewController
 
-@synthesize _webView, delegate, toolBar, alertView;
+@synthesize _webView, toolBar, alertView;
 
 - (id) initWithObituaryURL:(NSString *)url{
 	NSLog(@"Initializing obituary at %@", url);
@@ -102,15 +102,8 @@
 	//[actionSheet showFromToolbar:self.toolBar];
 }
 
-- (IBAction) onCloseObituary{
-	//remove this view from superview.
-	//TODO: this animation is not working for some stupid reason
-	[UIView beginAnimations:@"closeObituary" context:nil];
-	self.view.alpha = 0.0f;
-	NSLog(@"Alpha: %d", self.view.alpha);
-	[UIView commitAnimations];	
-	[self.view removeFromSuperview];
-	[self autorelease];
+- (IBAction) onCloseObituary {
+	[self dismissModalViewControllerAnimated: YES];
 }
 
 #pragma mark -

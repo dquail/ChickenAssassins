@@ -22,7 +22,7 @@
 	UIButton *postButton;
 }
 
-@property (nonatomic, retain) id<PickAFriendDelegate> delegate;
+@property (nonatomic, assign) id<PickAFriendDelegate> delegate;
 @property (nonatomic, retain) UIImage *friendPic;
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) NSMutableArray *arrayOfFriends;

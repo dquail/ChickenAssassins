@@ -20,7 +20,7 @@
 	id <AssassinsServerDelegate> delegate;
 
 }
-@property (nonatomic, retain) id<AssassinsServerDelegate> delegate;
+@property (nonatomic, assign) id<AssassinsServerDelegate> delegate;
 
 + (AssassinsServer *)sharedServer;
 

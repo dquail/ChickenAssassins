@@ -26,18 +26,21 @@
  */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil friendJSON:(NSArray*) friendArray friendPic:(UIImage *)friendPicture{
-	arrayOfFriends = [friendArray mutableCopy];
-	[arrayOfFriends sortUsingComparator: ^NSComparisonResult(id obj1, id obj2){
-		NSDictionary* dict1 = (NSDictionary*)obj1;
-		NSDictionary* dict2 = (NSDictionary*)obj2;
-		NSString* str1 = [dict1 objectForKey: @"name"];
-		NSString* str2 = [dict2 objectForKey: @"name"];
-		NSComparisonResult cr = [str1 compare: str2];
-		return cr;
-	}];	
+	if (self = [self initWithNibName:nil bundle:nil]) {
+		arrayOfFriends = [friendArray mutableCopy];
+		[arrayOfFriends sortUsingComparator: ^NSComparisonResult(id obj1, id obj2){
+			NSDictionary* dict1 = (NSDictionary*)obj1;
+			NSDictionary* dict2 = (NSDictionary*)obj2;
+			NSString* str1 = [dict1 objectForKey: @"name"];
+			NSString* str2 = [dict2 objectForKey: @"name"];
+			NSComparisonResult cr = [str1 compare: str2];
+			return cr;
+		}];	
+
+		self.friendPic = friendPicture;
+	}
 	
-	self.friendPic = friendPicture;
-	return [self initWithNibName:nil bundle:nil];
+	return self;
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -74,6 +77,7 @@
 	[imageView release];
 	[arrayOfFriends release];
 	[postButton release];	
+	
     [super dealloc];
 }
 
@@ -131,9 +135,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	
-	NSDictionary *selectedFrient = [arrayOfFriends objectAtIndex:indexPath.row];
-	appDelegate.attackInfo.targetID = (NSString*) [selectedFrient objectForKey:@"id"];
-	appDelegate.attackInfo.targetName = (NSString*) [selectedFrient objectForKey:@"name"];
+	NSDictionary *selectedFriend = [arrayOfFriends objectAtIndex:indexPath.row];
+	appDelegate.attackInfo.targetID = (NSString*) [selectedFriend objectForKey:@"id"];
+	appDelegate.attackInfo.targetName = (NSString*) [selectedFriend objectForKey:@"name"];
 	
 	if (self.delegate!=nil)
 	{

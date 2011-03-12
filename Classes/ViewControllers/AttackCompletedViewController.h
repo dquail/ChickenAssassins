@@ -25,9 +25,6 @@
 	ActivityAlert *alertView;
 	//Week reference
 	Facebook *facebook;
-	ObituaryViewController *obituaryViewController;
-					
-	//ObituaryViewController *obituaryController;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;

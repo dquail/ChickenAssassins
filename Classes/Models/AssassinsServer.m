@@ -42,7 +42,7 @@ static AssassinsServer * sharedServer = nil;
 	
 	//Get current time to pass to server
 	NSDate *date = [NSDate date];
-	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+	NSDateFormatter *dateFormat = [[[NSDateFormatter alloc] init] autorelease];
 	[dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss"]; 
 	NSString *stringFromDate = [dateFormat stringFromDate:date];
 	NSLog(@"stringDate: %@", stringFromDate);
@@ -59,7 +59,6 @@ static AssassinsServer * sharedServer = nil;
 	[request addData:imgData withFileName:@"killimage" andContentType:@"image/jpeg" forKey:@"photo"];
 	request.delegate = self;
 	[request start];
-	[dateFormat autorelease];
 }
 
 #pragma mark -
@@ -78,15 +77,17 @@ static AssassinsServer * sharedServer = nil;
 	}
 	else {
 		NSLog(@"Error creating obituary");
-		if (self.delegate)
-			[self.delegate onRequestDidFail];	}	
+		if (self.delegate) {
+			[self.delegate onRequestDidFail];	
+		}
+	}	
 	NSLog(@"Request finished");
 }
 - (void)requestFailed:(ASIHTTPRequest *)request{
 	NSLog(@"Error creating obituary");
-	if (self.delegate)
+	if (self.delegate) {
 		[self.delegate onRequestDidFail];
-
+	}
 }
 
 - (BOOL) validateUrl: (NSString *) candidate {
