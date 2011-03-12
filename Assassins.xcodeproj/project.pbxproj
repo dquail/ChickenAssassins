@@ -46,6 +46,11 @@
 		2FC5E09D132B362D00AD70CE /* b2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E09A132B362D00AD70CE /* b2.caf */; };
 		2FC5E09E132B362D00AD70CE /* b3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E09B132B362D00AD70CE /* b3.caf */; };
 		2FC5E0C8132B436700AD70CE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5E0C7132B436700AD70CE /* Friend.m */; };
+		2FC5E188132B547C00AD70CE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5E187132B547C00AD70CE /* CFNetwork.framework */; };
+		2FC5E18B132B548E00AD70CE /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5E18A132B548E00AD70CE /* libz.1.2.3.dylib */; };
+		2FC5E18D132B549900AD70CE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5E18C132B549900AD70CE /* MessageUI.framework */; };
+		2FC5E190132B54AC00AD70CE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5E18F132B54AC00AD70CE /* MobileCoreServices.framework */; };
+		2FC5E193132B54B300AD70CE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5E192132B54B300AD70CE /* SystemConfiguration.framework */; };
 		2FC7C66C130CF26900F7C3DB /* buttonCancelUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */; };
 		2FC7C66D130CF26900F7C3DB /* buttonCanelUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */; };
 		2FC7C66E130CF26900F7C3DB /* buttonPhoneUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */; };
@@ -83,9 +88,6 @@
 		2FC7C6D5130CF2D900F7C3DB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7C6CA130CF2D900F7C3DB /* SBJsonWriter.m */; };
 		2FCE3D4B130E3D4300C157B4 /* Facebook+CacheAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCE3D4A130E3D4300C157B4 /* Facebook+CacheAuth.m */; };
 		2FCE3D83130E460200C157B4 /* AssassinsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCE3D82130E460200C157B4 /* AssassinsServer.m */; };
-		2FD5EE0C13089380007AC351 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5EE0B13089380007AC351 /* CFNetwork.framework */; };
-		2FD5EE0E1308938D007AC351 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5EE0D1308938D007AC351 /* SystemConfiguration.framework */; };
-		2FD5EE1013089397007AC351 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5EE0F13089397007AC351 /* MobileCoreServices.framework */; };
 		2FD5EE40130894D3007AC351 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE3E130894D3007AC351 /* Reachability.m */; };
 		2FD5EE6213089617007AC351 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE4F13089617007AC351 /* ASIAuthenticationDialog.m */; };
 		2FD5EE6313089617007AC351 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE5213089617007AC351 /* ASIDataCompressor.m */; };
@@ -95,10 +97,8 @@
 		2FD5EE6713089617007AC351 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE5A13089617007AC351 /* ASIHTTPRequest.m */; };
 		2FD5EE6813089617007AC351 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE5E13089617007AC351 /* ASIInputStream.m */; };
 		2FD5EE6913089617007AC351 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5EE6013089617007AC351 /* ASINetworkQueue.m */; };
-		2FD5EE6F13089678007AC351 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */; };
 		2FDA20171311C32D00A78EE8 /* ObituaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA20151311C32D00A78EE8 /* ObituaryViewController.m */; };
 		2FDA20181311C32D00A78EE8 /* ObituaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDA20161311C32D00A78EE8 /* ObituaryViewController.xib */; };
-		A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C9C745130728410088BE1A /* MessageUI.framework */; };
 		C748E3171283CC32001658E2 /* AttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E3151283CC32001658E2 /* AttackViewController.m */; };
 		C748E3181283CC32001658E2 /* AttackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748E3161283CC32001658E2 /* AttackViewController.xib */; };
 		C748E31D1283CC41001658E2 /* ShakeEventSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C748E31A1283CC41001658E2 /* ShakeEventSource.m */; };
@@ -159,6 +159,11 @@
 		2FC5E09B132B362D00AD70CE /* b3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = b3.caf; sourceTree = "<group>"; };
 		2FC5E0C6132B436700AD70CE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Models/Friend.h; sourceTree = "<group>"; };
 		2FC5E0C7132B436700AD70CE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Models/Friend.m; sourceTree = "<group>"; };
+		2FC5E187132B547C00AD70CE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2FC5E18A132B548E00AD70CE /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		2FC5E18C132B549900AD70CE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2FC5E18F132B54AC00AD70CE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2FC5E192132B54B300AD70CE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonCancelUP@2x.png"; path = "Images/Application/buttonCancelUP@2x.png"; sourceTree = "<group>"; };
 		2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonCanelUP.png; path = Images/Application/buttonCanelUP.png; sourceTree = "<group>"; };
 		2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPhoneUP.png; path = Images/Application/buttonPhoneUP.png; sourceTree = "<group>"; };
@@ -210,9 +215,6 @@
 		2FCE3D4A130E3D4300C157B4 /* Facebook+CacheAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Facebook+CacheAuth.m"; path = "Helpers/Facebook+CacheAuth.m"; sourceTree = "<group>"; };
 		2FCE3D81130E460200C157B4 /* AssassinsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssassinsServer.h; path = Models/AssassinsServer.h; sourceTree = "<group>"; };
 		2FCE3D82130E460200C157B4 /* AssassinsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssassinsServer.m; path = Models/AssassinsServer.m; sourceTree = "<group>"; };
-		2FD5EE0B13089380007AC351 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		2FD5EE0D1308938D007AC351 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2FD5EE0F13089397007AC351 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2FD5EE3D130894D3007AC351 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		2FD5EE3E130894D3007AC351 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		2FD5EE4E13089617007AC351 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -235,13 +237,11 @@
 		2FD5EE5F13089617007AC351 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
 		2FD5EE6013089617007AC351 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		2FD5EE6113089617007AC351 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
-		2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		2FDA20141311C32D00A78EE8 /* ObituaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObituaryViewController.h; path = ViewControllers/ObituaryViewController.h; sourceTree = "<group>"; };
 		2FDA20151311C32D00A78EE8 /* ObituaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObituaryViewController.m; path = ViewControllers/ObituaryViewController.m; sourceTree = "<group>"; };
 		2FDA20161311C32D00A78EE8 /* ObituaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ObituaryViewController.xib; path = ViewControllers/ObituaryViewController.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Assassins_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assassins_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Assassins-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Assassins-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A5C9C745130728410088BE1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C748E3141283CC32001658E2 /* AttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttackViewController.h; path = ViewControllers/AttackViewController.h; sourceTree = "<group>"; };
 		C748E3151283CC32001658E2 /* AttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackViewController.m; path = ViewControllers/AttackViewController.m; sourceTree = "<group>"; };
 		C748E3161283CC32001658E2 /* AttackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AttackViewController.xib; path = ViewControllers/AttackViewController.xib; sourceTree = "<group>"; };
@@ -273,12 +273,12 @@
 				C748E3CB1283D15F001658E2 /* QuartzCore.framework in Frameworks */,
 				C748E3CD1283D16D001658E2 /* AVFoundation.framework in Frameworks */,
 				C748E3CF1283D180001658E2 /* AudioToolbox.framework in Frameworks */,
-				A5C9C746130728410088BE1A /* MessageUI.framework in Frameworks */,
 				C7BF177C1307307D005F7762 /* CoreLocation.framework in Frameworks */,
-				2FD5EE0C13089380007AC351 /* CFNetwork.framework in Frameworks */,
-				2FD5EE0E1308938D007AC351 /* SystemConfiguration.framework in Frameworks */,
-				2FD5EE1013089397007AC351 /* MobileCoreServices.framework in Frameworks */,
-				2FD5EE6F13089678007AC351 /* libz.1.2.3.dylib in Frameworks */,
+				2FC5E188132B547C00AD70CE /* CFNetwork.framework in Frameworks */,
+				2FC5E18B132B548E00AD70CE /* libz.1.2.3.dylib in Frameworks */,
+				2FC5E18D132B549900AD70CE /* MessageUI.framework in Frameworks */,
+				2FC5E190132B54AC00AD70CE /* MobileCoreServices.framework in Frameworks */,
+				2FC5E193132B54B300AD70CE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,11 +318,11 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				A5C9C745130728410088BE1A /* MessageUI.framework */,
-				2FD5EE0B13089380007AC351 /* CFNetwork.framework */,
-				2FD5EE0D1308938D007AC351 /* SystemConfiguration.framework */,
-				2FD5EE0F13089397007AC351 /* MobileCoreServices.framework */,
-				2FD5EE6E13089678007AC351 /* libz.1.2.3.dylib */,
+				2FC5E187132B547C00AD70CE /* CFNetwork.framework */,
+				2FC5E18A132B548E00AD70CE /* libz.1.2.3.dylib */,
+				2FC5E18C132B549900AD70CE /* MessageUI.framework */,
+				2FC5E18F132B54AC00AD70CE /* MobileCoreServices.framework */,
+				2FC5E192132B54B300AD70CE /* SystemConfiguration.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";

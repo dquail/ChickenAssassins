@@ -28,8 +28,8 @@
 #define HITS_FOR_RESPONSE 4  //Only occasionally will responses be played
 
 - (IBAction)slapButton {
-	slapCount = HITS_TO_KILL -1;
-	[self slap];
+	//slapCount = HITS_TO_KILL -1;
+	[self shake:16];
 }
 
 - (void) completeInitialization {
@@ -69,7 +69,7 @@
 	jabClips.delegate = self;
 	
 	NSString *jabURLs[] = {
-		@"j1.caf",	
+		@"j1.caf",
 	};
 	
 	for (int i = 0; i < (sizeof(jabURLs) / sizeof(jabURLs[0])); i++) {
@@ -189,6 +189,7 @@
 	responseClips.delegate = nil;
 	[responseClips release];
 	[slapClips release];
+	[bonkClips release];
 	[jabClips release];
 	[finishHimClips release];
 	
@@ -316,13 +317,13 @@
 	}
 	
 	if (direction & AccelerometerShakeDirectionPush) {
-		[self slap];
+		NSLog(@"AccelerometerShakeDirectionPush");		
 		[appDelegate.attackInfo.hitCombo appendString:@"F"];	
 		if (playClip)
 		{
 			[jabClips playRandomClip];
-		}		
-		NSLog(@"AccelerometerShakeDirectionPush");
+		}	
+		[self slap];
 	}
 	
 	if (direction & AccelerometerShakeDirectionPull) {
