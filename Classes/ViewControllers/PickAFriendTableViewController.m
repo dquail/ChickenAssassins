@@ -9,6 +9,7 @@
 #import "PickAFriendTableViewController.h"
 #import "SBJSON.h"
 #import "AssassinsAppDelegate.h"
+#import "Friend.h"
 
 @implementation PickAFriendTableViewController
 
@@ -36,7 +37,26 @@
 			NSComparisonResult cr = [str1 compare: str2];
 			return cr;
 		}];	
-
+		
+		index = [[NSMutableArray alloc] initWithCapacity:26];
+		friendData = [[NSMutableDictionary alloc] initWithCapacity:26];
+		
+		Friend *friend;
+		for (int i = 0; i < [arrayOfFriends count]; i++){
+			friend = [[[Friend alloc] init] autorelease];
+			friend.name = (NSString*)[[arrayOfFriends objectAtIndex:i] objectForKey:@"name"];
+			friend.facebookID = (NSString*) [[arrayOfFriends objectAtIndex:i] objectForKey:@"id"]; 
+			NSRange range = {0, 1};
+			NSString* firstChar = [friend.name substringWithRange:range];
+			NSMutableArray *array = [friendData valueForKey:firstChar];
+			if (!array){
+				array = [[[NSMutableArray alloc] initWithCapacity:20] autorelease];
+				//Add this to the sectionHeaders index
+				[index addObject:firstChar];
+			}
+			[array addObject:friend];
+			[friendData setObject:array forKey:firstChar];			 
+		}
 		self.friendPic = friendPicture;
 	}
 	
@@ -77,6 +97,8 @@
 	[imageView release];
 	[arrayOfFriends release];
 	[postButton release];	
+	[friendData release];
+	[index release];
 	
     [super dealloc];
 }
@@ -99,13 +121,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+	NSLog(@"returning %d", [friendData count]);
+    return [friendData count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [arrayOfFriends count];
+	NSLog(@"Returning %d", [[friendData objectForKey:[index objectAtIndex:section]] count]);
+	return [[friendData objectForKey:[index objectAtIndex:section]] count];
+
+    //return [arrayOfFriends count];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	return index;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return [index objectAtIndex: section];
 }
 
 // Customize the appearance of table view cells.
@@ -113,17 +147,15 @@
     
     static NSString *CellIdentifier = @"Cell";
 	
-    
+    NSArray *array = [friendData objectForKey:[index objectAtIndex:indexPath.section]];
+	Friend *friend = [array objectAtIndex:indexPath.row];
+	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
-	NSUInteger row = [indexPath row];
-	
-	NSDictionary *firstFriendTest = [arrayOfFriends objectAtIndex:row];
-	NSString *name = (NSString*) [firstFriendTest objectForKey:@"name"];
-	cell.textLabel.text = name;
+	cell.textLabel.text = friend.name;
 	
 	return cell;
 }
@@ -135,9 +167,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	
-	NSDictionary *selectedFriend = [arrayOfFriends objectAtIndex:indexPath.row];
-	appDelegate.attackInfo.targetID = (NSString*) [selectedFriend objectForKey:@"id"];
-	appDelegate.attackInfo.targetName = (NSString*) [selectedFriend objectForKey:@"name"];
+	NSString *key = [index objectAtIndex:indexPath.section];
+	Friend *friend = [[friendData objectForKey:key] objectAtIndex:indexPath.row];
+	
+	appDelegate.attackInfo.targetID = friend.facebookID;
+	appDelegate.attackInfo.targetName = friend.name;
 	
 	if (self.delegate!=nil)
 	{

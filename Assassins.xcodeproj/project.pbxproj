@@ -45,6 +45,7 @@
 		2FC5E09C132B362D00AD70CE /* b1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E099132B362D00AD70CE /* b1.caf */; };
 		2FC5E09D132B362D00AD70CE /* b2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E09A132B362D00AD70CE /* b2.caf */; };
 		2FC5E09E132B362D00AD70CE /* b3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E09B132B362D00AD70CE /* b3.caf */; };
+		2FC5E0C8132B436700AD70CE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5E0C7132B436700AD70CE /* Friend.m */; };
 		2FC7C66C130CF26900F7C3DB /* buttonCancelUP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */; };
 		2FC7C66D130CF26900F7C3DB /* buttonCanelUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */; };
 		2FC7C66E130CF26900F7C3DB /* buttonPhoneUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */; };
@@ -156,6 +157,8 @@
 		2FC5E099132B362D00AD70CE /* b1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = b1.caf; sourceTree = "<group>"; };
 		2FC5E09A132B362D00AD70CE /* b2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = b2.caf; sourceTree = "<group>"; };
 		2FC5E09B132B362D00AD70CE /* b3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = b3.caf; sourceTree = "<group>"; };
+		2FC5E0C6132B436700AD70CE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = Models/Friend.h; sourceTree = "<group>"; };
+		2FC5E0C7132B436700AD70CE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = Models/Friend.m; sourceTree = "<group>"; };
 		2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonCancelUP@2x.png"; path = "Images/Application/buttonCancelUP@2x.png"; sourceTree = "<group>"; };
 		2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonCanelUP.png; path = Images/Application/buttonCanelUP.png; sourceTree = "<group>"; };
 		2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonPhoneUP.png; path = Images/Application/buttonPhoneUP.png; sourceTree = "<group>"; };
@@ -627,6 +630,8 @@
 				2FCE3D82130E460200C157B4 /* AssassinsServer.m */,
 				2F79AF3B1318CDCB00541ACC /* AttackInfo.h */,
 				2F79AF3C1318CDCB00541ACC /* AttackInfo.m */,
+				2FC5E0C6132B436700AD70CE /* Friend.h */,
+				2FC5E0C7132B436700AD70CE /* Friend.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -811,6 +816,7 @@
 				2FDA20171311C32D00A78EE8 /* ObituaryViewController.m in Sources */,
 				2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */,
 				C7E4E92613198152009045D8 /* PickAFriendTableViewController.m in Sources */,
+				2FC5E0C8132B436700AD70CE /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

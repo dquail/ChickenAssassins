@@ -225,10 +225,11 @@
 	self.progressView.progress = 1.0f - (float) slapCount / (float)HITS_TO_KILL;
 	shouldPlayFinishHim = NO;
 	if (slapCount == HITS_TO_KILL){
-		[self finishKill];
+		[finishHimClips playRandomClip];	
+		[self finishKill];	
 	}
 	else if (slapCount == HITS_TO_FINISH_HIM){
-		[finishHimClips playRandomClip];
+		//[finishHimClips playRandomClip];
 	}
 	else if (slapCount > HITS_TO_KILL)
 	{
@@ -342,8 +343,9 @@
 - (void) soundClipPoolDidFinishPlaying: (SoundClipPool *) pool {
 	// 0.5 - 1.5 second delay
 	double delay = 1.5 + (double) (arc4random() % 10) / 10.0;
-	
-	[NSTimer scheduledTimerWithTimeInterval: delay target: self selector: @selector(playNextResponse) userInfo: nil repeats: NO];
+	if (!slapping){
+		[NSTimer scheduledTimerWithTimeInterval: delay target: self selector: @selector(playNextResponse) userInfo: nil repeats: NO];
+	}
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

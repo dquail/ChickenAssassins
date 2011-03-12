@@ -19,6 +19,8 @@
 	UIImage *friendPic;
 	IBOutlet UIImageView *imageView;
 	NSMutableArray *arrayOfFriends;
+	NSMutableDictionary *friendData;
+	NSMutableArray *index;
 	UIButton *postButton;
 }
 
