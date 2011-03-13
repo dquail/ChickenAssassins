@@ -9,6 +9,7 @@
 #import "ObituaryViewController.h"
 #import "ActivityAlert.h"
 #import "AssassinsAppDelegate.h"
+#import "FlurryAPI.h"
 
 @interface ObituaryViewController (Private)
 - (void) postToFacebook;
@@ -113,9 +114,11 @@
 	NSString * buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
 	
 	if ([buttonTitle isEqualToString:@"Facebook"]){
+		[FlurryAPI logEvent:@"ShareWithFacebook"];			
 		[self postToFacebook];
 	}
 	else if ([buttonTitle isEqualToString:@"Email"]){
+		[FlurryAPI logEvent:@"ShareWithEmail"];			
 		[self sendViaEmail];
 	}
 }

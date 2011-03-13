@@ -7,6 +7,7 @@
 //
 
 #import "AssassinsAppDelegate.h"
+#import "FlurryAPI.h"
 
 #define FACEBOOK_APP_ID @"189234387766257"
 
@@ -22,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+	[FlurryAPI startSession:@"K3HHZSNPQVGLX3TAXG9T"];	
 	// Override point for customization after application launch.
 	self.facebook = [[[Facebook alloc] initWithAppId:FACEBOOK_APP_ID] autorelease];
 	
@@ -112,6 +114,7 @@
  * Show the attack controller that allows a user to select a target
  */
 - (void) lockTarget:(UIImage *) targetImage{
+	[FlurryAPI logEvent:@"TargetLocked"];	
 	if (nil != attackController){
 		[attackController resetUsingImage:targetImage];
 	}
@@ -127,6 +130,7 @@
 }
 
 - (void) targetKilled:(UIImage *) targetImage{
+	[FlurryAPI logEvent:@"TargetKilled"];	
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:[[UIApplication sharedApplication] keyWindow] cache:YES];
@@ -145,6 +149,7 @@
  * Show the Screen allowing a user to lock on to a target
  */
 - (void) showHud{
+	[FlurryAPI logEvent:@"HUDShown"];	
 	self.hudController = [[[AssassinateHUDViewController alloc] initWithNibName:nil bundle:nil] autorelease];
 
 	[completedController.view removeFromSuperview];

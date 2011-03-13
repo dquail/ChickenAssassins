@@ -11,6 +11,7 @@
 #import "AssassinsAppDelegate.h"
 #import "PickAFriendTableViewController.h"
 #import "AssassinsServer.h"
+#import "FlurryAPI.h"
 
 @interface AttackCompletedViewController (Private)
 - (void) showObituary:(NSString *)obituaryURL;
@@ -79,11 +80,13 @@
 
 - (IBAction) startAttack{
 	//Start a new attack
+	[FlurryAPI logEvent:@"AttackAgainSelected"];	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	[appDelegate showHud];
 }
 
 - (IBAction) postToFacebook {
+	[FlurryAPI logEvent:@"PostToFacebookSelected"];	
 	/*if (nil != appDelegate.attackController)
 	{
 		[appDelegate.attackController release];
@@ -230,9 +233,10 @@
 - (void) donePickingFriendWithID:(NSString *) friendID{
 	[self dismissModalViewControllerAnimated:YES];
 	if (friendID == nil) {
+		[FlurryAPI logEvent:@"CancelledObitCreate"];		
 		return;
 	}
-	
+	[FlurryAPI logEvent:@"SelectedFriendForObit"];	
 	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);
