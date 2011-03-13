@@ -13,13 +13,15 @@
 @interface AttackViewController ()
 - (void) finishKill;
 - (void) slap;
+- (void) pulseRed;
+- (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 - (void)moveImage:(UIImageView *)image duration:(NSTimeInterval)duration
 			curve:(int)curve x:(CGFloat)x y:(CGFloat)y;
 @end
 
 @implementation AttackViewController
 
-@synthesize progressView, targetImageView, chickenImageView;
+@synthesize progressView, targetImageView, chickenImageView, redOverlay;
 
 #define MAX_PAST_ACCELERATION_EVENTS 2
 
@@ -223,8 +225,6 @@
 
 - (void) slap {
 	++slapCount;
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
-	[appDelegate.attackInfo.hitCombo appendString:@"L"];
 	
 	self.progressView.progress = 1.0f - (float) slapCount / (float)HITS_TO_KILL;
 	shouldPlayFinishHim = NO;
@@ -279,6 +279,7 @@
 		playClip = NO;
 	}
 
+	[self pulseRed];
 	if (direction & AccelerometerShakeDirectionLeft) {
 		NSLog(@"AccelerofmeterShakeDirectionLeft");
 		[appDelegate.attackInfo.hitCombo appendString:@"L"];
@@ -374,7 +375,7 @@
 	
 	// Move the image
 	[self moveImage:self.chickenImageView duration:0.75 
-			  curve:UIViewAnimationCurveLinear x:0.0 y:-270.0];	
+			  curve:UIViewAnimationCurveEaseInOut x:0.0 y:-270.0];	
 
 	[finishHimClips playRandomClip];
 }
@@ -418,4 +419,28 @@
 	
 }
 
+- (void) pulseRed{	
+	// Setup the animation
+	[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:0.15];
+	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[UIView setAnimationDelegate:self];	
+	
+	self.redOverlay.alpha = 0.6;
+	[UIView commitAnimations];
+
+}
+
+- (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+{
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:0.15];
+	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	
+	self.redOverlay.alpha = 0.0;
+	[UIView commitAnimations];	
+}
 @end

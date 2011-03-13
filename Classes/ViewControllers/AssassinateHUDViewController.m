@@ -105,6 +105,7 @@
 	[locationManager stopUpdatingLocation];
 	
 	appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
+	NSLog(@"Location set to %@", appDelegate.attackInfo.location);
 	self.startingPoint = newLocation;
 }
 

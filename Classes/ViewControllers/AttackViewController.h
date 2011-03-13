@@ -24,7 +24,7 @@
 	SoundClipPool *bonkClips;
 	SoundClipPool *responseClips;
 	SoundClipPool *finishHimClips;
-	
+
 	double lastSlapTime;
 	
 	BOOL slapping;
@@ -37,11 +37,15 @@
 	UIProgressView *progressView;
 	UIImageView *targetImageView;
 	
+	UIImageView *chickenImageView;
+	UIView *redOverlay;
 	NSTimer *timer;	
 }
 
 @property (nonatomic, retain) IBOutlet UIProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIImageView *targetImageView;
+@property (nonatomic, retain) IBOutlet UIImageView *chickenImageView;
+@property (nonatomic, retain) IBOutlet UIView *redOverlay;
 
 - (id) initWithTargetImage:(UIImage *)image;
 
