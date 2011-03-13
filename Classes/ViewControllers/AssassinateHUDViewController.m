@@ -54,8 +54,27 @@
 - (void) viewDidAppear:(BOOL)animated{
 	
 	[super viewDidAppear:animated];
-	
+
+
 	[self presentModalViewController:camera animated:YES];
+
+	//Only show once
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	BOOL shouldShowAlert =  ![defaults boolForKey:@"hudAlertedOnce"];
+	
+	if (shouldShowAlert){
+		[defaults setBool:YES forKey:@"hudAlertedOnce"];	
+		[defaults synchronize];
+		
+		UIAlertView *alert;
+		
+		alert = [[UIAlertView alloc] initWithTitle:@"Lock your target" 
+										   message:@"Once you've got your target in your crosshairs, tap the screen.  Then you can start attacking them with your rubber chicken!" 
+										  delegate:self cancelButtonTitle:@"Ok" 
+								 otherButtonTitles:nil];
+		[alert show];		
+	}
 	
 }
 /*
