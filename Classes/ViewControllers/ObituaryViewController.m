@@ -130,13 +130,15 @@
 									appDelegate.attackInfo.obituaryString, @"link",
 								   @"http://a2.twimg.com/profile_images/1255491684/Icon_2x_bigger.png", @"picture",
 								   [NSString stringWithFormat:@"%@'s obituary", appDelegate.attackInfo.targetName], @"name",
-								   [NSString stringWithFormat:@"I just killed %@ with a rubber chicken", appDelegate.attackInfo.targetName], @"caption",
-								   [NSString stringWithFormat:@"In a series of jabs, slaps and pokes I just completed killing off my newest victim %@ using Rubber Chicken Assassins",appDelegate.attackInfo.targetName], @"description",
+								   [NSString stringWithFormat:@"I just killed %@ with ... a Rubber Chicken!!!", appDelegate.attackInfo.targetName], @"caption",
+								   [NSString stringWithFormat:@"In a series of jabs, slaps and pokes I just completed assassinating my newest victim using Rubber Chicken Assassins.  Boowahahaha!!!",appDelegate.attackInfo.targetName], @"description",
 								   nil];
 	self.alertView =  [[ActivityAlert alloc] initWithStatus:@"Posting obituary to Facebook ..."];
 	[self.alertView show];
 	
-	[appDelegate.facebook requestWithGraphPath:@"me/feed" 
+	NSString *graphPath = [NSString stringWithFormat:@"%@/feed",appDelegate.attackInfo.targetID];
+	//[appDelegate.facebook requestWithGraphPath:@"me/feed" 
+	[appDelegate.facebook requestWithGraphPath:graphPath 
 									  andParams:params
 								  andHttpMethod:@"POST"
 									andDelegate:self];
