@@ -219,7 +219,7 @@
 	[self.alertView hide];
 	UIAlertView *alert;
 	alert = [[UIAlertView alloc] initWithTitle:@"Success" 
-									   message:@"The obituary was posted to your Facebook wall." 
+									   message:@"The obituary was posted to your victims wall." 
 									  delegate:self cancelButtonTitle:@"Ok" 
 							 otherButtonTitles:nil];
 	[alert show];
