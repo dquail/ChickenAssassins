@@ -374,7 +374,7 @@
 - (void)viewDidAppear:(BOOL)animated{
 	
 	// Move the image
-	[self moveImage:self.chickenImageView duration:0.75 
+	[self moveImage:self.chickenImageView duration:1.15 
 			  curve:UIViewAnimationCurveEaseInOut x:0.0 y:-270.0];	
 
 	[finishHimClips playRandomClip];
