@@ -172,7 +172,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	NSString *key = [index objectAtIndex:indexPath.section];
 	Friend *friend = [[friendData objectForKey:key] objectAtIndex:indexPath.row];

@@ -16,7 +16,7 @@
 
 @synthesize window;
 //@synthesize hudController, attackController, completedController, facebook, attackInfo;
-@synthesize facebook, attackInfo;
+@synthesize facebook, attackInfo, friendData;
 @synthesize attackController, completedController, hudController;
 
 #pragma mark -
@@ -29,7 +29,7 @@
     
 	// Override point for customization after application launch.
 	self.facebook = [[[Facebook alloc] initWithAppId:FACEBOOK_APP_ID] autorelease];
-	
+	[self.facebook setTokenFromCache];
     // Add the view controller's view to the window and display.
 	
 	//Create the Hudview
@@ -40,6 +40,12 @@
     [window addSubview:hudController.view];
 	[window makeKeyAndVisible];
 
+    if ([self.facebook isSessionValid]){
+        //Got a valid session so should load the friend list so its ready
+        [facebook requestWithGraphPath:@"me" andDelegate:self];
+        [facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+    }
+    
     return YES;
 }
 
@@ -161,5 +167,38 @@
 	[[[UIApplication sharedApplication] keyWindow] addSubview:hudController.view];
 	
 }
+
+#pragma -
+#pragma Facebook delegate
+/**
+ * Called when a request returns and its response has been parsed into
+ * an object. The resulting object may be a dictionary, an array, a string,
+ * or a number, depending on the format of the API response. If you need access
+ * to the raw response, use:
+ *
+ * (void)request:(FBRequest *)request
+ *      didReceiveResponse:(NSURLResponse *)response
+ */
+- (void)request:(FBRequest *)request didLoad:(id)result {
+	//Result could be the users info or a friend list
+	NSDictionary *resultDict;
+	if ([result isKindOfClass:[NSDictionary class]]){
+		resultDict = (NSDictionary *) result;
+		if ([resultDict objectForKey:@"id"])
+		{
+			//This is a callback from get user info
+			self.attackInfo.assassinID = [resultDict objectForKey:@"id"];
+			self.attackInfo.assassinName = [resultDict objectForKey:@"name"];
+		}
+		else {
+			self.friendData = [resultDict objectForKey:@"data"];
+		}
+	}
+	else {
+		NSLog(@"Something went wrong with the json returned");
+	}
+};
+
+
 
 @end

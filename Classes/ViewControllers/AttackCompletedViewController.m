@@ -81,18 +81,14 @@
 - (IBAction) startAttack{
 	//Start a new attack
 	[FlurryAPI logEvent:@"AttackAgainSelected"];	
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[appDelegate showHud];
 }
 
 - (IBAction) postToFacebook {
 	[FlurryAPI logEvent:@"PostToFacebookSelected"];	
-	/*if (nil != appDelegate.attackController)
-	{
-		[appDelegate.attackController release];
-		appDelegate = nil;
-	}*/
-	
+    AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
 	[self.facebook setTokenFromCache];
 	
     // only authorize if the access token isn't valid
@@ -112,12 +108,24 @@
 		return;
     }
 	
-	
-	self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
+	else if ([appDelegate.friendData count] > 0){
+        //We already have a friend list
 
-	[self.alertView show];
-	[facebook requestWithGraphPath:@"me" andDelegate:self];
-	[facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+        
+        UIImage *image = [[targetImage scaledToSize:overlayImageView.image.size] overlayWith:overlayImageView.image];
+        PickAFriendTableViewController *pickController = [[[PickAFriendTableViewController alloc] initWithNibName:nil bundle:nil friendJSON:appDelegate.friendData friendPic:image] autorelease];
+        pickController.delegate = self;
+        [self presentModalViewController:pickController animated:YES];        
+        
+    }
+    
+    else{
+        //We don't have any creds.  prompt
+        self.alertView = [[ActivityAlert alloc] initWithStatus:@"Loading friend list ..."];
+        [self.alertView show];
+        [facebook requestWithGraphPath:@"me" andDelegate:self];
+        [facebook requestWithGraphPath:@"me/friends" andDelegate:self];
+    }
 	
 }
 
@@ -186,7 +194,7 @@
 		if ([resultDict objectForKey:@"id"])
 		{
 			//This is a callback from get user info
-			AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+			AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 			appDelegate.attackInfo.assassinID = [resultDict objectForKey:@"id"];
 			appDelegate.attackInfo.assassinName = [resultDict objectForKey:@"name"];
 		}
@@ -237,7 +245,7 @@
 		return;
 	}
 	[FlurryAPI logEvent:@"SelectedFriendForObit"];	
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	appDelegate.attackInfo.targetID = friendID;
 	NSLog(@"Friend picked: %@", friendID);
 	
@@ -285,7 +293,7 @@
 #pragma mark -
 #pragma mark AssassinsServerDelegate
 - (void) onRequestDidLoad:(NSString*) response{
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[self.alertView hide];
 	appDelegate.attackInfo.obituaryString = response;
 	

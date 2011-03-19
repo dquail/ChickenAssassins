@@ -40,7 +40,7 @@
 	shakeEventSource = [[ShakeEventSource alloc] init];	
 	[shakeEventSource addDelegate: self];
 
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[appDelegate.attackInfo.hitCombo setString:@""];
 
 	/*
@@ -152,7 +152,7 @@
 
 - (void) resetUsingImage:(UIImage *) image{
 	if (targetImage!=image){
-		AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];		
+		AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];		
 		appDelegate.attackInfo = [[AttackInfo alloc] init];
 		[appDelegate.attackInfo.hitCombo setString:@""];		
 		[targetImage release];
@@ -218,7 +218,7 @@
 	[timer release];
 	
 	// Move the image
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];	
 	appDelegate.attackInfo.targetImage = targetImage;
 	[appDelegate targetKilled:targetImage];
 }
@@ -265,7 +265,7 @@
 
 - (void) shake: (int) direction {
 	
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];	
 	if (slapCount > HITS_TO_KILL)
 		return;
 	
@@ -355,7 +355,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];	
     [super viewDidLoad];
 	appDelegate = (AssassinsAppDelegate *)[UIApplication sharedApplication].delegate;
 	self.targetImageView.image = targetImage;

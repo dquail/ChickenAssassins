@@ -120,7 +120,7 @@
 - (void)locationManager:(CLLocationManager *)manager
 	didUpdateToLocation:(CLLocation *)newLocation
 		   fromLocation:(CLLocation *)oldLocation {
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];	
 	[locationManager stopUpdatingLocation];
 	
 	appDelegate.attackInfo.location = [NSString stringWithFormat:@"%f,%f", newLocation.coordinate.latitude, newLocation.coordinate.longitude];
@@ -160,7 +160,7 @@
 }
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];	
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];	
 	//self.targetImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 	
 	[appDelegate lockTarget:[info objectForKey:@"UIImagePickerControllerOriginalImage"]];

@@ -125,7 +125,7 @@
 
 - (void) postToFacebook{
 
-	AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 									appDelegate.attackInfo.obituaryString, @"link",
 								   @"http://a2.twimg.com/profile_images/1255491684/Icon_2x_bigger.png", @"picture",
@@ -149,7 +149,7 @@
 - (void) sendViaEmail{
 	NSLog(@"Attempting to send obituary in email");
 	if ([MFMailComposeViewController canSendMail]) {
-		AssassinsAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+		AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
 
 		NSString *htmlMessage = [NSString stringWithFormat:
 								  @"I just killed you using Rubber Chicken Assassins.  Check out your obituary here %@.  You could also get revenge by reverse assasination.  Start by downloading the app http://chickenassassin.com", appDelegate.attackInfo.obituaryString];
