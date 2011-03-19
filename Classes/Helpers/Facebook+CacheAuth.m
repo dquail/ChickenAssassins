@@ -7,6 +7,7 @@
 //
 
 #import "Facebook+CacheAuth.h"
+#import "NSUserDefaults+MPSecureUserDefaults.h"
 
 #define ACCESS_TOKEN_KEY @"fb_access_token"
 #define EXPIRATION_DATE_KEY @"fb_expiration_date"
@@ -14,15 +15,33 @@
 @implementation Facebook(CacheAuth)
 
 - (void) setTokenFromCache{
+	BOOL valid;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
-    self.accessToken = [defaults objectForKey:ACCESS_TOKEN_KEY];
-    self.expirationDate = [defaults objectForKey:EXPIRATION_DATE_KEY];	
+	
+	//Set access token
+	NSString *accessToken = [defaults secureObjectForKey:ACCESS_TOKEN_KEY valid:&valid];
+	if (valid){
+		self.accessToken = accessToken;
+	}
+	else{
+		self.accessToken = nil;
+	}
+    
+	//Set expiration date
+	NSDate *expirationDate = [defaults secureObjectForKey:EXPIRATION_DATE_KEY valid:&valid];
+	if (valid){
+		self.expirationDate = expirationDate;
+	}
+	else{
+		self.expirationDate = nil;
+	}
+	
 }
 
 - (void) saveTokenToCache{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.accessToken forKey:ACCESS_TOKEN_KEY];
-    [defaults setObject:self.expirationDate forKey:EXPIRATION_DATE_KEY];
+    [defaults setSecureObject:self.accessToken forKey:ACCESS_TOKEN_KEY];
+    [defaults setSecureObject:self.expirationDate forKey:EXPIRATION_DATE_KEY];
     [defaults synchronize];		
 }
 

@@ -8,6 +8,7 @@
 
 #import "AssassinsAppDelegate.h"
 #import "FlurryAPI.h"
+#import "NSUserDefaults+MPSecureUserDefaults.h"
 
 #define FACEBOOK_APP_ID @"189234387766257"
 
@@ -24,6 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	[FlurryAPI startSession:@"K3HHZSNPQVGLX3TAXG9T"];	
+    [NSUserDefaults setSecret:@"ChickenSecret"];    
+    
 	// Override point for customization after application launch.
 	self.facebook = [[[Facebook alloc] initWithAppId:FACEBOOK_APP_ID] autorelease];
 	
