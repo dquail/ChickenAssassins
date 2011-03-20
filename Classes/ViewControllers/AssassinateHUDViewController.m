@@ -41,6 +41,7 @@
 		camera.sourceType =  UIImagePickerControllerSourceTypeCamera;
 		camera.showsCameraControls = NO;
 		camera.cameraOverlayView = self.overlay;
+        camera.cameraViewTransform = CGAffineTransformMakeScale(1.0, 1.15);        
 	} else {
 		camera.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
 	}
