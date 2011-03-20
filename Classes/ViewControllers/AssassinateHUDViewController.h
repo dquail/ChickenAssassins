@@ -25,5 +25,4 @@
 @property (nonatomic, retain) CLLocation *startingPoint;
 
 - (IBAction) onLockTarget; 
-
 @end

@@ -17,11 +17,13 @@
 	NSString *obituaryURL;
 	UIToolbar *toolBar;
     ActivityAlert *alertView;
+    MFMailComposeViewController *mailComposer;
 														
 }
 @property (nonatomic, retain) IBOutlet UIWebView *_webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolBar;
 @property (nonatomic, retain) ActivityAlert *alertView;
+@property (nonatomic, retain) MFMailComposeViewController *mailComposer;
 
 - (id) initWithObituaryURL:(NSString *)url;
 - (IBAction) onPostLink;

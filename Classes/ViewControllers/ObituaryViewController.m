@@ -18,7 +18,7 @@
 
 @implementation ObituaryViewController
 
-@synthesize _webView, toolBar, alertView;
+@synthesize _webView, toolBar, alertView, mailComposer;
 
 - (id) initWithObituaryURL:(NSString *)url{
 	NSLog(@"Initializing obituary at %@", url);
@@ -80,7 +80,7 @@
     [alertView release];
 	
 	[_webView release];
-	
+	self.mailComposer = nil;
     [super dealloc];
 }
 
@@ -89,8 +89,11 @@
 
 - (IBAction) onPostLink{
 	//TODO - Post the message to facebook or twitter?
-	NSLog(@"Attempting to post to facebook");
+	NSLog(@"Share obituary clicked");
 	
+    [self postToFacebook];
+    // Disabled email send
+    /* 
     UIActionSheet * actionSheet = [[[UIActionSheet alloc] initWithTitle:@"Share Obituary"
 																   delegate:self
 														  cancelButtonTitle:@"Cancel"
@@ -99,9 +102,10 @@
 	
 	//actionSheet.cancelButtonIndex = actionSheet.numberOfButtons - 1;
 	[actionSheet showInView:self.view];
-		
+
 	// Display the action sheet
-	//[actionSheet showFromToolbar:self.toolBar];
+	[actionSheet showFromToolbar:self.toolBar];
+     */
 }
 
 - (IBAction) onCloseObituary {
@@ -155,13 +159,12 @@
 								  @"I just killed you using Rubber Chicken Assassins.  Check out your obituary here %@.  You could also get revenge by reverse assasination.  Start by downloading the app http://chickenassassin.com", appDelegate.attackInfo.obituaryString];
 
 
-		MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
-		mailComposer.mailComposeDelegate = self;
-		[mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
-		[mailComposer addAttachmentData:UIImagePNGRepresentation(appDelegate.attackInfo.targetImage) mimeType:@"image/png" fileName:@"image"]; 
-		[mailComposer setMessageBody:htmlMessage isHTML:YES]; 		
-		[self presentModalViewController:mailComposer animated:YES]; 
-		[mailComposer release];
+		self.mailComposer = [[MFMailComposeViewController alloc] init];
+		self.mailComposer.mailComposeDelegate = self;
+		[self.mailComposer setSubject:NSLocalizedString(@"I assasinated you on Chicken Assasin", @"I assasinated you on chicken assasin")]; 
+		[self.mailComposer addAttachmentData:UIImagePNGRepresentation(appDelegate.attackInfo.targetImage) mimeType:@"image/png" fileName:@"image"]; 
+		[self.mailComposer setMessageBody:htmlMessage isHTML:YES]; 		
+		[self presentModalViewController:self.mailComposer animated:YES]; 
 	}	
 }
 
@@ -249,7 +252,8 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller
 		  didFinishWithResult:(MFMailComposeResult)result 
 						error:(NSError*)error {
-	[self dismissModalViewControllerAnimated:YES];
+//	[self dismissModalViewControllerAnimated:YES];
+    [self.mailComposer dismissModalViewControllerAnimated:YES];
 }
 
 @end

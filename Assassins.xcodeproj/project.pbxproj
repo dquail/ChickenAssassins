@@ -19,6 +19,7 @@
 		2F79AF3D1318CDCB00541ACC /* AttackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F79AF3C1318CDCB00541ACC /* AttackInfo.m */; };
 		2F79B0BD13197E9C00541ACC /* PickAFriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */; };
 		2F8713FB127B4C03009D4C0C /* UIImage+Combine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */; };
+		2F8F952313357F0B00ED2EC7 /* facebookbug.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2F8F952213357F0B00ED2EC7 /* facebookbug.PNG */; };
 		2F97D5461311951C00F77318 /* AttackCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97D5451311951C00F77318 /* AttackCompletedViewController.m */; };
 		2FC5E06E132B360300AD70CE /* s1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E066132B360300AD70CE /* s1.caf */; };
 		2FC5E06F132B360300AD70CE /* s2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5E067132B360300AD70CE /* s2.caf */; };
@@ -138,6 +139,7 @@
 		2F79B0BC13197E9C00541ACC /* PickAFriendTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PickAFriendTableViewController.xib; path = ViewControllers/PickAFriendTableViewController.xib; sourceTree = "<group>"; };
 		2F8713F9127B4C03009D4C0C /* UIImage+Combine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Combine.h"; path = "Helpers/UIImage+Combine.h"; sourceTree = "<group>"; };
 		2F8713FA127B4C03009D4C0C /* UIImage+Combine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Combine.m"; path = "Helpers/UIImage+Combine.m"; sourceTree = "<group>"; };
+		2F8F952213357F0B00ED2EC7 /* facebookbug.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookbug.PNG; path = Images/Application/facebookbug.PNG; sourceTree = "<group>"; };
 		2F97D5451311951C00F77318 /* AttackCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttackCompletedViewController.m; path = ViewControllers/AttackCompletedViewController.m; sourceTree = "<group>"; };
 		2FC5E066132B360300AD70CE /* s1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = s1.caf; sourceTree = "<group>"; };
 		2FC5E067132B360300AD70CE /* s2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = s2.caf; sourceTree = "<group>"; };
@@ -629,6 +631,7 @@
 		C71E4A5F12638D6600670FFC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2F8F952213357F0B00ED2EC7 /* facebookbug.PNG */,
 				2FC7C659130CF26900F7C3DB /* buttonCancelUP@2x.png */,
 				2FC7C65A130CF26900F7C3DB /* buttonCanelUP.png */,
 				2FC7C65B130CF26900F7C3DB /* buttonPhoneUP.png */,
@@ -806,6 +809,7 @@
 				2FC5E09C132B362D00AD70CE /* b1.caf in Resources */,
 				2FC5E09D132B362D00AD70CE /* b2.caf in Resources */,
 				2FC5E09E132B362D00AD70CE /* b3.caf in Resources */,
+				2F8F952313357F0B00ED2EC7 /* facebookbug.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

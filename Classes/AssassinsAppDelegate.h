@@ -13,7 +13,7 @@
 #import "FBConnect.h"
 #import "AttackInfo.h"
 
-@interface AssassinsAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AssassinsAppDelegate : NSObject <FBRequestDelegate,UIApplicationDelegate> {
     UIWindow *window;
 	
 	AttackViewController *attackController;
@@ -22,6 +22,8 @@
 	
 	Facebook *facebook;
 	AttackInfo *attackInfo;
+    NSArray *friendData;
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -30,6 +32,7 @@
 @property (nonatomic, retain) AssassinateHUDViewController *hudController;
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic, retain) AttackInfo *attackInfo;
+@property (nonatomic, retain) NSArray *friendData;
 
 - (void) lockTarget: (UIImage *) targetImage;
 - (void) targetKilled: (UIImage *)targetImage;

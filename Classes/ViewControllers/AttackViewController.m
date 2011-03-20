@@ -36,6 +36,10 @@
 	[self shake:16];
 }
 
+- (IBAction) onCancelAttack{
+    AssassinsAppDelegate *appDelegate = (AssassinsAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate showHud];
+}
 - (void) completeInitialization {
 	shakeEventSource = [[ShakeEventSource alloc] init];	
 	[shakeEventSource addDelegate: self];

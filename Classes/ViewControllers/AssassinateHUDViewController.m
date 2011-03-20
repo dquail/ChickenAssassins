@@ -102,6 +102,7 @@
 - (void)dealloc {	
     [super dealloc];	
 	[camera release];
+
 	[overlay release];
 	
 	[locationManager stopUpdatingLocation];

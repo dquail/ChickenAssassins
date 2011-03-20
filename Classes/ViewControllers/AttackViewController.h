@@ -49,6 +49,7 @@
 
 - (id) initWithTargetImage:(UIImage *)image;
 
+- (IBAction)onCancelAttack;
 - (IBAction)slapButton;
 	
 // Resets the hitcount, combination etc.
