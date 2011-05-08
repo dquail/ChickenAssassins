@@ -91,9 +91,9 @@
 	//TODO - Post the message to facebook or twitter?
 	NSLog(@"Share obituary clicked");
 	
-    [self postToFacebook];
+    //[self postToFacebook];
     // Disabled email send
-    /* 
+     
     UIActionSheet * actionSheet = [[[UIActionSheet alloc] initWithTitle:@"Share Obituary"
 																   delegate:self
 														  cancelButtonTitle:@"Cancel"
@@ -104,8 +104,8 @@
 	[actionSheet showInView:self.view];
 
 	// Display the action sheet
-	[actionSheet showFromToolbar:self.toolBar];
-     */
+	//[actionSheet showFromToolbar:self.toolBar];
+    
 }
 
 - (IBAction) onCloseObituary {
